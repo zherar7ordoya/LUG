@@ -1,4 +1,4 @@
-# Teleinformática y Comunicaciones (Semeria)
+# Lenguajes de Última Generación (Prinzo)
 
 UAI
 
