@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contrataciones>
+  <contratacion streamingLive="true">
+    <codigoCliente>1</codigoCliente>
+    <codigoStreaming>4</codigoStreaming>
+    <total>400</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>1</codigoCliente>
+    <codigoStreaming>3</codigoStreaming>
+    <total>1080</total>
+  </contratacion>
+  <contratacion streamingLive="true">
+    <codigoCliente>2</codigoCliente>
+    <codigoStreaming>4</codigoStreaming>
+    <total>400</total>
+  </contratacion>
+  <contratacion streamingLive="true">
+    <codigoCliente>2</codigoCliente>
+    <codigoStreaming>1</codigoStreaming>
+    <total>80</total>
+  </contratacion>
+  <contratacion streamingLive="true">
+    <codigoCliente>4</codigoCliente>
+    <codigoStreaming>4</codigoStreaming>
+    <total>400</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>1</codigoCliente>
+    <codigoStreaming>2</codigoStreaming>
+    <total>1440</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>2</codigoCliente>
+    <codigoStreaming>2</codigoStreaming>
+    <total>1440</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>2</codigoCliente>
+    <codigoStreaming>3</codigoStreaming>
+    <total>1080</total>
+  </contratacion>
+  <contratacion streamingLive="true">
+    <codigoCliente>1</codigoCliente>
+    <codigoStreaming>5</codigoStreaming>
+    <total>240</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>1</codigoCliente>
+    <codigoStreaming>6</codigoStreaming>
+    <total>360</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>1</codigoCliente>
+    <codigoStreaming>7</codigoStreaming>
+    <total>3780</total>
+  </contratacion>
+  <contratacion streamingLive="false">
+    <codigoCliente>2</codigoCliente>
+    <codigoStreaming>7</codigoStreaming>
+    <total>3780</total>
+  </contratacion>
+</contrataciones>

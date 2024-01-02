@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Enter you external DTD here -->
+<!ELEMENT Direcciones (Direccion*)>
+<!ELEMENT Direccion (Nombre, Empresa, Movil)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Empresa (#PCDATA)>
+<!ELEMENT Movil (#PCDATA)>
+

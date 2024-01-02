@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Biblioteca>
+	<Libro>
+		<Id>1</Id>
+		<Titulo>El Quijote</Titulo>
+		<Autor>Cervantes</Autor>
+	</Libro>
+	<Libro>
+		<Id>2</Id>
+		<Titulo>Cien Años de Soledad</Titulo>
+		<Autor>García Márquez</Autor>
+	</Libro>
+</Biblioteca>

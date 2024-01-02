@@ -1,0 +1,162 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+
+namespace StringDatabaseApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            var app = new StringDatabaseApp();
+            app.Run();
+
+            Console.ReadLine();
+        }
+    }
+
+    class StringDatabaseApp
+    {
+        public void Run()
+        {
+            try
+            {
+                var archivo = SolicitarNombreArchivo();
+                var listado = new Listado();
+                listado.CargarDesdeArchivo(archivo);
+
+                var busqueda = SolicitarCadenaBusqueda();
+
+                var cronografo = Stopwatch.StartNew();
+                var resultados = ProcesarListado(listado, busqueda);
+                cronografo.Stop();
+
+                MostrarResultados(resultados, cronografo.ElapsedMilliseconds);
+
+                GuardarListado("depurada.txt", listado);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ERROR: {ex.Message}");
+            }
+        }
+
+        private string SolicitarNombreArchivo()
+        {
+            Console.Write("Ingrese el nombre del archivo: ");
+            return Console.ReadLine();
+        }
+
+        private string SolicitarCadenaBusqueda()
+        {
+            Console.Write("Ingrese la cadena de búsqueda: ");
+            return Console.ReadLine();
+        }
+
+        private void MostrarResultados(ResultadosBusqueda resultados, long tiempoEjecucion)
+        {
+            Console.WriteLine(resultados.Mensaje);
+            Console.WriteLine($"Tiempo de operaciones: {tiempoEjecucion} milisegundos");
+        }
+
+        private void GuardarListado(string pArchivo, Listado pListado)
+        {
+            try
+            {
+                pListado.GuardarEnArchivo(pArchivo);
+                Console.WriteLine("Lista depurada guardada en 'depurada.txt'");
+            }
+            catch (Exception ex)
+            {
+                throw new ListaRepudioException($"Error al guardar el archivo: {ex.Message}");
+            }
+        }
+
+        private ResultadosBusqueda ProcesarListado(Listado listado, string busqueda)
+        {
+            listado.Ordenar();
+            listado.EliminarCadenasDuplicadas();
+            listado.EliminarLongitudesInvalidas();
+
+            return listado.BuscarCadena(busqueda);
+        }
+    }
+
+    class Listado
+    {
+        public List<string> Cadenas { get; private set; } = new List<string>();
+
+        // Principio SOLID: Single Responsibility (SRP)
+        public void CargarDesdeArchivo(string archivo)
+        {
+            Cadenas = File.ReadAllLines(archivo).ToList();
+            ValidarCadenasAlfanumericas(); 
+        }
+
+        // Principio SOLID: Single Responsibility (SRP)
+        private void ValidarCadenasAlfanumericas()
+        {
+            if (Cadenas.Any(cadena => !EsAlfanumerico(cadena))) 
+            {
+                throw new ListaRepudioException("El archivo contiene cadenas no alfanuméricas.");
+            }
+        }
+
+        private bool EsAlfanumerico(string cadena)
+        {
+            return cadena.All(caracter => char.IsLetterOrDigit(caracter));
+        }
+
+        public void Ordenar()
+        {
+            Cadenas.Sort();
+        }
+
+        public void EliminarCadenasDuplicadas()
+        {
+            Cadenas = Cadenas.Distinct().ToList();
+        }
+
+        public void EliminarLongitudesInvalidas()
+        {
+            Cadenas = Cadenas.Where(s => s.Length == 8 || s.Length == 14).ToList();
+        }
+
+        public ResultadosBusqueda BuscarCadena(string busqueda)
+        {
+            if (Cadenas.Contains(busqueda))
+            {
+                return new ResultadosBusqueda($"EXISTE: Cadena encontrada en el índice {Cadenas.IndexOf(busqueda) + 1}: {busqueda}");
+            }
+            else
+            {
+                return new ResultadosBusqueda("NO EXISTE: Cadena no encontrada.");
+            }
+        }
+
+        public void GuardarEnArchivo(string archivo)
+        {
+            File.WriteAllLines(archivo, Cadenas);
+        }
+    }
+
+    class ResultadosBusqueda
+    {
+        public string Mensaje { get; }
+
+        public ResultadosBusqueda(string mensaje)
+        {
+            Mensaje = mensaje;
+        }
+    }
+
+    
+    class ListaRepudioException : Exception
+    {
+        public ListaRepudioException(string mensaje) : base(mensaje)
+        {
+        }
+    }
+}

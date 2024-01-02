@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritmo Ávido", "Algoritmo Ávido\Algoritmo Ávido.csproj", "{1AF0D111-C8E4-4125-958D-96F03D5C5857}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divide y Conquista", "Divide y Conquista\Divide y Conquista.csproj", "{630F119B-58F5-4A55-9FE4-41F4466DF87B}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programación Dinámica", "Programación Dinámica\Programación Dinámica.csproj", "{1EABCEF8-4748-4E99-BF47-1639533B7D32}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursividad", "Recursividad\Recursividad.csproj", "{0A87D4F6-3CB8-4733-A024-E962C819B24C}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A87D4F6-3CB8-4733-A024-E962C819B24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A87D4F6-3CB8-4733-A024-E962C819B24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A87D4F6-3CB8-4733-A024-E962C819B24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A87D4F6-3CB8-4733-A024-E962C819B24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{630F119B-58F5-4A55-9FE4-41F4466DF87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630F119B-58F5-4A55-9FE4-41F4466DF87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630F119B-58F5-4A55-9FE4-41F4466DF87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630F119B-58F5-4A55-9FE4-41F4466DF87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EABCEF8-4748-4E99-BF47-1639533B7D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EABCEF8-4748-4E99-BF47-1639533B7D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EABCEF8-4748-4E99-BF47-1639533B7D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EABCEF8-4748-4E99-BF47-1639533B7D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF0D111-C8E4-4125-958D-96F03D5C5857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF0D111-C8E4-4125-958D-96F03D5C5857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF0D111-C8E4-4125-958D-96F03D5C5857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF0D111-C8E4-4125-958D-96F03D5C5857}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20E06E7F-F6DA-4721-8136-D0B3EB8E19E1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro id="1">
+        <titulo>The Ultimate History of Videogames</titulo>
+        <autor>
+            <nombre>Steven</nombre>
+            <apellido>Kent</apellido>
+			<edad>50</edad>
+        </autor>
+    </libro>
+    <libro>
+        <titulo>Masters of Doom</titulo>
+        <autor>
+            <nombre>David</nombre>
+            <apellido>Kushner</apellido>
+        </autor>
+    </libro>
+    <libro>
+        <titulo>Mass Effect: Revelacion</titulo>
+        <autor>
+            <nombre>Timun</nombre>
+            <apellido>Mas</apellido>
+			<nacimiento>
+				<año>1980</año>
+				<mes>05</mes>
+				<dia>25</dia>
+			</nacimiento>
+        </autor>
+    </libro>
+</biblioteca>

@@ -1,0 +1,21 @@
+Hola Gerardo
+
+---
+
+Código:
+
+Juego tiene una herencia con TaTeTi y Piedra/Papel/Tijera.  Pero lo hiciste de otra manera. OK.
+
+Tené en cuenta en ABM Jugadores que, si el campo está mal, no lo agregue.
+
+Piedra/Papel/Tijera OK con 1 y 2 usuarios.
+TaTeTi 1 usuario no comienza.
+TaTeTi 2 usuarios da error cuando termina para el registro.
+
+Informes OK.
+
+---
+
+Nota 8(ocho)
+
+Saludos

@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "Chart2.sln",
+    "projects": [
+      "UI_C\\UI_C.csproj"
+    ]
+  }
+}

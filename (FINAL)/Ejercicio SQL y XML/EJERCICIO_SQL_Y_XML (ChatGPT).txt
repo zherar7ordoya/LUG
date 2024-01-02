@@ -1,0 +1,17 @@
+Una agencia de transporte requiere un sistema que lleve el control de todos sus vehículos y clientes. Los vehículos pueden ser de distinto tipo: auto, SUV, camioneta y camión. De los vehículos se conoce la marca, modelo y patente . De los clientes se conoce nombre, apellido, DNI, fecha de nacimiento, correo electrónico y el vehículo rentado. El valor del alquiler depende la cantidad de días, el tipo de vehículo y el modelo. La empresa desea saber cuál vehículo fue alquilado, cuál cliente lo posee actualmente, la cantidad de días del alquiler, y el importe final del alquiler. Se pide:
+- Implementar la solución en una aplicación de escritorio usando formularios y escrita en C#
+- Realizar el ABM de todas las tablas necesarias 
+- Informar: a) Los vehículos más alquilados, por tipo y el monto; b) Los vehículos menos alquilados, por tipo y monto; c) El monto total recaudado por tipo de transporte (auto, SUV, camioneta y camión)
+- Crear y realizar el ABM de los vehículos en un archivo XML que tenga el siguiente formato: 
+<Vehiculos>
+     <Vehiculo Tipo="Auto">
+          <Marca> Ford </Marca>
+          <Modelo>Focus</Modelo>
+          <Patente>BYQ311</Patente>
+      </Vehiculo>
+     <Vehiculo Tipo ="Camioneta">
+          <Marca> Chevrolet </Marca>
+          <Modelo>C10</Modelo>
+          <Patente>HIJ311</Patente>
+      </Vehiculo>
+</Vehiculos>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clientes>
+  <cliente codigo="1">
+    <nombre>Pablo</nombre>
+    <apellido>Cattalin</apellido>
+    <dni>33666444</dni>
+    <mail>pablo.cattalin@gmail.com</mail>
+  </cliente>
+  <cliente codigo="2">
+    <nombre>Homero</nombre>
+    <apellido>Simpsons</apellido>
+    <dni>44555777</dni>
+    <mail>homero.simpsons@gmail.com</mail>
+  </cliente>
+  <cliente codigo="4">
+    <nombre>Bart</nombre>
+    <apellido>Simpsons</apellido>
+    <dni>55666888</dni>
+    <mail>test@asd.com</mail>
+  </cliente>
+  <cliente codigo="8">
+    <nombre>Pablo</nombre>
+    <apellido>Cattalin</apellido>
+    <dni>44111558</dni>
+    <mail>pablo.cattalin@gmail.com</mail>
+  </cliente>
+</clientes>

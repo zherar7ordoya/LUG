@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaRepudioApp", "ListaRepudioApp\ListaRepudioApp.csproj", "{543C85E9-3C4C-4D07-9C3E-EC13D809F1C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaRepudioLib", "ListaRepudioLib\ListaRepudioLib.csproj", "{D95B1800-3EC9-43EC-8A2B-F4E18D9E2AF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{543C85E9-3C4C-4D07-9C3E-EC13D809F1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543C85E9-3C4C-4D07-9C3E-EC13D809F1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543C85E9-3C4C-4D07-9C3E-EC13D809F1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543C85E9-3C4C-4D07-9C3E-EC13D809F1C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95B1800-3EC9-43EC-8A2B-F4E18D9E2AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95B1800-3EC9-43EC-8A2B-F4E18D9E2AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95B1800-3EC9-43EC-8A2B-F4E18D9E2AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95B1800-3EC9-43EC-8A2B-F4E18D9E2AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46D95D44-CA75-4A95-9BAD-873214718C63}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Direcciones [
+	<!ELEMENT Direcciones (Direccion*)>
+	<!ELEMENT Direccion (Nombre, Empresa, Movil)>
+	<!ELEMENT Nombre (#PCDATA)>
+	<!ELEMENT Empresa (#PCDATA)>
+	<!ELEMENT Movil (#PCDATA)>
+]>
+<Direcciones>
+  <Direccion>
+    <Nombre>Juan González</Nombre>
+    <Empresa>Pept S.A.</Empresa>
+    <Movil>(015) 555-8546</Movil>
+  </Direccion>
+  <Direccion>
+    <Nombre>Fernando Kilua</Nombre>
+    <Empresa>Demosc S.R.L.</Empresa>
+    <Movil>(011) 555-6548</Movil>
+  </Direccion>
+  <Direccion>
+    <Nombre>Elisa Milavich</Nombre>
+    <Empresa>Sanatoria del Rosario S.A.</Empresa>
+    <Movil>(549) 555-2564</Movil>
+  </Direccion>
+</Direcciones>
