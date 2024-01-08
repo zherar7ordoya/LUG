@@ -1,0 +1,22 @@
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\bin\Debug\Crud WindowsForms AdoNet.exe.config
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\bin\Debug\Crud WindowsForms AdoNet.exe
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\bin\Debug\Crud WindowsForms AdoNet.pdb
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.csprojAssemblyReference.cache
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud_WindowsForms_AdoNet.Form1.resources
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud_WindowsForms_AdoNet.Properties.Resources.resources
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.csproj.GenerateResource.cache
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.csproj.CoreCompileInputs.cache
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.exe
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.pdb
+C:\Users\Bioxor\source\repos\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud_WindowsForms_AdoNet.FrmNuevo.resources
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\bin\Debug\Crud WindowsForms AdoNet.exe.config
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\bin\Debug\Crud WindowsForms AdoNet.exe
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\bin\Debug\Crud WindowsForms AdoNet.pdb
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.csproj.AssemblyReference.cache
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud_WindowsForms_AdoNet.Form1.resources
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud_WindowsForms_AdoNet.FrmNuevo.resources
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud_WindowsForms_AdoNet.Properties.Resources.resources
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.csproj.GenerateResource.cache
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.csproj.CoreCompileInputs.cache
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.exe
+C:\Documents\Trabajo-Final\Composite\ADO-HdeLeon\Crud WindowsForms AdoNet\Crud WindowsForms AdoNet\obj\Debug\Crud WindowsForms AdoNet.pdb

@@ -1,0 +1,15 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\bin\Debug\Presentacion_UI.exe.config
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\bin\Debug\Presentacion_UI.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\bin\Debug\Presentacion_UI.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\bin\Debug\Negocio.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\bin\Debug\Negocio.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.frAlumno.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.frLocalidad.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.Menu.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.Properties.Resources.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.csproj.GenerateResource.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\Ejemplos 2 Tablas\01_DataReader\Solution1\Presentacion_UI\obj\Debug\Presentacion_UI.pdb
