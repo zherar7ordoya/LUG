@@ -1,0 +1,8 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\bin\Debug\CSharpYa.exe.config
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\bin\Debug\CSharpYa.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\obj\Debug\CSharpYa.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\obj\Debug\CSharpYa.Form1.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\obj\Debug\CSharpYa.Properties.Resources.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\obj\Debug\CSharpYa.csproj.GenerateResource.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\obj\Debug\CSharpYa.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\ADO\CSharpYa\obj\Debug\CSharpYa.exe

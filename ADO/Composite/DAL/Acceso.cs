@@ -16,21 +16,8 @@ namespace DAL
         private SqlConnection connection;
 
         //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS
-
-        /// <summary>
-        /// Tipo de Consulta:
-        /// Se utiliza para ejecutar consultas SQL que devuelven conjuntos de resultados, como SELECT.
-        /// Método de retorno:
-        /// Devuelve un objeto DataSet que puede contener múltiples tablas y relaciones.
-        /// Esto es útil cuando la consulta puede devolver múltiples conjuntos de resultados o cuando
-        /// necesitas trabajar con datos de manera más compleja, como relaciones entre tablas.
-        /// Ejemplo de uso:
-        /// SELECT* FROM TableName
-        /// </summary>
-        /// <param name="pConsulta"></param>
-        /// <param name="pListaParametros"></param>
-        /// <returns></returns>
-        public DataSet Leer(string pConsulta, List<SqlParameter> pListaParametros)
+        
+        public DataSet Leer(string pSQL, List<SqlParameter> pParameters)
         {
             DataSet dataset = new DataSet();
 
@@ -39,16 +26,16 @@ namespace DAL
                 connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                command = new SqlCommand(pConsulta, connection)
+                command = new SqlCommand(pSQL, connection)
                 {
                     CommandType = CommandType.Text
                 };
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-                if (pListaParametros != null)
+                if (pParameters != null)
                 {
-                    foreach (SqlParameter dato in pListaParametros)
+                    foreach (SqlParameter dato in pParameters)
                     {
                         command.Parameters.AddWithValue(dato.ParameterName, dato.Value);
                     }
@@ -71,20 +58,7 @@ namespace DAL
             return dataset;
         }
 
-        /// <summary>
-        /// Tipo de Consulta:
-        /// Diseñado para ejecutar consultas SQL que devuelven un solo valor,
-        /// como una función de agregación o una consulta que devuelve una única columna y fila.
-        /// Método de retorno:
-        /// Devuelve un valor escalar, generalmente un entero, que es el resultado de la consulta.
-        /// Es útil cuando necesitas obtener un solo valor de la base de datos.
-        /// Ejemplo de uso:
-        /// SELECT COUNT(*) FROM TableName
-        /// </summary>
-        /// <param name="pConsulta"></param>
-        /// <param name="pListaParametros"></param>
-        /// <returns></returns>
-        public int ObtenerEscalar(string pConsulta, List<SqlParameter> pListaParametros)
+        public int ContarFilas(string pSQL, List<SqlParameter> pParameters)
         {
             int respuesta = 0;
 
@@ -93,14 +67,14 @@ namespace DAL
                 connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                command = new SqlCommand(pConsulta, connection)
+                command = new SqlCommand(pSQL, connection)
                 {
                     CommandType = CommandType.Text
                 };
 
-                if (pListaParametros != null)
+                if (pParameters != null)
                 {
-                    foreach (SqlParameter dato in pListaParametros)
+                    foreach (SqlParameter dato in pParameters)
                     {
                         command.Parameters.AddWithValue(dato.ParameterName, dato.Value);
                     }
@@ -124,7 +98,7 @@ namespace DAL
         }
 
 
-        public bool Escribir(string pConsulta, List<SqlParameter> pListaParametros)
+        public bool Escribir(string pSQL, List<SqlParameter> pParameters)
         {
             try
             {
@@ -132,14 +106,14 @@ namespace DAL
                 connection.Open();
                 transaction = connection.BeginTransaction();
 
-                command = new SqlCommand(pConsulta, connection, transaction)
+                command = new SqlCommand(pSQL, connection, transaction)
                 {
                     CommandType = CommandType.Text
                 };
 
-                if (pListaParametros != null)
+                if (pParameters != null)
                 {
-                    foreach (SqlParameter dato in pListaParametros)
+                    foreach (SqlParameter dato in pParameters)
                     {
                         command.Parameters.AddWithValue(dato.ParameterName, dato.Value);
                     }

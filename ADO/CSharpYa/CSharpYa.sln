@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpYa", "CSharpYa.csproj", "{FA71C854-4297-4C3F-BD06-5D14DB889CEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA71C854-4297-4C3F-BD06-5D14DB889CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA71C854-4297-4C3F-BD06-5D14DB889CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA71C854-4297-4C3F-BD06-5D14DB889CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA71C854-4297-4C3F-BD06-5D14DB889CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FDC9A7B-1F6A-4F9A-908A-E476592AD0C0}
+	EndGlobalSection
+EndGlobal

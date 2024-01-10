@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class Acceso
+    public class Propuesta1
     {
         private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Composite;Integrated Security=True";
 
@@ -69,7 +69,7 @@ namespace DAL
             return dataset;
         }
 
-        public int Leer(string pConsulta, List<SqlParameter> pListaParametros)
+        public int ContarFilas(string pConsulta, List<SqlParameter> pListaParametros)
         {
             int respuesta = 0;
             SqlConnection connection = new SqlConnection(connectionString);
