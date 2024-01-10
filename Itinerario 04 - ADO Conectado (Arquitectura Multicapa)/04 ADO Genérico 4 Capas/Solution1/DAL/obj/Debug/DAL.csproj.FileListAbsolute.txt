@@ -1,0 +1,6 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\04 ADO Genérico 4 Capas\Solution1\DAL\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\04 ADO Genérico 4 Capas\Solution1\DAL\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\04 ADO Genérico 4 Capas\Solution1\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\04 ADO Genérico 4 Capas\Solution1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\04 ADO Genérico 4 Capas\Solution1\DAL\obj\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\04 ADO Genérico 4 Capas\Solution1\DAL\obj\Debug\DAL.pdb
