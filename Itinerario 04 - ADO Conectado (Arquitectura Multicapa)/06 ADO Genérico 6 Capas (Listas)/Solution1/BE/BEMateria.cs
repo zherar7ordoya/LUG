@@ -8,22 +8,15 @@ namespace BE
 {
     public class BEMateria: Entidad
     {
-        #region "Propiedades"
-        //propiedades de Materia
-
-     
+        #region PROPIEDADES
         public string Materia { get; set; }
-
-
         #endregion
 
-        #region "Metodos"
-
+        #region MÉTODOS
         public override string ToString()
         {
             return Codigo + " " + Materia;
         }
-
         #endregion
     }
 }

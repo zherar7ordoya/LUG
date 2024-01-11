@@ -8,15 +8,11 @@ namespace BE
 {
     public class BELocalidad: Entidad
     {
-        #region "Propiedades"
-        //propiedades de Localidad
-
-      
+        #region PROPIEDADES
         public string Localidad { get; set; }
-
         #endregion
 
-        #region "Metodos"
+        #region MÉTODOS
         public override string ToString()
         {
             return Codigo + " " + Localidad;
