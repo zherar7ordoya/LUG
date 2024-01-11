@@ -1,0 +1,9 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\bin\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\bin\Debug\BE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\obj\Debug\BE.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\obj\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (IGenerica)\Solution1\BE\obj\Debug\BE.pdb

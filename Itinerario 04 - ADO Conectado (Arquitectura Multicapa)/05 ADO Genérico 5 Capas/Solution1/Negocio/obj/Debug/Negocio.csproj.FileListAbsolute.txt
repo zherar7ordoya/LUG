@@ -1,0 +1,13 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\Negocio.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\Negocio.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\BE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\MPP.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\obj\Debug\Negocio.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\Negocio\obj\Debug\Negocio.pdb

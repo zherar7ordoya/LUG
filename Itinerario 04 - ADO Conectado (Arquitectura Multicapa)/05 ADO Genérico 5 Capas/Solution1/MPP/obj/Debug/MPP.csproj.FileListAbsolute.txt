@@ -1,0 +1,11 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\bin\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\bin\Debug\MPP.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\bin\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\bin\Debug\BE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\obj\Debug\MPP.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\obj\Debug\MPP.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\obj\Debug\MPP.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\obj\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\05 ADO Genérico 5 Capas\Solution1\MPP\obj\Debug\MPP.pdb
