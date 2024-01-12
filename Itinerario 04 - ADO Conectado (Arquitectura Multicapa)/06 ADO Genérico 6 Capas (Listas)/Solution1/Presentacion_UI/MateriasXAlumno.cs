@@ -40,13 +40,20 @@ namespace Presentacion_UI
           
             this.dataGridView1.DataSource = null;
             //llamo al metodo cargar alumnos de la BLLAlumno que me devuelve una lista
-            this.dataGridView1.DataSource = oBLLAlumno.ListarTodo();
-            //propiedad de la grilla para autosize de columnas
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            //cambio color alternando las filas de la grilla
-            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-            //oculto la columna de locaidad
-            this.dataGridView1.Columns["oBELocalidad"].Visible = false;
+
+            // Corrigiendo... es el mismo error
+            List<BEAlumno> alumnos = oBLLAlumno.ListarTodo();
+
+            if (alumnos != null)
+            {
+                this.dataGridView1.DataSource = alumnos;
+                //propiedad de la grilla para autosize de columnas
+                this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+                //cambio color alternando las filas de la grilla
+                this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+                //oculto la columna de locaidad
+                this.dataGridView1.Columns["oBELocalidad"].Visible = false;
+            }
         }
 
         void CargarComboMateria()

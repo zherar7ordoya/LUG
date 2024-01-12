@@ -1,0 +1,10 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\bin\Debug\UI_Transacciones.exe.config
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\bin\Debug\UI_Transacciones.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\bin\Debug\UI_Transacciones.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.Form1.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.Properties.Resources.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.csproj.GenerateResource.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones y Criptografía\Ejemplo Transacciones\UI_Transacciones\obj\Debug\UI_Transacciones.pdb

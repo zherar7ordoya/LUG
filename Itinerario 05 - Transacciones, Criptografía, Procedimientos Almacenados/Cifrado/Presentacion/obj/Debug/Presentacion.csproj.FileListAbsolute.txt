@@ -1,0 +1,13 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\bin\Debug\Presentacion.exe.config
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\bin\Debug\Presentacion.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\bin\Debug\Presentacion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\bin\Debug\Security.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\bin\Debug\Security.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.Form1.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Presentacion\obj\Debug\Presentacion.pdb

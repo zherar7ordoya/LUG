@@ -1,0 +1,6 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\Abstraccion\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\Abstraccion\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\Abstraccion\obj\Debug\Abstraccion.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\Abstraccion\obj\Debug\Abstraccion.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\Abstraccion\obj\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\Abstraccion\obj\Debug\Abstraccion.pdb

@@ -52,13 +52,20 @@ namespace Presentacion_UI
         {
             this.dataGridView1.DataSource = null;
             //llamo al metodo cargar alumnos de BLLAlumno que me devuelve una lista
-            this.dataGridView1.DataSource = oBLLAlu.ListarTodo();
-            //propiedad de la grilla para autosize de columnas
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            //cambio color alternando las filas de la grilla
-            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkOrange;
-            //cambio el nombre de la columna oLocalidad x Localidad
-            this.dataGridView1.Columns["oBELocalidad"].HeaderText = "Localidad";
+
+            // Vamos a corregir el error de inicialización
+            List<BEAlumno> alumnos = oBLLAlu.ListarTodo();
+
+            if (alumnos != null)
+            {
+                this.dataGridView1.DataSource = alumnos;
+                //propiedad de la grilla para autosize de columnas
+                this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+                //cambio color alternando las filas de la grilla
+                this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkOrange;
+                //cambio el nombre de la columna oLocalidad x Localidad
+                this.dataGridView1.Columns["oBELocalidad"].HeaderText = "Localidad";
+            }
         }
         //Asigno los valores al objeto
         void Asignar()

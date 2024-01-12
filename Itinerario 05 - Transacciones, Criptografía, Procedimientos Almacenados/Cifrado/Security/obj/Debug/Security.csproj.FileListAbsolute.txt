@@ -1,0 +1,6 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Security\bin\Debug\Security.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Security\bin\Debug\Security.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Security\obj\Debug\Security.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Security\obj\Debug\Security.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Security\obj\Debug\Security.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 05 - Transacciones, Criptografía, Procedimientos Almacenados\Cifrado\Security\obj\Debug\Security.pdb

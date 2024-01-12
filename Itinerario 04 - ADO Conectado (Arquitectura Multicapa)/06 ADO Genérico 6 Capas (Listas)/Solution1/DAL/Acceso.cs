@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 //uso las librerias de SQL
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DAL
 {
     public class Acceso
     {
         //declaro el objeto del tipo conection y uso el constructor para pasar el ConnectionString
-        private readonly SqlConnection oCnn = new SqlConnection(
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
-            Initial Catalog=MiBaseListas;
-            Integrated Security=True");
+        //private readonly SqlConnection oCnn = new SqlConnection(
+        //    @"Data Source=(LocalDB)\MSSQLLocalDB;
+        //    Initial Catalog=MiBaseListas;
+        //    Integrated Security=True");
+        private readonly SqlConnection oCnn = 
+            new SqlConnection(
+                ConfigurationManager.ConnectionStrings["MiBaseListas"].ToString());
 
 
         // creo una funcion para saber el estado de la conexion
