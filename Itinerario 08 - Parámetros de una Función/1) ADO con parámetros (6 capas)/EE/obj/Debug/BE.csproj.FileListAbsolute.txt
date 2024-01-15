@@ -1,0 +1,9 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\bin\Debug\EE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\bin\Debug\EE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\obj\Debug\BE.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\obj\Debug\BE.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\obj\Debug\EE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\EE\obj\Debug\EE.pdb

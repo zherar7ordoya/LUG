@@ -1,0 +1,15 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\BLL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\BLL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\EE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\EE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\MPP.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\obj\Debug\BLL.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\obj\Debug\BLL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - Parámetros de una Función\ADOParametros_6C -SQLParam\BLL\obj\Debug\BLL.pdb
