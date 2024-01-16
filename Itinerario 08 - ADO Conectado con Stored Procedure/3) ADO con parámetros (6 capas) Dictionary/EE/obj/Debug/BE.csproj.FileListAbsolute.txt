@@ -1,0 +1,9 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\bin\Debug\EE.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\bin\Debug\EE.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\bin\Debug\Abstraccion.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\bin\Debug\Abstraccion.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\obj\Debug\BE.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\obj\Debug\BE.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\obj\Debug\EE.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\EE\obj\Debug\EE.pdb

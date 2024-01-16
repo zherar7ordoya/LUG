@@ -1,0 +1,13 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\MPP.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\MPP.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\Abstraccion.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\DAL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\EE.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\Abstraccion.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\DAL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\bin\Debug\EE.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\obj\Debug\MPP.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\obj\Debug\MPP.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\obj\Debug\MPP.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\obj\Debug\MPP.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\MPP\obj\Debug\MPP.pdb

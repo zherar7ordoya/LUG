@@ -1,0 +1,6 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\Abstraccion\bin\Debug\Abstraccion.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\Abstraccion\bin\Debug\Abstraccion.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\Abstraccion\obj\Debug\Abstraccion.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\Abstraccion\obj\Debug\Abstraccion.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\Abstraccion\obj\Debug\Abstraccion.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\3) ADO con parámetros (6 capas) Dictionary\Abstraccion\obj\Debug\Abstraccion.pdb
