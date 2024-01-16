@@ -8,108 +8,90 @@ namespace DAL
 {
     public class DatosDictionary
     {
-        //string CadenaC = @"Data Source=.\SQLEXPRESS02;Initial Catalog=ADO_en_Capas;Integrated Security=True";
-        string CadenaC = ConfigurationManager.ConnectionStrings["AdoEnCapas"].ToString();
-        //private SqlConnection oCnn = new SqlConnection(@"Data Source=.\SQLEXPRESS02;Initial Catalog=ADO_en_Capas;Integrated Security=True");
-        private SqlConnection oCnn;
-        private SqlTransaction Tranx;
-        private SqlCommand Cmd;
+        private readonly string cadena = ConfigurationManager.ConnectionStrings["AdoEnCapas"].ToString();
+        private readonly SqlConnection conexion;
+        private SqlTransaction transaccion;
+        private SqlCommand comando;
 
         public DatosDictionary()
         {
-            oCnn =  new SqlConnection(CadenaC);
+            conexion = new SqlConnection(cadena);
         }
 
-        // Con Dictionary
         public DataTable Leer(string consulta, Dictionary<string, object> parametros)
         {
             DataTable tabla = new DataTable();
             SqlDataAdapter adaptador;
-            //paso la consulta y el objeto conection en el constructor
-            Cmd = new SqlCommand(consulta, oCnn)
+
+            comando = new SqlCommand(consulta, conexion)
             {
                 CommandType = CommandType.StoredProcedure
             };
+
             try
             {
-                adaptador = new SqlDataAdapter(Cmd);
+                adaptador = new SqlDataAdapter(comando);
 
                 if (parametros != null)
                 {
-                    //si la hashtable no esta vacia, y tiene el dato q busco 
                     foreach (var parametro in parametros)
                     {
-                        //cargo los parametros que le estoy pasando con la Hash
-                        Cmd.Parameters.AddWithValue(parametro.Key, parametro.Value);
+                        comando.Parameters.AddWithValue(parametro.Key, parametro.Value);
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            catch (SqlException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
+
             adaptador.Fill(tabla);
             return tabla;
         }
 
 
-        public bool LeerScalar(string consulta, Dictionary<string, object> parametros)
+        public bool Existe(string consulta, Dictionary<string, object> parametros)
         {
-            oCnn.Open();
-            //uso el constructor del objeto Command al instanciar el objeto
-            Cmd = new SqlCommand(consulta, oCnn)
+            conexion.Open();
+            comando = new SqlCommand(consulta, conexion)
             {
                 CommandType = CommandType.StoredProcedure
             };
+
             try
             {
                 if (parametros != null)
                 {
-                    //si la hashtable no esta vacia, y tiene el dato q busco 
                     foreach (var parametro in parametros)
                     {
-                        //cargo los parametros que le estoy pasando con la Hash
-                        Cmd.Parameters.AddWithValue(parametro.Key, parametro.Value);
+                        comando.Parameters.AddWithValue(parametro.Key, parametro.Value);
                     }
                 }
-                int respuesta = Convert.ToInt32(Cmd.ExecuteScalar());
-                oCnn.Close();
-                if (respuesta > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                int respuesta = Convert.ToInt32(comando.ExecuteScalar());
+                conexion.Close();
+
+                if (respuesta > 0) { return true; }
+                else { return false; }
             }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
+            catch (SqlException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
         }
 
 
         public bool Escribir(string consulta, Dictionary<string, object> parametros)
         {
-            if (oCnn.State == ConnectionState.Closed)
+            if (conexion.State == ConnectionState.Closed)
             {
-                oCnn.ConnectionString = CadenaC;
-                oCnn.Open();
+                conexion.ConnectionString = cadena;
+                conexion.Open();
             }
             try
             {
-                Tranx = oCnn.BeginTransaction();
+                transaccion = conexion.BeginTransaction();
                 //uso el constructor del objeto command
-                Cmd = new SqlCommand(consulta, oCnn, Tranx);
+                comando = new SqlCommand(consulta, conexion, transaccion);
                 //Cmd.Connection = oCnn;
                 //Cmd.CommandText = consulta;
                 //Cmd.Transaction = Tranx;
-                Cmd.CommandType = CommandType.StoredProcedure;
+                comando.CommandType = CommandType.StoredProcedure;
 
                 if (parametros != null)
                 {
@@ -117,27 +99,27 @@ namespace DAL
                     foreach (var parametro in parametros)
                     {
                         //cargo los parametros que le estoy pasando con la Hash
-                        Cmd.Parameters.AddWithValue(parametro.Key, parametro.Value);
+                        comando.Parameters.AddWithValue(parametro.Key, parametro.Value);
                     }
                 }
 
-                int respuesta = Cmd.ExecuteNonQuery();
-                Tranx.Commit();
+                int respuesta = comando.ExecuteNonQuery();
+                transaccion.Commit();
                 return true;
             }
             catch (SqlException)
             {
-                Tranx.Rollback();
+                transaccion.Rollback();
                 return false;
             }
             catch (Exception)
             {
-                Tranx.Rollback();
+                transaccion.Rollback();
                 return false;
             }
             finally
             {
-                oCnn.Close();
+                conexion.Close();
             }
         }
 

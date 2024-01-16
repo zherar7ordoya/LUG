@@ -99,7 +99,7 @@ namespace MPP
             if (oBECli.Id == 0)
             {
                 parametros.Add("@DNI", oBECli.DNI);
-                return oDatos.LeerScalar("s_Cliente_Existe_DNI", parametros);
+                return oDatos.Existe("s_Cliente_Existe_DNI", parametros);
             }
             else
             {

@@ -64,7 +64,7 @@ namespace MPP
             {
                 { "@IdLoc", oBELoc.Id }
             };
-            return oDatos.LeerScalar("s_Localidad_Asociada", parametros);
+            return oDatos.Existe("s_Localidad_Asociada", parametros);
         }
 
         public bool Guardar(BELocalidad Objeto)
