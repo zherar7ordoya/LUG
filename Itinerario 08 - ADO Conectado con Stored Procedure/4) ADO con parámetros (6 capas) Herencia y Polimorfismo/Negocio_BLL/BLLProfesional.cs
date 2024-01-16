@@ -1,16 +1,12 @@
 ﻿using BE;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BE;
 using Abstraccion;
 using MPP;
 
 namespace Negocio_BLL
 {
-   public class BLLProfesional: BLLJugador, IGestor<BEProfesional>
+    public class BLLProfesional: BLLJugador, IGestor<BEProfesional>
     {
         public BLLProfesional()
         {

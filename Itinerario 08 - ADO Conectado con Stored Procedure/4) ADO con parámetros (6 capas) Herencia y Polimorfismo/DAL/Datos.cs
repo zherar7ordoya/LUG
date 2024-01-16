@@ -1,138 +1,100 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
-
+using System.Configuration;
 
 namespace DAL
 {
     public class Datos
     {
+        readonly string cadena = ConfigurationManager.ConnectionStrings["Equipo"].ToString();
+        private readonly SqlConnection conexion;
+        private SqlTransaction transaccion;
+        private SqlCommand comando;
 
-
-        string CadenaC = @"Data Source=.\SQLEXPRESS02;Initial Catalog=Equipo;Integrated Security=True";
-        private SqlConnection oCnn = new SqlConnection(@"Data Source=.\SQLEXPRESS02;Initial Catalog=Equipo;Integrated Security=True");
-        private SqlTransaction Tranx;
-        private SqlCommand Cmd;
-
-        // con arraylist
-        public DataTable Leer(string Consulta, Hashtable Hdatos)
+        public Datos()
         {
-            DataTable Dt = new DataTable();
-            SqlDataAdapter Da;
-            //paso la consulta y el objeto conection en el constructor
-            Cmd = new SqlCommand(Consulta, oCnn);
-            Cmd.CommandType = CommandType.StoredProcedure;
-
-            try
-            {
-                Da = new SqlDataAdapter(Cmd);
-
-                if ((Hdatos != null))
-                {
-                    //si la hashtable no esta vacia, y tiene el dato q busco 
-                    foreach (string dato in Hdatos.Keys)
-                    {
-                        //cargo los parametros que le estoy pasando con la Hash
-                        Cmd.Parameters.AddWithValue(dato, Hdatos[dato]);
-                    }
-                }
-            }
-
-            catch (SqlException ex)
-            { throw ex; }
-            catch (Exception ex)
-            { throw ex; }
-            Da.Fill(Dt);
-            return Dt;
-
+            conexion = new SqlConnection(cadena);
+            conexion.Open(); // Abre la conexión en el constructor
         }
 
-
-        public bool LeerScalar(string Consulta, Hashtable Hdatos)
+        private void ConfigurarComando(string consulta, Hashtable parametros = null)
         {
-            oCnn.Open();
-            //uso el constructor del objeto Command al instanciar el objeto
-            Cmd = new SqlCommand(Consulta, oCnn);
-            Cmd.CommandType = CommandType.StoredProcedure;
-            try
+            comando = new SqlCommand(consulta, conexion)
             {
-                if ((Hdatos != null))
-                {
-                    //si la hashtable no esta vacia, y tiene el dato q busco 
-                    foreach (string dato in Hdatos.Keys)
-                    {
-                        //cargo los parametros que le estoy pasando con la Hash
-                        Cmd.Parameters.AddWithValue(dato, Hdatos[dato]);
-                    }
-                }
+                CommandType = CommandType.StoredProcedure
+            };
 
-                int Respuesta = Convert.ToInt32(Cmd.ExecuteScalar());
-                oCnn.Close();
-                if (Respuesta > 0)
-                { return true; }
-                else
-                { return false; }
+            if (parametros != null)
+            {
+                AgregarParametros(parametros);
             }
-            catch (SqlException ex)
-            { throw ex; }
         }
-        public bool Escribir(string consulta, Hashtable Hdatos)
-        {
 
-            if (oCnn.State == ConnectionState.Closed)
+        private void AgregarParametros(Hashtable parametros)
+        {
+            foreach (string parametro in parametros.Keys)
             {
-                oCnn.ConnectionString = CadenaC;
-                oCnn.Open();
+                comando.Parameters.AddWithValue(parametro, parametros[parametro]);
             }
+        }
+
+        public DataTable Leer(string consulta, Hashtable parametros)
+        {
+            DataTable tabla = new DataTable();
+            SqlDataAdapter adaptador;
 
             try
             {
-                Tranx = oCnn.BeginTransaction();
-                //uso el constructor del objeto command
-                Cmd = new SqlCommand(consulta, oCnn, Tranx);
-                //Cmd.Connection = oCnn;
-                //Cmd.CommandText = consulta;
-                //Cmd.Transaction = Tranx;
-                Cmd.CommandType = CommandType.StoredProcedure;
+                ConfigurarComando(consulta, parametros);
+                adaptador = new SqlDataAdapter(comando);
+            }
+            catch (SqlException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
+            finally { conexion.Close(); }
 
-                if ((Hdatos != null))
-                {
-                    //si la hashtable no esta vacia, y tiene el dato q busco 
-                    foreach (string dato in Hdatos.Keys)
-                    {
-                        //cargo los parametros que le estoy pasando con la Hash
-                        Cmd.Parameters.AddWithValue(dato, Hdatos[dato]);
-                    }
-                }
+            adaptador.Fill(tabla);
+            return tabla;
+        }
 
-                int respuesta = Cmd.ExecuteNonQuery();
-                Tranx.Commit();
+        public bool Existe(string consulta, Hashtable parametros)
+        {
+            try
+            {
+                ConfigurarComando(consulta, parametros);
+                int Respuesta = Convert.ToInt32(comando.ExecuteScalar());
+                return Respuesta > 0;
+            }
+            catch (SqlException ex) { throw ex; }
+            catch (Exception ex) { throw ex; }
+            finally { conexion.Close(); }
+        }
+
+        public bool Escribir(string consulta, Hashtable parametros)
+        {
+            try
+            {
+                transaccion = conexion.BeginTransaction();
+                ConfigurarComando(consulta, parametros);
+                AgregarParametros(parametros);
+                int respuesta = comando.ExecuteNonQuery();
+                transaccion.Commit();
                 return true;
-
             }
-
             catch (SqlException ex)
-            {   
-                Tranx.Rollback();
-               
+            {
+                transaccion.Rollback();
                 return false;
                 throw ex;
             }
             catch (Exception ex)
             {
-                Tranx.Rollback();
+                transaccion.Rollback();
                 return false;
                 throw ex;
             }
-            finally
-            { oCnn.Close(); }
-
-
-        }   
+            finally { conexion.Close(); }
+        }
     }
 }

@@ -1,0 +1,13 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\MPP.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\BE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\obj\Debug\MPP.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\obj\Debug\MPP.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\obj\Debug\MPP.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\obj\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\MPP\obj\Debug\MPP.pdb

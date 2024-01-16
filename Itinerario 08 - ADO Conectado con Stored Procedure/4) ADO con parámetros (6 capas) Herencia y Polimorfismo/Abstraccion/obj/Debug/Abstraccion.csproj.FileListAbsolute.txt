@@ -1,0 +1,6 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\Abstraccion\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\Abstraccion\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\Abstraccion\obj\Debug\Abstraccion.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\Abstraccion\obj\Debug\Abstraccion.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\Abstraccion\obj\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\Abstraccion\obj\Debug\Abstraccion.pdb

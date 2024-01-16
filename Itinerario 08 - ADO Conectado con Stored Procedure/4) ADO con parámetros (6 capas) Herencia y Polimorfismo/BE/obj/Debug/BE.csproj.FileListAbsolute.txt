@@ -1,0 +1,9 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\bin\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\bin\Debug\BE.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\bin\Debug\Abstraccion.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\bin\Debug\Abstraccion.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\obj\Debug\BE.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\obj\Debug\BE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 08 - ADO Conectado con Stored Procedure\4) ADO con parámetros (6 capas) Herencia y Polimorfismo\BE\obj\Debug\BE.pdb

@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BE;
 using Abstraccion;
 using MPP;
 
 namespace Negocio_BLL
 {
-   public class BLLPrincipiante: BLLJugador,IGestor<BEPrincipiante>
+    public class BLLPrincipiante: BLLJugador,IGestor<BEPrincipiante>
     {
         public BLLPrincipiante()
         {
