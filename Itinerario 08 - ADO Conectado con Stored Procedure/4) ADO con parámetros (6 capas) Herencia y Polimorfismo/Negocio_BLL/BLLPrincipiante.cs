@@ -6,45 +6,37 @@ using MPP;
 
 namespace Negocio_BLL
 {
-    public class BLLPrincipiante: BLLJugador,IGestor<BEPrincipiante>
+    public class BLLPrincipiante : BLLJugador, IGestor<BEPrincipiante>
     {
+        readonly MPPPrincipiante oMPPJPrin;
+
         public BLLPrincipiante()
         {
             oMPPJPrin = new MPPPrincipiante();
         }
 
-        MPPPrincipiante oMPPJPrin;
-      public override int ObtenerPuntaje(BEJugador oBEJug)
+        //|||||||||||||||||||||||||||||||||||||||| IMPLEMENTACIÓN DE LA INTERFAZ
+
+        public bool Guardar(BEPrincipiante oBEPrin) => oMPPJPrin.Guardar(oBEPrin);
+        public BEPrincipiante ListarObjeto(BEPrincipiante oBEPrin) => oMPPJPrin.ListarObjeto(oBEPrin);
+        public bool Eliminar(BEPrincipiante Objeto) => throw new NotImplementedException();
+        public List<BEPrincipiante> ListarTodo() => throw new NotImplementedException();
+
+
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS PROPIOS
+
+        public override int ObtenerPuntaje(BEJugador oBEJug)
         {
-            int puntaje = 0;
-            puntaje = 10 * oBEJug.GolesRealizados - 2 * oBEJug.CantidadRojas - 2 * oBEJug.CantidadAmarillas;
+            int puntaje = 10 * oBEJug.GolesRealizados - 2 * oBEJug.CantidadRojas - 2 * oBEJug.CantidadAmarillas;
             return puntaje;
         }
 
         public bool Guardar_JugadorXEquipo(BEPrincipiante oBEPrin, BEEquipo oBEEqui)
-        {    
-             return oMPPJPrin.Guardar_JugadorXEquipo(oBEEqui, oBEPrin);
-          
-        }
-        public List<BEPrincipiante> ListarTodo()
         {
-            throw new NotImplementedException();
+            return oMPPJPrin.Guardar_JugadorXEquipo(oBEEqui, oBEPrin);
         }
 
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-        public bool Guardar(BEPrincipiante oBEPrin)
-        {
-            return oMPPJPrin.Guardar(oBEPrin);
-        }
-
-        public bool Baja(BEPrincipiante Objeto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public BEPrincipiante ListarObjeto(BEPrincipiante oBEPrin)
-        {
-            return oMPPJPrin.ListarObjeto(oBEPrin);
-        }
     }
 }

@@ -6,34 +6,23 @@ using MPP;
 
 namespace Negocio_BLL
 {
-
     public class BLLTecnico : IGestor<BETecnico>
     {
+        readonly MPPTecnico oMPPTec;
+
         public BLLTecnico()
         {
             oMPPTec = new MPPTecnico();
         }
 
-       MPPTecnico oMPPTec;
+        //|||||||||||||||||||||||||||||||||||||||| IMPLEMENTACIÓN DE LA INTERFAZ
 
-        public List<BETecnico> ListarTodo()
-        {
-            return oMPPTec.ListarTodo();
-        }
+        public bool Guardar(BETecnico oBETec) => oMPPTec.Guardar(oBETec);
+        public List<BETecnico> ListarTodo() => oMPPTec.ListarTodo();
+        public bool Eliminar(BETecnico Objeto) => throw new NotImplementedException();
+        public BETecnico ListarObjeto(BETecnico Objeto) => throw new NotImplementedException();
 
-        public bool Baja(BETecnico Objeto)
-        {
-            throw new NotImplementedException();
-        }
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-        public bool Guardar(BETecnico oBETec)
-        {
-            return oMPPTec.Guardar(oBETec);
-        }
-
-        public BETecnico ListarObjeto(BETecnico Objeto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

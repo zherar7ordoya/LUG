@@ -8,7 +8,5 @@
         public int CantidadAmarillas { get; set; }
         public int CantidadRojas { get; set; }
         public int GolesRealizados { get; set; }
-
-
     }
 }

@@ -10,39 +10,38 @@ namespace MPP
 {
     public class MPPPrincipiante : IGestor<BEPrincipiante>
     {
+        AccesoDatos oDatos;
+        Dictionary<string, object> parametros;
 
         public MPPPrincipiante()      
         {
-            oDatos = new Datos();
-        
-
+            oDatos = new AccesoDatos();
         }
 
-        Datos oDatos;
-        Hashtable Hdatos;
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
         public bool Guardar(BEPrincipiante oBEPrin)
         {
            
             string Consulta = "Alta_JPrincipiante";
-            Hdatos = new Hashtable();
-            Hdatos.Add("@TAmarilla", oBEPrin.CantidadAmarillas);
-            Hdatos.Add("@TRojas", oBEPrin.CantidadRojas);
-            Hdatos.Add("@GolesR", oBEPrin.GolesRealizados);
-            Hdatos.Add("@Rapado", oBEPrin.Rapado);
-            Hdatos.Add("@Nombre", oBEPrin.Nombre);
-            Hdatos.Add("@Apellido", oBEPrin.Apellido);
-            Hdatos.Add("@DNI", oBEPrin.DNI);
+            parametros = new Dictionary<string, object>();
+            parametros.Add("@TAmarilla", oBEPrin.CantidadAmarillas);
+            parametros.Add("@TRojas", oBEPrin.CantidadRojas);
+            parametros.Add("@GolesR", oBEPrin.GolesRealizados);
+            parametros.Add("@Rapado", oBEPrin.Rapado);
+            parametros.Add("@Nombre", oBEPrin.Nombre);
+            parametros.Add("@Apellido", oBEPrin.Apellido);
+            parametros.Add("@DNI", oBEPrin.DNI);
 
-            return oDatos.Escribir(Consulta, Hdatos);
+            return oDatos.Escribir(Consulta, parametros);
         }
 
         public BEPrincipiante ListarObjeto(BEPrincipiante oBEprin)
         {
             string Consulta = "Buscar_Jugador_DNI";
-            Hdatos = new Hashtable();
-            Hdatos.Add("@DNI", oBEprin.DNI);
-            DataTable Tabla = oDatos.Leer(Consulta, Hdatos);
+            parametros = new Dictionary<string, object>();
+            parametros.Add("@DNI", oBEprin.DNI);
+            DataTable Tabla = oDatos.Leer(Consulta, parametros);
 
             if (Tabla.Rows.Count > 0)
 
@@ -72,10 +71,10 @@ namespace MPP
             if (oBEPriBuscado.Codigo != 0)
             {  
                 Consulta = "Alta_Jugador_Equipo";
-                Hdatos = new Hashtable();
-                Hdatos.Add("@CodEquipo", oBEEq.Codigo);
-                Hdatos.Add("@CodJugador", oBEPriBuscado.Codigo);
-                return oDatos.Escribir(Consulta, Hdatos);
+                parametros = new Dictionary<string, object>();
+                parametros.Add("@CodEquipo", oBEEq.Codigo);
+                parametros.Add("@CodJugador", oBEPriBuscado.Codigo);
+                return oDatos.Escribir(Consulta, parametros);
             }
             else
             {
@@ -90,7 +89,7 @@ namespace MPP
         }
 
       
-        public bool Baja(BEPrincipiante Objeto)
+        public bool Eliminar(BEPrincipiante Objeto)
         {
             throw new NotImplementedException();
         }

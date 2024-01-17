@@ -12,7 +12,7 @@ namespace Presentacion_IU
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
         private void gestionarEquipoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -20,7 +20,6 @@ namespace Presentacion_IU
             FrmEquipo ofre = new FrmEquipo();
             ofre.MdiParent = this;
             ofre.Show();
-
         }
     }
 }

@@ -10,14 +10,17 @@ namespace MPP
 {
     public class MPPTecnico : IGestor<BETecnico>
     {
+        AccesoDatos oDatos;
+        Dictionary<string, object> parametros;
+
         public MPPTecnico()
         {
-            oDatos = new Datos();
-            Hdatos = new Hashtable();
+            oDatos = new AccesoDatos();
+            parametros = new Dictionary<string, object>();
         }
 
-        Datos oDatos;
-        Hashtable Hdatos;
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
         public List<BETecnico> ListarTodo()
         {
             //instancio un objeto de la clase datos para operar con la BD
@@ -47,14 +50,14 @@ namespace MPP
         public bool Guardar(BETecnico oBETec)
         {           
             string Consulta_SQL = "Modificar_Tecnico"; 
-            Hdatos.Add("@Cod", oBETec.Codigo);
+            parametros.Add("@Cod", oBETec.Codigo);
             //hago el update del campo estado cuando se asigna el tecnico a un equipo
-            Hdatos.Add("@Estado", true);
+            parametros.Add("@Estado", true);
      
-            return oDatos.Escribir(Consulta_SQL,Hdatos);
+            return oDatos.Escribir(Consulta_SQL,parametros);
         }
 
-        public bool Baja(BETecnico Objeto)
+        public bool Eliminar(BETecnico Objeto)
         {
             throw new NotImplementedException();
         }

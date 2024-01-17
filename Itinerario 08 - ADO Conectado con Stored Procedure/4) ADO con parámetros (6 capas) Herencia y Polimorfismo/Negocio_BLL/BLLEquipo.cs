@@ -6,60 +6,46 @@ using MPP;
 
 namespace Negocio_BLL
 {
-    public class BLLEquipo:IGestor<BEEquipo>
+    public class BLLEquipo : IGestor<BEEquipo>
     {
+        readonly MPPEquipo oMPPEquipo;
+
         public BLLEquipo()
         {
             oMPPEquipo = new MPPEquipo();
         }
 
-        MPPEquipo oMPPEquipo;
+        //|||||||||||||||||||||||||||||||||||||||| IMPLEMENTACION DE LA INTERFAZ
 
-        #region "Metodo Propio"
+        public List<BEEquipo> ListarTodo() => oMPPEquipo.ListarTodo();
+        public bool Guardar(BEEquipo oBEEquipo) => oMPPEquipo.Guardar(oBEEquipo);
+        public bool Eliminar(BEEquipo objeto) => throw new NotImplementedException();
+        public BEEquipo ListarObjeto(BEEquipo objeto) => throw new NotImplementedException();
+
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||| METODOS PROPIOS
+
         public int ObtenerPuntajeEquipo(BEEquipo oBEEquipo)
         {
-            int ptos = 0;
+            int puntos = 0;
 
             foreach (BEJugador jugador in oBEEquipo.ListaJugadores)
             {
+                // De esta manera se maneja el polimorfismo.
                 if (jugador is BEPrincipiante)
                 {
                     BLLPrincipiante oBLLprin = new BLLPrincipiante();
-                    ptos = oBLLprin.ObtenerPuntaje(jugador) + ptos;
-
+                    puntos = oBLLprin.ObtenerPuntaje(jugador) + puntos;
                 }
                 else
                 {
                     BLLProfesional oBLLprof = new BLLProfesional();
-                    ptos = oBLLprof.ObtenerPuntaje(jugador) + ptos;
+                    puntos = oBLLprof.ObtenerPuntaje(jugador) + puntos;
                 }
-
             }
-            return ptos;
-        }
-        #endregion
-
-        public List<BEEquipo> ListarTodo()
-        {
-            return oMPPEquipo.ListarTodo();
+            return puntos;
         }
 
-        public bool Guardar(BEEquipo oBEEquipo)
-        {
-            return oMPPEquipo.Guardar(oBEEquipo);
-        }
-
-        public bool Baja(BEEquipo Objeto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public BEEquipo ListarObjeto(BEEquipo Objeto)
-        {
-            throw new NotImplementedException();
-        }
-
-       
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
     }
 }

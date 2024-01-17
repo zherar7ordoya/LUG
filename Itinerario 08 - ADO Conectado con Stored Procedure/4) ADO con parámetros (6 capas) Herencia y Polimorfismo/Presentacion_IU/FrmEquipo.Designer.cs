@@ -29,7 +29,7 @@ namespace Presentacion_IU
         /// </summary>
         private void InitializeComponent()
         {
-            this.Label14 = new System.Windows.Forms.Label();
+            this.InfoLabel = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
             this.dataGridJugadores = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,14 +65,14 @@ namespace Presentacion_IU
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Label14
+            // InfoLabel
             // 
-            this.Label14.AutoSize = true;
-            this.Label14.Location = new System.Drawing.Point(33, 438);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(45, 13);
-            this.Label14.TabIndex = 44;
-            this.Label14.Text = "Label14";
+            this.InfoLabel.AutoSize = true;
+            this.InfoLabel.Location = new System.Drawing.Point(33, 438);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(45, 13);
+            this.InfoLabel.TabIndex = 44;
+            this.InfoLabel.Text = "Label14";
             // 
             // Button3
             // 
@@ -91,7 +91,6 @@ namespace Presentacion_IU
             this.dataGridJugadores.Name = "dataGridJugadores";
             this.dataGridJugadores.Size = new System.Drawing.Size(538, 189);
             this.dataGridJugadores.TabIndex = 42;
-            this.dataGridJugadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridJugadores_CellContentClick);
             // 
             // label3
             // 
@@ -224,7 +223,6 @@ namespace Presentacion_IU
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 21);
             this.comboBox2.TabIndex = 17;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Label15
             // 
@@ -354,7 +352,7 @@ namespace Presentacion_IU
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 460);
-            this.Controls.Add(this.Label14);
+            this.Controls.Add(this.InfoLabel);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.dataGridJugadores);
             this.Controls.Add(this.label3);
@@ -377,7 +375,7 @@ namespace Presentacion_IU
 
         #endregion
 
-        internal System.Windows.Forms.Label Label14;
+        internal System.Windows.Forms.Label InfoLabel;
         internal System.Windows.Forms.Button Button3;
         public System.Windows.Forms.DataGridView dataGridJugadores;
         internal System.Windows.Forms.Label label3;

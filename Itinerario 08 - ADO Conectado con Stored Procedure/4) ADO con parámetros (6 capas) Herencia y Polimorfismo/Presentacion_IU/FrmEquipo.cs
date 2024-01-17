@@ -9,45 +9,36 @@ namespace Presentacion_IU
 {
     public partial class FrmEquipo : Form
     {
-        public FrmEquipo()
-        {
-            InitializeComponent();
-            //instancio los objetos en el constructo del form
-            oBLLTecnico = new BLLTecnico();
-            oBLLEquipo = new BLLEquipo();
-            oBLLPrin = new BLLPrincipiante();
-            oBLLProf = new BLLProfesional();
-
-
-            CargarEquipoDatagrid();
-
-
-        }
-
-        //defino los objetos a utilizar
         BLLTecnico oBLLTecnico;
         BLLEquipo oBLLEquipo;
         BLLPrincipiante oBLLPrin;
         BLLProfesional oBLLProf;
         BEEquipo oBEEquipo;
         BEProfesional oJugadorPro;
-        BEPrincipiante oJugadorprin; 
-
+        BEPrincipiante oJugadorprin;
         List<BEEquipo> LBEEquipo;
 
+        public FrmEquipo()
+        {
+            InitializeComponent();
+
+            oBLLTecnico = new BLLTecnico();
+            oBLLEquipo = new BLLEquipo();
+            oBLLPrin = new BLLPrincipiante();
+            oBLLProf = new BLLProfesional();
+
+            CargarEquipos();
+        }
 
         private void FrmEquipo_Load(object sender, EventArgs e)
-        {    //caro la lista de equipos
-            CargarEquipoDatagrid();
-            //cargo la lista de tecnicos
-            CargarTecnico();
-
-            //vacio lo que se encuentre en el label
-            Label14.Text = string.Empty;
+        {
+            CargarTecnicos();
+            CargarEquipos();
+            InfoLabel.Text = string.Empty;
         }
 
         //cargar un combo con una lista
-        public void CargarTecnico()
+        public void CargarTecnicos()
         {
             //lleno al combo con la lista
             comboBox1.DataSource = null;
@@ -63,7 +54,7 @@ namespace Presentacion_IU
 
 
         //cargo el datagrid con la lista
-        public void CargarEquipoDatagrid()
+        public void CargarEquipos()
         {
             this.dataGridEquipo.DataSource = null;
             // lo limpio paraque me actualice cuando agrego valores a la lista
@@ -94,10 +85,10 @@ namespace Presentacion_IU
 
             }
             //actualizo el combo de tecnicos
-           CargarTecnico();
+           CargarTecnicos();
 
            //lo muestro en la grilla de equipos
-            CargarEquipoDatagrid();
+            CargarEquipos();
 
             //limpio los txt de equipo
             TxtNombreEquipo.Text = string.Empty;
@@ -130,7 +121,7 @@ namespace Presentacion_IU
                     { oBLLProf.Guardar_JugadorXEquipo(oJugadorPro, oBEEquipo); }
 
                     //cargo la lista de equipos, asi actualizo y puedo ver los jugadores asociados al equipo
-                    CargarEquipoDatagrid();
+                    CargarEquipos();
                     Limpiar();
 
                 }
@@ -153,7 +144,7 @@ namespace Presentacion_IU
                     { oBLLPrin.Guardar_JugadorXEquipo(oJugadorprin, oBEEquipo); }
 
                     //cargo la lista de equipos, asi actualizo y puedo ver los jugadores asociados al equipo
-                    CargarEquipoDatagrid();
+                    CargarEquipos();
                     Limpiar();
 
                 }
@@ -177,19 +168,24 @@ namespace Presentacion_IU
 
         private void dataGridEquipo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Haya o no haya jugadores en el equipo, tengo que limpiar la grilla.
+            dataGridJugadores.DataSource = null;
             oBEEquipo = (BEEquipo)this.dataGridEquipo.CurrentRow.DataBoundItem;
+            List<BEJugador> jugadores = oBEEquipo.ListaJugadores;
 
-
-             dataGridJugadores.DataSource = null;
-            //como el objeto Equipo tiene ya su lista de jugadores, la muestro
-            dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
-            //propiedad de la grilla para autosize de columnas
-            dataGridJugadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            //cambio color alternando las filas de la grilla
-            dataGridJugadores.AlternatingRowsDefaultCellStyle.BackColor = Color.GreenYellow;
-            dataGridJugadores.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
-            dataGridJugadores.Columns["CantidadRojas"].HeaderText = "T.Rojas";
-            dataGridJugadores.Columns["GolesRealizados"].HeaderText = "Goles";
+            if (jugadores != null)
+            {
+                //como el objeto Equipo tiene ya su lista de jugadores, la muestro
+                //dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
+                dataGridJugadores.DataSource = jugadores;
+                //propiedad de la grilla para autosize de columnas
+                dataGridJugadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+                //cambio color alternando las filas de la grilla
+                dataGridJugadores.AlternatingRowsDefaultCellStyle.BackColor = Color.GreenYellow;
+                dataGridJugadores.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
+                dataGridJugadores.Columns["CantidadRojas"].HeaderText = "T.Rojas";
+                dataGridJugadores.Columns["GolesRealizados"].HeaderText = "Goles";
+            }
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -210,17 +206,7 @@ namespace Presentacion_IU
                 }
             }
 
-            Label14.Text = "El puntaje Maximo fue del equipo " + MaxNomb + " : " + Convert.ToString(MaxPtje);
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridJugadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            InfoLabel.Text = "El puntaje Maximo fue del equipo " + MaxNomb + " : " + Convert.ToString(MaxPtje);
         }
     }
 }
