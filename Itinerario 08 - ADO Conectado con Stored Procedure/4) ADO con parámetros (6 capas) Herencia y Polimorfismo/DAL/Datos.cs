@@ -16,9 +16,16 @@ namespace DAL
         public Datos()
         {
             conexion = new SqlConnection(cadena);
-            conexion.Open(); // Abre la conexión en el constructor
+
+            // No es necesario abrir y cerrar la conexión en cada método. Se puede abrir
+            // la conexión en el constructor y cerrarla al finalizar las operaciones.
+            conexion.Open();
         }
 
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HELPERS
+
+        // Método privado que se encarga de la creación y configuración del comando.
+        // Esto reduce la duplicación de código.
         private void ConfigurarComando(string consulta, Hashtable parametros = null)
         {
             comando = new SqlCommand(consulta, conexion)
@@ -39,6 +46,8 @@ namespace DAL
                 comando.Parameters.AddWithValue(parametro, parametros[parametro]);
             }
         }
+
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS
 
         public DataTable Leer(string consulta, Hashtable parametros)
         {
@@ -63,8 +72,8 @@ namespace DAL
             try
             {
                 ConfigurarComando(consulta, parametros);
-                int Respuesta = Convert.ToInt32(comando.ExecuteScalar());
-                return Respuesta > 0;
+                int respuesta = Convert.ToInt32(comando.ExecuteScalar());
+                return respuesta > 0;
             }
             catch (SqlException ex) { throw ex; }
             catch (Exception ex) { throw ex; }
@@ -77,8 +86,7 @@ namespace DAL
             {
                 transaccion = conexion.BeginTransaction();
                 ConfigurarComando(consulta, parametros);
-                AgregarParametros(parametros);
-                int respuesta = comando.ExecuteNonQuery();
+                comando.ExecuteNonQuery();
                 transaccion.Commit();
                 return true;
             }
@@ -96,5 +104,7 @@ namespace DAL
             }
             finally { conexion.Close(); }
         }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }
