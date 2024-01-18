@@ -26,17 +26,23 @@ namespace Presentacion_IU
             oBLLEquipo = new BLLEquipo();
             oBLLPrin = new BLLPrincipiante();
             oBLLProf = new BLLProfesional();
-
-            CargarEquipos();
         }
+
+        //|||||||||||||||||||||||||||||||||||||||| OPERACIONES DE CARGA DEL FORM
 
         private void FrmEquipo_Load(object sender, EventArgs e)
         {
             CargarTecnicos();
             CargarEquipos();
             InfoLabel.Text = string.Empty;
+            AgregarEquipoButton.Click += AgregarEquipo;
+            AgregarJugadorButton.Click += AgregarJugador;
+            BuscarPuntajeButton.Click += MayorPuntaje;
+            EquiposDGV.CellContentClick += ListarJugadores;
         }
 
+
+        // ComboBox
         public void CargarTecnicos()
         {
             TecnicosCombobox.DataSource = null;
@@ -47,30 +53,56 @@ namespace Presentacion_IU
         }
 
 
-        //cargo el datagrid con la lista
+        // DataGridView 1
         public void CargarEquipos()
         {
-            this.dataGridEquipo.DataSource = null;
+            EquiposDGV.DataSource = null;
             // lo limpio paraque me actualice cuando agrego valores a la lista
-            this.dataGridEquipo.DataSource = oBLLEquipo.ListarTodo();
+            EquiposDGV.DataSource = oBLLEquipo.ListarTodo();
             //propiedad de la grilla para autosize de columnas
-            this.dataGridEquipo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            EquiposDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             //cambio color alternando las filas de la grilla
-            this.dataGridEquipo.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGreen;
+            EquiposDGV.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGreen;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+
+        // DataGridView 2
+        private void ListarJugadores(object sender, DataGridViewCellEventArgs e)
+        {
+            // Haya o no haya jugadores en el equipo, tengo que limpiar la grilla.
+            JugadoresDGV.DataSource = null;
+            oBEEquipo = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
+            List<BEJugador> jugadores = oBEEquipo.ListaJugadores;
+
+            if (jugadores != null)
+            {
+                //como el objeto Equipo tiene ya su lista de jugadores, la muestro
+                //dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
+                JugadoresDGV.DataSource = jugadores;
+                //propiedad de la grilla para autosize de columnas
+                JugadoresDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+                //cambio color alternando las filas de la grilla
+                JugadoresDGV.AlternatingRowsDefaultCellStyle.BackColor = Color.GreenYellow;
+                JugadoresDGV.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
+                JugadoresDGV.Columns["CantidadRojas"].HeaderText = "T.Rojas";
+                JugadoresDGV.Columns["GolesRealizados"].HeaderText = "Goles";
+            }
+        }
+
+
+        // Botón 1
+        private void AgregarEquipo(object sender, EventArgs e)
         {
             //instancio el objeto equipo en el bloque
             oBEEquipo = new BEEquipo();
             //asigno los valores en el bloque para el Objeto Equipo
-            oBEEquipo.Nombre = this.TxtNombreEquipo.Text;
-            oBEEquipo.Color = this.TxtColoresEquipo.Text;
+            oBEEquipo.Nombre = TxtNombreEquipo.Text;
+            oBEEquipo.Color = TxtColoresEquipo.Text;
             oBEEquipo.Tecnico = (BETecnico)TecnicosCombobox.SelectedItem;
 
             //llama a la BLL y cargo al equipo
 
-            if(oBLLEquipo.Guardar(oBEEquipo))
+            if (oBLLEquipo.Guardar(oBEEquipo))
             {
                 //si se guarda OK Equipo, entonces actualizo el estado del tecnico para que no aparezca en el combo
                 //y asi no pueda estar asginado a otro equipo
@@ -79,9 +111,9 @@ namespace Presentacion_IU
 
             }
             //actualizo el combo de tecnicos
-           CargarTecnicos();
+            CargarTecnicos();
 
-           //lo muestro en la grilla de equipos
+            //lo muestro en la grilla de equipos
             CargarEquipos();
 
             //limpio los txt de equipo
@@ -89,24 +121,25 @@ namespace Presentacion_IU
             TxtColoresEquipo.Text = string.Empty;
         }
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
 
-            if (dataGridEquipo.SelectedRows.Count > 0)
+        // Botón 2
+        private void AgregarJugador(object sender, EventArgs e)
+        {
+            if (EquiposDGV.SelectedRows.Count > 0)
             {
-                oBEEquipo = (BEEquipo)dataGridEquipo.CurrentRow.DataBoundItem;
-               
+                oBEEquipo = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
+
                 //depende el tipo de jugador instancio una clase u otra
                 if (comboBox2.Text == "Profesional")
                 {
                     oJugadorPro = new BEProfesional();
                     //asigno los valores al objeto
                     oJugadorPro.Nombre = TextBox1.Text;
-                    oJugadorPro.Apellido = textBox5.Text;
-                    oJugadorPro.DNI = Convert.ToInt32(textBox6.Text);
-                    oJugadorPro.CantidadAmarillas = Convert.ToInt32(TextBox3.Text);
-                    oJugadorPro.CantidadRojas = Convert.ToInt32(TextBox2.Text);
-                    oJugadorPro.GolesRealizados = Convert.ToInt32(TextBox4.Text);
+                    oJugadorPro.Apellido = TextBox2.Text;
+                    oJugadorPro.DNI = Convert.ToInt32(TextBox3.Text);
+                    oJugadorPro.CantidadAmarillas = Convert.ToInt32(TextBox5.Text);
+                    oJugadorPro.CantidadRojas = Convert.ToInt32(TextBox4.Text);
+                    oJugadorPro.GolesRealizados = Convert.ToInt32(TextBox6.Text);
 
                     //paso los datos a la BLL para Ingresar el jugador en la BD
                     if (oBLLProf.Guardar(oJugadorPro))
@@ -117,7 +150,6 @@ namespace Presentacion_IU
                     //cargo la lista de equipos, asi actualizo y puedo ver los jugadores asociados al equipo
                     CargarEquipos();
                     Limpiar();
-
                 }
                 else
                 {
@@ -125,14 +157,14 @@ namespace Presentacion_IU
                     //asigno los valores al objeto
                     oJugadorprin.Rapado = true;
                     oJugadorprin.Nombre = TextBox1.Text;
-                    oJugadorprin.Apellido = textBox5.Text;
-                    oJugadorprin.DNI = Convert.ToInt32(textBox6.Text);
-                    oJugadorprin.CantidadAmarillas = Convert.ToInt32(TextBox3.Text);
-                    oJugadorprin.CantidadRojas = Convert.ToInt32(TextBox2.Text);
-                    oJugadorprin.GolesRealizados = Convert.ToInt32(TextBox4.Text);
-                    
+                    oJugadorprin.Apellido = TextBox2.Text;
+                    oJugadorprin.DNI = Convert.ToInt32(TextBox3.Text);
+                    oJugadorprin.CantidadAmarillas = Convert.ToInt32(TextBox5.Text);
+                    oJugadorprin.CantidadRojas = Convert.ToInt32(TextBox4.Text);
+                    oJugadorprin.GolesRealizados = Convert.ToInt32(TextBox6.Text);
+
                     //paso los datos a la BLL para Ingresar el jugador en la BD
-                     if (oBLLPrin.Guardar(oJugadorprin))
+                    if (oBLLPrin.Guardar(oJugadorprin))
                     //si el jugador se graba en la BD llamo a otro método para grabar en la tabla intermedia
                     // por eso paso el equipo y el jugador
                     { oBLLPrin.Guardar_JugadorXEquipo(oJugadorprin, oBEEquipo); }
@@ -140,52 +172,17 @@ namespace Presentacion_IU
                     //cargo la lista de equipos, asi actualizo y puedo ver los jugadores asociados al equipo
                     CargarEquipos();
                     Limpiar();
-
                 }
-            
-             
             }
-            else 
-            
-            {MessageBox.Show("Debe seleccionar un equipo para agregar al jugador"); }
+            else { MessageBox.Show("Debe seleccionar un equipo para agregar al jugador"); }
         }
 
-        void Limpiar()
+
+        // Botón 3
+        private void MayorPuntaje(object sender, EventArgs e)
         {
-            TextBox1.Text = string.Empty;
-            TextBox2.Text = string.Empty;
-            TextBox3.Text = string.Empty;
-            TextBox4.Text = string.Empty;
-
-
-        }
-
-        private void dataGridEquipo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Haya o no haya jugadores en el equipo, tengo que limpiar la grilla.
-            dataGridJugadores.DataSource = null;
-            oBEEquipo = (BEEquipo)this.dataGridEquipo.CurrentRow.DataBoundItem;
-            List<BEJugador> jugadores = oBEEquipo.ListaJugadores;
-
-            if (jugadores != null)
-            {
-                //como el objeto Equipo tiene ya su lista de jugadores, la muestro
-                //dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
-                dataGridJugadores.DataSource = jugadores;
-                //propiedad de la grilla para autosize de columnas
-                dataGridJugadores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-                //cambio color alternando las filas de la grilla
-                dataGridJugadores.AlternatingRowsDefaultCellStyle.BackColor = Color.GreenYellow;
-                dataGridJugadores.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
-                dataGridJugadores.Columns["CantidadRojas"].HeaderText = "T.Rojas";
-                dataGridJugadores.Columns["GolesRealizados"].HeaderText = "Goles";
-            }
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            int MaxPtje = 0;
-            string MaxNomb = string.Empty;
+            int maxPuntaje = 0;
+            string maxEquipo = string.Empty;
 
             BLLEquipo oBLLEquipo = new BLLEquipo();
 
@@ -195,14 +192,29 @@ namespace Presentacion_IU
             {
                 if (oBEEquipo.ListaJugadores != null)
                 {
-                    if (oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo) > MaxPtje)
+                    if (oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo) > maxPuntaje)
                     {
-                        MaxNomb = oBEEquipo.Nombre;
-                        MaxPtje = oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo);
+                        maxEquipo = oBEEquipo.Nombre;
+                        maxPuntaje = oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo);
                     }
                 }
             }
-            InfoLabel.Text = "El puntaje Maximo fue del equipo " + MaxNomb + " : " + Convert.ToString(MaxPtje);
+            InfoLabel.Text = $"El puntaje máximo es del equipo {maxEquipo}: {Convert.ToString(maxPuntaje)}";
         }
+
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HELPERS
+
+        void Limpiar()
+        {
+            TextBox1.Text = string.Empty;
+            TextBox2.Text = string.Empty;
+            TextBox3.Text = string.Empty;
+            TextBox4.Text = string.Empty;
+            TextBox5.Text = string.Empty;
+            TextBox6.Text = string.Empty;
+        }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
     }
 }

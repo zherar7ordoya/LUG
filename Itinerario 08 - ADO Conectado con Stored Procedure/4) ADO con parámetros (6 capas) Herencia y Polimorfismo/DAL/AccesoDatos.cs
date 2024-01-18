@@ -118,6 +118,7 @@ namespace DAL
             {
                 transaccion = conexion.BeginTransaction();
                 ConfigurarComando(consulta, parametros);
+                comando.Transaction = transaccion;
                 comando.ExecuteNonQuery();
                 transaccion.Commit();
                 return true;
