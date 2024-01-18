@@ -1,6 +1,6 @@
 ﻿namespace BE
 {
-    public class BEPrincipiante: BEJugador
+    public class BEPrincipiante : BEJugador
     {
         public bool Rapado { get; set; }
     }

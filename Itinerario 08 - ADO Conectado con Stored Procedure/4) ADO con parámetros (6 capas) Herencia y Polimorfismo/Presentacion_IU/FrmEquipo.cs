@@ -37,19 +37,13 @@ namespace Presentacion_IU
             InfoLabel.Text = string.Empty;
         }
 
-        //cargar un combo con una lista
         public void CargarTecnicos()
         {
-            //lleno al combo con la lista
-            comboBox1.DataSource = null;
-            // lo limpio paraque me actualice cuando agrego valores a la lista
-            comboBox1.DataSource = oBLLTecnico.ListarTodo();
-            //aclaro cual es el valor y lo que se desea mostrar en el combo
-            comboBox1.ValueMember = "DNI";
-            //la variable publica de la clase
-            comboBox1.DisplayMember = "Apellido";
-            comboBox1.Refresh();
-
+            TecnicosCombobox.DataSource = null;
+            TecnicosCombobox.DataSource = oBLLTecnico.ListarTodo();
+            TecnicosCombobox.ValueMember = "DNI";
+            TecnicosCombobox.DisplayMember = "Apellido";
+            TecnicosCombobox.Refresh();
         }
 
 
@@ -72,7 +66,7 @@ namespace Presentacion_IU
             //asigno los valores en el bloque para el Objeto Equipo
             oBEEquipo.Nombre = this.TxtNombreEquipo.Text;
             oBEEquipo.Color = this.TxtColoresEquipo.Text;
-            oBEEquipo.Tecnico = (BETecnico)comboBox1.SelectedItem;
+            oBEEquipo.Tecnico = (BETecnico)TecnicosCombobox.SelectedItem;
 
             //llama a la BLL y cargo al equipo
 
@@ -199,13 +193,15 @@ namespace Presentacion_IU
 
             foreach (BEEquipo oBEEquipo in LBEEquipo)
             {
-                if (oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo) > MaxPtje)
+                if (oBEEquipo.ListaJugadores != null)
                 {
-                    MaxNomb = oBEEquipo.Nombre;
-                    MaxPtje = oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo);
+                    if (oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo) > MaxPtje)
+                    {
+                        MaxNomb = oBEEquipo.Nombre;
+                        MaxPtje = oBLLEquipo.ObtenerPuntajeEquipo(oBEEquipo);
+                    }
                 }
             }
-
             InfoLabel.Text = "El puntaje Maximo fue del equipo " + MaxNomb + " : " + Convert.ToString(MaxPtje);
         }
     }

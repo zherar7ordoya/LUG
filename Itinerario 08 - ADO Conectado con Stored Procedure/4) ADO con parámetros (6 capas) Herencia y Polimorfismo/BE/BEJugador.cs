@@ -1,6 +1,6 @@
 ﻿namespace BE
 {
-    public abstract class BEJugador:Entidad
+    public abstract class BEJugador : Entidad
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }

@@ -2,35 +2,24 @@
 
 namespace BE
 {
-    public class BETecnico:Entidad
+    public class BETecnico : Entidad
     {
-
-        public string Nombre { get; set; }
-
-        public string Apellido { get; set; }
-
-        public int DNI { get; set; }
-
-        public bool Estado { get; set; }
-
-        #region "cosntructores"
-        //constructor vacio
         public BETecnico() { }
-
-        //constructor sobrecargado
-        public BETecnico(string _Nom, String _Ape, int _DNI)
+        public BETecnico(string nombre, string apellido, int dni)
         {
-            Nombre = _Nom;
-            Apellido = _Ape;
-            DNI = _DNI;
-
+            Nombre = nombre;
+            Apellido = apellido;
+            DNI = dni;
         }
 
-        #endregion
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int DNI { get; set; }
+        public bool Estado { get; set; }
 
         public override string ToString()
         {
-            return this.Nombre + " " + this.Apellido + " " + this.DNI + " ";
+            return $"{Nombre} {Apellido} {DNI}";
         }
 
     }

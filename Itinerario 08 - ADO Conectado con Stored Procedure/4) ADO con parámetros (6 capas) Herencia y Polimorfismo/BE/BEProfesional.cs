@@ -1,6 +1,4 @@
 ﻿namespace BE
 {
-    public class BEProfesional : BEJugador
-    {
-    }
+    public class BEProfesional : BEJugador { }
 }

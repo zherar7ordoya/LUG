@@ -2,7 +2,7 @@
 
 namespace BE
 {
-    public class Entidad:IEntidad
+    public class Entidad : IEntidad
     {
         public int Codigo { get; set; }
     }
