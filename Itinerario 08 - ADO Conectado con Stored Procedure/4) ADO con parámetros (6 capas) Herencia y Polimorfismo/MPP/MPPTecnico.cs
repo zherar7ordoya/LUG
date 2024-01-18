@@ -10,8 +10,8 @@ namespace MPP
 {
     public class MPPTecnico : IGestor<BETecnico>
     {
-        AccesoDatos oDatos;
-        Dictionary<string, object> parametros;
+        readonly AccesoDatos oDatos;
+        readonly Dictionary<string, object> parametros;
 
         public MPPTecnico()
         {
@@ -25,10 +25,10 @@ namespace MPP
         {
             //instancio un objeto de la clase datos para operar con la BD
             List<BETecnico> ListaTecnicos = new List<BETecnico>();
-     
+
             string Consulta = "Listar_Tecnicos";
-    
-            DataTable Tabla = oDatos.Leer(Consulta,null);
+
+            DataTable Tabla = oDatos.Leer(Consulta, null);
 
             //rcorro la tabla dentro del Dataset y la paso a lista
             if (Tabla.Rows.Count > 0)
@@ -45,16 +45,16 @@ namespace MPP
             }
             return ListaTecnicos;
         }
- 
+
 
         public bool Guardar(BETecnico oBETec)
-        {           
-            string Consulta_SQL = "Modificar_Tecnico"; 
+        {
+            string consulta = "Modificar_Tecnico";
             parametros.Add("@Cod", oBETec.Codigo);
             //hago el update del campo estado cuando se asigna el tecnico a un equipo
             parametros.Add("@Estado", true);
-     
-            return oDatos.Escribir(Consulta_SQL,parametros);
+
+            return oDatos.Escribir(consulta, parametros);
         }
 
         public bool Eliminar(BETecnico Objeto)
@@ -66,6 +66,6 @@ namespace MPP
             throw new NotImplementedException();
         }
 
-     
+
     }
 }

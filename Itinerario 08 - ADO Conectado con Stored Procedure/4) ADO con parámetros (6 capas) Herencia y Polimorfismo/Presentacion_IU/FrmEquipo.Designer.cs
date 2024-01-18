@@ -29,6 +29,8 @@ namespace Presentacion_IU
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.InfoLabel = new System.Windows.Forms.Label();
             this.BuscarPuntajeButton = new System.Windows.Forms.Button();
             this.JugadoresDGV = new System.Windows.Forms.DataGridView();
@@ -85,10 +87,17 @@ namespace Presentacion_IU
             // 
             // JugadoresDGV
             // 
+            this.JugadoresDGV.AllowUserToAddRows = false;
+            this.JugadoresDGV.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.JugadoresDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.JugadoresDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.JugadoresDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.JugadoresDGV.Location = new System.Drawing.Point(480, 191);
             this.JugadoresDGV.Name = "JugadoresDGV";
+            this.JugadoresDGV.ReadOnly = true;
             this.JugadoresDGV.RowHeadersWidth = 62;
+            this.JugadoresDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.JugadoresDGV.Size = new System.Drawing.Size(538, 189);
             this.JugadoresDGV.TabIndex = 42;
             // 
@@ -112,10 +121,17 @@ namespace Presentacion_IU
             // 
             // EquiposDGV
             // 
+            this.EquiposDGV.AllowUserToAddRows = false;
+            this.EquiposDGV.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EquiposDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.EquiposDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.EquiposDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EquiposDGV.Location = new System.Drawing.Point(477, 20);
             this.EquiposDGV.Name = "EquiposDGV";
+            this.EquiposDGV.ReadOnly = true;
             this.EquiposDGV.RowHeadersWidth = 62;
+            this.EquiposDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EquiposDGV.Size = new System.Drawing.Size(541, 139);
             this.EquiposDGV.TabIndex = 39;
             // 
@@ -358,6 +374,7 @@ namespace Presentacion_IU
             this.Controls.Add(this.EquiposDGV);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmEquipo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipo";
             this.Load += new System.EventHandler(this.FrmEquipo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.JugadoresDGV)).EndInit();

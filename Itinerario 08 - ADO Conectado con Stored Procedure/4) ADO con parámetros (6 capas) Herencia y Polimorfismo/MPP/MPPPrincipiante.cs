@@ -10,7 +10,7 @@ namespace MPP
 {
     public class MPPPrincipiante : IGestor<BEPrincipiante>
     {
-        AccesoDatos oDatos;
+        readonly AccesoDatos oDatos;
         Dictionary<string, object> parametros;
 
         public MPPPrincipiante()      

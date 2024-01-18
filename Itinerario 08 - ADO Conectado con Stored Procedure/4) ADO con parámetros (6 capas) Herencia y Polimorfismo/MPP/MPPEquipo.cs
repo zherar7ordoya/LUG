@@ -10,7 +10,7 @@ namespace MPP
 {
     public class MPPEquipo : IGestor<BEEquipo>
     {
-        AccesoDatos oDatos;
+        readonly AccesoDatos oDatos;
         Dictionary<string, object> parametros;
 
         public MPPEquipo()

@@ -43,7 +43,7 @@ namespace Presentacion_IU
             this.gestionarEquipoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1139, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1139, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -52,20 +52,20 @@ namespace Presentacion_IU
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // gestionarEquipoToolStripMenuItem
             // 
             this.gestionarEquipoToolStripMenuItem.Name = "gestionarEquipoToolStripMenuItem";
-            this.gestionarEquipoToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.gestionarEquipoToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.gestionarEquipoToolStripMenuItem.Text = "Gestionar Equipo";
             this.gestionarEquipoToolStripMenuItem.Click += new System.EventHandler(this.gestionarEquipoToolStripMenuItem_Click);
             // 
@@ -78,6 +78,7 @@ namespace Presentacion_IU
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

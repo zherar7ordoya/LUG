@@ -9,10 +9,10 @@ namespace Presentacion_IU
 {
     public partial class FrmEquipo : Form
     {
-        BLLTecnico oBLLTecnico;
-        BLLEquipo oBLLEquipo;
-        BLLPrincipiante oBLLPrin;
-        BLLProfesional oBLLProf;
+        readonly BLLTecnico oBLLTecnico;
+        readonly BLLEquipo oBLLEquipo;
+        readonly BLLPrincipiante oBLLPrin;
+        readonly BLLProfesional oBLLProf;
         BEEquipo oBEEquipo;
         BEProfesional oJugadorPro;
         BEPrincipiante oJugadorprin;
@@ -38,7 +38,7 @@ namespace Presentacion_IU
             AgregarEquipoButton.Click += AgregarEquipo;
             AgregarJugadorButton.Click += AgregarJugador;
             BuscarPuntajeButton.Click += MayorPuntaje;
-            EquiposDGV.CellContentClick += ListarJugadores;
+            EquiposDGV.RowEnter += ListarJugadores;
         }
 
 
@@ -47,7 +47,7 @@ namespace Presentacion_IU
         {
             TecnicosCombobox.DataSource = null;
             TecnicosCombobox.DataSource = oBLLTecnico.ListarTodo();
-            TecnicosCombobox.ValueMember = "DNI";
+            //TecnicosCombobox.ValueMember = "DNI";
             TecnicosCombobox.DisplayMember = "Apellido";
             TecnicosCombobox.Refresh();
         }
@@ -56,36 +56,39 @@ namespace Presentacion_IU
         // DataGridView 1
         public void CargarEquipos()
         {
+            // Es necesario limpiar la grilla para que no se dupliquen los datos
+            // cuando se agrega un nuevo equipo.
             EquiposDGV.DataSource = null;
-            // lo limpio paraque me actualice cuando agrego valores a la lista
             EquiposDGV.DataSource = oBLLEquipo.ListarTodo();
-            //propiedad de la grilla para autosize de columnas
-            EquiposDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            //cambio color alternando las filas de la grilla
-            EquiposDGV.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGreen;
         }
 
 
         // DataGridView 2
         private void ListarJugadores(object sender, DataGridViewCellEventArgs e)
         {
-            // Haya o no haya jugadores en el equipo, tengo que limpiar la grilla.
+            // Es necesario limpiar la grilla para que no se dupliquen los datos
+            // cuando se agrega un nuevo jugador (o cuando listo otro equipo).
             JugadoresDGV.DataSource = null;
-            oBEEquipo = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
-            List<BEJugador> jugadores = oBEEquipo.ListaJugadores;
 
-            if (jugadores != null)
+            if (EquiposDGV.CurrentRow != null)
             {
-                //como el objeto Equipo tiene ya su lista de jugadores, la muestro
-                //dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
-                JugadoresDGV.DataSource = jugadores;
-                //propiedad de la grilla para autosize de columnas
-                JugadoresDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-                //cambio color alternando las filas de la grilla
-                JugadoresDGV.AlternatingRowsDefaultCellStyle.BackColor = Color.GreenYellow;
-                JugadoresDGV.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
-                JugadoresDGV.Columns["CantidadRojas"].HeaderText = "T.Rojas";
-                JugadoresDGV.Columns["GolesRealizados"].HeaderText = "Goles";
+                // Reemplazo la siguiente línea porque no funciona cuando se
+                // selecciona una nueva fila en la grilla de equipos (tira un
+                // resultado desfasado, lista los jugadores del equipo anterior).
+                //oBEEquipo = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
+                oBEEquipo = (BEEquipo)EquiposDGV.Rows[e.RowIndex].DataBoundItem;
+                List<BEJugador> jugadores = oBEEquipo.ListaJugadores;
+
+                if (jugadores != null)
+                {
+                    //como el objeto Equipo tiene ya su lista de jugadores, la muestro
+                    //dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
+                    JugadoresDGV.DataSource = jugadores;
+
+                    JugadoresDGV.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
+                    JugadoresDGV.Columns["CantidadRojas"].HeaderText = "T.Rojas";
+                    JugadoresDGV.Columns["GolesRealizados"].HeaderText = "Goles";
+                }
             }
         }
 

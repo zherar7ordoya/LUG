@@ -10,7 +10,7 @@ namespace MPP
 {
     public class MPPProfesional:IGestor<BEProfesional>
     {
-        AccesoDatos oDatos;
+        readonly AccesoDatos oDatos;
         Dictionary<string, object> parametros;
 
         public MPPProfesional()
