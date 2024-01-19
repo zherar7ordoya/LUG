@@ -13,6 +13,10 @@ namespace Negocio_BLL
     /// </summary>
     public abstract class BLLJugador
     {
-            public abstract int ObtenerPuntaje(BEJugador oBEJug);
+        public abstract int ObtenerPuntaje(BEJugador oBEJug);
+        public virtual bool Guardar_JugadorXEquipo(BEJugador oBEJugador, BEEquipo oBEEquipo)
+        {
+            return true;
+        }
     }
 }

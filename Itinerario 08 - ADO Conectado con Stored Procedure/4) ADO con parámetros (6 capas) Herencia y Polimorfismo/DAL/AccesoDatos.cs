@@ -40,15 +40,15 @@ namespace DAL
         #region ¿Por qué usar IDisposable?
         /* Cuando implementamos IDisposable, le estamos diciendo a los consumidores
          * de nuestra clase que estamos utilizando recursos no administrados por el
-         * sistema, y debido a eso estos recursos deben ser indicados de forma manual
-         * para ser limpiados por el garbage collector (recolector de basura). 
+         * sistema, y debido a esom estos recursos deben ser indicados de forma manual
+         * para ser limpiados por el GC (Garbage Collector, recolector de basura). 
          * Implementar, utilizar y comprender IDisposable es muy sencillo, pero la
          * documentación es muy confusa ya que está siempre haciendo referencia a
          * “recursos no administrados por el sistema” lo que te hace pensar que no
-         * te afecta, pero en verdad si. Cuando trabajamos en una aplicación en .NET
+         * te afecta, pero en verdad, sí. Cuando trabajamos en una aplicación en .NET
          * y esta aplicación tiene contacto con el sistema de ficheros o una consulta
-         * SQL o la mayoría de los servicios de la nube, como puede ser S3 en Amazon
-         * Web Services, se está utilizando recursos no administrados por el sistema.
+         * SQL o la mayoría de los servicios de la nube (como puede ser S3 en Amazon
+         * Web Services) se está utilizando recursos no administrados por el sistema.
          * Ejemplo: en el caso concreto de la conexión SQL utilizamos System.Data que
          * sí está administrado por el sistema, pero la conexión a la base de datos
          * como tal NO lo está, por lo que debemos invocar Dispose para liberar la
@@ -59,10 +59,10 @@ namespace DAL
          * Dispose(), o no instanciemos el objeto dentro de un bloque using, no
          * recibiremos ningún error. Ni en tiempo de ejecución ni en tiempo de
          * compilación. En la mayoría de casos de uso reales, nuestro problema será
-         * con la memoria o también conectando a la base de datos: Cuando realizamos
-         * llamadas a la base de datos, estas están limitadas a un número, el cual
-         * llamamos “pool de conexiones”. Una vez pasamos este número, la aplicación
-         * se cuelga.
+         * con la memoria o también conectando a la base de datos: cuando realizamos
+         * llamadas a la base de datos, estas están limitadas a un número (el cual
+         * llamamos “pool de conexiones”). Una vez que pasamos este número, la 
+         * aplicación se cuelga.
          */
         #endregion
         public void Dispose()
@@ -73,8 +73,8 @@ namespace DAL
             }
 
             // SuppressFinalize solo debe ser llamado por una clase que tenga un
-            // finalizador. Está informando al recolector de basura (GC) que este
-            // objeto se limpió por completo, que no es necesario llamar al GC.
+            // finalizador (como este Dispose, por ejemplo). Está informando al GC
+            // que este objeto ya se limpió por completo, que no necesita venir.
             GC.SuppressFinalize(this);
         }
 
@@ -83,17 +83,17 @@ namespace DAL
         public DataTable Leer(string consulta, Dictionary<string, object> parametros)
         {
             DataTable tabla = new DataTable();
+            SqlDataAdapter adaptador = null;
 
             try
             {
                 ConfigurarComando(consulta, parametros);
-                using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
-                {
-                    adaptador.Fill(tabla);
-                }
+                adaptador = new SqlDataAdapter(comando);
+                adaptador.Fill(tabla);
             }
             catch (SqlException ex) { throw ex; }
             catch (Exception ex) { throw ex; }
+            finally { adaptador?.Dispose(); }
 
             return tabla;
         }
@@ -109,7 +109,9 @@ namespace DAL
             }
             catch (SqlException ex) { throw ex; }
             catch (Exception ex) { throw ex; }
+            finally { comando?.Dispose(); }
         }
+
 
 
         public bool Escribir(string consulta, Dictionary<string, object> parametros)
@@ -123,9 +125,19 @@ namespace DAL
                 transaccion.Commit();
                 return true;
             }
-            catch (SqlException ex) { transaccion.Rollback(); throw ex; }
-            catch (Exception ex) { transaccion.Rollback(); throw ex; }
+            catch (SqlException ex)
+            {
+                transaccion.Rollback();
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                transaccion.Rollback();
+                throw ex;
+            }
+            finally { comando?.Dispose(); }
         }
+
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }

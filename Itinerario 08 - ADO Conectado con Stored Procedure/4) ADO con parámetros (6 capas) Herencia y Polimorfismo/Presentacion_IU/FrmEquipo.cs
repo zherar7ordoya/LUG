@@ -46,15 +46,31 @@ namespace Presentacion_IU
         public void CargarTecnicos()
         {
             TecnicosCombobox.DataSource = null;
-            TecnicosCombobox.DataSource = oBLLTecnico.ListarTodo();
-            // La siguiente línea, en este contexto, no es necesaria. ValueMember,
-            // lo que hace es devolver el valor de una propiedad del objeto, la
-            // propiedad que yo elija. Pero en este caso, se recuperará el objeto
-            // completo y no una propiedad en particular (que, de todas maneras,
-            // tendría que haber sido el Código de Técnico, y no el DNI).
-            //TecnicosCombobox.ValueMember = "DNI";
-            TecnicosCombobox.DisplayMember = "Apellido";
-            TecnicosCombobox.Refresh();
+
+            List<BETecnico> listaTecnicos = oBLLTecnico.ListarTodo();
+
+            // ES UNA BUENA IDEA MANEJAR CASOS COMO ESTOS EN LA GUI Y NO EN LA BLL.
+            // EN EL TRABAJO FINAL, UN COMPAÑERO MANEJÓ ASÍ LA AUSENCIA DE USUARIO
+            // O CONTRASEÑA EN EL LOGIN, Y NO LO COMPLICÓ EN LAS CAPAS DE NEGOCIO.
+            if (listaTecnicos.Count == 0)
+            {
+                AgregarEquipoButton.Enabled = false; // * A ESTO ME REFIERO * //
+                MessageBox.Show("No hay técnicos disponibles");
+                return;
+            }
+            else
+            {
+                AgregarEquipoButton.Enabled = true;  // * A ESTO ME REFIERO * //
+                TecnicosCombobox.DataSource = listaTecnicos;
+                // La siguiente línea, en este contexto, no es necesaria. ValueMember,
+                // lo que hace es devolver el valor de una propiedad del objeto, la
+                // propiedad que yo elija. Pero en este caso, se recuperará el objeto
+                // completo y no una propiedad en particular (que, de todas maneras,
+                // tendría que haber sido el Código de Técnico, y no el DNI).
+                //TecnicosCombobox.ValueMember = "DNI";
+                TecnicosCombobox.DisplayMember = "Apellido";
+                TecnicosCombobox.Refresh();
+            }
         }
 
 

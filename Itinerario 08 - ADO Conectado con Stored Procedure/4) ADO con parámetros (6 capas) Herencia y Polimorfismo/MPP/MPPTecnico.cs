@@ -23,27 +23,25 @@ namespace MPP
 
         public List<BETecnico> ListarTodo()
         {
-            //instancio un objeto de la clase datos para operar con la BD
-            List<BETecnico> ListaTecnicos = new List<BETecnico>();
+            List<BETecnico> listaTecnicos = new List<BETecnico>();
+            string consulta = "Listar_Tecnicos";
+            DataTable Tabla = oDatos.Leer(consulta, null);
 
-            string Consulta = "Listar_Tecnicos";
-
-            DataTable Tabla = oDatos.Leer(Consulta, null);
-
-            //rcorro la tabla dentro del Dataset y la paso a lista
             if (Tabla.Rows.Count > 0)
             {
                 foreach (DataRow fila in Tabla.Rows)
                 {
-                    BETecnico oBETec = new BETecnico();
-                    oBETec.Codigo = Convert.ToInt32(fila[0]);
-                    oBETec.Nombre = fila[1].ToString();
-                    oBETec.Apellido = fila["Apellido"].ToString();
-                    oBETec.DNI = Convert.ToInt32(fila["DNI"]);
-                    ListaTecnicos.Add(oBETec);
+                    BETecnico oBETec = new BETecnico
+                    {
+                        Codigo = Convert.ToInt32(fila[0]),
+                        Nombre = fila[1].ToString(),
+                        Apellido = fila["Apellido"].ToString(),
+                        DNI = Convert.ToInt32(fila["DNI"])
+                    };
+                    listaTecnicos.Add(oBETec);
                 }
             }
-            return ListaTecnicos;
+            return listaTecnicos;
         }
 
 
@@ -51,21 +49,27 @@ namespace MPP
         {
             string consulta = "Modificar_Tecnico";
             parametros.Add("@Cod", oBETec.Codigo);
-            //hago el update del campo estado cuando se asigna el tecnico a un equipo
+
+            // Actualizo el campo "Estado" cuando se asigna un técnico a un equipo
+            // para que ya no esté disponible para otro equipo.
             parametros.Add("@Estado", true);
 
             return oDatos.Escribir(consulta, parametros);
         }
 
+
         public bool Eliminar(BETecnico Objeto)
         {
             throw new NotImplementedException();
         }
+
+
         public BETecnico ListarObjeto(BETecnico Objeto)
         {
             throw new NotImplementedException();
         }
 
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
     }
 }

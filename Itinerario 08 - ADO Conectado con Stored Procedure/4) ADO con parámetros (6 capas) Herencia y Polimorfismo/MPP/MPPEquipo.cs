@@ -21,98 +21,147 @@ namespace MPP
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+        #region NOTAS SOBRE POLIMORFISMO
+        /*
+         * El polimorfismo se aplica tanto a los métodos como a la asignación de
+         * objetos a variables, y se manifiesta en dos formas principales:
+         * polimorfismo de tiempo de compilación (o estático) y polimorfismo de 
+         * tiempo de ejecución (o dinámico).
+         * 
+         * 1) Polimorfismo de tiempo de compilación (Estático): Se refiere al uso
+         * de la herencia y de interfaces para permitir que una clase base pueda
+         * ser utilizada de manera polimórfica. En este caso, la decisión sobre
+         * qué método o propiedad se debe llamar se toma en tiempo de compilación.
+         * Ejemplo:
+         *      BEJugador oBEJugador;
+         *      oBEJugador = new BEProfesional();
+         *      oBEJugador.MetodoComun(); // Llama al método común de BEJugador
+         * 
+         * 2) Polimorfismo de tiempo de ejecución (Dinámico): Se refiere a la
+         * capacidad de una variable de clase base para referenciar objetos de las
+         * clases derivadas, y la decisión sobre qué método o propiedad se debe
+         * llamar se toma en tiempo de ejecución.
+         * Ejemplo:
+         *      // Método que devuelve un BEJugador (BEProfesional o 
+         *      // BEPrincipiante) en tiempo de ejecución.
+         *      BEJugador oBEJugador = ObtenerJugador();
+         *      // Llama al método específico de BEJugador (BEProfesional o 
+         *      // BEPrincipiante) según el tipo real del objeto en tiempo de
+         *      // ejecución.
+         *      oBEJugador.MetodoComun();
+         * 
+         * En nuestro método ListarTodo(), se podrá leer este código:
+         *      BEJugador oBEJugador;
+         *      if (filaJugador["Rapado"] is DBNull)
+         *      {
+         *          oBEJugador = new BEProfesional();
+         *      }
+         *      else
+         *      {
+         *          oBEJugador = new BEPrincipiante { Rapado = true };
+         *      }
+         * Aquí, estamos viendo el polimorfismo de tiempo de ejecución.
+         * oBEJugador es de tipo BEJugador (clase base), pero en tiempo de
+         * ejecución, puede referenciar tanto a una instancia de BEProfesional
+         * como a una instancia de BEPrincipiante. Si se llama a métodos
+         * específicos de BEJugador a través de oBEJugador, el comportamiento real
+         * se determinará por el tipo real del objeto al que apunta en ese momento
+         * (sea BEProfesional o BEPrincipiante).
+         * 
+         * EN RESUMEN: el polimorfismo en C# abarca tanto métodos como asignación
+         * de objetos, y ambas formas son útiles en diferentes contextos.
+         */
+        #endregion
         public List<BEEquipo> ListarTodo()
         {
-            List<BEEquipo> equipos = new List<BEEquipo>();
-            string consulta = "Listar_Equipos";
-            DataTable tabla = oDatos.Leer(consulta, null);
+            // LECTURA DE EQUIPOS (CON TECNICO 1:1 Y JUGADORES 1:M)
+            List<BEEquipo> listaEquipos = new List<BEEquipo>();
+            DataTable tablaEquipos = oDatos.Leer("Listar_Equipos", null);
 
-            //rcorro la tabla dentro del Dataset y la paso a lista
-            if (tabla.Rows.Count > 0)
+            if (tablaEquipos.Rows.Count > 0)
             {
-                foreach (DataRow fila in tabla.Rows)
+                foreach (DataRow filaEquipo in tablaEquipos.Rows)
                 {
-                    BEEquipo oBEEquipo = new BEEquipo();
-                    oBEEquipo.Codigo = Convert.ToInt32(fila["Codigo"]);
-                    oBEEquipo.Nombre = fila["Equipo"].ToString();
-                    oBEEquipo.Color = fila["Color"].ToString();
-                    //busco al tecnico
-                    //lo cargo usando el constrcutor sobrecargado
-                    BETecnico oBETec = new BETecnico(fila["Nombre"].ToString(), fila["Apellido"].ToString(), Convert.ToInt32(fila["DNI"]));
-                    //oBETec.Nombre = fila["Nombre"].ToString();
-                    //oBETec.Apellido = fila["Apellido"].ToString();
-                    //oBETec.DNI = Convert.ToInt32(fila["DNI"]);
-                    oBEEquipo.Tecnico = oBETec;
-                    //busco la lista de jugadores
-                    AccesoDatos oDatos2 = new AccesoDatos();
-                    parametros = new Dictionary<string, object>();
-                    parametros.Add("@CodEqui", oBEEquipo.Codigo);
-                    DataTable Tabla2 = oDatos2.Leer("Listar_Jugadores_Equipo", parametros);
-                    List<BEJugador> LJugador = new List<BEJugador>();
-                    if (Tabla2.Rows.Count > 0)
+                    BEEquipo oBEEquipo = new BEEquipo
                     {
-                        foreach (DataRow fila2 in Tabla2.Rows)
+                        Codigo = Convert.ToInt32(filaEquipo["Codigo"]),
+                        Nombre = filaEquipo["Equipo"].ToString(),
+                        Color = filaEquipo["Color"].ToString()
+                    };
+
+                    // Cargar al técnico
+                    BETecnico oBETec = new BETecnico
+                    {
+                        Nombre = filaEquipo["Nombre"].ToString(),
+                        Apellido = filaEquipo["Apellido"].ToString(),
+                        DNI = Convert.ToInt32(filaEquipo["DNI"])
+                    };
+                    oBEEquipo.Tecnico = oBETec;
+
+                    // LECTURA DE JUGADORES (CON PRINCIPIANTES Y PROFESIONALES)
+                    DataTable tablaJugadores = oDatos.Leer("Listar_Jugadores_Equipo",
+                        new Dictionary<string, object> { { "@CodEqui", oBEEquipo.Codigo } });
+                    List<BEJugador> listaJugadores = new List<BEJugador>();
+
+                    if (tablaJugadores.Rows.Count > 0)
+                    {
+                        foreach (DataRow filaJugador in tablaJugadores.Rows)
                         {
-                            //si el campo rapado es NULL entonces es un jugador Profesional
-                            if (fila2["Rapado"] is DBNull)
+                            BEJugador oBEJugador;
 
+                            if (filaJugador["Rapado"] is DBNull)
                             {
-                                BEProfesional oBEPro = new BEProfesional();
-                                oBEPro.Codigo = Convert.ToInt32(fila2["Codigo"]);
-                                oBEPro.Nombre = fila2["Nombre"].ToString();
-                                oBEPro.Apellido = fila2["Apellido"].ToString();
-                                oBEPro.DNI = Convert.ToInt32(fila2["DNI"]);
-                                oBEPro.CantidadRojas = Convert.ToInt32(fila2["TRoja"]);
-                                oBEPro.CantidadAmarillas = Convert.ToInt32(fila2["TAmarilla"]);
-                                oBEPro.GolesRealizados = Convert.ToInt32(fila2["Goles"]);
-                                LJugador.Add(oBEPro);
+                                oBEJugador = new BEProfesional();
+                            }
+                            else
+                            {
+                                oBEJugador = new BEPrincipiante { Rapado = true };
                             }
 
-                            else
-                            {//si el campo rapado es distinto de null entonces es true y es principiant
-                                BEPrincipiante oBEPrin = new BEPrincipiante();
-                                oBEPrin.Rapado = true;
-                                oBEPrin.Codigo = Convert.ToInt32(fila2["Codigo"]);
-                                oBEPrin.Nombre = fila2["Nombre"].ToString();
-                                oBEPrin.Apellido = fila2["Apellido"].ToString();
-                                oBEPrin.DNI = Convert.ToInt32(fila2["DNI"]);
-                                oBEPrin.CantidadRojas = Convert.ToInt32(fila2["TRoja"]);
-                                oBEPrin.CantidadAmarillas = Convert.ToInt32(fila2["TAmarilla"]);
-                                oBEPrin.GolesRealizados = Convert.ToInt32(fila2["Goles"]);
-                                LJugador.Add(oBEPrin);
-                            }
+                            oBEJugador.Codigo = Convert.ToInt32(filaJugador["Codigo"]);
+                            oBEJugador.Nombre = filaJugador["Nombre"].ToString();
+                            oBEJugador.Apellido = filaJugador["Apellido"].ToString();
+                            oBEJugador.DNI = Convert.ToInt32(filaJugador["DNI"]);
+                            oBEJugador.CantidadRojas = Convert.ToInt32(filaJugador["TRoja"]);
+                            oBEJugador.CantidadAmarillas = Convert.ToInt32(filaJugador["TAmarilla"]);
+                            oBEJugador.GolesRealizados = Convert.ToInt32(filaJugador["Goles"]);
+
+                            listaJugadores.Add(oBEJugador);
                         }
-                        oBEEquipo.ListaJugadores = LJugador;
+                        oBEEquipo.ListaJugadores = listaJugadores;
                     }
-                    equipos.Add(oBEEquipo);
+                    listaEquipos.Add(oBEEquipo);
                 }
             }
-            return equipos;
+            return listaEquipos;
         }
-
-
 
 
         public bool Guardar(BEEquipo oBEEq)
         {
-            string Consulta_SQL = "Alta_Equipo";
-            parametros = new Dictionary<string, object>();
-            parametros.Add("@Nom", oBEEq.Nombre);
-            parametros.Add("@Color", oBEEq.Color);
-            parametros.Add("@CodTecnico", oBEEq.Tecnico.Codigo);
-
-            return oDatos.Escribir(Consulta_SQL, parametros);
+            string consulta = "Alta_Equipo";
+            parametros = new Dictionary<string, object>
+            {
+                { "@Nom", oBEEq.Nombre },
+                { "@Color", oBEEq.Color },
+                { "@CodTecnico", oBEEq.Tecnico.Codigo }
+            };
+            return oDatos.Escribir(consulta, parametros);
         }
+
+
         public bool Eliminar(BEEquipo Objeto)
         {
             throw new NotImplementedException();
         }
+
 
         public BEEquipo ListarObjeto(BEEquipo Objeto)
         {
             throw new NotImplementedException();
         }
 
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
     }
 }

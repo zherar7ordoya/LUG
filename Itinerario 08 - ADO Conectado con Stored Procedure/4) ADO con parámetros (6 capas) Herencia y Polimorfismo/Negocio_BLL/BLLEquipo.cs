@@ -33,13 +33,13 @@ namespace Negocio_BLL
                 // De esta manera se maneja el polimorfismo.
                 if (jugador is BEPrincipiante)
                 {
-                    BLLPrincipiante oBLLprin = new BLLPrincipiante();
-                    puntos = oBLLprin.ObtenerPuntaje(jugador) + puntos;
+                    BLLPrincipiante oBLLprincipiante = new BLLPrincipiante();
+                    puntos = oBLLprincipiante.ObtenerPuntaje(jugador) + puntos;
                 }
                 else
                 {
-                    BLLProfesional oBLLprof = new BLLProfesional();
-                    puntos = oBLLprof.ObtenerPuntaje(jugador) + puntos;
+                    BLLProfesional oBLLprofesional = new BLLProfesional();
+                    puntos = oBLLprofesional.ObtenerPuntaje(jugador) + puntos;
                 }
             }
             return puntos;

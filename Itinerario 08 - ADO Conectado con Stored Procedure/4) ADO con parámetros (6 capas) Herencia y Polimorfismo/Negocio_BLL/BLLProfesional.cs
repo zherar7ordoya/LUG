@@ -30,9 +30,9 @@ namespace Negocio_BLL
             return puntaje;
         }
 
-        public bool Guardar_JugadorXEquipo(BEProfesional oBEProf, BEEquipo oBEEqui)
+        public override bool Guardar_JugadorXEquipo(BEJugador oBEJugador, BEEquipo oBEEqui)
         {
-            return oMPPJProf.Guardar_JugadorXEquipo(oBEEqui, oBEProf);
+            return oMPPJProf.Guardar_JugadorXEquipo(oBEEqui, (BEProfesional)oBEJugador);
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
