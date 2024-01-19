@@ -47,6 +47,11 @@ namespace Presentacion_IU
         {
             TecnicosCombobox.DataSource = null;
             TecnicosCombobox.DataSource = oBLLTecnico.ListarTodo();
+            // La siguiente línea, en este contexto, no es necesaria. ValueMember,
+            // lo que hace es devolver el valor de una propiedad del objeto, la
+            // propiedad que yo elija. Pero en este caso, se recuperará el objeto
+            // completo y no una propiedad en particular (que, de todas maneras,
+            // tendría que haber sido el Código de Técnico, y no el DNI).
             //TecnicosCombobox.ValueMember = "DNI";
             TecnicosCombobox.DisplayMember = "Apellido";
             TecnicosCombobox.Refresh();
@@ -85,8 +90,8 @@ namespace Presentacion_IU
                     //dataGridJugadores.DataSource = oBEEquipo.ListaJugadores;
                     JugadoresDGV.DataSource = jugadores;
 
-                    JugadoresDGV.Columns["CantidadAmarillas"].HeaderText = "T.Amarillas";
-                    JugadoresDGV.Columns["CantidadRojas"].HeaderText = "T.Rojas";
+                    JugadoresDGV.Columns["CantidadAmarillas"].HeaderText = "T. Amarillas";
+                    JugadoresDGV.Columns["CantidadRojas"].HeaderText = "T. Rojas";
                     JugadoresDGV.Columns["GolesRealizados"].HeaderText = "Goles";
                 }
             }
@@ -96,32 +101,23 @@ namespace Presentacion_IU
         // Botón 1
         private void AgregarEquipo(object sender, EventArgs e)
         {
-            //instancio el objeto equipo en el bloque
-            oBEEquipo = new BEEquipo();
-            //asigno los valores en el bloque para el Objeto Equipo
-            oBEEquipo.Nombre = TxtNombreEquipo.Text;
-            oBEEquipo.Color = TxtColoresEquipo.Text;
-            oBEEquipo.Tecnico = (BETecnico)TecnicosCombobox.SelectedItem;
+            oBEEquipo = new BEEquipo
+            {
+                Nombre = TxtNombreEquipo.Text,
+                Color = TxtColoresEquipo.Text,
+                Tecnico = (BETecnico)TecnicosCombobox.SelectedItem
+            };
 
-            //llama a la BLL y cargo al equipo
-
+            // Llama a la BLL y cargo al equipo.
             if (oBLLEquipo.Guardar(oBEEquipo))
             {
-                //si se guarda OK Equipo, entonces actualizo el estado del tecnico para que no aparezca en el combo
-                //y asi no pueda estar asginado a otro equipo
-
+                // Si guardar equipo da OK, entonces actualizo el estado del técnico
+                // para que no figure en el combo y no pueda ser asginado a otro equipo.
                 oBLLTecnico.Guardar(oBEEquipo.Tecnico);
-
             }
-            //actualizo el combo de tecnicos
             CargarTecnicos();
-
-            //lo muestro en la grilla de equipos
             CargarEquipos();
-
-            //limpio los txt de equipo
-            TxtNombreEquipo.Text = string.Empty;
-            TxtColoresEquipo.Text = string.Empty;
+            Limpiar();
         }
 
 
@@ -132,47 +128,47 @@ namespace Presentacion_IU
             {
                 oBEEquipo = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
 
-                //depende el tipo de jugador instancio una clase u otra
+                // Depende el tipo de jugador, instancio una clase o la otra.
                 if (comboBox2.Text == "Profesional")
                 {
-                    oJugadorPro = new BEProfesional();
-                    //asigno los valores al objeto
-                    oJugadorPro.Nombre = TextBox1.Text;
-                    oJugadorPro.Apellido = TextBox2.Text;
-                    oJugadorPro.DNI = Convert.ToInt32(TextBox3.Text);
-                    oJugadorPro.CantidadAmarillas = Convert.ToInt32(TextBox5.Text);
-                    oJugadorPro.CantidadRojas = Convert.ToInt32(TextBox4.Text);
-                    oJugadorPro.GolesRealizados = Convert.ToInt32(TextBox6.Text);
+                    oJugadorPro = new BEProfesional
+                    {
+                        Nombre = TextBox1.Text,
+                        Apellido = TextBox2.Text,
+                        DNI = Convert.ToInt32(TextBox3.Text),
+                        CantidadAmarillas = Convert.ToInt32(TextBox5.Text),
+                        CantidadRojas = Convert.ToInt32(TextBox4.Text),
+                        GolesRealizados = Convert.ToInt32(TextBox6.Text)
+                    };
 
-                    //paso los datos a la BLL para Ingresar el jugador en la BD
+                    // Paso los datos a la BLL para Ingresar el jugador en la BD.
                     if (oBLLProf.Guardar(oJugadorPro))
-                    //si el jugador se graba en la BD llamo a otro método para grabar en la tabla intermedia
-                    // por eso paso el equipo y el jugador
-                    { oBLLProf.Guardar_JugadorXEquipo(oJugadorPro, oBEEquipo); }
-
-                    //cargo la lista de equipos, asi actualizo y puedo ver los jugadores asociados al equipo
+                    {
+                        // Si el jugador se graba OK, llamo a otro método para
+                        // grabar en la tabla intermedia. Para eso, paso el equipo
+                        // y el jugador.
+                        oBLLProf.Guardar_JugadorXEquipo(oJugadorPro, oBEEquipo); 
+                    }
                     CargarEquipos();
                     Limpiar();
                 }
                 else
                 {
-                    oJugadorprin = new BEPrincipiante();
-                    //asigno los valores al objeto
-                    oJugadorprin.Rapado = true;
-                    oJugadorprin.Nombre = TextBox1.Text;
-                    oJugadorprin.Apellido = TextBox2.Text;
-                    oJugadorprin.DNI = Convert.ToInt32(TextBox3.Text);
-                    oJugadorprin.CantidadAmarillas = Convert.ToInt32(TextBox5.Text);
-                    oJugadorprin.CantidadRojas = Convert.ToInt32(TextBox4.Text);
-                    oJugadorprin.GolesRealizados = Convert.ToInt32(TextBox6.Text);
+                    oJugadorprin = new BEPrincipiante
+                    {
+                        Rapado = true,
+                        Nombre = TextBox1.Text,
+                        Apellido = TextBox2.Text,
+                        DNI = Convert.ToInt32(TextBox3.Text),
+                        CantidadAmarillas = Convert.ToInt32(TextBox5.Text),
+                        CantidadRojas = Convert.ToInt32(TextBox4.Text),
+                        GolesRealizados = Convert.ToInt32(TextBox6.Text)
+                    };
 
-                    //paso los datos a la BLL para Ingresar el jugador en la BD
                     if (oBLLPrin.Guardar(oJugadorprin))
-                    //si el jugador se graba en la BD llamo a otro método para grabar en la tabla intermedia
-                    // por eso paso el equipo y el jugador
-                    { oBLLPrin.Guardar_JugadorXEquipo(oJugadorprin, oBEEquipo); }
-
-                    //cargo la lista de equipos, asi actualizo y puedo ver los jugadores asociados al equipo
+                    {
+                        oBLLPrin.Guardar_JugadorXEquipo(oJugadorprin, oBEEquipo);
+                    }
                     CargarEquipos();
                     Limpiar();
                 }
@@ -209,6 +205,8 @@ namespace Presentacion_IU
 
         void Limpiar()
         {
+            TxtNombreEquipo.Text = string.Empty;
+            TxtColoresEquipo.Text = string.Empty;
             TextBox1.Text = string.Empty;
             TextBox2.Text = string.Empty;
             TextBox3.Text = string.Empty;
