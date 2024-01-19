@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoJugador.cs" />
     <EmbeddedResource Include="FrmEquipo.resx">
       <DependentUpon>FrmEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +92,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Abstraccion\Abstraccion.csproj">
+      <Project>{7D69812B-2056-41D9-ADC7-5C36131CC82B}</Project>
+      <Name>Abstraccion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BE\BE.csproj">
       <Project>{def4a051-e083-4f94-b608-00981e22ceca}</Project>
       <Name>BE</Name>

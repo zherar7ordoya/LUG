@@ -80,7 +80,6 @@ namespace MPP
             {
                 return false;
             }
-
         }
 
         public bool Eliminar(BEProfesional Objeto)

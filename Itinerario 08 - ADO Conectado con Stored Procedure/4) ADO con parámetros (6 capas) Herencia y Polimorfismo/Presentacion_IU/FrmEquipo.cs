@@ -124,56 +124,77 @@ namespace Presentacion_IU
         // Botón 2
         private void AgregarJugador(object sender, EventArgs e)
         {
-            if (EquiposDGV.SelectedRows.Count > 0)
+            if (EquiposDGV.SelectedRows.Count == 0)
             {
-                oBEEquipo = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
-
-                // Depende el tipo de jugador, instancio una clase o la otra.
-                if (comboBox2.Text == "Profesional")
-                {
-                    oJugadorPro = new BEProfesional
-                    {
-                        Nombre = TextBox1.Text,
-                        Apellido = TextBox2.Text,
-                        DNI = Convert.ToInt32(TextBox3.Text),
-                        CantidadAmarillas = Convert.ToInt32(TextBox5.Text),
-                        CantidadRojas = Convert.ToInt32(TextBox4.Text),
-                        GolesRealizados = Convert.ToInt32(TextBox6.Text)
-                    };
-
-                    // Paso los datos a la BLL para Ingresar el jugador en la BD.
-                    if (oBLLProf.Guardar(oJugadorPro))
-                    {
-                        // Si el jugador se graba OK, llamo a otro método para
-                        // grabar en la tabla intermedia. Para eso, paso el equipo
-                        // y el jugador.
-                        oBLLProf.Guardar_JugadorXEquipo(oJugadorPro, oBEEquipo); 
-                    }
-                    CargarEquipos();
-                    Limpiar();
-                }
-                else
-                {
-                    oJugadorprin = new BEPrincipiante
-                    {
-                        Rapado = true,
-                        Nombre = TextBox1.Text,
-                        Apellido = TextBox2.Text,
-                        DNI = Convert.ToInt32(TextBox3.Text),
-                        CantidadAmarillas = Convert.ToInt32(TextBox5.Text),
-                        CantidadRojas = Convert.ToInt32(TextBox4.Text),
-                        GolesRealizados = Convert.ToInt32(TextBox6.Text)
-                    };
-
-                    if (oBLLPrin.Guardar(oJugadorprin))
-                    {
-                        oBLLPrin.Guardar_JugadorXEquipo(oJugadorprin, oBEEquipo);
-                    }
-                    CargarEquipos();
-                    Limpiar();
-                }
+                MessageBox.Show("Debe seleccionar un equipo para agregar al jugador");
+                return;
             }
-            else { MessageBox.Show("Debe seleccionar un equipo para agregar al jugador"); }
+
+            var equipoSeleccionado = (BEEquipo)EquiposDGV.CurrentRow.DataBoundItem;
+
+            BEJugador nuevoJugador;
+
+            switch ((TipoJugador)comboBox2.SelectedIndex)
+            {
+                case TipoJugador.Profesional:
+                    nuevoJugador = new BEProfesional();
+                    break;
+
+                case TipoJugador.Principiante:
+                    nuevoJugador = new BEPrincipiante { Rapado = true };
+                    break;
+
+                default:
+                    MessageBox.Show("Tipo de jugador no reconocido");
+                    return;
+            }
+
+            nuevoJugador.Nombre = TextBox1.Text;
+            nuevoJugador.Apellido = TextBox2.Text;
+            nuevoJugador.DNI = Convert.ToInt32(TextBox3.Text);
+            nuevoJugador.CantidadAmarillas = Convert.ToInt32(TextBox5.Text);
+            nuevoJugador.CantidadRojas = Convert.ToInt32(TextBox4.Text);
+            nuevoJugador.GolesRealizados = Convert.ToInt32(TextBox6.Text);
+
+            // Guardar jugador y asociarlo al equipo
+            if (GuardarAsociar(nuevoJugador, equipoSeleccionado))
+            {
+                CargarEquipos();
+                Limpiar();
+            }
+        }
+
+        // Método asociado al botón 2.
+        private bool GuardarAsociar(BEJugador jugador, BEEquipo equipo)
+        {
+            try
+            {
+                if (jugador is BEProfesional profesional)
+                {
+                    // Si el jugador se graba OK, llamo a otro método para grabar
+                    // en la tabla intermedia. Para eso, paso el equipo y el jugador.
+                    if (oBLLProf.Guardar(profesional))
+                    {
+                        oBLLProf.Guardar_JugadorXEquipo(profesional, equipo);
+                        return true;
+                    }
+                }
+                else if (jugador is BEPrincipiante principiante)
+                {
+                    if (oBLLPrin.Guardar(principiante))
+                    {
+                        oBLLPrin.Guardar_JugadorXEquipo(principiante, equipo);
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar jugador: {ex.Message}");
+                return false;
+            }
         }
 
 
