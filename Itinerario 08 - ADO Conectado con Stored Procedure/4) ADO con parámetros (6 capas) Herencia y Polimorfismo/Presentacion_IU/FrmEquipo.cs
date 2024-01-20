@@ -62,12 +62,15 @@ namespace Presentacion_IU
             {
                 AgregarEquipoButton.Enabled = true;  // * A ESTO ME REFIERO * //
                 TecnicosCombobox.DataSource = listaTecnicos;
+
+                #region ¿Por qué no es necesario ValueMember en este caso?
                 // La siguiente línea, en este contexto, no es necesaria. ValueMember,
                 // lo que hace es devolver el valor de una propiedad del objeto, la
                 // propiedad que yo elija. Pero en este caso, se recuperará el objeto
                 // completo y no una propiedad en particular (que, de todas maneras,
                 // tendría que haber sido el Código de Técnico, y no el DNI).
                 //TecnicosCombobox.ValueMember = "DNI";
+                #endregion
                 TecnicosCombobox.DisplayMember = "Apellido";
                 TecnicosCombobox.Refresh();
             }
