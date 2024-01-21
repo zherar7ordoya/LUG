@@ -3,20 +3,27 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using System;
+using System.Linq;
 
+// Teoría:
+// Manuel Torres Remon
+// Programación Orientada a Objetos con Visual C# 2015 y ADO.NET 4.6
 
 namespace DAL
 {
     public class AccesoDatos : IDisposable
     {
+        // La p185 presenta otra manera, muy similar, de obtener la cadena de conexión.
         private readonly string cadena = ConfigurationManager.ConnectionStrings["Equipo"].ToString();
+        
+        // p179: SqlConnection tiene 3 métodos (Open, Close y Dispose). Aquí no usamos Dispose.
         private readonly SqlConnection conexion;
         private SqlCommand comando;
         private SqlTransaction transaccion;
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection(cadena);
+            conexion = new SqlConnection(cadena); // p178: Ésta es la forma más sencilla.
             conexion.Open();
         }
 
@@ -24,9 +31,13 @@ namespace DAL
 
         private void ConfigurarComando(string consulta, Dictionary<string, object> parametros = null)
         {
-            comando = new SqlCommand(consulta, conexion)
+            comando = new SqlCommand
             {
-                CommandType = CommandType.StoredProcedure
+                CommandText = consulta, // p195.
+                Connection = conexion,
+                CommandType = parametros?.Keys.Any(x => x.StartsWith("@")) == true
+                    ? CommandType.StoredProcedure
+                    : CommandType.Text
             };
 
             if (parametros != null)
@@ -37,6 +48,7 @@ namespace DAL
                 }
             }
         }
+
 
         #region ¿Por qué usar IDisposable?
         /* Cuando implementamos IDisposable, le estamos diciendo a los consumidores
@@ -85,17 +97,24 @@ namespace DAL
         public DataTable Leer(string consulta, Dictionary<string, object> parametros)
         {
             DataTable tabla = new DataTable();
+
+            // Hay dos formas de lectura con SqlDataAdapter: una que usó Cardacci
+            // en su AAS (que usa las propiedades del adaptador) y otra que usa
+            // Prinzo (aquí) que es más genérica (p183, con SqlCommand).
             SqlDataAdapter adaptador = null;
 
             try
             {
                 ConfigurarComando(consulta, parametros);
+
+                // p189: Muestra un procedimiento más simple, pero imagino que aquí
+                //       la opción se decanta por ésta por el uso de parámetros.
                 adaptador = new SqlDataAdapter(comando);
                 adaptador.Fill(tabla);
             }
             catch (SqlException ex) { throw ex; }
             catch (Exception ex) { throw ex; }
-            finally { adaptador?.Dispose(); }
+            finally { adaptador?.Dispose(); } // p185, p188.
 
             return tabla;
         }
@@ -114,7 +133,6 @@ namespace DAL
             catch (Exception ex) { throw ex; }
             finally { comando?.Dispose(); }
         }
-
 
 
         public bool Escribir(string consulta, Dictionary<string, object> parametros)
