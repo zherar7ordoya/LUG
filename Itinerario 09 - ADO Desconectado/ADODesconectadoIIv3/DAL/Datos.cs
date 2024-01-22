@@ -8,7 +8,7 @@ namespace DAL
     {
         SqlConnection cnn = new SqlConnection(
             @"Data Source=(LocalDB)\MSSQLLocalDB;
-            Initial Catalog=Ejemplos_LUG;
+            Initial Catalog=ADO_EN_CAPAS;
             Integrated Security=True");
 
 
