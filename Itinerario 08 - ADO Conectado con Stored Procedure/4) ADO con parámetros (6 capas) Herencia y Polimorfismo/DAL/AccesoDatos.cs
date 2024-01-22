@@ -14,7 +14,10 @@ namespace DAL
     public class AccesoDatos : IDisposable
     {
         // La p185 presenta otra manera, muy similar, de obtener la cadena de conexión.
-        private readonly string cadena = ConfigurationManager.ConnectionStrings["Equipo"].ToString();
+        private readonly string cadena = 
+            ConfigurationManager
+            .ConnectionStrings["Equipo"]
+            .ToString();
         
         // p179: SqlConnection tiene 3 métodos (Open, Close y Dispose). Aquí no usamos Dispose.
         private readonly SqlConnection conexion;
@@ -31,6 +34,37 @@ namespace DAL
 
         private void ConfigurarComando(string consulta, Dictionary<string, object> parametros = null)
         {
+            #region Teoría y herramientas usadas en CommandType
+            /* El código verifica si al menos una clave en el diccionario de parámetros
+             * comienza con "@". Si es así, asume que se trata de un procedimiento 
+             * almacenado y establece CommandType en CommandType.StoredProcedure; 
+             * de lo contrario, asume que es una consulta de texto plano y establece 
+             * CommandType en CommandType.Text. Este código utiliza características 
+             * de C# modernas, como el operador de propagación de nulos (?.), LINQ
+             * (Any), el operador ternario condicional (? :).
+             * 
+             * 1) parametros?.Keys:
+             *    El operador ?. se llama "operador de propagación de nulos" o
+             *    "null-conditional operator". Este operador se usa con el objetivo
+             *    de evitar una excepción si "parametros" es null. Si "parametros"
+             *    es null, toda la expresión se evalúa como null. En este caso,
+             *    estamos accediendo a las keys del diccionario parametros.
+             *    
+             * 2) .Any(x => x.StartsWith("@")):
+             *    .Any es un método de LINQ que devuelve true si al menos un elemento
+             *    en la colección satisface la condición dada. En este caso, estamos
+             *    verificando si al menos una de las claves del diccionario comienza
+             *    con "@".
+             *    
+             * 3) Expresión Lambda (x => x.StartsWith("@")):
+             *    Esta expresión lambda se utiliza dentro del método Any. La parte
+             *    (x => x.StartsWith("@")) representa una función anónima que toma
+             *    un parámetro x (en este caso, cada clave en el diccionario) y
+             *    verifica si esa clave comienza con "@". La expresión lambda se
+             *    evalúa a true si la condición se cumple para al menos una clave
+             *    en el diccionario.
+             */
+            #endregion
             comando = new SqlCommand
             {
                 CommandText = consulta, // p195.
@@ -126,8 +160,8 @@ namespace DAL
             try
             {
                 ConfigurarComando(consulta, parametros);
-                int respuesta = Convert.ToInt32(comando.ExecuteScalar());
-                return respuesta > 0;
+                object resultado = comando.ExecuteScalar();
+                return resultado != null && (int)resultado > 0;
             }
             catch (SqlException ex) { throw ex; }
             catch (Exception ex) { throw ex; }
@@ -159,7 +193,7 @@ namespace DAL
             finally { comando?.Dispose(); }
         }
 
-
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
     }
 }
