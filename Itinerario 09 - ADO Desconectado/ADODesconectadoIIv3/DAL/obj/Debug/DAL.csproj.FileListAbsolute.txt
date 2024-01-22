@@ -1,0 +1,6 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\DAL\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\DAL\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\DAL\obj\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\DAL\obj\Debug\DAL.pdb

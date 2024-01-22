@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
+
 using BLL;
 
 namespace Presentacion
@@ -52,48 +54,114 @@ namespace Presentacion
         // *-------------------------------------------------------=> 2DA PARTE
 
 
+        //private void FiltrarDataTable_ButtonClick(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if ((txtInicio.Text == string.Empty) || (txtFin.Text == string.Empty))
+        //        { MessageBox.Show("Debe ingresar las fechas para la busqueda"); }
+        //        else
+        //        {
+        //            DataTable datatable = dataset.Tables["Persona"];
+        //            string Filtro = null;
+        //            Filtro = $"FechaNac >= #1/1/{txtInicio.Text.Trim()}# AND FechaNac <= #12/31/{txtFin.Text.Trim()}#";
+
+        //            //LIMPIO GRILLA
+        //            dgvFiltros.Columns.Clear();
+
+        //            //this.DGV.Columns.Add(nombre_columna, encabezado_columna);
+        //            dgvFiltros.Columns.Add("Codigo_Persona", "Código");
+        //            dgvFiltros.Columns.Add("Nombre", "Nombre");
+        //            dgvFiltros.Columns.Add("Apellido", "Apellido");
+        //            dgvFiltros.Columns.Add("FechaNac", "Nacimiento");
+        //            dgvFiltros.Columns.Add("Persona_Pais_Id", "Pais(Id)");
+        //            dgvFiltros.DataSource = null;
+
+        //            //FILTRADO ( SE PUEDE AGREGAR COLUMNA DE ORDEN)
+        //            foreach (DataRow fila in datatable.Select(Filtro, "FechaNac"))
+        //            {
+        //                dgvFiltros.Rows.Add(
+        //                    fila["Codigo_Persona"],
+        //                    fila["Nombre"],
+        //                    fila["Apellido"],
+        //                    Convert.ToDateTime(fila["FechaNac"]).ToShortDateString(),
+        //                    fila["Persona_Pais_Id"]);
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex) { MessageBox.Show(ex.Message); }
+        //}
+
+
         private void FiltrarDataTable_ButtonClick(object sender, EventArgs e)
         {
             try
             {
-                if ((txtInicio.Text == string.Empty) || (txtFin.Text == string.Empty))
-                { MessageBox.Show("Debe ingresar las fechas para la busqueda"); }
-                else
+                if (string.IsNullOrEmpty(txtInicio.Text) || string.IsNullOrEmpty(txtFin.Text))
                 {
-                    DataTable datatable = dataset.Tables["Persona"];
-                    string Filtro = null;
-                    Filtro =
-                        "FechaNac >= #1/1/" + 
-                        txtInicio.Text.Trim() + 
-                        "# AND FechaNac <= #12/31/" + 
-                        txtFin.Text.Trim() + 
-                        "#";
+                    MessageBox.Show("Debe ingresar los años para la búsqueda");
+                    return;
+                }
 
-                    //LIMPIO GRILLA
-                    dgvFiltros.Columns.Clear();
+                DataTable datatable = dataset.Tables["Persona"];
+                int inicioYear, finYear;
 
-                    //this.DGV.Columns.Add(nombre_columna, encabezado_columna);
-                    dgvFiltros.Columns.Add("Codigo_Persona", "Codigo_Persona");
-                    dgvFiltros.Columns.Add("Nombre", "Nombre");
-                    dgvFiltros.Columns.Add("Apellido", "Apellido");
-                    dgvFiltros.Columns.Add("FechaNac", "FechaNac");
-                    dgvFiltros.Columns.Add("Persona_Pais_Id", "Persona_Pais_Id");
-                    dgvFiltros.DataSource = null;
+                if (!int.TryParse(txtInicio.Text, out inicioYear) || !int.TryParse(txtFin.Text, out finYear))
+                {
+                    MessageBox.Show("Formato de año incorrecto");
+                    return;
+                }
 
-                    //FILTRADO ( SE PUEDE AGREGAR COLUMNA DE ORDEN)
-                    foreach (DataRow fila in datatable.Select(Filtro, "FechaNac"))
-                    {
-                        dgvFiltros.Rows.Add(
-                            fila["Codigo_Persona"], 
-                            fila["Apellido"], 
-                            fila["Nombre"], 
-                            Convert.ToDateTime(fila["FechaNac"]).ToShortDateString(), 
-                            fila["Persona_Pais_Id"]);
-                    }
+                DateTime inicio = new DateTime(inicioYear, 1, 1);
+                DateTime fin = new DateTime(finYear, 12, 31);
+
+                string filtro = $"FechaNac >= #{inicio.ToShortDateString()}# AND FechaNac <= #{fin.ToShortDateString()}#";
+
+                LimpiarYConfigurarGrilla();
+
+                foreach (DataRow fila in datatable.Select(filtro, "FechaNac"))
+                {
+                    dgvFiltros.Rows.Add(
+                        fila["Codigo_Persona"],
+                        fila["Nombre"],
+                        fila["Apellido"],
+                        Convert.ToDateTime(fila["FechaNac"]).ToShortDateString(),
+                        fila["Persona_Pais_Id"]);
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+
+
+
+
+        private void LimpiarYConfigurarGrilla()
+        {
+            dgvFiltros.Columns.Clear();
+
+            // Agregar columnas a la grilla.
+            AgregarColumna("Codigo_Persona", "Código");
+            AgregarColumna("Nombre", "Nombre");
+            AgregarColumna("Apellido", "Apellido");
+            AgregarColumna("FechaNac", "Nacimiento");
+            AgregarColumna("Persona_Pais_Id", "Pais(Id)");
+
+            dgvFiltros.DataSource = null;
+        }
+
+        private void AgregarColumna(string nombreColumna, string encabezadoColumna)
+        {
+            dgvFiltros.Columns.Add(nombreColumna, encabezadoColumna);
+        }
+
+
+
+
+
 
 
 
@@ -102,36 +170,33 @@ namespace Presentacion
         private void FiltrarDataView_ButtonClick(object sender, EventArgs e)
         {
             try
-            {   //CREAR Y CARGAR UNA TABLA  Y VISTA TEMPORALES.
+            {
                 DataTable datatable = dataset.Tables["Persona"];
                 DataView dataview = new DataView(datatable);
 
-                if ((rdbPais.Checked) && (TxfiltroData.Text != string.Empty))
+                if ((rdbPais.Checked || rdbApe.Checked) && (TxfiltroData.Text != string.Empty))
                 {
-                    //ROWFILTER ES EL FILTRO.
-                    dataview.RowFilter = "Persona_Pais_Id = " + TxfiltroData.Text.Trim();
-
-                    //ESPECIFICAR LA COLUMNA QUE QUIERO ORDENAR.
-                    dataview.Sort = "FechaNac";
-
-                    //LIMPIAR (MEMORIA Y CONTROL) Y CARGAR NUEVA DATA.
-                    dgvFiltros.Columns.Clear();
-                    dgvFiltros.DataSource = null;
-                    dgvFiltros.DataSource = dataview;
-                }
-                else if ((rdbApe.Checked) && (TxfiltroData.Text != string.Empty))
-                {
-                    dataview.RowFilter = "Apellido = '" + TxfiltroData.Text.Trim() + "'";
-                    dataview.Sort = "FechaNac";
-
-                    dgvFiltros.Columns.Clear();
-                    dgvFiltros.DataSource = null;
-                    dgvFiltros.DataSource = dataview;
+                    FiltrarYMostrar(dataview, TxfiltroData.Text.Trim(), rdbPais.Checked);
                 }
                 else { MessageBox.Show("Debe seleccionar una opción y llenar el campo de búsqueda."); }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        private void FiltrarYMostrar(DataView dataview, string filtro, bool porPais)
+        {
+            string filtroQuery = porPais ? $"Persona_Pais_Id = {filtro}" : $"Apellido = '{filtro}'";
+
+            // Aplicar filtro y ordenar.
+            dataview.RowFilter = filtroQuery;
+            dataview.Sort = "FechaNac";
+
+            // Limpieza y asignación del DataSource.
+            dgvFiltros.Columns.Clear();
+            dgvFiltros.DataSource = null;
+            dgvFiltros.DataSource = dataview;
+        }
+
 
 
         private void LimpiarFiltro_ButtonClick(object sender, EventArgs e)
