@@ -15,7 +15,7 @@ namespace Presentacion
 
         //DECLARAMOS LA CONEXION A ESTE NIVEL PARA PODER APROVECHAR LOS EVENTOS
         //EN TODO EL FORMULARIO.
-        readonly SqlConnection CONEXION = new SqlConnection(
+        readonly SqlConnection conexion = new SqlConnection(
                 @"Data Source=(LocalDB)\MSSQLLocalDB;
                 Initial Catalog=Ejemplos_LUG;
                 Integrated Security=True");
@@ -24,13 +24,13 @@ namespace Presentacion
         readonly ClsPersona PERSONA = new ClsPersona();
 
         //DECLARAMOS EL DATASET.
-        DataSet DATA_SET = new DataSet();
+        DataSet dataset = new DataSet();
 
         //DECLARAMOS EL DATAROW PARA APROVECHAR LOS EVENTOS DEL FORMULARIO.
         DataRow DATA_ROW;
 
         //DECLARAMOS EL DATAADAPTER PARA APROVECHAR LOS EVENTOS DEL FORMULARIO.
-        SqlDataAdapter DATA_ADAPTER;
+        SqlDataAdapter adaptador;
 
         //UTILIZAREMOS ESTE ENUMERADO Y ESTA VARIABLE COMO FLAG PARA SABER SI
         //VAMOS A MODIFICAR O AGREGAR UNA PERSONA.
@@ -101,10 +101,10 @@ namespace Presentacion
 
         public void CargarGrilla()
         {
-            DATA_SET = PERSONA.ListarSinSaldo();
+            dataset = PERSONA.ListarSinSaldo();
             //ENLAZAMOS LA GRILLA 
             mGrilla.DataSource = null;
-            mGrilla.DataSource = DATA_SET.Tables[0];
+            mGrilla.DataSource = dataset.Tables[0];
         }
 
 
@@ -133,19 +133,19 @@ namespace Presentacion
                 case Accion.Nuevo:
                     // ACTUALIZAMOS EL ULTIMO ID DE PERSONA EN LA SEGUNDA TABLA
                     // DE NUESTRO DATASET.
-                    DATA_SET.Tables[1].Rows[0][0] = (int.Parse(DATA_SET.Tables[1].Rows[0][0].ToString())) + 1;
-                    txtId.Text = DATA_SET.Tables[1].Rows[0][0].ToString();
+                    dataset.Tables[1].Rows[0][0] = (int.Parse(dataset.Tables[1].Rows[0][0].ToString())) + 1;
+                    txtId.Text = dataset.Tables[1].Rows[0][0].ToString();
 
                     // OBTENEMOS UNA NUEVA ROW PARA LA TABLA "PERSONA" Y LE
                     // PASAMOS LOS DATOS DE NUESTRA CAJAS DE TEXTO.
-                    DATA_ROW = DATA_SET.Tables[0].NewRow();
+                    DATA_ROW = dataset.Tables[0].NewRow();
                     DATA_ROW["persona_id"] = Convert.ToInt32(txtId.Text);
                     DATA_ROW["persona_nombre"] = txtNombre.Text;
                     DATA_ROW["persona_apellido"] = txtApellido.Text;
                     DATA_ROW["persona_direccion"] = txtDireccion.Text;
 
                     // SE AGREGA LA NUEVA ROW AL DATATABLE
-                    DATA_SET.Tables[0].Rows.Add(DATA_ROW);
+                    dataset.Tables[0].Rows.Add(DATA_ROW);
 
                     mGrilla.Rows[mGrilla.Rows.Count - 1].Selected = true;
                     mGrilla.SelectedRows[0].Cells[0].Value = DATA_ROW.RowState.ToString();
@@ -219,9 +219,9 @@ namespace Presentacion
             btnModificar.Enabled = false;
             btnNuevo.Enabled = false;
 
-            if (DATA_SET.Tables[1].Rows[0] is null == false && IsNumeric(DATA_SET.Tables[1].Rows[0][0].ToString()))
+            if (dataset.Tables[1].Rows[0] is null == false && IsNumeric(dataset.Tables[1].Rows[0][0].ToString()))
             {
-                int a = (int.Parse(DATA_SET.Tables[1].Rows[0][0].ToString())) + 1;
+                int a = (int.Parse(dataset.Tables[1].Rows[0][0].ToString())) + 1;
                 txtId.Text = a.ToString();
             }
             else { txtId.Text = "1"; }
@@ -313,21 +313,21 @@ namespace Presentacion
         private void Grabar_Click(object sender, EventArgs e)
         {
             //SETEO DATAADAPTER CON COnsulta Y CONNECTIONSTRING         
-            DATA_ADAPTER = new SqlDataAdapter(
+            adaptador = new SqlDataAdapter(
                 "SELECT Persona_id, Persona_nombre, Persona_apellido, Persona_direccion " +
                 "FROM Persona; " +
                 "SELECT MAX(persona_id) " +
-                "FROM Persona;", CONEXION);
+                "FROM Persona;", conexion);
 
             //SE SETEAN LOS METODOS PARA GUARDAR DATOS EN BASE DE DATOS
-            SqlCommandBuilder Cb = new SqlCommandBuilder(DATA_ADAPTER);
-            DATA_ADAPTER.UpdateCommand = Cb.GetUpdateCommand();
-            DATA_ADAPTER.DeleteCommand = Cb.GetDeleteCommand();
-            DATA_ADAPTER.InsertCommand = Cb.GetInsertCommand();
-            DATA_ADAPTER.ContinueUpdateOnError = true;
+            SqlCommandBuilder Cb = new SqlCommandBuilder(adaptador);
+            adaptador.UpdateCommand = Cb.GetUpdateCommand();
+            adaptador.DeleteCommand = Cb.GetDeleteCommand();
+            adaptador.InsertCommand = Cb.GetInsertCommand();
+            adaptador.ContinueUpdateOnError = true;
 
             //SE INTENTAN PERSISTIR LOS CAMBIOS EN LA BASE DE DATOS
-            DATA_ADAPTER.Update(DATA_SET.Tables[0]);
+            adaptador.Update(dataset.Tables[0]);
         }
 
 
@@ -337,13 +337,13 @@ namespace Presentacion
             //HABIA SIDO AGREGADO Y SE AUMENTO EL MAXIMO ID EN NUESTRA SEGUNDA
             //TABLA, TAMBIEN SE DESCARTAN ESOS CAMBIOS. POR ESO SE DESHACEN LOS
             //CAMBIOS DE TODO EL DATASET Y NO SOLO DE LA TABLA PERSONA.
-            DATA_SET.RejectChanges();
+            dataset.RejectChanges();
         }
 
 
         private void Cargar_Click(object sender, EventArgs e)
         {
-            DATA_SET.Tables[0].Rows.Clear();
+            dataset.Tables[0].Rows.Clear();
             CargarGrilla();
         }
 

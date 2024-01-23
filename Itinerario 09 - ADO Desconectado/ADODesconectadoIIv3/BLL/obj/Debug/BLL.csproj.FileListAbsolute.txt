@@ -7,3 +7,12 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADO
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.csproj.CopyComplete
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.dll
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\bin\Debug\BLL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\bin\Debug\BLL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\bin\Debug\DAL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\bin\Debug\DAL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 09 - ADO Desconectado\ADODesconectadoIIv3\BLL\obj\Debug\BLL.pdb

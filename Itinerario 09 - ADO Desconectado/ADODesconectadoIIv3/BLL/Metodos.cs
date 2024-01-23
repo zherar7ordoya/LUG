@@ -7,7 +7,7 @@ namespace BLL
     public class Metodos
     {
 
-        SqlDataAdapter DATA_ADAPTER;
+        SqlDataAdapter adaptador;
 
         public DataSet ArmarDataSet()
         {
@@ -199,7 +199,8 @@ namespace BLL
 
         static string FechaAleatoria()
         {
-            return _ = aleatorio.Next(1, 31) + "/" + aleatorio.Next(1, 12) + "/" + aleatorio.Next(1960, 2020);
+            return new DateTime(year: aleatorio.Next(1960, 2020), month: aleatorio.Next(1, 12), day: aleatorio.Next(1, 31)).ToShortDateString();
+            //return _ = aleatorio.Next(1, 31) + "/" + aleatorio.Next(1, 12) + "/" + aleatorio.Next(1960, 2020);
         }
 
         static int PaisAleatorio()
@@ -224,22 +225,22 @@ namespace BLL
         {
             string conexion =
                 @"Data Source=(LocalDB)\MSSQLLocalDB;
-                Initial Catalog=Ejemplos_LUG;
+                Initial Catalog=ADO_EN_CAPAS;
                 Integrated Security=True";
 
-            DATA_ADAPTER = new SqlDataAdapter(("SELECT * FROM " + tabla), conexion);
+            adaptador = new SqlDataAdapter(("SELECT * FROM " + tabla), conexion);
 
             //SE DEFINEN LOS METODOS PARA GUARDAR DATOS EN BASE DE DATOS
-            SqlCommandBuilder COMMAND_BUILDER = new SqlCommandBuilder(DATA_ADAPTER);
+            SqlCommandBuilder builder = new SqlCommandBuilder(adaptador);
 
-            DATA_ADAPTER.UpdateCommand = COMMAND_BUILDER.GetUpdateCommand();
-            DATA_ADAPTER.DeleteCommand = COMMAND_BUILDER.GetDeleteCommand();
-            DATA_ADAPTER.InsertCommand = COMMAND_BUILDER.GetInsertCommand();
-            DATA_ADAPTER.ContinueUpdateOnError = true;
-            DATA_ADAPTER.Fill(dataset);
+            adaptador.UpdateCommand = builder.GetUpdateCommand();
+            adaptador.DeleteCommand = builder.GetDeleteCommand();
+            adaptador.InsertCommand = builder.GetInsertCommand();
+            adaptador.ContinueUpdateOnError = true;
+            adaptador.Fill(dataset);
 
             //SE INTENTAN PERSISTIR LOS CAMBIOS EN LA BASE DE DATOS
-            DATA_ADAPTER.Update(dataset.Tables[0]);
+            adaptador.Update(dataset.Tables[0]);
         }
 
 
