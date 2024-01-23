@@ -73,7 +73,8 @@ namespace Presentacion
                 DateTime inicio = new DateTime(inicioYear, 1, 1);
                 DateTime fin = new DateTime(finYear, 12, 31);
 
-                string filtro = $"FechaNac >= #{inicio.ToShortDateString()}# AND FechaNac <= #{fin.ToShortDateString()}#";
+                // string filtro = $"FechaNac >= #{inicio.ToString("yyyy-MM-dd")}# AND FechaNac <= #{fin.ToString("yyyy-MM-dd")}#";
+                string filtro = $"FechaNac >= #{inicio:yyyy-MM-dd}# AND FechaNac <= #{fin:yyyy-MM-dd}#";
 
                 LimpiarYConfigurarGrilla();
 
@@ -83,7 +84,7 @@ namespace Presentacion
                         fila["Codigo_Persona"],
                         fila["Nombre"],
                         fila["Apellido"],
-                        Convert.ToDateTime(fila["FechaNac"]).ToShortDateString(),
+                        Convert.ToDateTime(fila["FechaNac"]).ToString("yyyy-MM-dd"), // Formatear la fecha correctamente
                         fila["Persona_Pais_Id"]);
                 }
             }
@@ -106,6 +107,7 @@ namespace Presentacion
 
             dgvFiltros.DataSource = null;
         }
+
 
 
 

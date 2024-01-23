@@ -154,8 +154,7 @@ namespace Presentacion
         {
             //DEFINO CONSULTA Y CONNECTION_STRING DE SQL_ADAPTER
             DATA_ADAPTER = new SqlDataAdapter(
-                "SELECT Persona_id, Persona_nombre, Persona_apellido, Persona_direccion " +
-                "FROM Persona", CONEXION);
+                "SELECT Persona_id, Persona_nombre, Persona_apellido, Persona_direccion FROM Persona", CONEXION);
 
             // SE SETEAN LOS METODOS PARA GUARDAR DATOS EN BASE DE DATOS
             SqlCommandBuilder COMMAND_BUILDER = new SqlCommandBuilder(DATA_ADAPTER);
