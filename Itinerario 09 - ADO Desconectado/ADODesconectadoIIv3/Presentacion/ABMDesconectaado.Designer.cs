@@ -43,11 +43,11 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.mGrilla = new System.Windows.Forms.DataGridView();
+            this.RegistrosDGV = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.mGrilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrosDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDescartar
@@ -175,18 +175,18 @@
             this.txtId.Size = new System.Drawing.Size(41, 20);
             this.txtId.TabIndex = 55;
             // 
-            // mGrilla
+            // RegistrosDGV
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.YellowGreen;
-            this.mGrilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.mGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.mGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mGrilla.Location = new System.Drawing.Point(17, 166);
-            this.mGrilla.Name = "mGrilla";
-            this.mGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mGrilla.Size = new System.Drawing.Size(615, 243);
-            this.mGrilla.TabIndex = 54;
-            this.mGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_Click);
+            this.RegistrosDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.RegistrosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.RegistrosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RegistrosDGV.Location = new System.Drawing.Point(17, 166);
+            this.RegistrosDGV.Name = "RegistrosDGV";
+            this.RegistrosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.RegistrosDGV.Size = new System.Drawing.Size(615, 243);
+            this.RegistrosDGV.TabIndex = 54;
+            this.RegistrosDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_Click);
             // 
             // btnCancelar
             // 
@@ -237,7 +237,7 @@
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.mGrilla);
+            this.Controls.Add(this.RegistrosDGV);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
@@ -246,7 +246,7 @@
             this.Text = "ABMDesconectaado";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UnloadForm);
             this.Load += new System.EventHandler(this.LoadForm);
-            ((System.ComponentModel.ISupportInitialize)(this.mGrilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrosDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +268,7 @@
         internal System.Windows.Forms.TextBox txtApellido;
         internal System.Windows.Forms.TextBox txtNombre;
         internal System.Windows.Forms.TextBox txtId;
-        internal System.Windows.Forms.DataGridView mGrilla;
+        internal System.Windows.Forms.DataGridView RegistrosDGV;
         internal System.Windows.Forms.Button btnCancelar;
         internal System.Windows.Forms.Button btnGuardar;
         internal System.Windows.Forms.Button btnNuevo;
