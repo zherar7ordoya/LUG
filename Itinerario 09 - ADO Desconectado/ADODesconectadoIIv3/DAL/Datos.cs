@@ -6,7 +6,7 @@ namespace DAL
 {
     public class Datos
     {
-        SqlConnection cnn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB; Initial Catalog=ADO_EN_CAPAS; Integrated Security=True");
+        SqlConnection cnn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB; Initial Catalog=LUG; Integrated Security=True");
 
         public void AbrirCnn()
         {
@@ -14,7 +14,7 @@ namespace DAL
             {
                 cnn = new SqlConnection(
                     @"Data Source=(LocalDB)\MSSQLLocalDB;
-                    Initial Catalog=Ejemplos_LUG;
+                    Initial Catalog=LUG;
                     Integrated Security=True ");
                 cnn.Open();
             }

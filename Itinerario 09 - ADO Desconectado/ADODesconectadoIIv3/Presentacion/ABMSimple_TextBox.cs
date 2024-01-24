@@ -18,7 +18,7 @@ namespace Presentacion
         //EN TODO EL FORMULARIO
         SqlConnection CONEXION = new SqlConnection(
             @"Data Source=(LocalDB)\MSSQLLocalDB;
-            Initial Catalog=Ejemplos_LUG;
+            Initial Catalog=LUG;
             Integrated Security=True");
 
         //CREO EL OBJETO PERSONA SOLO PARA USAR EL LISTAR 

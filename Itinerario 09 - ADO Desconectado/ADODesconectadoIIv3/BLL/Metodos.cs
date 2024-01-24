@@ -225,7 +225,7 @@ namespace BLL
         {
             string conexion =
                 @"Data Source=(LocalDB)\MSSQLLocalDB;
-                Initial Catalog=ADO_EN_CAPAS;
+                Initial Catalog=LUG;
                 Integrated Security=True";
 
             adaptador = new SqlDataAdapter(("SELECT * FROM " + tabla), conexion);

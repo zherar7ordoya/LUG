@@ -11,7 +11,7 @@ namespace Presentacion
         public ABMDesconectaado() => InitializeComponent();
         readonly SqlConnection conexion = new SqlConnection(
                 @"Data Source=(LocalDB)\MSSQLLocalDB;
-                Initial Catalog=ADO_EN_CAPAS;
+                Initial Catalog=LUG;
                 Integrated Security=True");
 
         //CREO EL OBJETO PERSONA SOLO PARA USAR EL LISTAR.
