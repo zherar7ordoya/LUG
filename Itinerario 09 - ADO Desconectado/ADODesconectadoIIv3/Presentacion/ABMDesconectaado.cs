@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 
 namespace Presentacion
 {
+    // Verde comentario
     public partial class ABMDesconectaado : Form
     {
+        /* VERDE COMENTARIO */
         public ABMDesconectaado() => InitializeComponent();
         readonly SqlConnection conexion = new SqlConnection(
                 @"Data Source=(LocalDB)\MSSQLLocalDB;

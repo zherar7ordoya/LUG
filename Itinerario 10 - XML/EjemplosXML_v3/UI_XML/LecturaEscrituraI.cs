@@ -24,36 +24,38 @@ namespace UI_XML
            // MostrarXML("Juegos.XML");
         }
 
-        void MostrarXML(string Archivo)
+        void MostrarXML(string p_archivo)
         {
             //limpio el treeview
             this.Arbol.Nodes.Clear();
             //creo el objetoArchivoXML del tipo XMLtextereader
-            XmlTextReader ArchivoXML = new XmlTextReader(Archivo);
+            XmlTextReader archivoXML = new XmlTextReader(p_archivo);
             try
             {   //Leo el archivo XML 
-                while (ArchivoXML.Read())
+                while (archivoXML.Read())
                 {        //los nodos del tipo elemento
-                    if (ArchivoXML.NodeType == XmlNodeType.Element)
+                    if (archivoXML.NodeType == XmlNodeType.Element)
                     {  //si tiene atributos
-                        if (ArchivoXML.HasAttributes == true)
+                        if (archivoXML.HasAttributes == true)
                         {      //por si tiene mas 1  atributo, me muevo en el elemento
-                            while (ArchivoXML.MoveToNextAttribute())
+                            while (archivoXML.MoveToNextAttribute())
                             {
-                                this.Arbol.Nodes.Add(ArchivoXML.Value);
+                                this.Arbol.Nodes.Add(archivoXML.Value);
                             }
                         }
                     }
                     
-                    if (ArchivoXML.NodeType == XmlNodeType.Text)
+                    if (archivoXML.NodeType == XmlNodeType.Text)
                     {
-                        this.Arbol.Nodes.Add(ArchivoXML.Value);
+                        this.Arbol.Nodes.Add(archivoXML.Value);
                     }
                 }
             }
             catch (System.Xml.XmlException ex)
             {  MessageBox.Show(ex.Message); }
         }
+
+
 
         private void LecturaEscrituraI_Load(object sender, EventArgs e)
         {
