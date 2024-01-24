@@ -20,40 +20,83 @@ namespace UI_XML
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MostrarXML("libros.xml");
-           // MostrarXML("Juegos.XML");
+           // MostrarXML("Libros.xml");
+           MostrarXML("Juegos.xml");
         }
 
-        void MostrarXML(string p_archivo)
+
+        void MostrarXML(string rutaArchivo)
         {
-            //limpio el treeview
-            this.Arbol.Nodes.Clear();
-            //creo el objetoArchivoXML del tipo XMLtextereader
-            XmlTextReader archivoXML = new XmlTextReader(p_archivo);
+            // Limpia el treeview
+            ControlArbol.Nodes.Clear();
+
+            // Crea el objeto lectorXml del tipo XmlTextReader
+            XmlTextReader lectorXml = new XmlTextReader(rutaArchivo);
+
             try
-            {   //Leo el archivo XML 
-                while (archivoXML.Read())
-                {        //los nodos del tipo elemento
-                    if (archivoXML.NodeType == XmlNodeType.Element)
-                    {  //si tiene atributos
-                        if (archivoXML.HasAttributes == true)
-                        {      //por si tiene mas 1  atributo, me muevo en el elemento
-                            while (archivoXML.MoveToNextAttribute())
+            {
+                TreeNode nodoPadre = null;
+
+                while (lectorXml.Read())
+                {
+                    // Verifica si el nodo actual es un elemento XML.////////////////////
+                    if (lectorXml.NodeType == XmlNodeType.Element)
+                    {
+                        // Crea un nuevo nodo para el elemento actual
+                        TreeNode nuevoNodo = new TreeNode(lectorXml.Name);
+
+                        // Si el elemento tiene atributos, añádelos al nodo actual
+                        if (lectorXml.HasAttributes)
+                        {
+                            while (lectorXml.MoveToNextAttribute())
                             {
-                                this.Arbol.Nodes.Add(archivoXML.Value);
+                                // Añade un nodo para cada atributo del elemento
+                                nuevoNodo.Nodes.Add($"{lectorXml.Name} = {lectorXml.Value}");
                             }
                         }
+
+                        // Si hay un nodo padre, agrega el nuevo nodo a él.
+                        // De lo contrario, es el nodo raíz.
+                        if (nodoPadre != null)
+                        {
+                            nodoPadre.Nodes.Add(nuevoNodo);
+                        }
+                        else
+                        {
+                            ControlArbol.Nodes.Add(nuevoNodo);
+                        }
+
+                        // Establece el nuevo nodo como el nodo padre para los siguientes nodos.
+                        nodoPadre = nuevoNodo;
                     }
-                    
-                    if (archivoXML.NodeType == XmlNodeType.Text)
+                    // Verifica si el nodo actual es un texto.///////////////////////////
+                    else if (lectorXml.NodeType == XmlNodeType.Text)
                     {
-                        this.Arbol.Nodes.Add(archivoXML.Value);
+                        // Agrega el valor como un nodo al nodo padre actual.
+                        nodoPadre?.Nodes.Add(lectorXml.Value);
+                    }
+                    // Verifica si el nodo actual es el cierre de un elemento.///////////
+                    else if (lectorXml.NodeType == XmlNodeType.EndElement)
+                    {
+                        // Si el nodo actual es el cierre de un elemento, retrocede al nodo padre
+                        if (nodoPadre != null)
+                        {
+                            nodoPadre = nodoPadre.Parent;
+                        }
                     }
                 }
             }
-            catch (System.Xml.XmlException ex)
-            {  MessageBox.Show(ex.Message); }
+            catch (XmlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                lectorXml.Close();
+            }
         }
+
+
 
 
 
@@ -70,9 +113,9 @@ namespace UI_XML
             archivoxml.Indentation=2;
             archivoxml.WriteStartDocument(true);
             archivoxml.WriteStartElement("Alumno");
-            archivoxml.WriteAttributeString("DNI", this.textBox1.Text.ToString());
-            archivoxml.WriteElementString("Nombre", this.textBox2.Text.ToString());
-            archivoxml.WriteElementString("Apellido", this.textBox3.Text.ToString());
+            archivoxml.WriteAttributeString("DNI", textBox1.Text.ToString());
+            archivoxml.WriteElementString("Nombre", textBox2.Text.ToString());
+            archivoxml.WriteElementString("Apellido", textBox3.Text.ToString());
             archivoxml.WriteEndElement();
             archivoxml.WriteEndDocument();
             archivoxml.Close();
@@ -89,14 +132,18 @@ namespace UI_XML
 
         void Limpiar()
         {
-            textBox1.Text = null;
-            textBox2.Text = null;
-            textBox3.Text = null;
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = null;
+                }
+            }
         }
         private void Button3_Click_1(object sender, EventArgs e)
         {
             //limpio el treeview
-            this.Arbol.Nodes.Clear();
+            ControlArbol.Nodes.Clear();
             XmlDocument doc = new XmlDocument();
              doc.Load("libros.xml");
            // doc.Load("Juegos.XML");
@@ -104,11 +151,11 @@ namespace UI_XML
             {
                 foreach (XmlNode a in f.Attributes)
                 {
-                    this.Arbol.Nodes.Add (a.InnerText);
+                    ControlArbol.Nodes.Add (a.InnerText);
                 }
                 foreach (XmlNode ff in f.ChildNodes)
                 {
-                    this.Arbol.Nodes.Add(ff.InnerText);
+                    ControlArbol.Nodes.Add(ff.InnerText);
                 }
 
             }

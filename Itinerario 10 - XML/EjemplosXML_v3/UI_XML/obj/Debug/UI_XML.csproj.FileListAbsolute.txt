@@ -27,3 +27,4 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\EjemplosXML_v3\U
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\EjemplosXML_v3\UI_XML\bin\Debug\Prueba.xml
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\EjemplosXML_v3\UI_XML\bin\Debug\Prueba2.xml
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\EjemplosXML_v3\UI_XML\bin\Debug\vehiculos.xml
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\EjemplosXML_v3\UI_XML\obj\Debug\UI_XML.Form1.resources

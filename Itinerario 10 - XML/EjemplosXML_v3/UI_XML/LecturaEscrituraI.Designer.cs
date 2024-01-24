@@ -30,7 +30,7 @@
         {
             this.Button3 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
-            this.Arbol = new System.Windows.Forms.TreeView();
+            this.ControlArbol = new System.Windows.Forms.TreeView();
             this.Button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -62,12 +62,12 @@
             this.Button2.UseVisualStyleBackColor = true;
             this.Button2.Click += new System.EventHandler(this.Button2_Click_1);
             // 
-            // Arbol
+            // ControlArbol
             // 
-            this.Arbol.Location = new System.Drawing.Point(249, 12);
-            this.Arbol.Name = "Arbol";
-            this.Arbol.Size = new System.Drawing.Size(251, 240);
-            this.Arbol.TabIndex = 9;
+            this.ControlArbol.Location = new System.Drawing.Point(249, 12);
+            this.ControlArbol.Name = "ControlArbol";
+            this.ControlArbol.Size = new System.Drawing.Size(251, 240);
+            this.ControlArbol.TabIndex = 9;
             // 
             // Button1
             // 
@@ -150,7 +150,7 @@
             this.ClientSize = new System.Drawing.Size(648, 286);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Button3);
-            this.Controls.Add(this.Arbol);
+            this.Controls.Add(this.ControlArbol);
             this.Controls.Add(this.Button1);
             this.Name = "LecturaEscrituraI";
             this.Text = "LecturaEscrituraI";
@@ -164,7 +164,7 @@
 
         internal System.Windows.Forms.Button Button3;
         internal System.Windows.Forms.Button Button2;
-        internal System.Windows.Forms.TreeView Arbol;
+        internal System.Windows.Forms.TreeView ControlArbol;
         internal System.Windows.Forms.Button Button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;

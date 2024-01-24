@@ -66,5 +66,14 @@ namespace UI_XML
             ofrlq4.MdiParent = this;
             ofrlq4.Show();
         }
+
+        private void chatGPTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 ofrlq4 = new Form1
+            {
+                MdiParent = this
+            };
+            ofrlq4.Show();
+        }
     }
 }
