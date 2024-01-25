@@ -1,16 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!--CONTENIDO CREADO CON XMLTEXTWRITER EL 16/10/2017 21:21:08-->
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<!--CONTENIDO CREADO CON XMLTEXTWRITER EL 25/1/2024 17:37:52-->
 <personas>
-  <persona nombre="José" apellido="Fernandez">
-    <saldo>1200</saldo>
-  </persona>
-  <persona nombre="Matrín" apellido="Rodriguez">
-    <saldo>2500</saldo>
-  </persona>
-  <persona nombre="Pedro" apellido="Perez">
-    <saldo>1850</saldo>
-  </persona>
-  <persona nombre="hhh" apellido="hhh">
-    <saldo>666</saldo>
-  </persona>
+    <persona nombre='José' apellido='Fernandez'>
+        <saldo>1200</saldo>
+    </persona>
+    <persona nombre='Matrín' apellido='Rodriguez'>
+        <saldo>2500</saldo>
+    </persona>
+    <persona nombre='Pedro' apellido='Perez'>
+        <saldo>1850</saldo>
+    </persona>
+    <persona nombre='X-Men' apellido='Rojo'>
+        <saldo>1000</saldo>
+    </persona>
+    <persona nombre='X-Men' apellido='Azul'>
+        <saldo>1000</saldo>
+    </persona>
+    <persona nombre='X-Men' apellido='Verde'>
+        <saldo>2000</saldo>
+    </persona>
 </personas>

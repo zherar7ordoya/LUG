@@ -37,8 +37,6 @@
             this.linQClasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linQBusquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linqABMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.chatGPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,9 +59,7 @@
             this.linQToolStripMenuItem,
             this.linQClasesToolStripMenuItem,
             this.linQBusquedaToolStripMenuItem,
-            this.linqABMToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.chatGPTToolStripMenuItem});
+            this.linqABMToolStripMenuItem});
             this.xNLToolStripMenuItem.Name = "xNLToolStripMenuItem";
             this.xNLToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.xNLToolStripMenuItem.Text = "XML";
@@ -117,18 +113,6 @@
             this.linqABMToolStripMenuItem.Text = "LinQ - ABM";
             this.linqABMToolStripMenuItem.Click += new System.EventHandler(this.linqABMToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(251, 6);
-            // 
-            // chatGPTToolStripMenuItem
-            // 
-            this.chatGPTToolStripMenuItem.Name = "chatGPTToolStripMenuItem";
-            this.chatGPTToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
-            this.chatGPTToolStripMenuItem.Text = "ChatGPT";
-            this.chatGPTToolStripMenuItem.Click += new System.EventHandler(this.chatGPTToolStripMenuItem_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,8 +141,6 @@
         private System.Windows.Forms.ToolStripMenuItem linQClasesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem linQBusquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem linqABMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem chatGPTToolStripMenuItem;
     }
 }
 
