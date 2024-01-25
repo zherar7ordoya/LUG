@@ -38,7 +38,7 @@
             this.ElegirArchivoButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ElegirArchivoButton.Location = new System.Drawing.Point(12, 12);
             this.ElegirArchivoButton.Name = "ElegirArchivoButton";
-            this.ElegirArchivoButton.Size = new System.Drawing.Size(150, 28);
+            this.ElegirArchivoButton.Size = new System.Drawing.Size(187, 34);
             this.ElegirArchivoButton.TabIndex = 0;
             this.ElegirArchivoButton.Text = "Cargar archivo XML";
             this.ElegirArchivoButton.UseVisualStyleBackColor = true;
@@ -53,7 +53,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 344);
             this.Controls.Add(this.treeView1);
@@ -62,7 +62,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
