@@ -7,77 +7,65 @@ namespace UI_XML
 {
     public partial class Form1 : Form
     {
+        string rutaArchivo = "Ejemplo2.xml";
         public Form1()
         {
             InitializeComponent();
-            ElegirArchivoButton.Click -= CargarXML;
-            ElegirArchivoButton.Click += CargarXML;
+            CargarArchivoButton.Click += MostrarConLINQ;
+            GuardarArchivoButton.Click += CrearXmlConLINQ;
         }
 
-        private void CargarXML(object sender, EventArgs e)
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+        private void MostrarConLINQ(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Archivos XML|*.xml";
+            // Limpiar el treeview
+            ControlArbol.Nodes.Clear();
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                string rutaArchivo = openFileDialog.FileName;
+                XDocument doc = XDocument.Load(rutaArchivo);
 
-                try
-                {
-                    XDocument xDoc = XDocument.Load(rutaArchivo);
+                var treeNodes = from juego in doc.Descendants("juego")
+                                select new TreeNode($"{juego.Element("nombre")?.Value} (ID: {juego.Attribute("id")?.Value})")
+                                {
+                                    Nodes = {
+                                new TreeNode($"Género: {juego.Element("genero")?.Value}"),
+                                new TreeNode($"Plataforma: {juego.Element("plataforma")?.Value}"),
+                                new TreeNode($"Compañía Creadora: {juego.Element("companiaCreadora")?.Value}")
+                            }
+                                };
 
-                    // Limpiar el TreeView
-                    treeView1.Nodes.Clear();
-
-                    // Crear el nodo raíz en el TreeView
-                    TreeNode rootNode = ConstruirNodo(xDoc.Root);
-                    treeView1.Nodes.Add(rootNode);
-
-                    // Construir el árbol desde el elemento raíz
-                    ConstruirArbolDesdeXElement(xDoc.Root, rootNode);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar el archivo XML:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                ControlArbol.Nodes.AddRange(treeNodes.ToArray());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al procesar el archivo XML: {ex.Message}");
             }
         }
 
-        private TreeNode ConstruirNodo(XElement xElement)
+
+
+
+
+
+        private void CrearXmlConLINQ(object sender, EventArgs e)
         {
-            // Crear el nodo para el elemento
-            TreeNode treeNode = new TreeNode(xElement.Name.LocalName);
+            var nuevoXml = new XDocument(
+                new XElement("Alumno",
+                    new XAttribute("DNI", textBox1.Text),
+                    new XElement("Nombre", textBox2.Text),
+                    new XElement("Apellido", textBox3.Text)
+                )
+            );
 
-            // Agregar atributos como nodos secundarios
-            foreach (XAttribute attribute in xElement.Attributes())
-            {
-                treeNode.Nodes.Add($"{attribute.Name.LocalName} = {attribute.Value}");
-            }
-
-            return treeNode;
+            nuevoXml.Save(rutaArchivo);
         }
 
-        private void ConstruirArbolDesdeXElement(XElement xElement, TreeNode treeNode)
-        {
-            // Crear nodos para cada elemento hijo
-            foreach (XNode childNode in xElement.Nodes())
-            {
-                if (childNode is XElement element)
-                {
-                    // Si es un elemento, crear un nuevo nodo y agregarlo
-                    TreeNode childTreeNode = ConstruirNodo(element);
-                    treeNode.Nodes.Add(childTreeNode);
 
-                    // Construir el árbol desde el elemento hijo
-                    ConstruirArbolDesdeXElement(element, childTreeNode);
-                }
-                else if (childNode is XText text)
-                {
-                    // Si es un nodo de texto, usar su valor
-                    treeNode.Nodes.Add(text.Value);
-                }
-            }
-        }
+
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }

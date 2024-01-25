@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Button3 = new System.Windows.Forms.Button();
-            this.Button2 = new System.Windows.Forms.Button();
+            this.LeerDomButton = new System.Windows.Forms.Button();
+            this.CrearXmlButton = new System.Windows.Forms.Button();
             this.ControlArbol = new System.Windows.Forms.TreeView();
-            this.Button1 = new System.Windows.Forms.Button();
+            this.AbrirXmlButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -42,25 +42,25 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Button3
+            // LeerDomButton
             // 
-            this.Button3.Location = new System.Drawing.Point(28, 209);
-            this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(130, 23);
-            this.Button3.TabIndex = 11;
-            this.Button3.Text = "Leer XML usando DOM";
-            this.Button3.UseVisualStyleBackColor = true;
-            this.Button3.Click += new System.EventHandler(this.Button3_Click_1);
+            this.LeerDomButton.Location = new System.Drawing.Point(28, 209);
+            this.LeerDomButton.Name = "LeerDomButton";
+            this.LeerDomButton.Size = new System.Drawing.Size(130, 23);
+            this.LeerDomButton.TabIndex = 11;
+            this.LeerDomButton.Text = "Leer XML usando DOM";
+            this.LeerDomButton.UseVisualStyleBackColor = true;
+            this.LeerDomButton.Click += new System.EventHandler(this.MostrarConXmlDocument);
             // 
-            // Button2
+            // CrearXmlButton
             // 
-            this.Button2.Location = new System.Drawing.Point(25, 103);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(130, 23);
-            this.Button2.TabIndex = 10;
-            this.Button2.Text = "Crear Archivo XML";
-            this.Button2.UseVisualStyleBackColor = true;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click_1);
+            this.CrearXmlButton.Location = new System.Drawing.Point(25, 103);
+            this.CrearXmlButton.Name = "CrearXmlButton";
+            this.CrearXmlButton.Size = new System.Drawing.Size(130, 23);
+            this.CrearXmlButton.TabIndex = 10;
+            this.CrearXmlButton.Text = "Crear Archivo XML";
+            this.CrearXmlButton.UseVisualStyleBackColor = true;
+            this.CrearXmlButton.Click += new System.EventHandler(this.CrearXml);
             // 
             // ControlArbol
             // 
@@ -69,22 +69,22 @@
             this.ControlArbol.Size = new System.Drawing.Size(251, 240);
             this.ControlArbol.TabIndex = 9;
             // 
-            // Button1
+            // AbrirXmlButton
             // 
-            this.Button1.Location = new System.Drawing.Point(13, 12);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(130, 23);
-            this.Button1.TabIndex = 8;
-            this.Button1.Text = "Abrir Archivo XML";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.AbrirXmlButton.Location = new System.Drawing.Point(13, 12);
+            this.AbrirXmlButton.Name = "AbrirXmlButton";
+            this.AbrirXmlButton.Size = new System.Drawing.Size(130, 23);
+            this.AbrirXmlButton.TabIndex = 8;
+            this.AbrirXmlButton.Text = "Abrir Archivo XML";
+            this.AbrirXmlButton.UseVisualStyleBackColor = true;
+            this.AbrirXmlButton.Click += new System.EventHandler(this.AbrirXml);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.Button2);
+            this.groupBox1.Controls.Add(this.CrearXmlButton);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -149,9 +149,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 286);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Button3);
+            this.Controls.Add(this.LeerDomButton);
             this.Controls.Add(this.ControlArbol);
-            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.AbrirXmlButton);
             this.Name = "LecturaEscrituraI";
             this.Text = "LecturaEscrituraI";
             this.groupBox1.ResumeLayout(false);
@@ -162,10 +162,10 @@
 
         #endregion
 
-        internal System.Windows.Forms.Button Button3;
-        internal System.Windows.Forms.Button Button2;
+        internal System.Windows.Forms.Button LeerDomButton;
+        internal System.Windows.Forms.Button CrearXmlButton;
         internal System.Windows.Forms.TreeView ControlArbol;
-        internal System.Windows.Forms.Button Button1;
+        internal System.Windows.Forms.Button AbrirXmlButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;

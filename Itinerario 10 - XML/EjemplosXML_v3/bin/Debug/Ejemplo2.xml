@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Alumno DNI="12852852">
-  <Nombre>Juan</Nombre>
-  <Apellido>Chales II</Apellido>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Alumno DNI="22333444">
+  <Nombre>Gerardo</Nombre>
+  <Apellido>Ayodrot</Apellido>
 </Alumno>
