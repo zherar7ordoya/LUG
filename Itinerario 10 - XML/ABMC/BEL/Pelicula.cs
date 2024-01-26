@@ -8,8 +8,8 @@ namespace ABMC
 {
     public class Pelicula : Entidad
     {
-        string Titulo { get; set; }
-        Lanzamiento Lanzamiento { get; set; }
-        List<Actor> Actores { get; set; }
+        public string Titulo { get; set; }
+        public Produccion Produccion { get; set; }
+        public List<Actor> Actores { get; set; }
     }
 }

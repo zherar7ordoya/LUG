@@ -12,5 +12,7 @@ namespace ABMC
     /// </summary>
     public class Actor
     {
+        public string Nombre { get; set; }
+        public string Personaje { get; set; }
     }
 }
