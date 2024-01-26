@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ABMC
 {
-    internal interface IGestor
+    public interface IGestor<T> where T : IEntidad
     {
+        bool Guardar(T objeto);
+        bool Eliminar(T objeto);
+        bool Actualizar(T objeto);
+        List<T> ListarTodo();
+        T ListarObjeto(T objeto);
     }
 }

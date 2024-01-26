@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ABMC
 {
-    public interface IEntidad
+    /// <summary>
+    /// Clase auxiliar de Pelicula.
+    /// Por tanto, no necesita interfaz.
+    /// </summary>
+    public class Lanzamiento
     {
-        int Codigo { get; set; }
     }
 }

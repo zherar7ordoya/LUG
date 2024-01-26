@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ABMC
 {
-    public interface IEntidad
+    public class Entidad : IEntidad
     {
-        int Codigo { get; set; }
+        public int Codigo { get; set; }
     }
 }

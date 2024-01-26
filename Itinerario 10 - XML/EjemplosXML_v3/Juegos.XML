@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <juegos>
-  <juego id="01">
+  <juego id="1">
     <nombre> Heroes Of Might Magic VI</nombre>
     <genero>Arcade</genero>
     <plataforma>PC</plataforma>
     <companiaCreadora> Ubisoft </companiaCreadora>
   </juego>
-  <juego id="02">
+  <juego id="2">
     <nombre> Starcraft II: Wings of Liberty </nombre>
     <genero>Estrategia</genero>
     <plataforma>PC</plataforma>
     <companiaCreadora> Blizzard Entertainment </companiaCreadora>
   </juego>
-  <juego id="03">
+  <juego id="3">
     <nombre> Batman: Arkham Asylum </nombre>
     <genero>Acción</genero>
     <plataforma>PC</plataforma>

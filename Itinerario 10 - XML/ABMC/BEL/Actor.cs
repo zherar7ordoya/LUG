@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ABMC
 {
-    internal class BEL
+    /// <summary>
+    /// Clase auxiliar de Pelicula.
+    /// Por tanto, no necesita interfaz.
+    /// </summary>
+    public class Actor
     {
     }
 }
