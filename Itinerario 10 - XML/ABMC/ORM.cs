@@ -28,7 +28,24 @@ namespace ABMC
 
         public bool Eliminar(Pelicula objeto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                XElement peliculas = peliculaDAL.Leer();
+
+                // Buscar el elemento de la película que se va a eliminar
+                XElement pelicula =
+                    peliculas
+                    .Elements("Pelicula")
+                    .FirstOrDefault(x => (int)x.Attribute("Id") == objeto.Codigo);
+
+                if (pelicula != null)
+                {
+                    pelicula.Remove();
+                    return peliculaDAL.Escribir(peliculas);
+                }
+                else { return false; }
+            }
+            catch (Exception ex) { throw new Exception($"Error al eliminar la película: {ex.Message}"); }
         }
 
 
