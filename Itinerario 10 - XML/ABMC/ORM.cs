@@ -78,10 +78,7 @@ namespace ABMC
 
                 return true;
             }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error al agregar la película: {ex.Message}");
-            }
+            catch (Exception ex) { throw new Exception($"Error al agregar la película: {ex.Message}"); }
         }
 
 
@@ -90,9 +87,71 @@ namespace ABMC
             throw new NotImplementedException();
         }
 
+
+        /* OPERADOR "?" (OPERADOR DE NULABILIDAD)
+         * Se utiliza para realizar una verificación de nulabilidad antes de acceder
+         * a una propiedad o llamar a un método para evitar excepciones
+         * NullReferenceException.
+         * Ejemplo:
+         *      string nombre = actorElement?.Element("Nombre")?.Value;
+         * En este ejemplo, si actorElement o Element("Nombre") son nulos, la
+         * expresión devolverá null en lugar de lanzar una excepción.
+         * 
+         * OPERADOR "??" (OPERADOR DE FUSIÓN DE NULOS)
+         * Es una forma concisa de manejar casos en los que una variable puede ser
+         * nula, proporcionando un valor predeterminado si es así.
+         * Ejemplo:
+         *      List<Actor> actores = 
+         *          peliculaElement
+         *          .Element("Actores")?
+         *          .Elements("Actor")
+         *          .Select(actorElement => new Actor
+         *              {
+         *                  Nombre = (string)actorElement.Element("Nombre"),
+         *                  Personaje = (string)actorElement.Element("Personaje")
+         *              })
+         *          .ToList() ?? new List<Actor>();
+         * En este ejemplo, si peliculaElement.Element("Actores") es nulo, se
+         * asignará una nueva lista vacía en lugar de null.
+         */
         public List<Pelicula> ListarTodo()
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Leer el contenido del archivo XML
+                XElement peliculas = peliculaDAL.Leer();
+
+                // Utilizar LINQ to XML para mapear los elementos Pelicula a objetos Pelicula
+                List<Pelicula> lista =
+                    peliculas
+                    .Elements("Pelicula")
+                    .Select(pelicula => new Pelicula
+                    {
+                        Codigo = (int)pelicula.Attribute("Id"),
+                        Titulo = (string)pelicula.Element("Titulo"),
+
+                        // 1 a 1
+                        Produccion = new Produccion
+                        {
+                            AñoEstreno = (int)pelicula.Element("Produccion").Element("Estreno"),
+                            Distribuidora = (string)pelicula.Element("Produccion").Element("Distribuidora")
+                        },
+
+                        // 1 a M
+                        Actores = pelicula.Element("Actores")?.Elements("Actor")
+                            .Select(actor => new Actor
+                            {
+                                Nombre = (string)actor.Element("Nombre"),
+                                Personaje = (string)actor.Element("Personaje")
+                            }).ToList() ?? new List<Actor>() // Lista anidada (actores)
+
+                    }).ToList(); // Lista anidante (películas)
+
+                return lista;
+            }
+            catch (Exception ex) { throw new Exception($"Error al listar las películas: {ex.Message}"); }
         }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }
