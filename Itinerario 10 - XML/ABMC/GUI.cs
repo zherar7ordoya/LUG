@@ -106,9 +106,9 @@ namespace ABMC
             foreach (Control control in this.Controls)
             {
                 if (control is TextBox) control.Text = string.Empty;
-                if (control is RadioButton) ((RadioButton)control).Checked = false;
-                if (control is DataGridView) ((DataGridView)control).DataSource = null;
-                if (control is TreeView) ((TreeView)control).Nodes.Clear();
+                if (control is RadioButton button) button.Checked = false;
+                if (control is DataGridView dataview) dataview.DataSource = null;
+                if (control is TreeView treeview) treeview.Nodes.Clear();
             }
             ListarPeliculas();
         }

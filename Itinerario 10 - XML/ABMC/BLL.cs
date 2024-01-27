@@ -8,29 +8,34 @@ namespace ABMC
 {
     public class BLL : IGestor<Pelicula>
     {
+        private readonly Pelicula peliculaBEL = new Pelicula();
+        private readonly ORM peliculaORM = new ORM();
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
         public bool Actualizar(Pelicula objeto)
         {
-            throw new NotImplementedException();
+            return peliculaORM.Actualizar(objeto);
         }
 
         public bool Eliminar(Pelicula objeto)
         {
-            throw new NotImplementedException();
+            return peliculaORM.Eliminar(objeto);
         }
 
         public bool Guardar(Pelicula objeto)
         {
-            throw new NotImplementedException();
+            return peliculaORM.Guardar(objeto);
         }
 
         public Pelicula ListarObjeto(Pelicula objeto)
         {
-            throw new NotImplementedException();
+            return peliculaORM.ListarObjeto(objeto);
         }
 
         public List<Pelicula> ListarTodo()
         {
-            throw new NotImplementedException();
+            return peliculaORM.ListarTodo();
         }
     }
 }

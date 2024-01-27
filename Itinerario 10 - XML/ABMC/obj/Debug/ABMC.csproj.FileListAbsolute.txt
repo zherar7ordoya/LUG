@@ -9,3 +9,14 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\A
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.csproj.CoreCompileInputs.cache
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.exe
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\bin\Debug\Peliculas.xml
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\bin\Debug\ABMC.exe.config
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\bin\Debug\ABMC.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\bin\Debug\ABMC.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.GUI.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.Properties.Resources.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.csproj.GenerateResource.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 10 - XML\ABMC\obj\Debug\ABMC.pdb
