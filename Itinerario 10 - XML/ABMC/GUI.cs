@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * => TENGO QUE ORDENAR ESTE CÓDIGO, POR DIOS...
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -11,17 +16,32 @@ namespace ABMC
         public GUI()
         {
             InitializeComponent();
+            ConfigurarEventos();
         }
+
+
+        // Interesante...
+        private void ConfigurarEventos()
+        {
+            AltaButton.Click += (sender, e) => ManejarOperacion(Guardar);
+            BajaButton.Click += (sender, e) => ManejarOperacion(Eliminar);
+            ModificacionButton.Click += (sender, e) => ManejarOperacion(Actualizar);
+            ConsultaButton.Click += Consultar;
+            RestablecerButton.Click += (sender, e) => ManejarOperacion(Restablecer);
+            PeliculasDGV.RowEnter += SincronizarControles;
+        }
+
+        private void ManejarOperacion(Action<object, EventArgs> operacion)
+        {
+            peliculaBEL = ArmarObjeto();
+            operacion.Invoke(this, EventArgs.Empty);
+            LimpiarControles();
+            ListarPeliculas();
+        }
+
 
         private void GUI_Load(object sender, EventArgs e)
         {
-            AltaButton.Click += Guardar;
-            BajaButton.Click += Eliminar;
-            ModificacionButton.Click += Actualizar;
-            ConsultaButton.Click += Consultar;
-            RestablecerButton.Click += Restablecer;
-
-            PeliculasDGV.RowEnter += SincronizarControles;
             ActoresDGV.Columns.Add("ColumnaNombre", "Nombre");
             ActoresDGV.Columns.Add("ColumnaPersonaje", "Personaje");
             ListarPeliculas();
@@ -72,7 +92,7 @@ namespace ABMC
         }
 
 
-        private void Consultar(object sender, EventArgs e) //------------------*
+        private void Consultar(object sender, EventArgs e)
         {
             if (ConsultaTextbox.Text == string.Empty)
             {
@@ -83,24 +103,39 @@ namespace ABMC
             switch (ObtenerCriterioBusquedaSeleccionado())
             {
                 case CriterioBusqueda.Titulo:
-                    PeliculasDGV.DataSource = null;
-                    PeliculasDGV.DataSource = peliculaBLL.ConsultarPorTitulo(ConsultaTextbox.Text);
+                    ConsultarPorTitulo();
                     break;
 
                 case CriterioBusqueda.Año:
-                    PeliculasDGV.DataSource = null;
-                    PeliculasDGV.DataSource = peliculaBLL.ConsultarPorAño(int.Parse(ConsultaTextbox.Text));
+                    ConsultarPorAño();
                     break;
 
                 case CriterioBusqueda.Actor:
-                    PeliculasDGV.DataSource = null;
-                    PeliculasDGV.DataSource = peliculaBLL.ConsultarPorActor(ConsultaTextbox.Text);
+                    ConsultarPorActor();
                     break;
 
                 default:
                     MessageBox.Show("No ha seleccionado ningún criterio de búsqueda.");
                     break;
             }
+        }
+
+        private void ConsultarPorTitulo()
+        {
+            PeliculasDGV.DataSource = null;
+            PeliculasDGV.DataSource = peliculaBLL.ConsultarPorTitulo(ConsultaTextbox.Text);
+        }
+
+        private void ConsultarPorAño()
+        {
+            PeliculasDGV.DataSource = null;
+            PeliculasDGV.DataSource = peliculaBLL.ConsultarPorAño(int.Parse(ConsultaTextbox.Text));
+        }
+
+        private void ConsultarPorActor()
+        {
+            PeliculasDGV.DataSource = null;
+            PeliculasDGV.DataSource = peliculaBLL.ConsultarPorActor(ConsultaTextbox.Text);
         }
 
         private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
@@ -140,7 +175,7 @@ namespace ABMC
         }
 
 
-        private void ActualizarTreeView(string titulo)
+        private void ActualizarTreeView(string titulo) //----------------------*
         {
             DetalleTreeview.Nodes.Clear();
 
@@ -205,7 +240,7 @@ namespace ABMC
         }
 
 
-        private void Restablecer(object sender, EventArgs e)
+        private void Restablecer(object sender, EventArgs e) //----------------*
         {
             LimpiarControles();
             ListarPeliculas();
@@ -213,7 +248,7 @@ namespace ABMC
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-        private Pelicula ArmarObjeto()
+        private Pelicula ArmarObjeto() //--------------------------------------*
         {
             Pelicula pelicula = new Pelicula
             {
