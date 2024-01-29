@@ -53,6 +53,7 @@
     <Compile Include="BEL\Produccion.cs" />
     <Compile Include="BEL\Pelicula.cs" />
     <Compile Include="BLL.cs" />
+    <Compile Include="CriterioBusqueda.cs" />
     <Compile Include="DAL.cs" />
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>

@@ -19,6 +19,8 @@ namespace ABMC
             BajaButton.Click += Eliminar;
             ModificacionButton.Click += Actualizar;
             ConsultaButton.Click += Consultar;
+            RestablecerButton.Click += Restablecer;
+
             PeliculasDGV.RowEnter += SincronizarControles;
             ActoresDGV.Columns.Add("ColumnaNombre", "Nombre");
             ActoresDGV.Columns.Add("ColumnaPersonaje", "Personaje");
@@ -47,9 +49,58 @@ namespace ABMC
             LimpiarControles();
             ListarPeliculas();
         }
-        private void Consultar(object sender, EventArgs e)
-        {
 
+
+        private CriterioBusqueda ObtenerCriterioBusquedaSeleccionado() //------*
+        {
+            if (TituloRadio.Checked)
+            {
+                return CriterioBusqueda.Titulo;
+            }
+            else if (AñoRadio.Checked)
+            {
+                return CriterioBusqueda.Año;
+            }
+            else if (ActorRadio.Checked)
+            {
+                return CriterioBusqueda.Actor;
+            }
+            else
+            {
+                return CriterioBusqueda.SinSeleccion;
+            }
+        }
+
+
+        private void Consultar(object sender, EventArgs e) //------------------*
+        {
+            if (ConsultaTextbox.Text == string.Empty)
+            {
+                MessageBox.Show("No ha ingresado ningún valor para realizar la búsqueda.");
+                return;
+            }
+
+            switch (ObtenerCriterioBusquedaSeleccionado())
+            {
+                case CriterioBusqueda.Titulo:
+                    PeliculasDGV.DataSource = null;
+                    PeliculasDGV.DataSource = peliculaBLL.ConsultarPorTitulo(ConsultaTextbox.Text);
+                    break;
+
+                case CriterioBusqueda.Año:
+                    PeliculasDGV.DataSource = null;
+                    PeliculasDGV.DataSource = peliculaBLL.ConsultarPorAño(int.Parse(ConsultaTextbox.Text));
+                    break;
+
+                case CriterioBusqueda.Actor:
+                    PeliculasDGV.DataSource = null;
+                    PeliculasDGV.DataSource = peliculaBLL.ConsultarPorActor(ConsultaTextbox.Text);
+                    break;
+
+                default:
+                    MessageBox.Show("No ha seleccionado ningún criterio de búsqueda.");
+                    break;
+            }
         }
 
         private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
@@ -85,7 +136,7 @@ namespace ABMC
             }
         }
 
-        private void ListarPeliculas()
+        private void ListarPeliculas() //--------------------------------------*
         {
             // Limpiar el DataGridView
             PeliculasDGV.Columns.Clear();
@@ -112,6 +163,12 @@ namespace ABMC
             PeliculasDGV.DataSource = peliculaBLL.ListarTodo();
         }
 
+
+        private void Restablecer(object sender, EventArgs e)
+        {
+            LimpiarControles();
+            ListarPeliculas();
+        }
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 

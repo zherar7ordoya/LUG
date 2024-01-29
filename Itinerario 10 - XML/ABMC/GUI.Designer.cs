@@ -49,6 +49,7 @@
             this.TituloLabel = new System.Windows.Forms.Label();
             this.CodigoLabel = new System.Windows.Forms.Label();
             this.CodigoTextbox = new System.Windows.Forms.TextBox();
+            this.RestablecerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActoresDGV)).BeginInit();
             this.FiltradoGroup.SuspendLayout();
@@ -130,7 +131,7 @@
             // ActorRadio
             // 
             this.ActorRadio.AutoSize = true;
-            this.ActorRadio.Location = new System.Drawing.Point(125, 51);
+            this.ActorRadio.Location = new System.Drawing.Point(125, 91);
             this.ActorRadio.Name = "ActorRadio";
             this.ActorRadio.Size = new System.Drawing.Size(75, 28);
             this.ActorRadio.TabIndex = 8;
@@ -141,7 +142,7 @@
             // AñoRadio
             // 
             this.AñoRadio.AutoSize = true;
-            this.AñoRadio.Location = new System.Drawing.Point(125, 79);
+            this.AñoRadio.Location = new System.Drawing.Point(125, 57);
             this.AñoRadio.Name = "AñoRadio";
             this.AñoRadio.Size = new System.Drawing.Size(66, 28);
             this.AñoRadio.TabIndex = 9;
@@ -163,14 +164,15 @@
             // FiltradoGroup
             // 
             this.FiltradoGroup.BackColor = System.Drawing.SystemColors.Control;
+            this.FiltradoGroup.Controls.Add(this.RestablecerButton);
             this.FiltradoGroup.Controls.Add(this.ConsultaTextbox);
             this.FiltradoGroup.Controls.Add(this.TituloRadio);
             this.FiltradoGroup.Controls.Add(this.ConsultaButton);
             this.FiltradoGroup.Controls.Add(this.AñoRadio);
             this.FiltradoGroup.Controls.Add(this.ActorRadio);
-            this.FiltradoGroup.Location = new System.Drawing.Point(12, 378);
+            this.FiltradoGroup.Location = new System.Drawing.Point(12, 359);
             this.FiltradoGroup.Name = "FiltradoGroup";
-            this.FiltradoGroup.Size = new System.Drawing.Size(432, 109);
+            this.FiltradoGroup.Size = new System.Drawing.Size(432, 126);
             this.FiltradoGroup.TabIndex = 11;
             this.FiltradoGroup.TabStop = false;
             this.FiltradoGroup.Text = "Filtrado";
@@ -253,6 +255,15 @@
             this.CodigoTextbox.Size = new System.Drawing.Size(200, 28);
             this.CodigoTextbox.TabIndex = 15;
             // 
+            // RestablecerButton
+            // 
+            this.RestablecerButton.Location = new System.Drawing.Point(7, 64);
+            this.RestablecerButton.Name = "RestablecerButton";
+            this.RestablecerButton.Size = new System.Drawing.Size(100, 35);
+            this.RestablecerButton.TabIndex = 10;
+            this.RestablecerButton.Text = "Restablecer";
+            this.RestablecerButton.UseVisualStyleBackColor = true;
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -309,6 +320,7 @@
         private System.Windows.Forms.Label TituloLabel;
         private System.Windows.Forms.Label CodigoLabel;
         private System.Windows.Forms.TextBox CodigoTextbox;
+        private System.Windows.Forms.Button RestablecerButton;
     }
 }
 
