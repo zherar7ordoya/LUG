@@ -1,156 +1,156 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
-<Películas>
-	<Película Id="1">
-		<Título>Terminator</Título>
-		<Lanzamiento>
-			<Año>1984</Año>
-			<Distribuidora>Orion Pictures</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Arnold Schwarzenegger</Nombre>
-				<Personaje>Terminator</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Linda Hamilton</Nombre>
-				<Personaje>Sarah Connor</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="2">
-		<Título>Terminator 2: Judgment Day</Título>
-		<Lanzamiento>
-			<Año>1991</Año>
-			<Distribuidora>TriStar Pictures</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Arnold Schwarzenegger</Nombre>
-				<Personaje>T-800</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Linda Hamilton</Nombre>
-				<Personaje>Sarah Connor</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Edward Furlong</Nombre>
-				<Personaje>John Connor</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="3">
-		<Título>Terminator: Dark Fate</Título>
-		<Lanzamiento>
-			<Año>2019</Año>
-			<Distribuidora>Paramount Pictures</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Linda Hamilton</Nombre>
-				<Personaje>Sarah Connor</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Mackenzie Davis</Nombre>
-				<Personaje>Grace</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Arnold Schwarzenegger</Nombre>
-				<Personaje>T-800</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="4">
-		<Título>Rocky</Título>
-		<Lanzamiento>
-			<Año>1976</Año>
-			<Distribuidora>United Artists</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Sylvester Stallone</Nombre>
-				<Personaje>Rocky Balboa</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Talia Shire</Nombre>
-				<Personaje>Adrian</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="5">
-		<Título>Rambo: First Blood</Título>
-		<Lanzamiento>
-			<Año>1982</Año>
-			<Distribuidora>Orion Pictures</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Sylvester Stallone</Nombre>
-				<Personaje>John Rambo</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Richard Crenna</Nombre>
-				<Personaje>Coronel Trautman</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="6">
-		<Título>Rambo: First Blood Part II</Título>
-		<Lanzamiento>
-			<Año>1985</Año>
-			<Distribuidora>TriStar Pictures</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Sylvester Stallone</Nombre>
-				<Personaje>John Rambo</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Richard Crenna</Nombre>
-				<Personaje>Coronel Trautman</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="7">
-		<Título>Predator</Título>
-		<Lanzamiento>
-			<Año>1987</Año>
-			<Distribuidora>20th Century Fox</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Arnold Schwarzenegger</Nombre>
-				<Personaje>Dutch</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Carl Weathers</Nombre>
-				<Personaje>Dillon</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-	<Película Id="8">
-		<Título>Predator 2</Título>
-		<Lanzamiento>
-			<Año>1990</Año>
-			<Distribuidora>20th Century Fox</Distribuidora>
-		</Lanzamiento>
-		<Actores>
-			<Actor>
-				<Nombre>Danny Glover</Nombre>
-				<Personaje>Mike Harrigan</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Bill Paxton</Nombre>
-				<Personaje>Jerry Lambert</Personaje>
-			</Actor>
-		</Actores>
-	</Película>
-
-</Películas>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Peliculas>
+  <Pelicula Id="1">
+    <Titulo>Terminator</Titulo>
+    <Produccion>
+      <Estreno>1984</Estreno>
+      <Distribuidora>Orion Pictures</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Arnold Schwarzenegger</Nombre>
+        <Personaje>Terminator</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Linda Hamilton</Nombre>
+        <Personaje>Sarah Connor</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="2">
+    <Titulo>Terminator 2: Judgment Day</Titulo>
+    <Produccion>
+      <Estreno>1991</Estreno>
+      <Distribuidora>TriStar Pictures</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Arnold Schwarzenegger</Nombre>
+        <Personaje>T-800</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Linda Hamilton</Nombre>
+        <Personaje>Sarah Connor</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Edward Furlong</Nombre>
+        <Personaje>John Connor</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="3">
+    <Titulo>Terminator: Dark Fate</Titulo>
+    <Produccion>
+      <Estreno>2019</Estreno>
+      <Distribuidora>Paramount Pictures</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Linda Hamilton</Nombre>
+        <Personaje>Sarah Connor</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Mackenzie Davis</Nombre>
+        <Personaje>Grace</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Arnold Schwarzenegger</Nombre>
+        <Personaje>T-800</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="4">
+    <Titulo>Rocky</Titulo>
+    <Produccion>
+      <Estreno>1976</Estreno>
+      <Distribuidora>United Artists</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Sylvester Stallone</Nombre>
+        <Personaje>Rocky Balboa</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Talia Shire</Nombre>
+        <Personaje>Adrian</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="5">
+    <Titulo>Rambo: First Blood</Titulo>
+    <Produccion>
+      <Estreno>1982</Estreno>
+      <Distribuidora>Orion Pictures</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Sylvester Stallone</Nombre>
+        <Personaje>John Rambo</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Richard Crenna</Nombre>
+        <Personaje>Coronel Trautman</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="6">
+    <Titulo>Rambo: First Blood Part II</Titulo>
+    <Produccion>
+      <Estreno>1985</Estreno>
+      <Distribuidora>TriStar Pictures</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Sylvester Stallone</Nombre>
+        <Personaje>John Rambo</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Richard Crenna</Nombre>
+        <Personaje>Coronel Trautman</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="7">
+    <Titulo>Predator</Titulo>
+    <Produccion>
+      <Estreno>1987</Estreno>
+      <Distribuidora>20th Century Fox</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Arnold Schwarzenegger</Nombre>
+        <Personaje>Dutch</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Carl Weathers</Nombre>
+        <Personaje>Dillon</Personaje>
+      </Actor>
+      <!-- Nuevos actores agregados -->
+      <Actor>
+        <Nombre>Jesse Ventura</Nombre>
+        <Personaje>Blaine</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Bill Duke</Nombre>
+        <Personaje>Mac</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+  <Pelicula Id="8">
+    <Titulo>Predator 2</Titulo>
+    <Produccion>
+      <Estreno>1990</Estreno>
+      <Distribuidora>20th Century Fox</Distribuidora>
+    </Produccion>
+    <Actores>
+      <Actor>
+        <Nombre>Danny Glover</Nombre>
+        <Personaje>Mike Harrigan</Personaje>
+      </Actor>
+      <Actor>
+        <Nombre>Bill Paxton</Nombre>
+        <Personaje>Jerry Lambert</Personaje>
+      </Actor>
+    </Actores>
+  </Pelicula>
+</Peliculas>

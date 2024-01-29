@@ -47,6 +47,8 @@
             this.EstrenoLabel = new System.Windows.Forms.Label();
             this.TituloTextbox = new System.Windows.Forms.TextBox();
             this.TituloLabel = new System.Windows.Forms.Label();
+            this.CodigoLabel = new System.Windows.Forms.Label();
+            this.CodigoTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActoresDGV)).BeginInit();
             this.FiltradoGroup.SuspendLayout();
@@ -55,9 +57,12 @@
             // 
             // PeliculasDGV
             // 
+            this.PeliculasDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.PeliculasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PeliculasDGV.Location = new System.Drawing.Point(12, 12);
             this.PeliculasDGV.Name = "PeliculasDGV";
+            this.PeliculasDGV.RowHeadersWidth = 51;
+            this.PeliculasDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PeliculasDGV.Size = new System.Drawing.Size(432, 150);
             this.PeliculasDGV.TabIndex = 0;
             // 
@@ -65,7 +70,7 @@
             // 
             this.DetalleTreeview.Location = new System.Drawing.Point(450, 168);
             this.DetalleTreeview.Name = "DetalleTreeview";
-            this.DetalleTreeview.Size = new System.Drawing.Size(240, 255);
+            this.DetalleTreeview.Size = new System.Drawing.Size(432, 317);
             this.DetalleTreeview.TabIndex = 1;
             // 
             // AltaButton
@@ -108,7 +113,7 @@
             // 
             this.ConsultaTextbox.Location = new System.Drawing.Point(225, 23);
             this.ConsultaTextbox.Name = "ConsultaTextbox";
-            this.ConsultaTextbox.Size = new System.Drawing.Size(187, 24);
+            this.ConsultaTextbox.Size = new System.Drawing.Size(187, 28);
             this.ConsultaTextbox.TabIndex = 6;
             // 
             // TituloRadio
@@ -116,7 +121,7 @@
             this.TituloRadio.AutoSize = true;
             this.TituloRadio.Location = new System.Drawing.Point(125, 23);
             this.TituloRadio.Name = "TituloRadio";
-            this.TituloRadio.Size = new System.Drawing.Size(62, 22);
+            this.TituloRadio.Size = new System.Drawing.Size(77, 28);
             this.TituloRadio.TabIndex = 7;
             this.TituloRadio.TabStop = true;
             this.TituloRadio.Text = "Título";
@@ -127,7 +132,7 @@
             this.ActorRadio.AutoSize = true;
             this.ActorRadio.Location = new System.Drawing.Point(125, 51);
             this.ActorRadio.Name = "ActorRadio";
-            this.ActorRadio.Size = new System.Drawing.Size(61, 22);
+            this.ActorRadio.Size = new System.Drawing.Size(75, 28);
             this.ActorRadio.TabIndex = 8;
             this.ActorRadio.TabStop = true;
             this.ActorRadio.Text = "Actor";
@@ -138,7 +143,7 @@
             this.AñoRadio.AutoSize = true;
             this.AñoRadio.Location = new System.Drawing.Point(125, 79);
             this.AñoRadio.Name = "AñoRadio";
-            this.AñoRadio.Size = new System.Drawing.Size(52, 22);
+            this.AñoRadio.Size = new System.Drawing.Size(66, 28);
             this.AñoRadio.TabIndex = 9;
             this.AñoRadio.TabStop = true;
             this.AñoRadio.Text = "Año";
@@ -146,10 +151,13 @@
             // 
             // ActoresDGV
             // 
+            this.ActoresDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.ActoresDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ActoresDGV.Location = new System.Drawing.Point(450, 12);
             this.ActoresDGV.Name = "ActoresDGV";
-            this.ActoresDGV.Size = new System.Drawing.Size(240, 150);
+            this.ActoresDGV.RowHeadersWidth = 51;
+            this.ActoresDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ActoresDGV.Size = new System.Drawing.Size(432, 150);
             this.ActoresDGV.TabIndex = 10;
             // 
             // FiltradoGroup
@@ -160,9 +168,9 @@
             this.FiltradoGroup.Controls.Add(this.ConsultaButton);
             this.FiltradoGroup.Controls.Add(this.AñoRadio);
             this.FiltradoGroup.Controls.Add(this.ActorRadio);
-            this.FiltradoGroup.Location = new System.Drawing.Point(13, 314);
+            this.FiltradoGroup.Location = new System.Drawing.Point(12, 378);
             this.FiltradoGroup.Name = "FiltradoGroup";
-            this.FiltradoGroup.Size = new System.Drawing.Size(431, 109);
+            this.FiltradoGroup.Size = new System.Drawing.Size(432, 109);
             this.FiltradoGroup.TabIndex = 11;
             this.FiltradoGroup.TabStop = false;
             this.FiltradoGroup.Text = "Filtrado";
@@ -173,7 +181,7 @@
             this.ProduccionGroup.Controls.Add(this.AñoEstrenoTextbox);
             this.ProduccionGroup.Controls.Add(this.DistribuidoraLabel);
             this.ProduccionGroup.Controls.Add(this.EstrenoLabel);
-            this.ProduccionGroup.Location = new System.Drawing.Point(125, 209);
+            this.ProduccionGroup.Location = new System.Drawing.Point(125, 250);
             this.ProduccionGroup.Name = "ProduccionGroup";
             this.ProduccionGroup.Size = new System.Drawing.Size(319, 99);
             this.ProduccionGroup.TabIndex = 12;
@@ -184,14 +192,14 @@
             // 
             this.DistribuidoraTextbox.Location = new System.Drawing.Point(107, 55);
             this.DistribuidoraTextbox.Name = "DistribuidoraTextbox";
-            this.DistribuidoraTextbox.Size = new System.Drawing.Size(200, 24);
+            this.DistribuidoraTextbox.Size = new System.Drawing.Size(200, 28);
             this.DistribuidoraTextbox.TabIndex = 3;
             // 
             // AñoEstrenoTextbox
             // 
             this.AñoEstrenoTextbox.Location = new System.Drawing.Point(107, 23);
             this.AñoEstrenoTextbox.Name = "AñoEstrenoTextbox";
-            this.AñoEstrenoTextbox.Size = new System.Drawing.Size(100, 24);
+            this.AñoEstrenoTextbox.Size = new System.Drawing.Size(100, 28);
             this.AñoEstrenoTextbox.TabIndex = 2;
             // 
             // DistribuidoraLabel
@@ -199,7 +207,7 @@
             this.DistribuidoraLabel.AutoSize = true;
             this.DistribuidoraLabel.Location = new System.Drawing.Point(10, 58);
             this.DistribuidoraLabel.Name = "DistribuidoraLabel";
-            this.DistribuidoraLabel.Size = new System.Drawing.Size(91, 18);
+            this.DistribuidoraLabel.Size = new System.Drawing.Size(114, 24);
             this.DistribuidoraLabel.TabIndex = 1;
             this.DistribuidoraLabel.Text = "Distribuidora";
             // 
@@ -208,31 +216,50 @@
             this.EstrenoLabel.AutoSize = true;
             this.EstrenoLabel.Location = new System.Drawing.Point(10, 26);
             this.EstrenoLabel.Name = "EstrenoLabel";
-            this.EstrenoLabel.Size = new System.Drawing.Size(60, 18);
+            this.EstrenoLabel.Size = new System.Drawing.Size(75, 24);
             this.EstrenoLabel.TabIndex = 0;
             this.EstrenoLabel.Text = "Estreno";
             // 
             // TituloTextbox
             // 
-            this.TituloTextbox.Location = new System.Drawing.Point(232, 179);
+            this.TituloTextbox.Location = new System.Drawing.Point(232, 212);
             this.TituloTextbox.Name = "TituloTextbox";
-            this.TituloTextbox.Size = new System.Drawing.Size(200, 24);
+            this.TituloTextbox.Size = new System.Drawing.Size(200, 28);
             this.TituloTextbox.TabIndex = 13;
             // 
             // TituloLabel
             // 
             this.TituloLabel.AutoSize = true;
-            this.TituloLabel.Location = new System.Drawing.Point(135, 182);
+            this.TituloLabel.Location = new System.Drawing.Point(135, 215);
             this.TituloLabel.Name = "TituloLabel";
-            this.TituloLabel.Size = new System.Drawing.Size(44, 18);
+            this.TituloLabel.Size = new System.Drawing.Size(56, 24);
             this.TituloLabel.TabIndex = 14;
             this.TituloLabel.Text = "Título";
             // 
+            // CodigoLabel
+            // 
+            this.CodigoLabel.AutoSize = true;
+            this.CodigoLabel.Location = new System.Drawing.Point(135, 181);
+            this.CodigoLabel.Name = "CodigoLabel";
+            this.CodigoLabel.Size = new System.Drawing.Size(71, 24);
+            this.CodigoLabel.TabIndex = 16;
+            this.CodigoLabel.Text = "Codigo";
+            // 
+            // CodigoTextbox
+            // 
+            this.CodigoTextbox.Enabled = false;
+            this.CodigoTextbox.Location = new System.Drawing.Point(232, 178);
+            this.CodigoTextbox.Name = "CodigoTextbox";
+            this.CodigoTextbox.Size = new System.Drawing.Size(200, 28);
+            this.CodigoTextbox.TabIndex = 15;
+            // 
             // GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 441);
+            this.ClientSize = new System.Drawing.Size(896, 529);
+            this.Controls.Add(this.CodigoLabel);
+            this.Controls.Add(this.CodigoTextbox);
             this.Controls.Add(this.TituloLabel);
             this.Controls.Add(this.TituloTextbox);
             this.Controls.Add(this.ProduccionGroup);
@@ -280,6 +307,8 @@
         private System.Windows.Forms.TextBox AñoEstrenoTextbox;
         private System.Windows.Forms.TextBox TituloTextbox;
         private System.Windows.Forms.Label TituloLabel;
+        private System.Windows.Forms.Label CodigoLabel;
+        private System.Windows.Forms.TextBox CodigoTextbox;
     }
 }
 

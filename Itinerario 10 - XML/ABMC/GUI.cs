@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ABMC
@@ -14,7 +7,7 @@ namespace ABMC
     public partial class GUI : Form
     {
         Pelicula peliculaBEL = new Pelicula();
-        BLL peliculaBLL = new BLL();
+        readonly BLL peliculaBLL = new BLL();
         public GUI()
         {
             InitializeComponent();
@@ -26,22 +19,33 @@ namespace ABMC
             BajaButton.Click += Eliminar;
             ModificacionButton.Click += Actualizar;
             ConsultaButton.Click += Consultar;
-            ActoresDGV.RowEnter += SincronizarControles;
+            PeliculasDGV.RowEnter += SincronizarControles;
+            ActoresDGV.Columns.Add("ColumnaNombre", "Nombre");
+            ActoresDGV.Columns.Add("ColumnaPersonaje", "Personaje");
             ListarPeliculas();
         }
 
 
         private void Guardar(object sender, EventArgs e)
         {
+            peliculaBEL = ArmarObjeto();
+            peliculaBLL.Guardar(peliculaBEL);
             LimpiarControles();
+            ListarPeliculas();
         }
         private void Eliminar(object sender, EventArgs e)
         {
+            peliculaBEL = ArmarObjeto();
+            peliculaBLL.Eliminar(peliculaBEL);
             LimpiarControles();
+            ListarPeliculas();
         }
         private void Actualizar(object sender, EventArgs e)
         {
+            peliculaBEL = ArmarObjeto();
+            peliculaBLL.Actualizar(peliculaBEL);
             LimpiarControles();
+            ListarPeliculas();
         }
         private void Consultar(object sender, EventArgs e)
         {
@@ -50,12 +54,62 @@ namespace ABMC
 
         private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
         {
+            ActoresDGV.Rows.Clear();
 
+            if (PeliculasDGV.CurrentRow != null)
+            {
+                peliculaBEL = (Pelicula)PeliculasDGV.Rows[e.RowIndex].DataBoundItem;
+
+                // Textboxes
+                CodigoTextbox.Text = peliculaBEL.Codigo.ToString();
+                TituloTextbox.Text = peliculaBEL.Titulo;
+                AñoEstrenoTextbox.Text = peliculaBEL.Produccion.AñoEstreno.ToString();
+                DistribuidoraTextbox.Text = peliculaBEL.Produccion.Distribuidora;
+
+                // DataGridView
+                List<Actor> actores = peliculaBEL.Actores;
+
+                if (actores != null)
+                {
+                    foreach (Actor actor in actores)
+                    {
+                        // Agregar una nueva fila al DataGridView
+                        int rowIndex = ActoresDGV.Rows.Add();
+                        DataGridViewRow nuevaFila = ActoresDGV.Rows[rowIndex];
+
+                        // Asignar los valores de la lista de actores a las celdas correspondientes
+                        nuevaFila.Cells["ColumnaNombre"].Value = actor.Nombre;
+                        nuevaFila.Cells["ColumnaPersonaje"].Value = actor.Personaje;
+                    }
+                }
+            }
         }
 
         private void ListarPeliculas()
         {
+            // Limpiar el DataGridView
+            PeliculasDGV.Columns.Clear();
 
+            // Configurar el DataGridView
+            PeliculasDGV.AutoGenerateColumns = false;
+
+            // Configurar las columnas que deseas mostrar
+            DataGridViewTextBoxColumn ColumnaCodigo = new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Codigo",
+                HeaderText = "Codigo"
+            };
+
+            DataGridViewTextBoxColumn ColumnaTitulo = new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Titulo",
+                HeaderText = "Titulo"
+            };
+
+            // Agregar las columnas al DataGridView
+            PeliculasDGV.Columns.Add(ColumnaCodigo);
+            PeliculasDGV.Columns.Add(ColumnaTitulo);
+            PeliculasDGV.DataSource = peliculaBLL.ListarTodo();
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -65,18 +119,19 @@ namespace ABMC
         {
             Pelicula pelicula = new Pelicula
             {
+                Codigo = Int32.Parse(CodigoTextbox.Text),
                 Titulo = TituloTextbox.Text,
                 Produccion = new Produccion
                 {
                     AñoEstreno = int.Parse(AñoEstrenoTextbox.Text),
                     Distribuidora = DistribuidoraTextbox.Text
                 },
-                Actores = RecuperarActores()
+                Actores = ListarActores()
             };
             return pelicula;
         }
 
-        private List<Actor> RecuperarActores()
+        private List<Actor> ListarActores()
         {
             List<Actor> actores = new List<Actor>();
             foreach (DataGridViewRow fila in ActoresDGV.Rows)
@@ -90,8 +145,8 @@ namespace ABMC
                     // Crear un nuevo objeto Actor y asignar valores
                     Actor actor = new Actor
                     {
-                        Nombre = celdas["Nombre"].Value.ToString(),
-                        Personaje = celdas["Personaje"].Value.ToString()
+                        Nombre = celdas["ColumnaNombre"].Value.ToString(),
+                        Personaje = celdas["ColumnaPersonaje"].Value.ToString()
                     };
 
                     // Agregar el objeto Actor a la lista
@@ -103,14 +158,31 @@ namespace ABMC
 
         private void LimpiarControles()
         {
-            foreach (Control control in this.Controls)
+            PeliculasDGV.DataSource = null;
+            ActoresDGV.DataSource = null;
+
+            CodigoTextbox.Text = string.Empty;
+            TituloTextbox.Text = string.Empty;
+            AñoEstrenoTextbox.Text = string.Empty;
+            DistribuidoraTextbox.Text = string.Empty;
+
+            foreach (Control control in Controls)
             {
-                if (control is TextBox) control.Text = string.Empty;
-                if (control is RadioButton button) button.Checked = false;
-                if (control is DataGridView dataview) dataview.DataSource = null;
-                if (control is TreeView treeview) treeview.Nodes.Clear();
+                if (control is GroupBox groupBox)
+                {
+                    foreach (Control c in groupBox.Controls)
+                    {
+                        if (c is TextBox textBox)
+                        {
+                            textBox.Text = string.Empty;
+                        }
+                        else if (c is RadioButton radioButton)
+                        {
+                            radioButton.Checked = false;
+                        }
+                    }
+                }
             }
-            ListarPeliculas();
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

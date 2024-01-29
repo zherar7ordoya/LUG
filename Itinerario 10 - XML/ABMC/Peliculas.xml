@@ -117,23 +117,33 @@
 		</Actores>
 	</Pelicula>
 
-	<Pelicula Id="7">
-		<Titulo>Predator</Titulo>
-		<Produccion>
-			<Estreno>1987</Estreno>
-			<Distribuidora>20th Century Fox</Distribuidora>
-		</Produccion>
-		<Actores>
-			<Actor>
-				<Nombre>Arnold Schwarzenegger</Nombre>
-				<Personaje>Dutch</Personaje>
-			</Actor>
-			<Actor>
-				<Nombre>Carl Weathers</Nombre>
-				<Personaje>Dillon</Personaje>
-			</Actor>
-		</Actores>
-	</Pelicula>
+<Pelicula Id="7">
+    <Titulo>Predator</Titulo>
+    <Produccion>
+        <Estreno>1987</Estreno>
+        <Distribuidora>20th Century Fox</Distribuidora>
+    </Produccion>
+    <Actores>
+        <Actor>
+            <Nombre>Arnold Schwarzenegger</Nombre>
+            <Personaje>Dutch</Personaje>
+        </Actor>
+        <Actor>
+            <Nombre>Carl Weathers</Nombre>
+            <Personaje>Dillon</Personaje>
+        </Actor>
+        <!-- Nuevos actores agregados -->
+        <Actor>
+            <Nombre>Jesse Ventura</Nombre>
+            <Personaje>Blaine</Personaje>
+        </Actor>
+        <Actor>
+            <Nombre>Bill Duke</Nombre>
+            <Personaje>Mac</Personaje>
+        </Actor>
+    </Actores>
+</Pelicula>
+
 
 	<Pelicula Id="8">
 		<Titulo>Predator 2</Titulo>

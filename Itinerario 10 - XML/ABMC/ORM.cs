@@ -3,8 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace ABMC
@@ -23,8 +21,47 @@ namespace ABMC
 
         public bool Actualizar(Pelicula objeto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Leer el contenido del archivo XML
+                XElement peliculas = peliculaDAL.Leer();
+
+                // Buscar el elemento de la película que se va a actualizar
+                XElement pelicula = peliculas.Elements("Pelicula")
+                    .FirstOrDefault(x => (int)x.Attribute("Id") == objeto.Codigo);
+
+                // Si encontramos la película, la actualizamos en lugar de agregar una nueva
+                if (pelicula != null)
+                {
+                    // Actualizar los elementos relevantes con los nuevos valores
+                    pelicula.Element("Titulo").Value = objeto.Titulo;
+                    pelicula.Element("Produccion").Element("Estreno").Value = objeto.Produccion.AñoEstreno.ToString();
+                    pelicula.Element("Produccion").Element("Distribuidora").Value = objeto.Produccion.Distribuidora;
+
+                    // *MANERA SIMPLE Y EFICIENTE DE ACTUALIZAR LISTAS ANIDADAS*
+                    // Eliminar actores existentes para actualizarlos
+                    pelicula.Element("Actores").RemoveAll();
+
+                    // Agregar los nuevos actores
+                    pelicula.Element("Actores").Add(
+                        objeto.Actores.Select(actor =>
+                            new XElement("Actor",
+                                new XElement("Nombre", actor.Nombre),
+                                new XElement("Personaje", actor.Personaje)
+                            )
+                        )
+                    );
+
+                    // Guardar el contenido actualizado en el archivo XML
+                    peliculaDAL.Escribir(peliculas);
+
+                    return true;
+                }
+                else { return false; }
+            }
+            catch (Exception ex) { throw new Exception($"Error al actualizar la película: {ex.Message}"); }
         }
+
 
         public bool Eliminar(Pelicula objeto)
         {
@@ -48,6 +85,17 @@ namespace ABMC
             catch (Exception ex) { throw new Exception($"Error al eliminar la película: {ex.Message}"); }
         }
 
+        private int NuevoId(XElement peliculas)
+        {
+            // Obtener el valor máximo actual de los IDs
+            int max = peliculas.Elements("Pelicula").Attributes("Id")
+                .Select(x => (int)x)
+                .DefaultIfEmpty(0) // En caso de que no haya elementos
+                .Max();
+
+            // Incrementar el valor máximo en 1 para obtener el nuevo ID
+            return max + 1;
+        }
 
         /* El código proporcionado tiene en cuenta que la lista de actores puede
          * contener muchos, uno o ningún actor. La función Select de LINQ en la
@@ -65,7 +113,10 @@ namespace ABMC
                 // Cargar el contenido existente del archivo XML
                 XElement peliculas = peliculaDAL.Leer();
 
-                // Crear el elemento Pelicula con atributo Id
+                // Asignar el nuevo ID al objeto Pelicula
+                objeto.Codigo = NuevoId(peliculas);
+
+                // Crear el elemento Pelicula con el nuevo ID
                 XElement pelicula = new XElement("Pelicula",
                     new XAttribute("Id", objeto.Codigo),
                     new XElement("Titulo", objeto.Titulo),
@@ -76,7 +127,7 @@ namespace ABMC
                         new XElement("Distribuidora", objeto.Produccion.Distribuidora)
                     ),
 
-                    // Mapear la lista de Actores (ver comentario principal).
+                    // Mapear la lista de Actores
                     new XElement("Actores",
                         objeto.Actores.Select(actor =>
                             new XElement("Actor",
@@ -95,8 +146,12 @@ namespace ABMC
 
                 return true;
             }
-            catch (Exception ex) { throw new Exception($"Error al agregar la película: {ex.Message}"); }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al agregar la película: {ex.Message}");
+            }
         }
+
 
 
         public Pelicula ListarObjeto(Pelicula objeto)
