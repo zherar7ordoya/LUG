@@ -17,7 +17,18 @@ namespace ABMC
             peliculaDAL = new DAL(archivo);
         }
 
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HELPERS
+
+        private XElement OrdenarPorId(XElement elementos)
+        {
+            // Ordenar los elementos según el atributo "Id"
+            return new XElement(elementos.Name,
+                elementos.Elements("Pelicula")
+                    .OrderBy(x => (int)x.Attribute("Id"))
+            );
+        }
+
+        //|||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS DE LA CLASE
 
         public bool Actualizar(Pelicula objeto)
         {
@@ -25,6 +36,7 @@ namespace ABMC
             {
                 // Leer el contenido del archivo XML
                 XElement peliculas = peliculaDAL.Leer();
+                peliculas = OrdenarPorId(peliculas);
 
                 // Buscar el elemento de la película que se va a actualizar
                 XElement pelicula = peliculas.Elements("Pelicula")
@@ -68,6 +80,7 @@ namespace ABMC
             try
             {
                 XElement peliculas = peliculaDAL.Leer();
+                peliculas = OrdenarPorId(peliculas);
 
                 // Buscar el elemento de la película que se va a eliminar
                 XElement pelicula =
@@ -112,6 +125,7 @@ namespace ABMC
             {
                 // Cargar el contenido existente del archivo XML
                 XElement peliculas = peliculaDAL.Leer();
+                peliculas = OrdenarPorId(peliculas);
 
                 // Asignar el nuevo ID al objeto Pelicula
                 objeto.Codigo = NuevoId(peliculas);
@@ -192,6 +206,7 @@ namespace ABMC
             {
                 // Leer el contenido del archivo XML
                 XElement peliculas = peliculaDAL.Leer();
+                peliculas = OrdenarPorId(peliculas);
 
                 // Utilizar LINQ to XML para mapear los elementos Pelicula a objetos Pelicula
                 List<Pelicula> lista =

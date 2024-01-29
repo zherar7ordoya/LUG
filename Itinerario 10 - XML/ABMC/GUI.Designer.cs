@@ -40,6 +40,7 @@
             this.AñoRadio = new System.Windows.Forms.RadioButton();
             this.ActoresDGV = new System.Windows.Forms.DataGridView();
             this.FiltradoGroup = new System.Windows.Forms.GroupBox();
+            this.RestablecerButton = new System.Windows.Forms.Button();
             this.ProduccionGroup = new System.Windows.Forms.GroupBox();
             this.DistribuidoraTextbox = new System.Windows.Forms.TextBox();
             this.AñoEstrenoTextbox = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.TituloLabel = new System.Windows.Forms.Label();
             this.CodigoLabel = new System.Windows.Forms.Label();
             this.CodigoTextbox = new System.Windows.Forms.TextBox();
-            this.RestablecerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActoresDGV)).BeginInit();
             this.FiltradoGroup.SuspendLayout();
@@ -114,7 +114,7 @@
             // 
             this.ConsultaTextbox.Location = new System.Drawing.Point(225, 23);
             this.ConsultaTextbox.Name = "ConsultaTextbox";
-            this.ConsultaTextbox.Size = new System.Drawing.Size(187, 28);
+            this.ConsultaTextbox.Size = new System.Drawing.Size(187, 24);
             this.ConsultaTextbox.TabIndex = 6;
             // 
             // TituloRadio
@@ -122,7 +122,7 @@
             this.TituloRadio.AutoSize = true;
             this.TituloRadio.Location = new System.Drawing.Point(125, 23);
             this.TituloRadio.Name = "TituloRadio";
-            this.TituloRadio.Size = new System.Drawing.Size(77, 28);
+            this.TituloRadio.Size = new System.Drawing.Size(62, 22);
             this.TituloRadio.TabIndex = 7;
             this.TituloRadio.TabStop = true;
             this.TituloRadio.Text = "Título";
@@ -133,7 +133,7 @@
             this.ActorRadio.AutoSize = true;
             this.ActorRadio.Location = new System.Drawing.Point(125, 91);
             this.ActorRadio.Name = "ActorRadio";
-            this.ActorRadio.Size = new System.Drawing.Size(75, 28);
+            this.ActorRadio.Size = new System.Drawing.Size(61, 22);
             this.ActorRadio.TabIndex = 8;
             this.ActorRadio.TabStop = true;
             this.ActorRadio.Text = "Actor";
@@ -144,7 +144,7 @@
             this.AñoRadio.AutoSize = true;
             this.AñoRadio.Location = new System.Drawing.Point(125, 57);
             this.AñoRadio.Name = "AñoRadio";
-            this.AñoRadio.Size = new System.Drawing.Size(66, 28);
+            this.AñoRadio.Size = new System.Drawing.Size(52, 22);
             this.AñoRadio.TabIndex = 9;
             this.AñoRadio.TabStop = true;
             this.AñoRadio.Text = "Año";
@@ -177,6 +177,15 @@
             this.FiltradoGroup.TabStop = false;
             this.FiltradoGroup.Text = "Filtrado";
             // 
+            // RestablecerButton
+            // 
+            this.RestablecerButton.Location = new System.Drawing.Point(7, 64);
+            this.RestablecerButton.Name = "RestablecerButton";
+            this.RestablecerButton.Size = new System.Drawing.Size(100, 35);
+            this.RestablecerButton.TabIndex = 10;
+            this.RestablecerButton.Text = "Restablecer";
+            this.RestablecerButton.UseVisualStyleBackColor = true;
+            // 
             // ProduccionGroup
             // 
             this.ProduccionGroup.Controls.Add(this.DistribuidoraTextbox);
@@ -194,14 +203,14 @@
             // 
             this.DistribuidoraTextbox.Location = new System.Drawing.Point(107, 55);
             this.DistribuidoraTextbox.Name = "DistribuidoraTextbox";
-            this.DistribuidoraTextbox.Size = new System.Drawing.Size(200, 28);
+            this.DistribuidoraTextbox.Size = new System.Drawing.Size(200, 24);
             this.DistribuidoraTextbox.TabIndex = 3;
             // 
             // AñoEstrenoTextbox
             // 
             this.AñoEstrenoTextbox.Location = new System.Drawing.Point(107, 23);
             this.AñoEstrenoTextbox.Name = "AñoEstrenoTextbox";
-            this.AñoEstrenoTextbox.Size = new System.Drawing.Size(100, 28);
+            this.AñoEstrenoTextbox.Size = new System.Drawing.Size(100, 24);
             this.AñoEstrenoTextbox.TabIndex = 2;
             // 
             // DistribuidoraLabel
@@ -209,7 +218,7 @@
             this.DistribuidoraLabel.AutoSize = true;
             this.DistribuidoraLabel.Location = new System.Drawing.Point(10, 58);
             this.DistribuidoraLabel.Name = "DistribuidoraLabel";
-            this.DistribuidoraLabel.Size = new System.Drawing.Size(114, 24);
+            this.DistribuidoraLabel.Size = new System.Drawing.Size(91, 18);
             this.DistribuidoraLabel.TabIndex = 1;
             this.DistribuidoraLabel.Text = "Distribuidora";
             // 
@@ -218,7 +227,7 @@
             this.EstrenoLabel.AutoSize = true;
             this.EstrenoLabel.Location = new System.Drawing.Point(10, 26);
             this.EstrenoLabel.Name = "EstrenoLabel";
-            this.EstrenoLabel.Size = new System.Drawing.Size(75, 24);
+            this.EstrenoLabel.Size = new System.Drawing.Size(60, 18);
             this.EstrenoLabel.TabIndex = 0;
             this.EstrenoLabel.Text = "Estreno";
             // 
@@ -226,7 +235,7 @@
             // 
             this.TituloTextbox.Location = new System.Drawing.Point(232, 212);
             this.TituloTextbox.Name = "TituloTextbox";
-            this.TituloTextbox.Size = new System.Drawing.Size(200, 28);
+            this.TituloTextbox.Size = new System.Drawing.Size(200, 24);
             this.TituloTextbox.TabIndex = 13;
             // 
             // TituloLabel
@@ -234,7 +243,7 @@
             this.TituloLabel.AutoSize = true;
             this.TituloLabel.Location = new System.Drawing.Point(135, 215);
             this.TituloLabel.Name = "TituloLabel";
-            this.TituloLabel.Size = new System.Drawing.Size(56, 24);
+            this.TituloLabel.Size = new System.Drawing.Size(44, 18);
             this.TituloLabel.TabIndex = 14;
             this.TituloLabel.Text = "Título";
             // 
@@ -243,7 +252,7 @@
             this.CodigoLabel.AutoSize = true;
             this.CodigoLabel.Location = new System.Drawing.Point(135, 181);
             this.CodigoLabel.Name = "CodigoLabel";
-            this.CodigoLabel.Size = new System.Drawing.Size(71, 24);
+            this.CodigoLabel.Size = new System.Drawing.Size(56, 18);
             this.CodigoLabel.TabIndex = 16;
             this.CodigoLabel.Text = "Codigo";
             // 
@@ -252,21 +261,12 @@
             this.CodigoTextbox.Enabled = false;
             this.CodigoTextbox.Location = new System.Drawing.Point(232, 178);
             this.CodigoTextbox.Name = "CodigoTextbox";
-            this.CodigoTextbox.Size = new System.Drawing.Size(200, 28);
+            this.CodigoTextbox.Size = new System.Drawing.Size(200, 24);
             this.CodigoTextbox.TabIndex = 15;
-            // 
-            // RestablecerButton
-            // 
-            this.RestablecerButton.Location = new System.Drawing.Point(7, 64);
-            this.RestablecerButton.Name = "RestablecerButton";
-            this.RestablecerButton.Size = new System.Drawing.Size(100, 35);
-            this.RestablecerButton.TabIndex = 10;
-            this.RestablecerButton.Text = "Restablecer";
-            this.RestablecerButton.UseVisualStyleBackColor = true;
             // 
             // GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 529);
             this.Controls.Add(this.CodigoLabel);
@@ -284,6 +284,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMC";
             this.Load += new System.EventHandler(this.GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasDGV)).EndInit();

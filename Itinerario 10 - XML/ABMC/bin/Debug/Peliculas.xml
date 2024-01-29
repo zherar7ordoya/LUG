@@ -1,156 +1,780 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Peliculas>
-  <Pelicula Id="1">
-    <Titulo>Terminator</Titulo>
-    <Produccion>
-      <Estreno>1984</Estreno>
-      <Distribuidora>Orion Pictures</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Arnold Schwarzenegger</Nombre>
-        <Personaje>Terminator</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Linda Hamilton</Nombre>
-        <Personaje>Sarah Connor</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="2">
-    <Titulo>Terminator 2: Judgment Day</Titulo>
-    <Produccion>
-      <Estreno>1991</Estreno>
-      <Distribuidora>TriStar Pictures</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Arnold Schwarzenegger</Nombre>
-        <Personaje>T-800</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Linda Hamilton</Nombre>
-        <Personaje>Sarah Connor</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Edward Furlong</Nombre>
-        <Personaje>John Connor</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="3">
-    <Titulo>Terminator: Dark Fate</Titulo>
-    <Produccion>
-      <Estreno>2019</Estreno>
-      <Distribuidora>Paramount Pictures</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Linda Hamilton</Nombre>
-        <Personaje>Sarah Connor</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Mackenzie Davis</Nombre>
-        <Personaje>Grace</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Arnold Schwarzenegger</Nombre>
-        <Personaje>T-800</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="4">
-    <Titulo>Rocky</Titulo>
-    <Produccion>
-      <Estreno>1976</Estreno>
-      <Distribuidora>United Artists</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Sylvester Stallone</Nombre>
-        <Personaje>Rocky Balboa</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Talia Shire</Nombre>
-        <Personaje>Adrian</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="5">
-    <Titulo>Rambo: First Blood</Titulo>
-    <Produccion>
-      <Estreno>1982</Estreno>
-      <Distribuidora>Orion Pictures</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Sylvester Stallone</Nombre>
-        <Personaje>John Rambo</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Richard Crenna</Nombre>
-        <Personaje>Coronel Trautman</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="6">
-    <Titulo>Rambo: First Blood Part II</Titulo>
-    <Produccion>
-      <Estreno>1985</Estreno>
-      <Distribuidora>TriStar Pictures</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Sylvester Stallone</Nombre>
-        <Personaje>John Rambo</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Richard Crenna</Nombre>
-        <Personaje>Coronel Trautman</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="7">
-    <Titulo>Predator</Titulo>
-    <Produccion>
-      <Estreno>1987</Estreno>
-      <Distribuidora>20th Century Fox</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Arnold Schwarzenegger</Nombre>
-        <Personaje>Dutch</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Carl Weathers</Nombre>
-        <Personaje>Dillon</Personaje>
-      </Actor>
-      <!-- Nuevos actores agregados -->
-      <Actor>
-        <Nombre>Jesse Ventura</Nombre>
-        <Personaje>Blaine</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Bill Duke</Nombre>
-        <Personaje>Mac</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
-  <Pelicula Id="8">
-    <Titulo>Predator 2</Titulo>
-    <Produccion>
-      <Estreno>1990</Estreno>
-      <Distribuidora>20th Century Fox</Distribuidora>
-    </Produccion>
-    <Actores>
-      <Actor>
-        <Nombre>Danny Glover</Nombre>
-        <Personaje>Mike Harrigan</Personaje>
-      </Actor>
-      <Actor>
-        <Nombre>Bill Paxton</Nombre>
-        <Personaje>Jerry Lambert</Personaje>
-      </Actor>
-    </Actores>
-  </Pelicula>
+	<Pelicula Id="1">
+		<Titulo>Terminator</Titulo>
+		<Produccion>
+			<Estreno>1984</Estreno>
+			<Distribuidora>Orion Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>Terminator</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Linda Hamilton</Nombre>
+				<Personaje>Sarah Connor</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="2">
+		<Titulo>Terminator 2: Judgment Day</Titulo>
+		<Produccion>
+			<Estreno>1991</Estreno>
+			<Distribuidora>TriStar Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>T-800</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Linda Hamilton</Nombre>
+				<Personaje>Sarah Connor</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Edward Furlong</Nombre>
+				<Personaje>John Connor</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="40">
+		<Titulo>Terminator: Dark Fate</Titulo>
+		<Produccion>
+			<Estreno>2019</Estreno>
+			<Distribuidora>Paramount Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Linda Hamilton</Nombre>
+				<Personaje>Sarah Connor</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Mackenzie Davis</Nombre>
+				<Personaje>Grace</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>T-800</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="4">
+		<Titulo>Rocky</Titulo>
+		<Produccion>
+			<Estreno>1976</Estreno>
+			<Distribuidora>United Artists</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>Rocky Balboa</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Talia Shire</Nombre>
+				<Personaje>Adrian</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="5">
+		<Titulo>Rambo: First Blood</Titulo>
+		<Produccion>
+			<Estreno>1982</Estreno>
+			<Distribuidora>Orion Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>John Rambo</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Richard Crenna</Nombre>
+				<Personaje>Coronel Trautman</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="6">
+		<Titulo>Rambo: First Blood Part II</Titulo>
+		<Produccion>
+			<Estreno>1985</Estreno>
+			<Distribuidora>TriStar Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>John Rambo</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Richard Crenna</Nombre>
+				<Personaje>Coronel Trautman</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="7">
+		<Titulo>Predator</Titulo>
+		<Produccion>
+			<Estreno>1987</Estreno>
+			<Distribuidora>20th Century Fox</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>Dutch</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Carl Weathers</Nombre>
+				<Personaje>Dillon</Personaje>
+			</Actor>
+			<!-- Nuevos actores agregados -->
+			<Actor>
+				<Nombre>Jesse Ventura</Nombre>
+				<Personaje>Blaine</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Bill Duke</Nombre>
+				<Personaje>Mac</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="8">
+		<Titulo>Predator 2</Titulo>
+		<Produccion>
+			<Estreno>1990</Estreno>
+			<Distribuidora>20th Century Fox</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Danny Glover</Nombre>
+				<Personaje>Mike Harrigan</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Bill Paxton</Nombre>
+				<Personaje>Jerry Lambert</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="9">
+		<Titulo>Rocky II</Titulo>
+		<Produccion>
+			<Estreno>1979</Estreno>
+			<Distribuidora>United Artists</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>Rocky Balboa</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Talia Shire</Nombre>
+				<Personaje>Adrian</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="10">
+		<Titulo>Rambo III</Titulo>
+		<Produccion>
+			<Estreno>1988</Estreno>
+			<Distribuidora>TriStar Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>John Rambo</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Richard Crenna</Nombre>
+				<Personaje>Coronel Trautman</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="11">
+		<Titulo>Total Recall</Titulo>
+		<Produccion>
+			<Estreno>1990</Estreno>
+			<Distribuidora>TriStar Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>Douglas Quaid</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Sharon Stone</Nombre>
+				<Personaje>Lori Quaid</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="12">
+		<Titulo>Terminator 3: Rise of the Machines</Titulo>
+		<Produccion>
+			<Estreno>2003</Estreno>
+			<Distribuidora>Warner Bros.</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>T-850</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Nick Stahl</Nombre>
+				<Personaje>John Connor</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="13">
+		<Titulo>Rocky III</Titulo>
+		<Produccion>
+			<Estreno>1982</Estreno>
+			<Distribuidora>United Artists</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>Rocky Balboa</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Mr. T</Nombre>
+				<Personaje>Clubber Lang</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="14">
+		<Titulo>Demolition Man</Titulo>
+		<Produccion>
+			<Estreno>1993</Estreno>
+			<Distribuidora>Warner Bros.</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>John Spartan</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Wesley Snipes</Nombre>
+				<Personaje>Simon Phoenix</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="15">
+		<Titulo>Last Action Hero</Titulo>
+		<Produccion>
+			<Estreno>1993</Estreno>
+			<Distribuidora>Columbia Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>Jack Slater</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Austin O'Brien</Nombre>
+				<Personaje>Danny Madigan</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="16">
+		<Titulo>True Lies</Titulo>
+		<Produccion>
+			<Estreno>1994</Estreno>
+			<Distribuidora>20th Century Fox</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Arnold Schwarzenegger</Nombre>
+				<Personaje>Harry Tasker</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Jamie Lee Curtis</Nombre>
+				<Personaje>Helen Tasker</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="17">
+		<Titulo>Rocky IV</Titulo>
+		<Produccion>
+			<Estreno>1985</Estreno>
+			<Distribuidora>United Artists</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>Rocky Balboa</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Dolph Lundgren</Nombre>
+				<Personaje>Ivan Drago</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="18">
+		<Titulo>Rocky V</Titulo>
+		<Produccion>
+			<Estreno>1990</Estreno>
+			<Distribuidora>United Artists</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sylvester Stallone</Nombre>
+				<Personaje>Rocky Balboa</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Talia Shire</Nombre>
+				<Personaje>Adrian</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="19">
+		<Titulo>Parasite</Titulo>
+		<Produccion>
+			<Estreno>2019</Estreno>
+			<Distribuidora>CJ Entertainment</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Kang-ho Song</Nombre>
+				<Personaje>Kim Ki-taek</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Yeo-jeong Jo</Nombre>
+				<Personaje>Yeon-kyo</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="20">
+		<Titulo>Green Book</Titulo>
+		<Produccion>
+			<Estreno>2018</Estreno>
+			<Distribuidora>Universal Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Viggo Mortensen</Nombre>
+				<Personaje>Tony Lip</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Mahershala Ali</Nombre>
+				<Personaje>Dr. Don Shirley</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="21">
+		<Titulo>The Shape of Water</Titulo>
+		<Produccion>
+			<Estreno>2017</Estreno>
+			<Distribuidora>Fox Searchlight Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sally Hawkins</Nombre>
+				<Personaje>Elisa Esposito</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Michael Shannon</Nombre>
+				<Personaje>Richard Strickland</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="22">
+		<Titulo>Moonlight</Titulo>
+		<Produccion>
+			<Estreno>2016</Estreno>
+			<Distribuidora>A24</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Mahershala Ali</Nombre>
+				<Personaje>Juan</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Naomie Harris</Nombre>
+				<Personaje>Paula</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="23">
+		<Titulo>The Revenant</Titulo>
+		<Produccion>
+			<Estreno>2015</Estreno>
+			<Distribuidora>20th Century Fox</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Leonardo DiCaprio</Nombre>
+				<Personaje>Hugh Glass</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Tom Hardy</Nombre>
+				<Personaje>John Fitzgerald</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="24">
+		<Titulo>Birdman</Titulo>
+		<Produccion>
+			<Estreno>2014</Estreno>
+			<Distribuidora>Fox Searchlight Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Michael Keaton</Nombre>
+				<Personaje>Riggan Thomson</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Zach Galifianakis</Nombre>
+				<Personaje>Jake</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="25">
+		<Titulo>12 Years a Slave</Titulo>
+		<Produccion>
+			<Estreno>2013</Estreno>
+			<Distribuidora>Fox Searchlight Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Chiwetel Ejiofor</Nombre>
+				<Personaje>Solomon Northup</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Lupita Nyong'o</Nombre>
+				<Personaje>Patsey</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="26">
+		<Titulo>Argo</Titulo>
+		<Produccion>
+			<Estreno>2012</Estreno>
+			<Distribuidora>Warner Bros. Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Ben Affleck</Nombre>
+				<Personaje>Tony Mendez</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Bryan Cranston</Nombre>
+				<Personaje>Jack O'Donnell</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="27">
+		<Titulo>The Artist</Titulo>
+		<Produccion>
+			<Estreno>2011</Estreno>
+			<Distribuidora>The Weinstein Company</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Jean Dujardin</Nombre>
+				<Personaje>George Valentin</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Bérénice Bejo</Nombre>
+				<Personaje>Peppy Miller</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="28">
+		<Titulo>The King's Speech</Titulo>
+		<Produccion>
+			<Estreno>2010</Estreno>
+			<Distribuidora>The Weinstein Company</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Colin Firth</Nombre>
+				<Personaje>King George VI</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Geoffrey Rush</Nombre>
+				<Personaje>Lionel Logue</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="29">
+		<Titulo>The Hurt Locker</Titulo>
+		<Produccion>
+			<Estreno>2008</Estreno>
+			<Distribuidora>Summit Entertainment</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Jeremy Renner</Nombre>
+				<Personaje>Staff Sergeant William James</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Anthony Mackie</Nombre>
+				<Personaje>Sergeant J.T. Sanborn</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="30">
+		<Titulo>No Country for Old Men</Titulo>
+		<Produccion>
+			<Estreno>2007</Estreno>
+			<Distribuidora>Miramax Films</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Javier Bardem</Nombre>
+				<Personaje>Anton Chigurh</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Josh Brolin</Nombre>
+				<Personaje>Llewelyn Moss</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="31">
+		<Titulo>The Departed</Titulo>
+		<Produccion>
+			<Estreno>2006</Estreno>
+			<Distribuidora>Warner Bros. Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Leonardo DiCaprio</Nombre>
+				<Personaje>Billy Costigan</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Matt Damon</Nombre>
+				<Personaje>Colin Sullivan</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Jack Nicholson</Nombre>
+				<Personaje>Frank Costello</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="32">
+		<Titulo>Crash</Titulo>
+		<Produccion>
+			<Estreno>2004</Estreno>
+			<Distribuidora>Lions Gate Films</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Sandra Bullock</Nombre>
+				<Personaje>Jean Cabot</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Don Cheadle</Nombre>
+				<Personaje>Graham Waters</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Matt Dillon</Nombre>
+				<Personaje>Officer John Ryan</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="33">
+		<Titulo>The Lord of the Rings: The Return of the King</Titulo>
+		<Produccion>
+			<Estreno>2003</Estreno>
+			<Distribuidora>New Line Cinema</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Elijah Wood</Nombre>
+				<Personaje>Frodo Baggins</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Viggo Mortensen</Nombre>
+				<Personaje>Aragorn</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Sean Astin</Nombre>
+				<Personaje>Samwise Gamgee</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="34">
+		<Titulo>Gladiator</Titulo>
+		<Produccion>
+			<Estreno>2000</Estreno>
+			<Distribuidora>DreamWorks Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Russell Crowe</Nombre>
+				<Personaje>Maximus</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Joaquin Phoenix</Nombre>
+				<Personaje>Commodus</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="35">
+		<Titulo>The Silence of the Lambs</Titulo>
+		<Produccion>
+			<Estreno>1991</Estreno>
+			<Distribuidora>Orion Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Anthony Hopkins</Nombre>
+				<Personaje>Dr. Hannibal Lecter</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Jodie Foster</Nombre>
+				<Personaje>Clarice Starling</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="36">
+		<Titulo>Forrest Gump</Titulo>
+		<Produccion>
+			<Estreno>1994</Estreno>
+			<Distribuidora>Paramount Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Tom Hanks</Nombre>
+				<Personaje>Forrest Gump</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Robin Wright</Nombre>
+				<Personaje>Jenny Curran</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="37">
+		<Titulo>The Shawshank Redemption</Titulo>
+		<Produccion>
+			<Estreno>1994</Estreno>
+			<Distribuidora>Columbia Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Tim Robbins</Nombre>
+				<Personaje>Andy Dufresne</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Morgan Freeman</Nombre>
+				<Personaje>Ellis Boyd 'Red' Redding</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="38">
+		<Titulo>Schindler's List</Titulo>
+		<Produccion>
+			<Estreno>1993</Estreno>
+			<Distribuidora>Universal Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Liam Neeson</Nombre>
+				<Personaje>Oskar Schindler</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Ben Kingsley</Nombre>
+				<Personaje>Itzhak Stern</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="39">
+		<Titulo>Braveheart</Titulo>
+		<Produccion>
+			<Estreno>1995</Estreno>
+			<Distribuidora>Paramount Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Mel Gibson</Nombre>
+				<Personaje>William Wallace</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Sophie Marceau</Nombre>
+				<Personaje>Princess Isabella</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="41">
+		<Titulo>The Lord of the Rings: The Fellowship of the Ring</Titulo>
+		<Produccion>
+			<Estreno>2001</Estreno>
+			<Distribuidora>New Line Cinema</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Elijah Wood</Nombre>
+				<Personaje>Frodo Baggins</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Ian McKellen</Nombre>
+				<Personaje>Gandalf</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="42">
+		<Titulo>The Dark Knight</Titulo>
+		<Produccion>
+			<Estreno>2008</Estreno>
+			<Distribuidora>Warner Bros. Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Christian Bale</Nombre>
+				<Personaje>Bruce Wayne / Batman</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Heath Ledger</Nombre>
+				<Personaje>Joker</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="43">
+		<Titulo>Inception</Titulo>
+		<Produccion>
+			<Estreno>2010</Estreno>
+			<Distribuidora>Warner Bros. Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Leonardo DiCaprio</Nombre>
+				<Personaje>Dominic Cobb</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Joseph Gordon-Levitt</Nombre>
+				<Personaje>Arthur</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="44">
+		<Titulo>The Godfather</Titulo>
+		<Produccion>
+			<Estreno>1972</Estreno>
+			<Distribuidora>Paramount Pictures</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Marlon Brando</Nombre>
+				<Personaje>Don Vito Corleone</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Al Pacino</Nombre>
+				<Personaje>Michael Corleone</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
+	<Pelicula Id="3">
+		<Titulo>La La Land</Titulo>
+		<Produccion>
+			<Estreno>2016</Estreno>
+			<Distribuidora>Lionsgate</Distribuidora>
+		</Produccion>
+		<Actores>
+			<Actor>
+				<Nombre>Ryan Gosling</Nombre>
+				<Personaje>Sebastian</Personaje>
+			</Actor>
+			<Actor>
+				<Nombre>Emma Stone</Nombre>
+				<Personaje>Mia</Personaje>
+			</Actor>
+		</Actores>
+	</Pelicula>
 </Peliculas>

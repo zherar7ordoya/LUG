@@ -133,8 +133,49 @@ namespace ABMC
                         nuevaFila.Cells["ColumnaPersonaje"].Value = actor.Personaje;
                     }
                 }
+
+                ActualizarTreeView(peliculaBEL.Titulo);
+
             }
         }
+
+
+        private void ActualizarTreeView(string titulo)
+        {
+            DetalleTreeview.Nodes.Clear();
+
+            // Obtener las películas con el mismo título
+            List<Pelicula> peliculas = peliculaBLL.ConsultarPorTitulo(titulo);
+
+            // Agregar nodos al TreeView
+            foreach (Pelicula pelicula in peliculas)
+            {
+                TreeNode nodo = new TreeNode($"{pelicula.Titulo} (Código: {pelicula.Codigo})");
+
+                // Nodo para información de producción
+                TreeNode produccionNode = new TreeNode("Producción");
+                produccionNode.Nodes.Add($"Año de estreno: {pelicula.Produccion.AñoEstreno}");
+                produccionNode.Nodes.Add($"Distribuidora: {pelicula.Produccion.Distribuidora}");
+
+                // Nodo para actores
+                TreeNode actoresNode = new TreeNode("Actores");
+                if (pelicula.Actores != null)
+                {
+                    foreach (Actor actor in pelicula.Actores)
+                    {
+                        TreeNode actorNode = new TreeNode(actor.Nombre);
+                        actoresNode.Nodes.Add(actorNode);
+                    }
+                }
+
+                // Agregar nodos de producción y actores al nodo principal
+                nodo.Nodes.Add(produccionNode);
+                nodo.Nodes.Add(actoresNode);
+
+                DetalleTreeview.Nodes.Add(nodo);
+            }
+        }
+
 
         private void ListarPeliculas() //--------------------------------------*
         {
