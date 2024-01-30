@@ -44,5 +44,14 @@ namespace WindowsFormsApplication1
             ofrlimp.MdiParent = this;
             ofrlimp.Show();
         }
+
+        private void teléfonoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelefonoForm formulario = new TelefonoForm
+            {
+                MdiParent = this
+            };
+            formulario.Show();
+        }
     }
 }

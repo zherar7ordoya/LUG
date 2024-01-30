@@ -34,16 +34,18 @@
             this.loguinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datagrigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limpiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teléfonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ejemplosToolStripMenuItem});
+            this.ejemplosToolStripMenuItem,
+            this.teléfonoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(833, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(833, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,36 +57,43 @@
             this.datagrigToolStripMenuItem,
             this.limpiarToolStripMenuItem});
             this.ejemplosToolStripMenuItem.Name = "ejemplosToolStripMenuItem";
-            this.ejemplosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.ejemplosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.ejemplosToolStripMenuItem.Text = "Ejemplos";
             // 
             // validarToolStripMenuItem
             // 
             this.validarToolStripMenuItem.Name = "validarToolStripMenuItem";
-            this.validarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.validarToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.validarToolStripMenuItem.Text = "Validar";
             this.validarToolStripMenuItem.Click += new System.EventHandler(this.validarToolStripMenuItem_Click);
             // 
             // loguinToolStripMenuItem
             // 
             this.loguinToolStripMenuItem.Name = "loguinToolStripMenuItem";
-            this.loguinToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loguinToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.loguinToolStripMenuItem.Text = "Loguin";
             this.loguinToolStripMenuItem.Click += new System.EventHandler(this.loguinToolStripMenuItem_Click);
             // 
             // datagrigToolStripMenuItem
             // 
             this.datagrigToolStripMenuItem.Name = "datagrigToolStripMenuItem";
-            this.datagrigToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.datagrigToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.datagrigToolStripMenuItem.Text = "Datagrig";
             this.datagrigToolStripMenuItem.Click += new System.EventHandler(this.datagrigToolStripMenuItem_Click);
             // 
             // limpiarToolStripMenuItem
             // 
             this.limpiarToolStripMenuItem.Name = "limpiarToolStripMenuItem";
-            this.limpiarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.limpiarToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.limpiarToolStripMenuItem.Text = "Limpiar";
             this.limpiarToolStripMenuItem.Click += new System.EventHandler(this.limpiarToolStripMenuItem_Click);
+            // 
+            // teléfonoToolStripMenuItem
+            // 
+            this.teléfonoToolStripMenuItem.Name = "teléfonoToolStripMenuItem";
+            this.teléfonoToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.teléfonoToolStripMenuItem.Text = "Teléfono";
+            this.teléfonoToolStripMenuItem.Click += new System.EventHandler(this.teléfonoToolStripMenuItem_Click);
             // 
             // MENU
             // 
@@ -111,5 +120,6 @@
         private System.Windows.Forms.ToolStripMenuItem loguinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datagrigToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limpiarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teléfonoToolStripMenuItem;
     }
 }
