@@ -1,0 +1,17 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\bin\Debug\Personas.xml
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\bin\Debug\UI_C.exe.config
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\bin\Debug\UI_C.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\bin\Debug\UI_C.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.frmArrays.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.frmImportExport.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.frmListas.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.frmXml.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.frmDatview.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.frmTabla.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.Menu.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.Properties.Resources.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.csproj.GenerateResource.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Chart2\UI_C\obj\Debug\UI_C.pdb

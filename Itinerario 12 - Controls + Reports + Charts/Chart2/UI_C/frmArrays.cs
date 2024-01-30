@@ -26,8 +26,8 @@ namespace UI_C
         void cargargraficoArray()
         {
             //creo los array y le asigno valores
-            double[] yValores = { 15, 28.5, 9, 17, 41.5 };
-            string[] xNombres = { " Juan", " Perdro", " Martin", " Julio", " Anibal" };
+            double[] yValores = { 40, 3.125, 22.5, 6.25, 28.125 };
+            string[] xNombres = { " Juan", " Pedro", " Martín", " Julio", " Aníbal" };
             //bindeo los valores con la serie del chart
             chart1.Series[0].Points.DataBindXY(xNombres, yValores);
             //digo q tipo de grafico quiero (pie= torta)
