@@ -28,7 +28,9 @@ namespace Regex_C
         {
             string Numeros = TextNumeros.Text;
 
-            bool respuesta = Regex.IsMatch(Numeros, "^([0-9]+$)");
+            //bool respuesta = Regex.IsMatch(Numeros, "^([0-9]+$)");
+            bool respuesta = Validaciones.EsNumero(Numeros);
+
             if (respuesta == false)
             {
                 MessageBox.Show("No escribio un Número", "ERROR");
@@ -47,8 +49,8 @@ namespace Regex_C
 
             if (Texto.Length > 0)
             {
-                bool respuesta = false;
-                respuesta = Regex.IsMatch(Texto, "^([a-zA-Z]+$)");
+                //bool respuesta = Regex.IsMatch(Texto, "^([a-zA-Z]+$)");
+                bool respuesta = Validaciones.EsTexto(Texto);
                 if (respuesta == false)
                 {  MessageBox.Show("Escribio caracteres Especiales o Numericos", "ERROR"); }
                 else
@@ -62,8 +64,9 @@ namespace Regex_C
         {
 
             string texto = TextAlfaNum.Text;
+            //bool respuesta = Regex.IsMatch(texto, "^([a-zA-Z0-9]+$)");
+            bool respuesta = Validaciones.EsAlfanumerico(texto);
 
-            bool respuesta = Regex.IsMatch(texto, "^([a-zA-Z0-9]+$)");
             if (respuesta == false)
             {
                 MessageBox.Show("Escribio un caracter Especial", "ERROR");
@@ -79,20 +82,20 @@ namespace Regex_C
 
         private void BtnMail_Click(object sender, EventArgs e)
         {
-            string Mail = null;
-
-            Mail = this.TextMail.Text;
+            string Mail = this.TextMail.Text;
 
             if (Mail.Length > 0)
             {
-                bool respuesta = false;
                 //depende el lenguaje se puede usar \ o \\ barras
 
                 //la barra inversa no se utiliza nunca por sí sola, sino en combinación con otros caracteres.
                 //Al utilizarlo por ejemplo en combinación con el punto "\." este deja de tener su significado normal y se comporta como un carácter literal.
                 //depende el lenguaje se utiliza \\ o \ en c# se toma como caracter de escape segun la combinacion y se utiliza \\
                 // en \\w- , es que puede haber caracteres alfanumericos separados por guion
-                respuesta = Regex.IsMatch(Mail, "^([\\w-]+\\.)*?[\\w-]+@[\\w-]+\\.([\\w-]+\\.)*?[\\w]+$");
+                
+                //bool respuesta = Regex.IsMatch(Mail, "^([\\w-]+\\.)*?[\\w-]+@[\\w-]+\\.([\\w-]+\\.)*?[\\w]+$");
+                bool respuesta = Validaciones.EsEmail(Mail);
+                
                 if (respuesta == true)
                 {
                     MessageBox.Show("Escribio el mail correctamete","VALIDACION OK");
@@ -117,7 +120,9 @@ namespace Regex_C
             if (Fecha.Length > 0)
             {
                // /^ (0[1 - 9] |[12][0 - 9] | 3[01])[\- \/.](?:(0[1 - 9] | 1[012])[\- \/.](19 | 20)[0 - 9]{ 2})$/)
-                bool respuesta = Regex.IsMatch(Fecha, "^([0][1-9]|[12][0-9]|3[01])(\\/|-)([0][1-9]|[1][0-2])\\2(\\d{4})$");
+                //bool respuesta = Regex.IsMatch(Fecha, "^([0][1-9]|[12][0-9]|3[01])(\\/|-)([0][1-9]|[1][0-2])\\2(\\d{4})$");
+                bool respuesta = Validaciones.EsFecha(Fecha);
+
                 if (respuesta == true)
                 {
                     MessageBox.Show("Escribio la fecha correctamete", "VALIDACION OK");

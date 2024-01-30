@@ -94,7 +94,7 @@ namespace Regex_C
 
         private void cmbRegex_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (((ListaItems)this.cmbRegex.SelectedItem).Text == "Personalizada")
+            if (((ListaItems)this.cmbRegex.SelectedItem).Texto == "Personalizada")
             {
                 this.txtPatron.ReadOnly = false;
             }
