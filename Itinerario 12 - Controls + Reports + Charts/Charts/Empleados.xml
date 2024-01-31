@@ -5,7 +5,7 @@
         <Apellido>Ruffles</Apellido>
         <Edad>53</Edad>
         <Genero>Male</Genero>
-        <Puesto>VP Product Management</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>131904.2</Sueldo>
         <AñoAlta>1988</AñoAlta>
     </Empleado>
@@ -14,7 +14,7 @@
         <Apellido>Toombs</Apellido>
         <Edad>58</Edad>
         <Genero>Female</Genero>
-        <Puesto>Engineer IV</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>106129.27</Sueldo>
         <AñoAlta>2012</AñoAlta>
     </Empleado>
@@ -23,7 +23,7 @@
         <Apellido>Vittet</Apellido>
         <Edad>57</Edad>
         <Genero>Male</Genero>
-        <Puesto>Sales Representative</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>78864.28</Sueldo>
         <AñoAlta>2006</AñoAlta>
     </Empleado>
@@ -32,7 +32,7 @@
         <Apellido>Bansal</Apellido>
         <Edad>43</Edad>
         <Genero>Male</Genero>
-        <Puesto>Quality Engineer</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>66845.78</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -41,7 +41,7 @@
         <Apellido>Stickney</Apellido>
         <Edad>24</Edad>
         <Genero>Male</Genero>
-        <Puesto>Account Representative IV</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>134711.89</Sueldo>
         <AñoAlta>2002</AñoAlta>
     </Empleado>
@@ -50,7 +50,7 @@
         <Apellido>Marchand</Apellido>
         <Edad>26</Edad>
         <Genero>Female</Genero>
-        <Puesto>Research Assistant II</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>67246.5</Sueldo>
         <AñoAlta>1996</AñoAlta>
     </Empleado>
@@ -59,7 +59,7 @@
         <Apellido>Mixer</Apellido>
         <Edad>52</Edad>
         <Genero>Bigender</Genero>
-        <Puesto>VP Accounting</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>52221.64</Sueldo>
         <AñoAlta>1993</AñoAlta>
     </Empleado>
@@ -68,7 +68,7 @@
         <Apellido>Argabrite</Apellido>
         <Edad>33</Edad>
         <Genero>Female</Genero>
-        <Puesto>VP Quality Control</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>83852.08</Sueldo>
         <AñoAlta>1989</AñoAlta>
     </Empleado>
@@ -77,7 +77,7 @@
         <Apellido>Silson</Apellido>
         <Edad>43</Edad>
         <Genero>Female</Genero>
-        <Puesto>Senior Editor</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>132757.85</Sueldo>
         <AñoAlta>2006</AñoAlta>
     </Empleado>
@@ -86,7 +86,7 @@
         <Apellido>Featherstonhaugh</Apellido>
         <Edad>46</Edad>
         <Genero>Female</Genero>
-        <Puesto>Administrative Assistant I</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>58740.89</Sueldo>
         <AñoAlta>1998</AñoAlta>
     </Empleado>
@@ -95,7 +95,7 @@
         <Apellido>Dowbakin</Apellido>
         <Edad>34</Edad>
         <Genero>Female</Genero>
-        <Puesto>Analog Circuit Design manager</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>106562.09</Sueldo>
         <AñoAlta>1999</AñoAlta>
     </Empleado>
@@ -104,7 +104,7 @@
         <Apellido>Baribal</Apellido>
         <Edad>59</Edad>
         <Genero>Female</Genero>
-        <Puesto>Senior Financial Analyst</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>88755.9</Sueldo>
         <AñoAlta>1996</AñoAlta>
     </Empleado>
@@ -113,7 +113,7 @@
         <Apellido>Brampton</Apellido>
         <Edad>22</Edad>
         <Genero>Female</Genero>
-        <Puesto>Sales Representative</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>37038.78</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -122,7 +122,7 @@
         <Apellido>Grishukhin</Apellido>
         <Edad>44</Edad>
         <Genero>Male</Genero>
-        <Puesto>Social Worker</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>98650.11</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -131,7 +131,7 @@
         <Apellido>Cheltnam</Apellido>
         <Edad>60</Edad>
         <Genero>Male</Genero>
-        <Puesto>Computer Systems Analyst II</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>113336.03</Sueldo>
         <AñoAlta>1990</AñoAlta>
     </Empleado>
@@ -140,7 +140,7 @@
         <Apellido>Calderonello</Apellido>
         <Edad>24</Edad>
         <Genero>Male</Genero>
-        <Puesto>Financial Analyst</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>126929.53</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -149,7 +149,7 @@
         <Apellido>Yegorkin</Apellido>
         <Edad>63</Edad>
         <Genero>Male</Genero>
-        <Puesto>Programmer III</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>84770.5</Sueldo>
         <AñoAlta>1990</AñoAlta>
     </Empleado>
@@ -158,7 +158,7 @@
         <Apellido>Trayford</Apellido>
         <Edad>34</Edad>
         <Genero>Male</Genero>
-        <Puesto>Automation Specialist III</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>122974.07</Sueldo>
         <AñoAlta>2012</AñoAlta>
     </Empleado>
@@ -167,7 +167,7 @@
         <Apellido>Tolemache</Apellido>
         <Edad>26</Edad>
         <Genero>Male</Genero>
-        <Puesto>Geologist IV</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>35444.24</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -176,7 +176,7 @@
         <Apellido>Bartolommeo</Apellido>
         <Edad>49</Edad>
         <Genero>Male</Genero>
-        <Puesto>Chief Design Engineer</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>43009.62</Sueldo>
         <AñoAlta>2002</AñoAlta>
     </Empleado>
@@ -185,7 +185,7 @@
         <Apellido>Daines</Apellido>
         <Edad>56</Edad>
         <Genero>Polygender</Genero>
-        <Puesto>Financial Analyst</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>73939.45</Sueldo>
         <AñoAlta>2000</AñoAlta>
     </Empleado>
@@ -194,7 +194,7 @@
         <Apellido>Jikovsky</Apellido>
         <Edad>43</Edad>
         <Genero>Male</Genero>
-        <Puesto>Registered Nurse</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>141778.63</Sueldo>
         <AñoAlta>1991</AñoAlta>
     </Empleado>
@@ -203,7 +203,7 @@
         <Apellido>Lowe</Apellido>
         <Edad>58</Edad>
         <Genero>Male</Genero>
-        <Puesto>Office Assistant I</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>43596.38</Sueldo>
         <AñoAlta>1992</AñoAlta>
     </Empleado>
@@ -212,7 +212,7 @@
         <Apellido>Jeannard</Apellido>
         <Edad>33</Edad>
         <Genero>Female</Genero>
-        <Puesto>Marketing Assistant</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>94138.53</Sueldo>
         <AñoAlta>1997</AñoAlta>
     </Empleado>
@@ -221,7 +221,7 @@
         <Apellido>Tomkins</Apellido>
         <Edad>18</Edad>
         <Genero>Non-binary</Genero>
-        <Puesto>Professor</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>85317.78</Sueldo>
         <AñoAlta>2002</AñoAlta>
     </Empleado>
@@ -230,7 +230,7 @@
         <Apellido>Petters</Apellido>
         <Edad>64</Edad>
         <Genero>Male</Genero>
-        <Puesto>Research Associate</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>67313.78</Sueldo>
         <AñoAlta>2003</AñoAlta>
     </Empleado>
@@ -239,7 +239,7 @@
         <Apellido>Jeff</Apellido>
         <Edad>25</Edad>
         <Genero>Female</Genero>
-        <Puesto>Developer I</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>148692.45</Sueldo>
         <AñoAlta>2010</AñoAlta>
     </Empleado>
@@ -248,7 +248,7 @@
         <Apellido>Romme</Apellido>
         <Edad>57</Edad>
         <Genero>Genderfluid</Genero>
-        <Puesto>Account Representative I</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>102790.75</Sueldo>
         <AñoAlta>1989</AñoAlta>
     </Empleado>
@@ -257,7 +257,7 @@
         <Apellido>Jira</Apellido>
         <Edad>20</Edad>
         <Genero>Male</Genero>
-        <Puesto>Senior Developer</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>92968.34</Sueldo>
         <AñoAlta>2012</AñoAlta>
     </Empleado>
@@ -266,7 +266,7 @@
         <Apellido>Esmead</Apellido>
         <Edad>29</Edad>
         <Genero>Female</Genero>
-        <Puesto>Research Assistant I</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>81395.55</Sueldo>
         <AñoAlta>1986</AñoAlta>
     </Empleado>
@@ -275,7 +275,7 @@
         <Apellido>Huke</Apellido>
         <Edad>18</Edad>
         <Genero>Non-binary</Genero>
-        <Puesto>Research Assistant III</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>75272.32</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -284,7 +284,7 @@
         <Apellido>Wallwork</Apellido>
         <Edad>30</Edad>
         <Genero>Female</Genero>
-        <Puesto>Environmental Tech</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>108791.79</Sueldo>
         <AñoAlta>1992</AñoAlta>
     </Empleado>
@@ -293,7 +293,7 @@
         <Apellido>Whate</Apellido>
         <Edad>26</Edad>
         <Genero>Male</Genero>
-        <Puesto>Nurse</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>64480.27</Sueldo>
         <AñoAlta>2003</AñoAlta>
     </Empleado>
@@ -302,7 +302,7 @@
         <Apellido>Shepheard</Apellido>
         <Edad>24</Edad>
         <Genero>Female</Genero>
-        <Puesto>Senior Quality Engineer</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>46032.06</Sueldo>
         <AñoAlta>2009</AñoAlta>
     </Empleado>
@@ -311,7 +311,7 @@
         <Apellido>Rittmeyer</Apellido>
         <Edad>47</Edad>
         <Genero>Male</Genero>
-        <Puesto>Biostatistician I</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>112337.44</Sueldo>
         <AñoAlta>1999</AñoAlta>
     </Empleado>
@@ -320,7 +320,7 @@
         <Apellido>Shattock</Apellido>
         <Edad>55</Edad>
         <Genero>Female</Genero>
-        <Puesto>Internal Auditor</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>36826.4</Sueldo>
         <AñoAlta>1984</AñoAlta>
     </Empleado>
@@ -329,7 +329,7 @@
         <Apellido>Rosenthaler</Apellido>
         <Edad>19</Edad>
         <Genero>Female</Genero>
-        <Puesto>Paralegal</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>33019.4</Sueldo>
         <AñoAlta>1995</AñoAlta>
     </Empleado>
@@ -338,7 +338,7 @@
         <Apellido>Lillegard</Apellido>
         <Edad>36</Edad>
         <Genero>Male</Genero>
-        <Puesto>VP Accounting</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>98661.92</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -347,7 +347,7 @@
         <Apellido>Higbin</Apellido>
         <Edad>48</Edad>
         <Genero>Female</Genero>
-        <Puesto>Research Assistant III</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>44065.57</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -356,7 +356,7 @@
         <Apellido>Bavidge</Apellido>
         <Edad>34</Edad>
         <Genero>Female</Genero>
-        <Puesto>Web Designer III</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>30491.56</Sueldo>
         <AñoAlta>2009</AñoAlta>
     </Empleado>
@@ -365,7 +365,7 @@
         <Apellido>Trevon</Apellido>
         <Edad>59</Edad>
         <Genero>Female</Genero>
-        <Puesto>Business Systems Development Analyst</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>85201.76</Sueldo>
         <AñoAlta>1998</AñoAlta>
     </Empleado>
@@ -374,7 +374,7 @@
         <Apellido>Yarmouth</Apellido>
         <Edad>50</Edad>
         <Genero>Male</Genero>
-        <Puesto>Civil Engineer</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>67891.44</Sueldo>
         <AñoAlta>2002</AñoAlta>
     </Empleado>
@@ -383,7 +383,7 @@
         <Apellido>Birmingham</Apellido>
         <Edad>65</Edad>
         <Genero>Female</Genero>
-        <Puesto>Librarian</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>71116.57</Sueldo>
         <AñoAlta>2004</AñoAlta>
     </Empleado>
@@ -392,7 +392,7 @@
         <Apellido>Trudgion</Apellido>
         <Edad>51</Edad>
         <Genero>Female</Genero>
-        <Puesto>Senior Financial Analyst</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>72137.62</Sueldo>
         <AñoAlta>2010</AñoAlta>
     </Empleado>
@@ -401,7 +401,7 @@
         <Apellido>Gilfoyle</Apellido>
         <Edad>21</Edad>
         <Genero>Male</Genero>
-        <Puesto>Assistant Media Planner</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>52091.71</Sueldo>
         <AñoAlta>2004</AñoAlta>
     </Empleado>
@@ -410,7 +410,7 @@
         <Apellido>Holdron</Apellido>
         <Edad>59</Edad>
         <Genero>Male</Genero>
-        <Puesto>Compensation Analyst</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>84986.95</Sueldo>
         <AñoAlta>2002</AñoAlta>
     </Empleado>
@@ -419,7 +419,7 @@
         <Apellido>Lunt</Apellido>
         <Edad>35</Edad>
         <Genero>Male</Genero>
-        <Puesto>Tax Accountant</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>113550.87</Sueldo>
         <AñoAlta>1995</AñoAlta>
     </Empleado>
@@ -428,7 +428,7 @@
         <Apellido>Dobbie</Apellido>
         <Edad>27</Edad>
         <Genero>Female</Genero>
-        <Puesto>Financial Advisor</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>140126.66</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -437,7 +437,7 @@
         <Apellido>MacElroy</Apellido>
         <Edad>63</Edad>
         <Genero>Female</Genero>
-        <Puesto>Business Systems Development Analyst</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>98033.06</Sueldo>
         <AñoAlta>2012</AñoAlta>
     </Empleado>
@@ -446,7 +446,7 @@
         <Apellido>Gledhall</Apellido>
         <Edad>40</Edad>
         <Genero>Male</Genero>
-        <Puesto>Research Assistant IV</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>32440.4</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -455,7 +455,7 @@
         <Apellido>Baddiley</Apellido>
         <Edad>29</Edad>
         <Genero>Female</Genero>
-        <Puesto>Accountant II</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>120624.7</Sueldo>
         <AñoAlta>1998</AñoAlta>
     </Empleado>
@@ -464,7 +464,7 @@
         <Apellido>Lawman</Apellido>
         <Edad>52</Edad>
         <Genero>Female</Genero>
-        <Puesto>GIS Technical Architect</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>75639.02</Sueldo>
         <AñoAlta>2010</AñoAlta>
     </Empleado>
@@ -473,7 +473,7 @@
         <Apellido>Terbrugge</Apellido>
         <Edad>34</Edad>
         <Genero>Female</Genero>
-        <Puesto>Administrative Assistant I</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>89762.79</Sueldo>
         <AñoAlta>2010</AñoAlta>
     </Empleado>
@@ -482,7 +482,7 @@
         <Apellido>Wedmore</Apellido>
         <Edad>38</Edad>
         <Genero>Female</Genero>
-        <Puesto>Payment Adjustment Coordinator</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>53026.09</Sueldo>
         <AñoAlta>1997</AñoAlta>
     </Empleado>
@@ -491,7 +491,7 @@
         <Apellido>Bycraft</Apellido>
         <Edad>27</Edad>
         <Genero>Male</Genero>
-        <Puesto>Payment Adjustment Coordinator</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>148203.22</Sueldo>
         <AñoAlta>2004</AñoAlta>
     </Empleado>
@@ -500,7 +500,7 @@
         <Apellido>Klemenz</Apellido>
         <Edad>54</Edad>
         <Genero>Male</Genero>
-        <Puesto>Software Consultant</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>99590.03</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -509,7 +509,7 @@
         <Apellido>Aris</Apellido>
         <Edad>28</Edad>
         <Genero>Female</Genero>
-        <Puesto>Programmer Analyst IV</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>138984.24</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -518,7 +518,7 @@
         <Apellido>Marl</Apellido>
         <Edad>21</Edad>
         <Genero>Female</Genero>
-        <Puesto>Junior Executive</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>138817.45</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -527,7 +527,7 @@
         <Apellido>Niesegen</Apellido>
         <Edad>64</Edad>
         <Genero>Male</Genero>
-        <Puesto>Operator</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>72142.94</Sueldo>
         <AñoAlta>1984</AñoAlta>
     </Empleado>
@@ -536,7 +536,7 @@
         <Apellido>Ingram</Apellido>
         <Edad>52</Edad>
         <Genero>Genderfluid</Genero>
-        <Puesto>Nurse</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>136834.84</Sueldo>
         <AñoAlta>1979</AñoAlta>
     </Empleado>
@@ -545,7 +545,7 @@
         <Apellido>Gorioli</Apellido>
         <Edad>33</Edad>
         <Genero>Bigender</Genero>
-        <Puesto>Administrative Officer</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>123858.0</Sueldo>
         <AñoAlta>2009</AñoAlta>
     </Empleado>
@@ -554,7 +554,7 @@
         <Apellido>Ewers</Apellido>
         <Edad>43</Edad>
         <Genero>Male</Genero>
-        <Puesto>Professor</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>40857.93</Sueldo>
         <AñoAlta>2006</AñoAlta>
     </Empleado>
@@ -563,7 +563,7 @@
         <Apellido>Crankhorn</Apellido>
         <Edad>53</Edad>
         <Genero>Female</Genero>
-        <Puesto>VP Product Management</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>77523.28</Sueldo>
         <AñoAlta>2010</AñoAlta>
     </Empleado>
@@ -572,7 +572,7 @@
         <Apellido>Leed</Apellido>
         <Edad>24</Edad>
         <Genero>Male</Genero>
-        <Puesto>Registered Nurse</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>115354.66</Sueldo>
         <AñoAlta>1996</AñoAlta>
     </Empleado>
@@ -581,7 +581,7 @@
         <Apellido>Bonicelli</Apellido>
         <Edad>61</Edad>
         <Genero>Female</Genero>
-        <Puesto>Information Systems Manager</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>96650.42</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -590,7 +590,7 @@
         <Apellido>Wyson</Apellido>
         <Edad>56</Edad>
         <Genero>Female</Genero>
-        <Puesto>Pharmacist</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>33817.83</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -599,7 +599,7 @@
         <Apellido>Gencke</Apellido>
         <Edad>36</Edad>
         <Genero>Female</Genero>
-        <Puesto>Assistant Professor</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>35054.32</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -608,7 +608,7 @@
         <Apellido>Slad</Apellido>
         <Edad>29</Edad>
         <Genero>Male</Genero>
-        <Puesto>Database Administrator III</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>64017.13</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -617,7 +617,7 @@
         <Apellido>Paggitt</Apellido>
         <Edad>45</Edad>
         <Genero>Female</Genero>
-        <Puesto>Occupational Therapist</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>48562.05</Sueldo>
         <AñoAlta>1992</AñoAlta>
     </Empleado>
@@ -626,7 +626,7 @@
         <Apellido>Smythin</Apellido>
         <Edad>33</Edad>
         <Genero>Female</Genero>
-        <Puesto>Health Coach IV</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>102623.72</Sueldo>
         <AñoAlta>2009</AñoAlta>
     </Empleado>
@@ -635,7 +635,7 @@
         <Apellido>Antonetti</Apellido>
         <Edad>43</Edad>
         <Genero>Male</Genero>
-        <Puesto>Software Consultant</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>86872.2</Sueldo>
         <AñoAlta>2009</AñoAlta>
     </Empleado>
@@ -644,7 +644,7 @@
         <Apellido>Minter</Apellido>
         <Edad>31</Edad>
         <Genero>Male</Genero>
-        <Puesto>Clinical Specialist</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>45790.57</Sueldo>
         <AñoAlta>2007</AñoAlta>
     </Empleado>
@@ -653,7 +653,7 @@
         <Apellido>Grocutt</Apellido>
         <Edad>29</Edad>
         <Genero>Female</Genero>
-        <Puesto>Research Nurse</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>70555.5</Sueldo>
         <AñoAlta>1991</AñoAlta>
     </Empleado>
@@ -662,7 +662,7 @@
         <Apellido>Pennoni</Apellido>
         <Edad>54</Edad>
         <Genero>Male</Genero>
-        <Puesto>Research Nurse</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>91076.25</Sueldo>
         <AñoAlta>2001</AñoAlta>
     </Empleado>
@@ -671,7 +671,7 @@
         <Apellido>Scandwright</Apellido>
         <Edad>33</Edad>
         <Genero>Female</Genero>
-        <Puesto>Marketing Manager</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>129281.44</Sueldo>
         <AñoAlta>1993</AñoAlta>
     </Empleado>
@@ -680,7 +680,7 @@
         <Apellido>Shadfourth</Apellido>
         <Edad>28</Edad>
         <Genero>Genderfluid</Genero>
-        <Puesto>Nurse Practicioner</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>131923.19</Sueldo>
         <AñoAlta>2007</AñoAlta>
     </Empleado>
@@ -689,7 +689,7 @@
         <Apellido>Oakeshott</Apellido>
         <Edad>28</Edad>
         <Genero>Female</Genero>
-        <Puesto>Help Desk Operator</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>123771.02</Sueldo>
         <AñoAlta>1988</AñoAlta>
     </Empleado>
@@ -698,7 +698,7 @@
         <Apellido>Rubinlicht</Apellido>
         <Edad>41</Edad>
         <Genero>Female</Genero>
-        <Puesto>Chemical Engineer</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>140591.35</Sueldo>
         <AñoAlta>2007</AñoAlta>
     </Empleado>
@@ -707,7 +707,7 @@
         <Apellido>Guilbert</Apellido>
         <Edad>37</Edad>
         <Genero>Male</Genero>
-        <Puesto>Nuclear Power Engineer</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>98843.87</Sueldo>
         <AñoAlta>1993</AñoAlta>
     </Empleado>
@@ -716,7 +716,7 @@
         <Apellido>Defau</Apellido>
         <Edad>64</Edad>
         <Genero>Female</Genero>
-        <Puesto>Teacher</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>71750.47</Sueldo>
         <AñoAlta>2008</AñoAlta>
     </Empleado>
@@ -725,7 +725,7 @@
         <Apellido>Kitteringham</Apellido>
         <Edad>47</Edad>
         <Genero>Male</Genero>
-        <Puesto>Office Assistant I</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>133170.46</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -734,7 +734,7 @@
         <Apellido>Hedde</Apellido>
         <Edad>56</Edad>
         <Genero>Female</Genero>
-        <Puesto>Statistician III</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>41114.3</Sueldo>
         <AñoAlta>2001</AñoAlta>
     </Empleado>
@@ -743,7 +743,7 @@
         <Apellido>MacConnulty</Apellido>
         <Edad>57</Edad>
         <Genero>Female</Genero>
-        <Puesto>Teacher</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>89797.23</Sueldo>
         <AñoAlta>1998</AñoAlta>
     </Empleado>
@@ -752,7 +752,7 @@
         <Apellido>Bibb</Apellido>
         <Edad>56</Edad>
         <Genero>Female</Genero>
-        <Puesto>Software Engineer IV</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>44360.41</Sueldo>
         <AñoAlta>1967</AñoAlta>
     </Empleado>
@@ -761,7 +761,7 @@
         <Apellido>Oxherd</Apellido>
         <Edad>52</Edad>
         <Genero>Female</Genero>
-        <Puesto>Human Resources Manager</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>91355.21</Sueldo>
         <AñoAlta>2011</AñoAlta>
     </Empleado>
@@ -770,7 +770,7 @@
         <Apellido>Paddell</Apellido>
         <Edad>54</Edad>
         <Genero>Female</Genero>
-        <Puesto>Clinical Specialist</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>132371.69</Sueldo>
         <AñoAlta>2012</AñoAlta>
     </Empleado>
@@ -779,7 +779,7 @@
         <Apellido>Colman</Apellido>
         <Edad>34</Edad>
         <Genero>Male</Genero>
-        <Puesto>Structural Engineer</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>126556.62</Sueldo>
         <AñoAlta>1995</AñoAlta>
     </Empleado>
@@ -788,7 +788,7 @@
         <Apellido>Garritley</Apellido>
         <Edad>57</Edad>
         <Genero>Male</Genero>
-        <Puesto>Executive Secretary</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>39898.76</Sueldo>
         <AñoAlta>2012</AñoAlta>
     </Empleado>
@@ -797,7 +797,7 @@
         <Apellido>Beggan</Apellido>
         <Edad>47</Edad>
         <Genero>Female</Genero>
-        <Puesto>Clinical Specialist</Puesto>
+        <Puesto>Analista</Puesto>
         <Sueldo>69217.79</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -806,7 +806,7 @@
         <Apellido>Worsfold</Apellido>
         <Edad>43</Edad>
         <Genero>Female</Genero>
-        <Puesto>Senior Editor</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>95740.45</Sueldo>
         <AñoAlta>1969</AñoAlta>
     </Empleado>
@@ -815,7 +815,7 @@
         <Apellido>Bedward</Apellido>
         <Edad>60</Edad>
         <Genero>Male</Genero>
-        <Puesto>Occupational Therapist</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>58465.68</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -824,7 +824,7 @@
         <Apellido>Kidgell</Apellido>
         <Edad>25</Edad>
         <Genero>Male</Genero>
-        <Puesto>Safety Technician II</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>38730.72</Sueldo>
         <AñoAlta>1998</AñoAlta>
     </Empleado>
@@ -833,7 +833,7 @@
         <Apellido>Skakunas</Apellido>
         <Edad>58</Edad>
         <Genero>Female</Genero>
-        <Puesto>Automation Specialist I</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>97838.08</Sueldo>
         <AñoAlta>2006</AñoAlta>
     </Empleado>
@@ -842,7 +842,7 @@
         <Apellido>Volkers</Apellido>
         <Edad>38</Edad>
         <Genero>Female</Genero>
-        <Puesto>Senior Cost Accountant</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>127224.37</Sueldo>
         <AñoAlta>2003</AñoAlta>
     </Empleado>
@@ -851,7 +851,7 @@
         <Apellido>Drakeford</Apellido>
         <Edad>46</Edad>
         <Genero>Male</Genero>
-        <Puesto>Financial Advisor</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>147543.98</Sueldo>
         <AñoAlta>2007</AñoAlta>
     </Empleado>
@@ -860,7 +860,7 @@
         <Apellido>Beswetherick</Apellido>
         <Edad>28</Edad>
         <Genero>Female</Genero>
-        <Puesto>Associate Professor</Puesto>
+        <Puesto>Ingeniero</Puesto>
         <Sueldo>91468.36</Sueldo>
         <AñoAlta>1987</AñoAlta>
     </Empleado>
@@ -869,7 +869,7 @@
         <Apellido>Crowcum</Apellido>
         <Edad>24</Edad>
         <Genero>Female</Genero>
-        <Puesto>Research Assistant I</Puesto>
+        <Puesto>Administrativo</Puesto>
         <Sueldo>49380.2</Sueldo>
         <AñoAlta>2013</AñoAlta>
     </Empleado>
@@ -878,7 +878,7 @@
         <Apellido>Colecrough</Apellido>
         <Edad>51</Edad>
         <Genero>Male</Genero>
-        <Puesto>Executive Secretary</Puesto>
+        <Puesto>Tester</Puesto>
         <Sueldo>142981.2</Sueldo>
         <AñoAlta>2004</AñoAlta>
     </Empleado>
@@ -887,7 +887,7 @@
         <Apellido>Gowland</Apellido>
         <Edad>56</Edad>
         <Genero>Female</Genero>
-        <Puesto>Human Resources Manager</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>83401.27</Sueldo>
         <AñoAlta>2005</AñoAlta>
     </Empleado>
@@ -896,7 +896,7 @@
         <Apellido>Duesbury</Apellido>
         <Edad>23</Edad>
         <Genero>Female</Genero>
-        <Puesto>Cost Accountant</Puesto>
+        <Puesto>Programador</Puesto>
         <Sueldo>84154.65</Sueldo>
         <AñoAlta>2009</AñoAlta>
     </Empleado>

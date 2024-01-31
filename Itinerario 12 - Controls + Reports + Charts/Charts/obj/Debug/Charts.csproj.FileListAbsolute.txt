@@ -1,0 +1,11 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\bin\Debug\Empleados.xml
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\bin\Debug\Charts.exe.config
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\bin\Debug\Charts.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\bin\Debug\Charts.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.Form1.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.Properties.Resources.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.csproj.GenerateResource.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Charts\obj\Debug\Charts.pdb
