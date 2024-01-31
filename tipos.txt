@@ -1,0 +1,4 @@
+Automovil
+SUV
+Camioneta
+Camion

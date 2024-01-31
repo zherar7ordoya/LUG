@@ -1,0 +1,198 @@
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\Reporte.exe.config
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.csprojResolveAssemblyReference.cache
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.Properties.Resources.resources
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.csproj.GenerateResource.Cache
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\RdlCompile.cache
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\RdlCompile.compiled
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.Listas.resources
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.FDataSet.resources
+C:\Users\prinzom\Desktop\Reportesv1\Solution1\Reporte\obj\Debug\Reporte.Menu.resources
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\Reporte.exe.config
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.csprojResolveAssemblyReference.cache
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.FDataSet.resources
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.Listas.resources
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.Menu.resources
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.Properties.Resources.resources
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\Reporte.csproj.GenerateResource.Cache
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\RdlCompile.cache
+C:\Users\prinzom\Desktop\Reportesv1 - copia\Solution1\Reporte\obj\Debug\RdlCompile.compiled
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe.config
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csprojResolveAssemblyReference.cache
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.FDataSet.resources
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Listas.resources
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Menu.resources
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Properties.Resources.resources
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.GenerateResource.Cache
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\RdlCompile.cache
+C:\Users\prinzom\Desktop\Reportesv2\Solution1\Reporte\obj\Debug\RdlCompile.compiled
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe.config
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.pdb
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csprojAssemblyReference.cache
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.FDataSet.resources
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Listas.resources
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Menu.resources
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Properties.Resources.resources
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.GenerateResource.cache
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.CoreCompileInputs.cache
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.CopyComplete
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.exe
+D:\facu\03 -  LUG Presencial\2020\clase 13 - Regex +  Multidioma + Chart\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe.config
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.pdb
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csprojAssemblyReference.cache
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.exe.config
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.FDataSet.resources
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Listas.resources
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Menu.resources
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Properties.Resources.resources
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.GenerateResource.cache
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\RdlCompile.cache
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\RdlCompile.compiled
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.CoreCompileInputs.cache
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.CopyComplete
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.exe
+C:\Users\prinzom\Desktop\facu\VC\6_User_controv2l\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe.config
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Reporte.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.Common.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.Design.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\Microsoft.SqlServer.Types.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\EnvDTE.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\stdole.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.SuggestedBindingRedirects.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.exe.config
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.FDataSet.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Listas.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Menu.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.Properties.Resources.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.GenerateResource.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 12 - Controls + Reports + Charts\Reportesv2\Solution1\Reporte\obj\Debug\Reporte.pdb
