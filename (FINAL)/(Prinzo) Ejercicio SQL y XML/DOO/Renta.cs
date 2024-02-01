@@ -25,4 +25,8 @@ public class Renta
     }
 
     // Otros métodos, si es necesario
+    static int TarifarModelo(string modelo)
+    {
+        return Math.Abs(modelo.GetHashCode()) % 10000;
+    }
 }
