@@ -35,21 +35,40 @@ public class Renta
         return Math.Abs(modelo.GetHashCode()) % 10000;
     }
 
+    public List<Renta> ObtenerTodosVehiculosRentados()
+    {
+        // Lógica para obtener los vehículos rentados
+        // Puedes ajustar esta lógica según tus requerimientos específicos.
+        return new List<Renta>();
+    }
 
-    /*
-    FALTA UN MÉTODO PUBLICO PARA EL REPORTE SOLICITADO:
+    public List<Renta> ObtenerVehiculosMasRentados()
+    {
+        // Lógica para obtener los vehículos más rentados
+        // Puedes ajustar esta lógica según tus requerimientos específicos.
+        return new List<Renta>();
+    }
 
-    "La empresa desea saber que vehículo fue alquilado, el cliente que lo posee,
-    la cantidad de días de la renta, y el importe de la misma."
+    public List<Renta> ObtenerVehiculosMenosRentados()
+    {
+        // Lógica para obtener los vehículos menos rentados
+        // Puedes ajustar esta lógica según tus requerimientos específicos.
+        return new List<Renta>();
+    }
 
-    PARA ELLO, HAY QUE SOBEESCRIBIR EL MÉTODO ToString() DE LA CLASE Cliente.
-    TODOS LOS DATOS ESTÁN AQUÍ (Vehiculo, Cliente, DiasRentados, Importe).
+    public decimal ObtenerRecaudacionPorTipo(string tipo)
+    {
+        // Lógica para obtener el monto total recaudado por tipo de transporte
+        // Puedes ajustar esta lógica según tus requerimientos específicos.
+        return 0;
+    }
 
-    PUNTO 7. TRES MÉTODOS MÁS:
-        a. Los vehículos más rentados, por tipo y el monto. 
-        b. Los vehículos menos rentados, por tipo y monto.
-        c. El monto total recaudado por tipo de transporte.
-    */
+
+    
+    public override string ToString()
+    {
+        return $"Cliente: {Cliente} - Vehículo: {Vehiculo} - Días rentados: {DiasRentados} - Importe: {Importe}";
+    }
 
 
 }
