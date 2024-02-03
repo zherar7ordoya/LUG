@@ -1,0 +1,13 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\BLL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\BLL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\ABS.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\BEL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\MAP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\ABS.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\BEL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\bin\Debug\MAP.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\obj\Debug\BLL.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\obj\Debug\BLL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\BLL\obj\Debug\BLL.pdb
