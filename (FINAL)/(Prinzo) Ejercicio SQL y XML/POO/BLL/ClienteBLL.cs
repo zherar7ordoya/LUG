@@ -8,6 +8,6 @@ namespace BLL
 {
     public partial class ClienteBLL
     {
-        
+        // Principal (métodos de negocio)
     }
 }
