@@ -4,10 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ABS;
+
+using BEL;
+
 namespace BLL
 {
-    public partial class ClienteBLL
+    public partial class ClienteBLL : IABMC<Cliente>
     {
-        // BASE
+        public bool Actualizar(Cliente entidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Eliminar(Cliente entidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Guardar(Cliente entidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Cliente> Listar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>embedded</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -47,92 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\CustomTextbox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\CustomTextbox.Designer.cs">
-      <DependentUpon>CustomTextbox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AlquilerForm.cs">
+    <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AlquilerForm.Designer.cs">
-      <DependentUpon>AlquilerForm.cs</DependentUpon>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ClienteForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ClienteForm.Designer.cs">
-      <DependentUpon>ClienteForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MasForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MasForm.Designer.cs">
-      <DependentUpon>MasForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MenosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MenosForm.Designer.cs">
-      <DependentUpon>MenosForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\TotalForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TotalForm.Designer.cs">
-      <DependentUpon>TotalForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\VehiculoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\VehiculoForm.Designer.cs">
-      <DependentUpon>VehiculoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\LabeledTextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\LabeledTextBox.Designer.cs">
-      <DependentUpon>LabeledTextBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-
-
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-
-    
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\CustomTextbox.resx">
-      <DependentUpon>CustomTextbox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AlquilerForm.resx">
-      <DependentUpon>AlquilerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ClienteForm.resx">
-      <DependentUpon>ClienteForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LabeledTextBox.resx">
-      <DependentUpon>LabeledTextBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MasForm.resx">
-      <DependentUpon>MasForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenosForm.resx">
-      <DependentUpon>MenosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TotalForm.resx">
-      <DependentUpon>TotalForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VehiculoForm.resx">
-      <DependentUpon>VehiculoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

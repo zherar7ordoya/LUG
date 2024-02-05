@@ -4,3 +4,9 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.dll
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\DAL\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\DAL\bin\Debug\DAL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\DAL\obj\Debug\DAL.pdb

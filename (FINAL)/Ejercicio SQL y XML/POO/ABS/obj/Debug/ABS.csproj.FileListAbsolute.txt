@@ -4,3 +4,9 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.csproj.CoreCompileInputs.cache
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.dll
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\(Prinzo) Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\ABS\bin\Debug\ABS.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\ABS\bin\Debug\ABS.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\ABS\obj\Debug\ABS.pdb

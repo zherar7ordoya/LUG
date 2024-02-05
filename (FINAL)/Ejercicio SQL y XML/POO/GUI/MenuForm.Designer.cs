@@ -1,7 +1,7 @@
 ﻿
-namespace GUI.Forms
+namespace GUI
 {
-    partial class VehiculoForm
+    partial class MenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -19,12 +19,6 @@ namespace GUI.Forms
                 components.Dispose();
             }
             base.Dispose(disposing);
-
-            /* Since "formulario" is a static variable, if you close the Form,
-             * the value of "formulario" won't get reset automatically, so you
-             * need to do a clean up. To do this, add "formulario = null;" to
-             * the dispose method of the Form. */
-            formulario = null;
         }
 
         #region Windows Form Designer generated code
@@ -35,22 +29,38 @@ namespace GUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
-            // VehiculoForm
+            // MenuStrip
+            // 
+            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuStrip.Name = "MenuStrip";
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.MenuStrip.Size = new System.Drawing.Size(834, 24);
+            this.MenuStrip.TabIndex = 1;
+            this.MenuStrip.Text = "menuStrip1";
+            // 
+            // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 411);
+            this.ClientSize = new System.Drawing.Size(834, 436);
+            this.Controls.Add(this.MenuStrip);
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.MenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "VehiculoForm";
-            this.Text = "ABM Vehículo";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agencia de Transporte";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip MenuStrip;
     }
 }

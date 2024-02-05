@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BEL
 {
-    public class Entidad : IEntidad
+    public abstract class Entidad : IEntidad
     {
         public int Codigo { get; set; }
     }

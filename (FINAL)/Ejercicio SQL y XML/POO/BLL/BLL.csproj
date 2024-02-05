@@ -41,13 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <!-- Inicia: forma de mostrar clases parciales como jerarquía -->
+
+    <!-- ******** FORMA DE MOSTRAR UNA CLASE PARCIAL COMO JERARQUÍA ******** -->
+    
     <Compile Include="ClienteBLL.Base.cs">
       <DependentUpon>ClienteBLL.cs</DependentUpon>
     </Compile>
     <Compile Include="ClienteBLL.cs" />
-    <!-- Termina: forma de mostrar clases parciales como jerarquía -->
+
+    <Compile Include="RentaBLL.Base.cs">
+      <DependentUpon>RentaBLL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentaBLL.cs" />
+    
+    <Compile Include="VehiculoBLL.Base.cs">
+      <DependentUpon>VehiculoBLL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculoBLL.cs" />
+
+    <!-- ******************************************************************* -->
+    
     <Compile Include="Properties\AssemblyInfo.cs" />
+    
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ABS\ABS.csproj">
