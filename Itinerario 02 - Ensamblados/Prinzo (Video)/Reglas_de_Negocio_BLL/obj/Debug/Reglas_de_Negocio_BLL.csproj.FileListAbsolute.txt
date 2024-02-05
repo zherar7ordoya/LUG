@@ -1,0 +1,6 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Reglas_de_Negocio_BLL\obj\Debug\Reglas_de_Negocio_BLL.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Reglas_de_Negocio_BLL\bin\Debug\Reglas_de_Negocio_BLL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Reglas_de_Negocio_BLL\bin\Debug\Reglas_de_Negocio_BLL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Reglas_de_Negocio_BLL\obj\Debug\Reglas_de_Negocio_BLL.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Reglas_de_Negocio_BLL\obj\Debug\Reglas_de_Negocio_BLL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Reglas_de_Negocio_BLL\obj\Debug\Reglas_de_Negocio_BLL.pdb

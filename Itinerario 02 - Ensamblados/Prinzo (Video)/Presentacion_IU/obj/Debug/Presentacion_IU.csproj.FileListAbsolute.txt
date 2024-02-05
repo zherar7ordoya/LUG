@@ -1,0 +1,14 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.Menu.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.Operaciones.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.Properties.Resources.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.csproj.GenerateResource.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\bin\Debug\Presentacion_IU.exe.config
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\bin\Debug\Presentacion_IU.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\bin\Debug\Presentacion_IU.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\bin\Debug\Reglas_de_Negocio_BLL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\bin\Debug\Reglas_de_Negocio_BLL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.exe
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 02 - Ensamblados\Prinzo (Video)\Presentacion_IU\obj\Debug\Presentacion_IU.pdb

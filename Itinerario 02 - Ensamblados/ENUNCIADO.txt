@@ -1,0 +1,7 @@
+ENUNCIADO
+
+1.  Desarrollar un programa que permita ejecutar el desensamblador de código intermedio y que se pueda seleccionar desde un listado el archivo a desensamblar. ¿Qué observa? 
+
+2.  Desarrollar un ensamblado que posea nombre seguro y quede registrado en el GAC. Demostrar que ha quedado registrado.
+
+3. Desarrollar un programa y compilarlo con el VS desde la línea de comandos Desarrollar un programa que permita ejecutar el desensamblador de código intermedio y que se pueda seleccionar desde un listado el archivo a desensamblar. ¿Qué observa? 
