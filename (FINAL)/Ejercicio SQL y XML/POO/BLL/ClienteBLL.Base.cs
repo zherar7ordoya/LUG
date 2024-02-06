@@ -10,8 +10,10 @@ using BEL;
 
 namespace BLL
 {
+
     public partial class ClienteBLL : IABMC<Cliente>
     {
+
         public bool Actualizar(Cliente entidad)
         {
             throw new NotImplementedException();

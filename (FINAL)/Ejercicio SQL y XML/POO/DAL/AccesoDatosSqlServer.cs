@@ -11,7 +11,7 @@ namespace DAL
 {
     public class AccesoDatosSqlServer : IDisposable
     {
-        private readonly string cadena = ConfigurationManager.ConnectionStrings["LUG_Final"].ToString();
+        private readonly string cadena = ConfigurationManager.ConnectionStrings["Final"].ToString();
         private readonly SqlConnection conexion;
         private SqlCommand comando;
         private SqlTransaction transaccion;
@@ -33,7 +33,8 @@ namespace DAL
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HERRAMIENTAS
 
-        private void ConfigurarComando(string consulta, Dictionary<string, object> parametros = null, bool esProcedimientoAlmacenado = false)
+        // Los defaults son para procedimientos almacenados y sin parámetros.
+        private void ConfigurarComando(string consulta, Dictionary<string, object> parametros = null, bool esProcedimientoAlmacenado = true)
         {
             comando = new SqlCommand
             {
