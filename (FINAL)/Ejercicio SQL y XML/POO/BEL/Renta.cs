@@ -16,7 +16,8 @@ namespace BEL
         public int DiasRentados { get; set; }
         public decimal Importe { get; set; }
 
-        // Constructor
+        // Constructores
+        public Renta() { }
         public Renta(Cliente cliente, Vehiculo vehiculo, int diasRentados)
         {
             Cliente = cliente;

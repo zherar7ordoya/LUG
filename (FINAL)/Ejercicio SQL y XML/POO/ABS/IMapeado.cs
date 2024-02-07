@@ -9,7 +9,7 @@ namespace ABS
     public interface IMapeado<T> where T : IEntidad
     {
         List<T> MapearDesdeSqlServer();
-        bool MapearHaciaSqlServer(List<T> objetos);
+        bool MapearHaciaSqlServer(string consulta, T objeto);
         List<T> MapearDesdeXmlArchivo();
         bool MapearHaciaXmlArchivo(List<T> objetos);
     }

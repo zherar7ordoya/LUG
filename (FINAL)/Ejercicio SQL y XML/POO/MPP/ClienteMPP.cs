@@ -16,23 +16,15 @@ namespace MPP
     public class ClienteMPP : IMapeado<Cliente>
     {
         private readonly AccesoDatosSqlServer accesoDatosSqlServer = new AccesoDatosSqlServer();
-        private readonly VehiculoMPP vehiculoMPP = new VehiculoMPP();
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HERRAMIENTAS
-
-        private Vehiculo ObtenerVehiculoPorCodigo(int codigo)
-        {
-            List<Vehiculo> vehiculos = vehiculoMPP.MapearDesdeXmlArchivo();
-            return vehiculos.Find(vehiculo => vehiculo.Codigo == codigo);
-        }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||| METÓDOS DE CLASE
+
         public List<Cliente> MapearDesdeSqlServer()
         {
-            DataTable clientesTabla = accesoDatosSqlServer.Leer("ClientesConsultar", null);
-            List<Cliente> clientesLista = new List<Cliente>();
+            List<Cliente> listaClientes = new List<Cliente>();
+            DataTable tablaClientes = accesoDatosSqlServer.Leer("ClientesConsultar", null);
 
-            foreach(DataRow registro in clientesTabla.Rows)
+            foreach(DataRow registro in tablaClientes.Rows)
             {
                 Cliente cliente = new Cliente
                 {
@@ -42,18 +34,27 @@ namespace MPP
                     DNI = int.Parse(registro["DNI"].ToString()),
                     FechaNacimiento = DateTime.Parse(registro["FechaNacimiento"].ToString()),
                     Email = registro["Email"].ToString(),
-                    VehiculoRentado = ObtenerVehiculoPorCodigo(int.Parse(registro["Codigo_VehiculoRentado"].ToString()))
+                    VehiculoRentado = Tool.ObtenerVehiculoPorCodigo(int.Parse(registro["Codigo_VehiculoRentado"].ToString()))
                 };
-                clientesLista.Add(cliente);
+                listaClientes.Add(cliente);
             }
-            return clientesLista;
+            return listaClientes;
         }
 
-        
 
-        public bool MapearHaciaSqlServer(List<Cliente> entidades)
+        public bool MapearHaciaSqlServer(string consulta, Cliente objeto)
         {
-            throw new NotImplementedException();
+            Dictionary<string, object> parametros = new Dictionary<string, object>
+            {
+                { "@Codigo", objeto.Codigo },
+                { "@Nombre", objeto.Nombre },
+                { "@Apellido", objeto.Apellido },
+                { "@DNI", objeto.DNI },
+                { "@FechaNacimiento", objeto.FechaNacimiento },
+                { "@Email", objeto.Email },
+                { "@Codigo_VehiculoRentado", objeto.VehiculoRentado.Codigo }
+            };
+            return accesoDatosSqlServer.Escribir(consulta, parametros);
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

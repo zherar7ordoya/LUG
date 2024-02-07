@@ -13,7 +13,7 @@ namespace MPP
 {
     public class VehiculoMPP : IMapeado<Vehiculo>
     {
-        AccesoDatosXmlArchivo accesoDatosXmlArchivo = new AccesoDatosXmlArchivo("Cliente.xml");
+        readonly AccesoDatosXmlArchivo accesoDatosXmlArchivo = new AccesoDatosXmlArchivo("Cliente.xml");
 
 
         public List<Vehiculo> MapearDesdeXmlArchivo()
@@ -52,7 +52,7 @@ namespace MPP
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-        public bool MapearHaciaSqlServer(List<Vehiculo> entidades) => throw new NotImplementedException("Vehiculo usa XML Archivo");
+        public bool MapearHaciaSqlServer(string consulta, Vehiculo objeto) => throw new NotImplementedException("Vehiculo usa XML Archivo");
         public List<Vehiculo> MapearDesdeSqlServer() => throw new NotImplementedException("Vehiculo usa XML Archivo");
     }
 }
