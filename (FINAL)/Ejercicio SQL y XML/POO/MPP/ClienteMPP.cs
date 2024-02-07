@@ -19,7 +19,7 @@ namespace MPP
 
         public List<Cliente> MapearDesdeXmlArchivo()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Cliente usa SQL Server");
         }
 
         public bool MapearHaciaSqlServer(Cliente entidad)
@@ -29,7 +29,7 @@ namespace MPP
 
         public bool MapearHaciaXmlArchivo(Cliente entidad)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Cliente usa SQL Server");
         }
     }
 }

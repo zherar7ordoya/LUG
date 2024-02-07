@@ -13,7 +13,7 @@ namespace MPP
     {
         public List<Vehiculo> MapearDesdeSqlServer()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Vehiculo usa XML Archivo");
         }
 
         public List<Vehiculo> MapearDesdeXmlArchivo()
@@ -23,7 +23,7 @@ namespace MPP
 
         public bool MapearHaciaSqlServer(Vehiculo entidad)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Vehiculo usa XML Archivo");
         }
 
         public bool MapearHaciaXmlArchivo(Vehiculo entidad)

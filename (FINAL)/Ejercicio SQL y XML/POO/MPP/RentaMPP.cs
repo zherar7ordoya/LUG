@@ -18,7 +18,7 @@ namespace MPP
 
         public List<Renta> MapearDesdeXmlArchivo()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Renta usa SQL Server");
         }
 
         public bool MapearHaciaSqlServer(Renta entidad)
@@ -28,7 +28,7 @@ namespace MPP
 
         public bool MapearHaciaXmlArchivo(Renta entidad)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Renta usa SQL Server");
         }
     }
 }
