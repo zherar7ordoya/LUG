@@ -41,28 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <!-- ******** FORMA DE MOSTRAR UNA CLASE PARCIAL COMO JERARQUÍA ******** -->
-    
     <Compile Include="ClienteBLL.Base.cs">
       <DependentUpon>ClienteBLL.cs</DependentUpon>
     </Compile>
     <Compile Include="ClienteBLL.cs" />
-
     <Compile Include="RentaBLL.Base.cs">
       <DependentUpon>RentaBLL.cs</DependentUpon>
     </Compile>
     <Compile Include="RentaBLL.cs" />
-    
     <Compile Include="VehiculoBLL.Base.cs">
       <DependentUpon>VehiculoBLL.cs</DependentUpon>
     </Compile>
     <Compile Include="VehiculoBLL.cs" />
-
     <!-- ******************************************************************* -->
-    
     <Compile Include="Properties\AssemblyInfo.cs" />
-    
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ABS\ABS.csproj">
@@ -72,6 +65,10 @@
     <ProjectReference Include="..\BEL\BEL.csproj">
       <Project>{6be322e7-469a-4b4c-8cd4-d2cf04c026a5}</Project>
       <Name>BEL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPP\MPP.csproj">
+      <Project>{c19fcb19-bd0c-4b8a-8c37-1f71cc3973eb}</Project>
+      <Name>MPP</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

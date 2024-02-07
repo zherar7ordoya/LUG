@@ -15,6 +15,7 @@ namespace BEL
         public int DNI { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Email { get; set; }
+        public Vehiculo VehiculoRentado { get; set; }
 
         public override string ToString()
         {

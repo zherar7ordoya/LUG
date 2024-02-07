@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="IABMC.cs" />
     <Compile Include="IEntidad.cs" />
-    <Compile Include="IMapeador.cs" />
+    <Compile Include="IMapeado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

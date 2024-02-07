@@ -31,11 +31,11 @@ namespace DAL
             }
         }
 
-        public bool Escribir(XElement pXElement)
+        public bool Escribir(XElement datos)
         {
             try
             {
-                pXElement.Save(archivo);
+                datos.Save(archivo);
                 return true;
             }
             catch (Exception ex)
