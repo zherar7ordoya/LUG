@@ -1,0 +1,9 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\BEL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\BEL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\ABS.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\ABS.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\2) BEL Business Entities Layer.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\2) BEL Business Entities Layer.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\2) BEL Business Entities Layer.csproj.CopyComplete
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.pdb

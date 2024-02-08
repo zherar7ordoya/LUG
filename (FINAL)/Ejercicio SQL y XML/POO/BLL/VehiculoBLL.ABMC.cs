@@ -12,22 +12,22 @@ namespace BLL
 {
     public partial class VehiculoBLL : IABMC<Vehiculo>
     {
-        public bool Actualizar(Vehiculo entidad)
+        public bool Modificar(Vehiculo objeto)
         {
             throw new NotImplementedException();
         }
 
-        public bool Eliminar(Vehiculo entidad)
+        public bool Borrar(Vehiculo objeto)
         {
             throw new NotImplementedException();
         }
 
-        public bool Guardar(Vehiculo entidad)
+        public bool Agregar(Vehiculo objeto)
         {
             throw new NotImplementedException();
         }
 
-        public List<Vehiculo> Listar()
+        public List<Vehiculo> Consultar()
         {
             throw new NotImplementedException();
         }

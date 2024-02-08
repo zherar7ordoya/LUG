@@ -8,9 +8,9 @@ namespace ABS
 {
     public interface IABMC<T> where T : IEntidad
     {
-        bool Actualizar(T objeto);
-        bool Eliminar(T objeto);
-        bool Guardar(T objeto);
-        List<T> Listar();
+        bool Agregar(T objeto);
+        bool Borrar(T objeto);
+        bool Modificar(T objeto);
+        List<T> Consultar();
     }
 }

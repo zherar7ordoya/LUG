@@ -1,35 +1,33 @@
-﻿using System;
+﻿using ABS;
+
+using BEL;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using ABS;
-
-using BEL;
-
 namespace BLL
 {
-
-    public partial class ClienteBLL : IABMC<Cliente>
+    public partial class RentaBLL : IABMC<Renta>
     {
-
-        public bool Actualizar(Cliente entidad)
+        public bool Modificar(Renta objeto)
         {
             throw new NotImplementedException();
         }
 
-        public bool Eliminar(Cliente entidad)
+        public bool Borrar(Renta objeto)
         {
             throw new NotImplementedException();
         }
 
-        public bool Guardar(Cliente entidad)
+        public bool Agregar(Renta objeto)
         {
             throw new NotImplementedException();
         }
 
-        public List<Cliente> Listar()
+        public List<Renta> Consultar()
         {
             throw new NotImplementedException();
         }

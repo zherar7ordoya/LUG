@@ -10,24 +10,24 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public partial class RentaBLL : IABMC<Renta>
+    public partial class ClienteBLL : IABMC<Cliente>
     {
-        public bool Actualizar(Renta entidad)
+        public bool Modificar(Cliente objeto)
         {
             throw new NotImplementedException();
         }
 
-        public bool Eliminar(Renta entidad)
+        public bool Borrar(Cliente objeto)
         {
             throw new NotImplementedException();
         }
 
-        public bool Guardar(Renta entidad)
+        public bool Agregar(Cliente objeto)
         {
             throw new NotImplementedException();
         }
 
-        public List<Renta> Listar()
+        public List<Cliente> Consultar()
         {
             throw new NotImplementedException();
         }

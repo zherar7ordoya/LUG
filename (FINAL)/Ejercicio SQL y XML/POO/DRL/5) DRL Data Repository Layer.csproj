@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FAE395D-122A-4CCC-9A8A-7D66A1BD6D31}</ProjectGuid>
+    <ProjectGuid>{BD35D3A1-363B-45F0-B840-DEC042741692}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLL</RootNamespace>
-    <AssemblyName>BLL</AssemblyName>
+    <RootNamespace>DRL</RootNamespace>
+    <AssemblyName>DRL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,34 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <!-- ******** FORMA DE MOSTRAR UNA CLASE PARCIAL COMO JERARQUÍA ******** -->
-    <Compile Include="ClienteBLL.Base.cs">
-      <DependentUpon>ClienteBLL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ClienteBLL.cs" />
-    <Compile Include="RentaBLL.Base.cs">
-      <DependentUpon>RentaBLL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RentaBLL.cs" />
-    <Compile Include="VehiculoBLL.Base.cs">
-      <DependentUpon>VehiculoBLL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VehiculoBLL.cs" />
-    <!-- ******************************************************************* -->
+    <Compile Include="ClienteDRL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentaDRL.cs" />
+    <Compile Include="VehiculoDRL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ABS\ABS.csproj">
+    <ProjectReference Include="..\ABS\1%29 ABS Abstraction Layer.csproj">
       <Project>{027728cf-dcac-4026-afc4-dd9b88305f7e}</Project>
-      <Name>ABS</Name>
+      <Name>1%29 ABS Abstraction Layer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BEL\BEL.csproj">
-      <Project>{6be322e7-469a-4b4c-8cd4-d2cf04c026a5}</Project>
-      <Name>BEL</Name>
+    <ProjectReference Include="..\BEL\2%29 BEL Business Entities Layer.csproj">
+      <Project>{6BE322E7-469A-4B4C-8CD4-D2CF04C026A5}</Project>
+      <Name>2%29 BEL Business Entities Layer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MPP\MPP.csproj">
+    <ProjectReference Include="..\MPP\6%29 MPP Mapping Layer.csproj">
       <Project>{c19fcb19-bd0c-4b8a-8c37-1f71cc3973eb}</Project>
-      <Name>MPP</Name>
+      <Name>6%29 MPP Mapping Layer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,16 +9,7 @@ namespace DAL
 {
     public class AccesoDatosXmlArchivo
     {
-        private readonly string archivo;
-
-        public AccesoDatosXmlArchivo(string archivo)
-        {
-            this.archivo = archivo;
-        }
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS DE CLASE
-
-        public XElement Leer()
+        public XElement Leer(string archivo)
         {
             try
             {
@@ -31,7 +22,7 @@ namespace DAL
             }
         }
 
-        public bool Escribir(XElement datos)
+        public bool Escribir(string archivo, XElement datos)
         {
             try
             {
