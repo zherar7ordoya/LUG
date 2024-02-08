@@ -19,7 +19,7 @@ namespace MPP
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||| METÓDOS DE CLASE
 
-        public List<Cliente> MapearDesdeSqlServer()
+        public List<Cliente> MapearDesdeOrigen()
         {
             List<Cliente> listaClientes = new List<Cliente>();
             DataTable tablaClientes = accesoDatosSqlServer.Leer("ClientesConsultar", null);
@@ -58,7 +58,6 @@ namespace MPP
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-        public List<Cliente> MapearDesdeXmlArchivo() => throw new NotImplementedException("Cliente usa SQL Server");
         public bool MapearHaciaXmlArchivo(List<Cliente> entidades) => throw new NotImplementedException("Cliente usa SQL Server");
     }
 }

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ABS
 {
     public interface IMapeado<T> where T : IEntidad
     {
-        List<T> MapearDesdeSqlServer();
+        List<T> MapearDesdeOrigen();
         bool MapearHaciaSqlServer(string consulta, T objeto);
-        List<T> MapearDesdeXmlArchivo();
         bool MapearHaciaXmlArchivo(List<T> objetos);
     }
 }

@@ -16,7 +16,7 @@ namespace MPP
         readonly AccesoDatosXmlArchivo accesoDatosXmlArchivo = new AccesoDatosXmlArchivo("Cliente.xml");
 
 
-        public List<Vehiculo> MapearDesdeXmlArchivo()
+        public List<Vehiculo> MapearDesdeOrigen()
         {
             List<Vehiculo> vehiculosLista = new List<Vehiculo>();
             XElement vehiculosXelement = accesoDatosXmlArchivo.Leer();
@@ -53,6 +53,5 @@ namespace MPP
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
         public bool MapearHaciaSqlServer(string consulta, Vehiculo objeto) => throw new NotImplementedException("Vehiculo usa XML Archivo");
-        public List<Vehiculo> MapearDesdeSqlServer() => throw new NotImplementedException("Vehiculo usa XML Archivo");
     }
 }

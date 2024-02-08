@@ -16,3 +16,12 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.csproj.CopyComplete
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.dll
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\BEL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\BEL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\ABS.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\ABS.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.pdb

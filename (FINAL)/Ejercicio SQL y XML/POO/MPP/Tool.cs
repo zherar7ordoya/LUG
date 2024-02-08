@@ -12,13 +12,13 @@ namespace MPP
 
         public static Cliente ObtenerClientePorCodigo(int codigo)
         {
-            List<Cliente> clientes = clienteMPP.MapearDesdeSqlServer();
+            List<Cliente> clientes = clienteMPP.MapearDesdeOrigen();
             return clientes.Find(cliente => cliente.Codigo == codigo);
         }
 
         public static Vehiculo ObtenerVehiculoPorCodigo(int codigo)
         {
-            List<Vehiculo> vehiculos = vehiculoMPP.MapearDesdeXmlArchivo();
+            List<Vehiculo> vehiculos = vehiculoMPP.MapearDesdeOrigen();
             return vehiculos.Find(vehiculo => vehiculo.Codigo == codigo);
         }
     }
