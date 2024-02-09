@@ -1,0 +1,8 @@
+
+	*--------------+------------+----------*
+	| Alta         | Guardar    |          |
+	| Baja         | Eliminar   | Escribir |
+	| Modificación | Actualizar |          |
+	+--------------+------------+----------+
+	| Consulta     | Consultar  | Leer     |
+	*--------------+------------+----------*

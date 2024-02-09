@@ -30,3 +30,11 @@ D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\3) GUI Graphical User Interface.csproj.CoreCompileInputs.cache
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\3) GUI Graphical User Interface.csproj.CopyComplete
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.exe
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.BaseForm.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.ClienteForm.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\ASL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\MPP.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\ASL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\MPP.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\DAL.pdb

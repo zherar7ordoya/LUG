@@ -42,12 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <!-- ******** FORMA DE MOSTRAR UNA CLASE PARCIAL COMO JERARQUÍA ******** -->
-    <Compile Include="Cliente\ClienteBLL.ABMC.cs" />
-    <Compile Include="Cliente\ClienteBLL.cs" />
-    <Compile Include="Renta\RentaBLL.ABMC.cs" />
-    <Compile Include="Renta\RentaBLL.cs" />
-    <Compile Include="Vehiculo\VehiculoBLL.ABMC.cs" />
-    <Compile Include="Vehiculo\VehiculoBLL.cs" />
+    <Compile Include="ABMC\ClienteBLL.ABMC.cs" />
+    <Compile Include="ClienteBLL.cs" />
+    <Compile Include="ABMC\RentaBLL.ABMC.cs" />
+    <Compile Include="RentaBLL.cs" />
+    <Compile Include="ABMC\VehiculoBLL.ABMC.cs" />
+    <Compile Include="VehiculoBLL.cs" />
     <!-- ******************************************************************* -->
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,13 +56,13 @@
       <Project>{027728cf-dcac-4026-afc4-dd9b88305f7e}</Project>
       <Name>1%29 ABS Abstraction Layer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ASL\5%29 ASL Application Services Layer.csproj">
+      <Project>{9909d29a-0efe-4620-ab73-7ca66f5d9896}</Project>
+      <Name>5%29 ASL Application Services Layer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BEL\2%29 BEL Business Entities Layer.csproj">
       <Project>{6be322e7-469a-4b4c-8cd4-d2cf04c026a5}</Project>
       <Name>2%29 BEL Business Entities Layer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MPP\6%29 MPP Mapping Layer.csproj">
-      <Project>{c19fcb19-bd0c-4b8a-8c37-1f71cc3973eb}</Project>
-      <Name>6%29 MPP Mapping Layer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
