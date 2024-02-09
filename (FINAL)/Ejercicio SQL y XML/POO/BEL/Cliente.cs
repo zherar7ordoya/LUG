@@ -15,11 +15,11 @@ namespace BEL
         public int DNI { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Email { get; set; }
-        public Vehiculo VehiculoRentado { get; set; }
+        public List<Vehiculo> VehiculosRentados { get; set; }
 
         public override string ToString()
         {
-            return $"DNI: {DNI} - Cliente: {Nombre} {Apellido}";
+            return $"Código: {Codigo} - Cliente: {Nombre} {Apellido}";
         }
     }
 }

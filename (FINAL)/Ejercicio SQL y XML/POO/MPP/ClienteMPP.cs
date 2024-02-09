@@ -34,7 +34,7 @@ namespace MPP
                     DNI = int.Parse(registro["DNI"].ToString()),
                     FechaNacimiento = DateTime.Parse(registro["FechaNacimiento"].ToString()),
                     Email = registro["Email"].ToString(),
-                    VehiculoRentado = Tool.ObtenerVehiculoPorCodigo(int.Parse(registro["Codigo_VehiculoRentado"].ToString()))
+                    VehiculosRentados = Tool.ObtenerVehiculoPorCodigo(int.Parse(registro["Codigo_VehiculoRentado"].ToString()))
                 };
                 listaClientes.Add(cliente);
             }
@@ -56,7 +56,7 @@ namespace MPP
                 { "@DNI", objeto.DNI },
                 { "@FechaNacimiento", objeto.FechaNacimiento },
                 { "@Email", objeto.Email },
-                { "@Codigo_VehiculoRentado", objeto.VehiculoRentado.Codigo }
+                { "@Codigo_VehiculoRentado", objeto.VehiculosRentados.Codigo }
             };
             return accesoDatosSqlServer.Escribir(consulta, parametros);
         }

@@ -20,7 +20,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class MenuForm : Form
+    public partial class MenuForm : BaseForm
     {
         public MenuForm()
         {
