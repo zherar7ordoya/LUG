@@ -24,7 +24,7 @@ namespace MPP
             List<Cliente> listaClientes = new List<Cliente>();
             DataTable tablaClientes = accesoDatosSqlServer.Leer(consulta, null);
 
-            foreach(DataRow registro in tablaClientes.Rows)
+            foreach (DataRow registro in tablaClientes.Rows)
             {
                 Cliente cliente = new Cliente
                 {
@@ -34,8 +34,8 @@ namespace MPP
                     DNI = int.Parse(registro["DNI"].ToString()),
                     FechaNacimiento = DateTime.Parse(registro["FechaNacimiento"].ToString()),
                     Email = registro["Email"].ToString(),
+                    VehiculosRentados = Tool.ObtenerVehiculosRentadosPorCliente(int.Parse(registro["Codigo"].ToString()))
                 };
-                cliente.VehiculosRentados = Tool.ObtenerVehiculosRentadosPorCliente(cliente.Codigo);
                 listaClientes.Add(cliente);
             }
             return listaClientes;
