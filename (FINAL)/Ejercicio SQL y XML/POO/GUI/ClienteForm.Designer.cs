@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.DetallePanel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,41 +41,43 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.NuevoFormButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.AltaButton = new System.Windows.Forms.Button();
+            this.ListadoDGV = new System.Windows.Forms.DataGridView();
+            this.ModificacionButton = new System.Windows.Forms.Button();
+            this.DetallePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // DetallePanel
             // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 13);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(288, 198);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.DetallePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DetallePanel.ColumnCount = 2;
+            this.DetallePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.DetallePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.DetallePanel.Controls.Add(this.label1, 0, 0);
+            this.DetallePanel.Controls.Add(this.label2, 0, 1);
+            this.DetallePanel.Controls.Add(this.label3, 0, 2);
+            this.DetallePanel.Controls.Add(this.label4, 0, 3);
+            this.DetallePanel.Controls.Add(this.label5, 0, 4);
+            this.DetallePanel.Controls.Add(this.label6, 0, 5);
+            this.DetallePanel.Controls.Add(this.textBox1, 1, 0);
+            this.DetallePanel.Controls.Add(this.textBox2, 1, 1);
+            this.DetallePanel.Controls.Add(this.textBox3, 1, 2);
+            this.DetallePanel.Controls.Add(this.textBox4, 1, 3);
+            this.DetallePanel.Controls.Add(this.textBox5, 1, 5);
+            this.DetallePanel.Controls.Add(this.dateTimePicker1, 1, 4);
+            this.DetallePanel.Location = new System.Drawing.Point(619, 13);
+            this.DetallePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.DetallePanel.Name = "DetallePanel";
+            this.DetallePanel.RowCount = 6;
+            this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.DetallePanel.Size = new System.Drawing.Size(300, 200);
+            this.DetallePanel.TabIndex = 0;
             // 
             // label1
             // 
@@ -139,7 +141,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 4);
+            this.textBox1.Location = new System.Drawing.Point(154, 4);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 25);
@@ -147,7 +149,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 37);
+            this.textBox2.Location = new System.Drawing.Point(154, 37);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 25);
@@ -155,7 +157,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 70);
+            this.textBox3.Location = new System.Drawing.Point(154, 70);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 25);
@@ -163,7 +165,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(148, 103);
+            this.textBox4.Location = new System.Drawing.Point(154, 103);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(132, 25);
@@ -171,7 +173,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(148, 169);
+            this.textBox5.Location = new System.Drawing.Point(154, 169);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(132, 25);
@@ -180,41 +182,60 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(148, 136);
+            this.dateTimePicker1.Location = new System.Drawing.Point(154, 136);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(132, 25);
             this.dateTimePicker1.TabIndex = 11;
             // 
-            // NuevoFormButton
+            // AltaButton
             // 
-            this.NuevoFormButton.Location = new System.Drawing.Point(476, 319);
-            this.NuevoFormButton.Name = "NuevoFormButton";
-            this.NuevoFormButton.Size = new System.Drawing.Size(75, 23);
-            this.NuevoFormButton.TabIndex = 1;
-            this.NuevoFormButton.Text = "button1";
-            this.NuevoFormButton.UseVisualStyleBackColor = true;
+            this.AltaButton.Location = new System.Drawing.Point(667, 220);
+            this.AltaButton.Name = "AltaButton";
+            this.AltaButton.Size = new System.Drawing.Size(100, 30);
+            this.AltaButton.TabIndex = 1;
+            this.AltaButton.Text = "Alta";
+            this.AltaButton.UseVisualStyleBackColor = true;
+            // 
+            // ListadoDGV
+            // 
+            this.ListadoDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListadoDGV.Location = new System.Drawing.Point(12, 12);
+            this.ListadoDGV.Name = "ListadoDGV";
+            this.ListadoDGV.Size = new System.Drawing.Size(600, 200);
+            this.ListadoDGV.TabIndex = 2;
+            // 
+            // ModificacionButton
+            // 
+            this.ModificacionButton.Location = new System.Drawing.Point(773, 220);
+            this.ModificacionButton.Name = "ModificacionButton";
+            this.ModificacionButton.Size = new System.Drawing.Size(100, 30);
+            this.ModificacionButton.TabIndex = 3;
+            this.ModificacionButton.Text = "Modificación";
+            this.ModificacionButton.UseVisualStyleBackColor = true;
             // 
             // ClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 623);
-            this.Controls.Add(this.NuevoFormButton);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(929, 261);
+            this.Controls.Add(this.ModificacionButton);
+            this.Controls.Add(this.ListadoDGV);
+            this.Controls.Add(this.AltaButton);
+            this.Controls.Add(this.DetallePanel);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "ClienteForm";
             this.Text = "ClienteForm";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.DetallePanel.ResumeLayout(false);
+            this.DetallePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoDGV)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel DetallePanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -227,6 +248,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button NuevoFormButton;
+        private System.Windows.Forms.Button AltaButton;
+        private System.Windows.Forms.DataGridView ListadoDGV;
+        private System.Windows.Forms.Button ModificacionButton;
     }
 }

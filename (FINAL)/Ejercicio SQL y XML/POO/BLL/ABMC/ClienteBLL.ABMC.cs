@@ -1,5 +1,7 @@
 ﻿using ABS;
 
+using ASL;
+
 using BEL;
 
 using System;
@@ -12,6 +14,8 @@ namespace BLL
 {
     public partial class ClienteBLL : IABMC<Cliente>
     {
+        ClienteASL clienteASL = new ClienteASL();
+
         public bool Modificar(Cliente objeto)
         {
             throw new NotImplementedException();
@@ -29,7 +33,7 @@ namespace BLL
 
         public List<Cliente> Consultar()
         {
-            throw new NotImplementedException();
+            return clienteASL.Consultar();
         }
     }
 }

@@ -30,21 +30,32 @@ namespace BLL
 
         public List<Renta> ObtenerVehiculosMasRentados()
         {
-            return new List<Renta>();
+            List<Renta> todos = rentaASL.Consultar();
+            List<Renta> masRentados = todos
+                .GroupBy(x => x.Vehiculo.Codigo)
+                .Select(group => group.First())
+                .ToList();
+            return masRentados;
         }
 
         public List<Renta> ObtenerVehiculosMenosRentados()
         {
-            // Lógica para obtener los vehículos menos rentados
-            // Puedes ajustar esta lógica según tus requerimientos específicos.
-            return new List<Renta>();
+            List<Renta> todos = rentaASL.Consultar();
+            List<Renta> menosRentados = todos
+                .GroupBy(x => x.Vehiculo.Codigo)
+                .Select(group => group.Last())
+                .ToList();
+            return menosRentados;
         }
 
-        public decimal ObtenerRecaudacionPorTipo(string tipo)
+        public Dictionary<string, decimal> ObtenerTotalRecaudadoPorTipoDeVehiculo()
         {
-            // Lógica para obtener el monto total recaudado por tipo de transporte
-            // Puedes ajustar esta lógica según tus requerimientos específicos.
-            return 0;
+            List<Renta> todos = rentaASL.Consultar();
+            return todos
+                .GroupBy(x => x.Vehiculo.Tipo)
+                .ToDictionary(group => group.Key,
+                              group => group.Sum(x => x.Importe)
+                             );
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
