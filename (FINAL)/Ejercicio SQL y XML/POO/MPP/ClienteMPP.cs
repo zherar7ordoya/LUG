@@ -34,7 +34,7 @@ namespace MPP
                     DNI = int.Parse(registro["DNI"].ToString()),
                     FechaNacimiento = DateTime.Parse(registro["FechaNacimiento"].ToString()),
                     Email = registro["Email"].ToString(),
-                    VehiculosRentados = Tool.ObtenerVehiculosRentadosPorCliente(int.Parse(registro["Codigo"].ToString()))
+                    VehiculosRentados = new List<Vehiculo>()
                 };
                 listaClientes.Add(cliente);
             }

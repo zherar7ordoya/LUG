@@ -7,3 +7,12 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arqui
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.csproj.CopyComplete
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.dll
 U:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 04 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\bin\Debug\BE.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\bin\Debug\BE.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\bin\Debug\Abstraccion.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\bin\Debug\Abstraccion.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.csproj.CopyComplete
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\Itinerario 03 - ADO Conectado (Arquitectura Multicapa)\06 ADO Genérico 6 Capas (Listas) con AppConf\Solution1\BE\obj\Debug\BE.pdb

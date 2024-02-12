@@ -32,8 +32,15 @@ namespace ASL
 
         public List<Cliente> Consultar()
         {
-            string consulta = "ClientesConsultar";
-            return clienteMPP.MapearDesdeSqlServer(consulta);
+            List<Cliente> clientes = new ClienteMPP().MapearDesdeSqlServer("ClientesConsultar");
+            List<Renta> rentas = new RentaMPP().MapearDesdeSqlServer("RentasConsultar");
+
+            foreach (Renta renta in rentas)
+            {
+                Cliente cliente = clientes.Find(c => c.Codigo == renta.Cliente.Codigo);
+                cliente?.VehiculosRentados.Add(renta.Vehiculo);
+            }
+            return clientes;
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

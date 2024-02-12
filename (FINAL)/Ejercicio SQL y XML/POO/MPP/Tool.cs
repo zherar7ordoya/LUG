@@ -32,8 +32,7 @@ namespace MPP
 
             foreach (Renta renta in rentas)
             {
-                //vehiculos.Add(renta.Vehiculo);
-                vehiculos.Add(clienteMPP.ObtenerVehiculoPorCodigo(renta.Cliente.Codigo));
+                vehiculos.Add(renta.Vehiculo);
             }
             return vehiculos;
         }
