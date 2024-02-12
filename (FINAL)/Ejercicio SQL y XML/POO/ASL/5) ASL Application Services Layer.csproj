@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMC\ClienteASL.ABMC.cs" />
+    <Compile Include="ABMC\RentaASL.ABMC.cs" />
+    <Compile Include="ABMC\VehiculoASL.ABMC.cs" />
     <Compile Include="ClienteASL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentaASL.cs" />
@@ -60,5 +63,6 @@
       <Name>6%29 MPP Mapping Layer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

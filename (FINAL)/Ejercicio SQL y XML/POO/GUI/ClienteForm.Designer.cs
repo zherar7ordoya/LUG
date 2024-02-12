@@ -143,6 +143,7 @@
             // 
             // CodigoTextbox
             // 
+            this.CodigoTextbox.Enabled = false;
             this.CodigoTextbox.Location = new System.Drawing.Point(179, 5);
             this.CodigoTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CodigoTextbox.Name = "CodigoTextbox";

@@ -1,41 +1,50 @@
-﻿using ABS;
-
-using BEL;
-
-using MPP;
+﻿using BEL;
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ASL
 {
-    public class RentaASL : IABMC<Renta>
+    public partial class RentaASL
     {
-        readonly RentaMPP rentaMPP = new RentaMPP();
-
-        public bool Modificar(Renta objeto)
+        public List<Renta> ObtenerTodosVehiculosRentados()
         {
-            string consulta = "RentaModificar";
-            return rentaMPP.MapearHaciaSqlServer(consulta, objeto);
+            List<Renta> rentados = Consultar();
+
+            // Eliminar duplicados basándose en la propiedad Codigo del objeto
+            return rentados
+                .GroupBy(x => x.Vehiculo.Codigo) // Agrupa rentas por código de vehículo
+                .Select(group => group.First()) // SELECT para seleccionar el 1er elemento de cada grupo
+                .ToList();
         }
 
-        public bool Borrar(Renta objeto)
+        public List<Renta> ObtenerVehiculosMasRentados()
         {
-            string consulta = "RentaBorrar";
-            return rentaMPP.MapearHaciaSqlServer(consulta, objeto);
+            List<Renta> rentados = Consultar();
+
+            return rentados
+                .GroupBy(x => x.Vehiculo.Codigo)
+                .Select(group => group.First())
+                .ToList();
         }
 
-        public bool Agregar(Renta objeto)
+        public List<Renta> ObtenerVehiculosMenosRentados()
         {
-            string consulta = "RentaAgregar";
-            return rentaMPP.MapearHaciaSqlServer(consulta, objeto);
+            List<Renta> rentados = Consultar();
+
+            return rentados
+                .GroupBy(x => x.Vehiculo.Codigo)
+                .Select(group => group.Last())
+                .ToList();
         }
 
-        public List<Renta> Consultar()
+        public Dictionary<string, decimal> ObtenerTotalRecaudadoPorTipoDeVehiculo()
         {
-            string consulta = "RentasConsultar";
-            return rentaMPP.MapearDesdeSqlServer(consulta);
-        }
+            List<Renta> rentados = Consultar();
 
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            return rentados
+                .GroupBy(x => x.Vehiculo.Tipo)
+                .ToDictionary(group => group.Key, group => group.Sum(x => x.Importe));
+        }
     }
 }
