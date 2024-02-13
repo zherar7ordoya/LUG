@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace DAL
@@ -11,11 +13,9 @@ namespace DAL
             {
                 return XElement.Load(archivo);
             }
-            catch (Exception ex)
-            {
-                string mensaje = $"Error: {ex.Message}";
-                throw new Exception(mensaje, ex);
-            }
+            catch (FileNotFoundException ex) { throw new Exception(ex.Message); }
+            catch (XmlException ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
         public bool Escribir(string archivo, XElement datos)
@@ -25,11 +25,9 @@ namespace DAL
                 datos.Save(archivo);
                 return true;
             }
-            catch (Exception ex)
-            {
-                string mensaje = $"Error: {ex.Message}";
-                throw new Exception(mensaje, ex);
-            }
+            catch (FileNotFoundException ex) { throw new Exception(ex.Message); }
+            catch (XmlException ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

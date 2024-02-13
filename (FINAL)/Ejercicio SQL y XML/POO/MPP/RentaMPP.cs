@@ -7,6 +7,7 @@ using DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace MPP
 {
@@ -14,47 +15,57 @@ namespace MPP
     {
         public List<Renta> MapearDesdeSql(string consulta)
         {
-            List<Renta> listaRentas = new List<Renta>();
-            DataTable tablaRentas = new ConexionSql().Leer(consulta, null);
-
-            foreach (DataRow registro in tablaRentas.Rows)
+            try
             {
-                Renta renta = new Renta
+                List<Renta> listaRentas = new List<Renta>();
+                DataTable tablaRentas = new ConexionSql().Leer(consulta, null);
+
+                foreach (DataRow registro in tablaRentas.Rows)
                 {
-                    Codigo = int.Parse(registro["Codigo"].ToString()),
-                    Cliente = Tool.ObtenerClientePorCodigo(int.Parse(registro["Codigo_Cliente"].ToString())),
-                    Vehiculo = Tool.ObtenerVehiculoPorCodigo(int.Parse(registro["Codigo_Vehiculo"].ToString())),
-                    DiasRentados = int.Parse(registro["DiasRentados"].ToString()),
-                    Importe = decimal.Parse(registro["Importe"].ToString())
-                };
-                listaRentas.Add(renta);
+                    Renta renta = new Renta
+                    {
+                        Codigo = int.Parse(registro["Codigo"].ToString()),
+                        Cliente = Tool.ObtenerClientePorCodigo(int.Parse(registro["Codigo_Cliente"].ToString())),
+                        Vehiculo = Tool.ObtenerVehiculoPorCodigo(int.Parse(registro["Codigo_Vehiculo"].ToString())),
+                        DiasRentados = int.Parse(registro["DiasRentados"].ToString()),
+                        Importe = decimal.Parse(registro["Importe"].ToString())
+                    };
+                    listaRentas.Add(renta);
+                }
+                return listaRentas;
             }
-            return listaRentas;
+            catch (SqlException ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
         public bool MapearHaciaSql(string consulta, Renta objeto)
         {
-            Dictionary<string, object> parametros = new Dictionary<string, object>
+            try
+            {
+                Dictionary<string, object> parametros = new Dictionary<string, object>
             {
                 { "@Codigo", objeto.Codigo }
             };
 
-            if (objeto.Cliente != null)
-            {
-                parametros.Add("@Cliente", objeto.Cliente.Codigo);
-            }
+                if (objeto.Cliente != null)
+                {
+                    parametros.Add("@Cliente", objeto.Cliente.Codigo);
+                }
 
-            if (objeto.Vehiculo != null)
-            {
-                parametros.Add("@Vehiculo", objeto.Vehiculo.Codigo);
-            }
+                if (objeto.Vehiculo != null)
+                {
+                    parametros.Add("@Vehiculo", objeto.Vehiculo.Codigo);
+                }
 
-            if (objeto.Importe > 0)
-            {
-                parametros.Add("@Importe", objeto.Importe);
-            }
+                if (objeto.Importe > 0)
+                {
+                    parametros.Add("@Importe", objeto.Importe);
+                }
 
-            return new ConexionSql().Escribir(consulta, parametros);
+                return new ConexionSql().Escribir(consulta, parametros);
+            }
+            catch (SqlException ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

@@ -47,13 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente\ApellidoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cliente\ApellidoControl.Designer.cs">
+      <DependentUpon>ApellidoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClienteForm.ABMC.cs">
+    <Compile Include="Cliente\ClienteForm.ABMC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClienteForm.cs">
@@ -62,6 +68,18 @@
     <Compile Include="ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\DniControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cliente\DniControl.Designer.cs">
+      <DependentUpon>DniControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\EmailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cliente\EmailControl.Designer.cs">
+      <DependentUpon>EmailControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,17 +87,35 @@
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ModoFormulario.cs" />
+    <Compile Include="Cliente\NombreControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cliente\NombreControl.Designer.cs">
+      <DependentUpon>NombreControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tool.cs" />
+    <EmbeddedResource Include="Cliente\ApellidoControl.resx">
+      <DependentUpon>ApellidoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\DniControl.resx">
+      <DependentUpon>DniControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\EmailControl.resx">
+      <DependentUpon>EmailControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\NombreControl.resx">
+      <DependentUpon>NombreControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -4,6 +4,7 @@ using ASL;
 
 using BEL;
 
+using System;
 using System.Collections.Generic;
 
 namespace BLL
@@ -12,7 +13,11 @@ namespace BLL
     {
         public bool Agregar(Cliente objeto)
         {
-            return new ClienteASL().Agregar(objeto);
+            if (ValidarEdad(objeto.FechaNacimiento))
+            {
+                return new ClienteASL().Agregar(objeto);
+            }
+            return false;
         }
 
         public bool Borrar(Cliente objeto)
@@ -22,7 +27,11 @@ namespace BLL
 
         public bool Modificar(Cliente objeto)
         {
-            return new ClienteASL().Modificar(objeto);
+            if (ValidarEdad(objeto.FechaNacimiento))
+            {
+                return new ClienteASL().Modificar(objeto);
+            }
+            return false;
         }
 
         public List<Cliente> Consultar()

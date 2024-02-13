@@ -9,13 +9,13 @@ namespace GUI
     public static class Tool
     {
         #region Limpieza de controles
-        public static void Limpiar(this Control.ControlCollection controls)
+        public static void LimpiarControlesEstandar(this Control.ControlCollection controls)
         {
             foreach (Control control in controls)
             {
                 if (control is TableLayoutPanel panel)
                 {
-                    LimpiarTableLayoutPanel(panel);
+                    LimpiarControlesEstandarTableLayoutPanel(panel);
                 }
 
                 if (control is DataGridView) (control as DataGridView).DataSource = null;
@@ -24,7 +24,7 @@ namespace GUI
             }
         }
 
-        private static void LimpiarTableLayoutPanel(TableLayoutPanel tableLayoutPanel)
+        private static void LimpiarControlesEstandarTableLayoutPanel(TableLayoutPanel tableLayoutPanel)
         {
             foreach (Control control in tableLayoutPanel.Controls)
             {

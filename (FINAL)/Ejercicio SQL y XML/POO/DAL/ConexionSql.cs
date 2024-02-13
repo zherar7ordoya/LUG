@@ -62,21 +62,13 @@ namespace DAL
                 adaptador = new SqlDataAdapter(comando);
                 adaptador.Fill(tabla);
             }
-            catch (SqlException ex)
-            {
-                string mensaje = $"Error: {ex.Message}";
-                throw new Exception(mensaje, ex);
-            }
-            catch (Exception ex)
-            {
-                string mensaje = $"Error: {ex.Message}";
-                throw new Exception(mensaje, ex);
-
-            }
+            catch (SqlException ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw new Exception(ex.Message); }
             finally { adaptador?.Dispose(); }
 
             return tabla;
         }
+
 
         public bool Escribir(string consulta, Dictionary<string, object> parametros)
         {
@@ -92,14 +84,12 @@ namespace DAL
             catch (SqlException ex)
             {
                 transaccion.Rollback();
-                string mensaje = $"Error: {ex.Message}";
-                throw new Exception(mensaje, ex);
+                throw new Exception(ex.Message);
             }
             catch (Exception ex)
             {
                 transaccion.Rollback();
-                string mensaje = $"Error: {ex.Message}";
-                throw new Exception(mensaje, ex);
+                throw new Exception(ex.Message);
             }
             finally { comando?.Dispose(); }
         }
