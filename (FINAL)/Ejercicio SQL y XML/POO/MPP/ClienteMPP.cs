@@ -10,16 +10,12 @@ using System.Data;
 
 namespace MPP
 {
-    public class ClienteMPP : IMapeado<Cliente>
+    public class ClienteMPP : IMapeadoSql<Cliente>
     {
-        private readonly AccesoDatosSqlServer accesoDatosSqlServer = new AccesoDatosSqlServer();
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||| METÓDOS DE CLASE
-
-        public List<Cliente> MapearDesdeSqlServer(string consulta)
+        public List<Cliente> MapearDesdeSql(string consulta)
         {
             List<Cliente> listaClientes = new List<Cliente>();
-            DataTable tablaClientes = accesoDatosSqlServer.Leer(consulta, null);
+            DataTable tablaClientes = new ConexionSql().Leer(consulta, null);
 
             foreach (DataRow registro in tablaClientes.Rows)
             {
@@ -38,26 +34,43 @@ namespace MPP
             return listaClientes;
         }
 
-        public List<Cliente> MapearDesdeXmlArchivo(string archivo)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool MapearHaciaSqlServer(string consulta, Cliente objeto)
+        public bool MapearHaciaSql(string consulta, Cliente objeto)
         {
+            // El código siempre lo voy a necesitar
             Dictionary<string, object> parametros = new Dictionary<string, object>
             {
-                { "@Codigo", objeto.Codigo },
-                { "@Nombre", objeto.Nombre },
-                { "@Apellido", objeto.Apellido },
-                { "@DNI", objeto.DNI },
-                { "@FechaNacimiento", objeto.FechaNacimiento },
-                { "@Email", objeto.Email },
+                { "@Codigo", objeto.Codigo }
             };
-            return accesoDatosSqlServer.Escribir(consulta, parametros);
+
+            if (!string.IsNullOrEmpty(objeto.Nombre))
+            {
+                parametros.Add("@Nombre", objeto.Nombre);
+            }
+
+            if (!string.IsNullOrEmpty(objeto.Apellido))
+            {
+                parametros.Add("@Apellido", objeto.Apellido);
+            }
+
+            if (objeto.DNI > 0)
+            {
+                parametros.Add("@DNI", objeto.DNI);
+            }
+
+            if (objeto.FechaNacimiento != DateTime.MinValue)
+            {
+                parametros.Add("@FechaNacimiento", objeto.FechaNacimiento);
+            }
+
+            if (!string.IsNullOrEmpty(objeto.Email))
+            {
+                parametros.Add("@Email", objeto.Email);
+            }
+
+            return new ConexionSql().Escribir(consulta, parametros);
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-        public bool MapearHaciaXmlArchivo(string archivo, List<Cliente> objetos) => throw new NotImplementedException("Cliente usa SQL Server");
     }
 }

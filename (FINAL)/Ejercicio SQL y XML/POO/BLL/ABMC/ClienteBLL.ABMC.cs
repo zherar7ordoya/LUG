@@ -4,33 +4,32 @@ using ASL;
 
 using BEL;
 
-using System;
 using System.Collections.Generic;
 
 namespace BLL
 {
     public partial class ClienteBLL : IABMC<Cliente>
     {
-        ClienteASL clienteASL = new ClienteASL();
-
-        public bool Modificar(Cliente objeto)
+        public bool Agregar(Cliente objeto)
         {
-            throw new NotImplementedException();
+            return new ClienteASL().Agregar(objeto);
         }
 
         public bool Borrar(Cliente objeto)
         {
-            throw new NotImplementedException();
+            return new ClienteASL().Borrar(objeto);
         }
 
-        public bool Agregar(Cliente objeto)
+        public bool Modificar(Cliente objeto)
         {
-            throw new NotImplementedException();
+            return new ClienteASL().Modificar(objeto);
         }
 
         public List<Cliente> Consultar()
         {
-            return clienteASL.Consultar();
+            return new ClienteASL().Consultar();
         }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }

@@ -11,15 +11,12 @@ using System.Xml.Linq;
 
 namespace MPP
 {
-    public class VehiculoMPP : IMapeado<Vehiculo>
+    public class VehiculoMPP : IMapeadoXml<Vehiculo>
     {
-        readonly AccesoDatosXmlArchivo accesoDatosXmlArchivo= new AccesoDatosXmlArchivo();
-
-
-        public List<Vehiculo> MapearDesdeXmlArchivo(string archivo)
+        public List<Vehiculo> MapearDesdeXml(string archivo)
         {
             List<Vehiculo> vehiculosLista = new List<Vehiculo>();
-            XElement vehiculosXelement = accesoDatosXmlArchivo.Leer(archivo);
+            XElement vehiculosXelement = new ConexionXml().Leer(archivo);
             foreach (XElement vehiculoXElement in vehiculosXelement.Elements("Vehiculo"))
             {
                 Vehiculo vehiculo = new Vehiculo
@@ -36,7 +33,7 @@ namespace MPP
         }
 
         
-        public bool MapearHaciaXmlArchivo(string archivo, List<Vehiculo> objetos)
+        public bool MapearHaciaXml(string archivo, List<Vehiculo> objetos)
         {
             XElement datos = new XElement("Vehiculos",
                 from vehiculo in objetos
@@ -48,11 +45,9 @@ namespace MPP
                     new XElement("Patente", vehiculo.Patente)
                 )
             );
-            return accesoDatosXmlArchivo.Escribir(archivo, datos);
+            return new ConexionXml().Escribir(archivo, datos);
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-        public List<Vehiculo> MapearDesdeSqlServer(string consulta) => throw new NotImplementedException("Vehiculo usa XML Archivo");
-        public bool MapearHaciaSqlServer(string consulta, Vehiculo objeto) => throw new NotImplementedException("Vehiculo usa XML Archivo");
     }
 }

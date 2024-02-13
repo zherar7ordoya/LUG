@@ -3,8 +3,12 @@ using System.Windows.Forms;
 
 namespace GUI
 {
+    /// <summary>
+    /// Esta es una clase de utilidades para todas las ventanas.
+    /// </summary>
     public static class Tool
     {
+        #region Limpieza de controles
         public static void Limpiar(this Control.ControlCollection controls)
         {
             foreach (Control control in controls)
@@ -28,8 +32,9 @@ namespace GUI
                 if (control is DateTimePicker) control.Text = DateTime.Now.ToString();
             }
         }
+        #endregion
 
-
+        #region Mensajes (MessageBox)
         public static void MostrarInformacion(string mensaje)
         {
             MessageBox.Show(
@@ -65,10 +70,7 @@ namespace GUI
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
         }
-
-
-
-
+        #endregion
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }

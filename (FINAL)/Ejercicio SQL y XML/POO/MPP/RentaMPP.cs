@@ -10,16 +10,12 @@ using System.Data;
 
 namespace MPP
 {
-    public class RentaMPP : IMapeado<Renta>
+    public class RentaMPP : IMapeadoSql<Renta>
     {
-        private readonly AccesoDatosSqlServer accesoDatosSqlServer = new AccesoDatosSqlServer();
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS DE CLASE
-
-        public List<Renta> MapearDesdeSqlServer(string consulta)
+        public List<Renta> MapearDesdeSql(string consulta)
         {
             List<Renta> listaRentas = new List<Renta>();
-            DataTable tablaRentas = accesoDatosSqlServer.Leer(consulta, null);
+            DataTable tablaRentas = new ConexionSql().Leer(consulta, null);
 
             foreach (DataRow registro in tablaRentas.Rows)
             {
@@ -36,24 +32,31 @@ namespace MPP
             return listaRentas;
         }
 
-        public List<Renta> MapearDesdeXmlArchivo(string archivo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool MapearHaciaSqlServer(string consulta, Renta objeto)
+        public bool MapearHaciaSql(string consulta, Renta objeto)
         {
             Dictionary<string, object> parametros = new Dictionary<string, object>
             {
-                { "@Codigo", objeto.Codigo },
-                { "@Cliente", objeto.Cliente.Codigo },
-                { "@Vehiculo", objeto.Vehiculo.Codigo },
-                { "@Importe", objeto.Importe }
+                { "@Codigo", objeto.Codigo }
             };
-            return accesoDatosSqlServer.Escribir(consulta, parametros);
+
+            if (objeto.Cliente != null)
+            {
+                parametros.Add("@Cliente", objeto.Cliente.Codigo);
+            }
+
+            if (objeto.Vehiculo != null)
+            {
+                parametros.Add("@Vehiculo", objeto.Vehiculo.Codigo);
+            }
+
+            if (objeto.Importe > 0)
+            {
+                parametros.Add("@Importe", objeto.Importe);
+            }
+
+            return new ConexionSql().Escribir(consulta, parametros);
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-        public bool MapearHaciaXmlArchivo(string archivo, List<Renta> objetos) => throw new NotImplementedException("Renta usa SQL Server");
     }
 }

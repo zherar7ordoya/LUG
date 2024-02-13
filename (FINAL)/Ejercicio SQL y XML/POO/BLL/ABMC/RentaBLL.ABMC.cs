@@ -1,32 +1,35 @@
 ﻿using ABS;
 
+using ASL;
+
 using BEL;
 
-using System;
 using System.Collections.Generic;
 
 namespace BLL
 {
     public partial class RentaBLL : IABMC<Renta>
     {
-        public bool Modificar(Renta objeto)
+        public bool Agregar(Renta objeto)
         {
-            throw new NotImplementedException();
+            return new RentaASL().Agregar(objeto);
         }
 
         public bool Borrar(Renta objeto)
         {
-            throw new NotImplementedException();
+            return new RentaASL().Borrar(objeto);
         }
 
-        public bool Agregar(Renta objeto)
+        public bool Modificar(Renta objeto)
         {
-            throw new NotImplementedException();
+            return new RentaASL().Modificar(objeto);
         }
 
         public List<Renta> Consultar()
         {
-            throw new NotImplementedException();
+            return new RentaASL().Consultar();
         }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }

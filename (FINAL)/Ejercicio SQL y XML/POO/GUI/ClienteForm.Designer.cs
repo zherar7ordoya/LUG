@@ -256,6 +256,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "ClienteForm";
             this.Text = "ClienteForm";
+            this.Load += new System.EventHandler(this.ClienteForm_Load);
             this.DetallePanel.ResumeLayout(false);
             this.DetallePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListadoDGV)).EndInit();

@@ -53,6 +53,9 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClienteForm.ABMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,32 +1,35 @@
 ﻿using ABS;
 
+using ASL;
+
 using BEL;
 
-using System;
 using System.Collections.Generic;
 
 namespace BLL
 {
     public partial class VehiculoBLL : IABMC<Vehiculo>
     {
-        public bool Modificar(Vehiculo objeto)
+        public bool Agregar(Vehiculo objeto)
         {
-            throw new NotImplementedException();
+            return new VehiculoASL().Agregar(objeto);
         }
 
         public bool Borrar(Vehiculo objeto)
         {
-            throw new NotImplementedException();
+            return new VehiculoASL().Borrar(objeto);
         }
 
-        public bool Agregar(Vehiculo objeto)
+        public bool Modificar(Vehiculo objeto)
         {
-            throw new NotImplementedException();
+            return new VehiculoASL().Modificar(objeto);
         }
 
         public List<Vehiculo> Consultar()
         {
-            throw new NotImplementedException();
+            return new VehiculoASL().Consultar();
         }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }

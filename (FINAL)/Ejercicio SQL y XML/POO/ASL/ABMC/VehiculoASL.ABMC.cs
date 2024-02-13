@@ -5,6 +5,7 @@ using BEL;
 using MPP;
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ASL
 {
@@ -15,15 +16,17 @@ namespace ASL
         public bool Agregar(Vehiculo objeto)
         {
             List<Vehiculo> vehiculos = Consultar();
+            int codigo = vehiculos.Max(c => c.Codigo) + 1;
+            objeto.Codigo = codigo;
             vehiculos.Add(objeto);
-            return new VehiculoMPP().MapearHaciaXmlArchivo(archivo, vehiculos);
+            return new VehiculoMPP().MapearHaciaXml(archivo, vehiculos);
         }
 
         public bool Borrar(Vehiculo objeto)
         {
             List<Vehiculo> vehiculos = Consultar();
             vehiculos.RemoveAll(x => x.Codigo == objeto.Codigo);
-            return new VehiculoMPP().MapearHaciaXmlArchivo(archivo, vehiculos);
+            return new VehiculoMPP().MapearHaciaXml(archivo, vehiculos);
         }
 
         public bool Modificar(Vehiculo objeto)
@@ -38,12 +41,12 @@ namespace ASL
                 vehiculo.Modelo = objeto.Modelo;
                 vehiculo.Patente = objeto.Patente;
             }
-            return new VehiculoMPP().MapearHaciaXmlArchivo(archivo, vehiculos);
+            return new VehiculoMPP().MapearHaciaXml(archivo, vehiculos);
         }
 
         public List<Vehiculo> Consultar()
         {
-            return new VehiculoMPP().MapearDesdeXmlArchivo(archivo);
+            return new VehiculoMPP().MapearDesdeXml(archivo);
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

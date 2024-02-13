@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesoDatosSqlServer.cs" />
-    <Compile Include="AccesoDatosXmlArchivo.cs" />
+    <Compile Include="ConexionSql.cs" />
+    <Compile Include="ConexionXml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
