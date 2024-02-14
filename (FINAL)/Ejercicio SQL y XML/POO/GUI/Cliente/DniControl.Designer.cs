@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.DniError = new System.Windows.Forms.ErrorProvider(this.components);
             this.DniTextbox = new System.Windows.Forms.TextBox();
-            this.DniTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DniError)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,18 +40,20 @@
             // 
             // DniTextbox
             // 
-            this.DniTextbox.Location = new System.Drawing.Point(3, 3);
+            this.DniTextbox.Location = new System.Drawing.Point(2, 2);
+            this.DniTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DniTextbox.Name = "DniTextbox";
-            this.DniTextbox.Size = new System.Drawing.Size(105, 22);
+            this.DniTextbox.Size = new System.Drawing.Size(80, 20);
             this.DniTextbox.TabIndex = 0;
             // 
             // DniControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DniTextbox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DniControl";
-            this.Size = new System.Drawing.Size(130, 30);
+            this.Size = new System.Drawing.Size(98, 24);
             ((System.ComponentModel.ISupportInitialize)(this.DniError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -63,6 +64,5 @@
 
         private System.Windows.Forms.ErrorProvider DniError;
         private System.Windows.Forms.TextBox DniTextbox;
-        private System.Windows.Forms.ToolTip DniTip;
     }
 }

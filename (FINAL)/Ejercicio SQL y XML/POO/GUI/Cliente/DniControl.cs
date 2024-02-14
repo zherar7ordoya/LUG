@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class DniControl : UserControl
     {
-        private readonly ToolTip tip = new ToolTip();
-
         public string Dni
         {
             get { return DniTextbox.Text; }
@@ -24,7 +15,6 @@ namespace GUI
         public DniControl()
         {
             InitializeComponent();
-            tip.SetToolTip(DniTextbox, "Formato esperado: ocho dígitos.");
             DniTextbox.Validating += Validar;
         }
 
@@ -48,7 +38,9 @@ namespace GUI
             }
             else
             {
-                DniError.SetError(DniTextbox, "El DNI no es válido");
+                DniError.SetError(
+                    DniTextbox,
+                    "Formato esperado: ocho dígitos");
             }
 
             return valido;

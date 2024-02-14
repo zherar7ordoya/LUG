@@ -17,7 +17,6 @@ namespace GUI
         public ApellidoControl()
         {
             InitializeComponent();
-            tip.SetToolTip(ApellidoTextbox, "Formato esperado: Primera letra mayúscula, siguientes letras minúsculas.");
             ApellidoTextbox.Validating += Validar;
         }
 
@@ -41,7 +40,9 @@ namespace GUI
             }
             else
             {
-                ApellidoError.SetError(ApellidoTextbox, "El apellido no es válido");
+                ApellidoError.SetError(
+                    ApellidoTextbox,
+                    "Formato esperado: Primera letra mayúscula, siguientes letras minúsculas");
             }
 
             return valido;

@@ -2,13 +2,10 @@
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-
-
 namespace GUI
 {
     public partial class NombreControl : UserControl
     {
-        private readonly ToolTip tip = new ToolTip();
         public string Nombre
         {
             get { return NombreTextbox.Text; }
@@ -18,7 +15,6 @@ namespace GUI
         public NombreControl()
         {
             InitializeComponent();
-            tip.SetToolTip(NombreTextbox, "Formato esperado: Primera letra mayúscula, siguientes letras minúsculas.");
             NombreTextbox.Validating += Validar;
         }
 
@@ -42,7 +38,9 @@ namespace GUI
             }
             else
             {
-                NombreError.SetError(NombreTextbox, "El nombre no es válido");
+                NombreError.SetError(
+                    NombreTextbox,
+                    "Formato esperado: Primera letra mayúscula, siguientes letras minúsculas");
             }
 
             return valido;

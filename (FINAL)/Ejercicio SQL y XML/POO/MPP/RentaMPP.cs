@@ -43,9 +43,9 @@ namespace MPP
             try
             {
                 Dictionary<string, object> parametros = new Dictionary<string, object>
-            {
-                { "@Codigo", objeto.Codigo }
-            };
+                {
+                    { "@Codigo", objeto.Codigo }
+                };
 
                 if (objeto.Cliente != null)
                 {

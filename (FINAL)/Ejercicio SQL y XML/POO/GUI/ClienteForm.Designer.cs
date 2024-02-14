@@ -164,7 +164,7 @@
             // NombreControl
             // 
             this.NombreControl.Location = new System.Drawing.Point(146, 35);
-            this.NombreControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreControl.Margin = new System.Windows.Forms.Padding(2);
             this.NombreControl.Name = "NombreControl";
             this.NombreControl.Nombre = "";
             this.NombreControl.Size = new System.Drawing.Size(245, 31);
@@ -174,7 +174,7 @@
             // 
             this.ApellidoControl.Apellido = "";
             this.ApellidoControl.Location = new System.Drawing.Point(146, 70);
-            this.ApellidoControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoControl.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoControl.Name = "ApellidoControl";
             this.ApellidoControl.Size = new System.Drawing.Size(245, 33);
             this.ApellidoControl.TabIndex = 3;
@@ -183,7 +183,7 @@
             // 
             this.DniControl.Dni = "";
             this.DniControl.Location = new System.Drawing.Point(146, 107);
-            this.DniControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DniControl.Margin = new System.Windows.Forms.Padding(2);
             this.DniControl.Name = "DniControl";
             this.DniControl.Size = new System.Drawing.Size(139, 30);
             this.DniControl.TabIndex = 4;
@@ -192,7 +192,7 @@
             // 
             this.EmailControl.Email = "";
             this.EmailControl.Location = new System.Drawing.Point(146, 174);
-            this.EmailControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailControl.Margin = new System.Windows.Forms.Padding(2);
             this.EmailControl.Name = "EmailControl";
             this.EmailControl.Size = new System.Drawing.Size(245, 30);
             this.EmailControl.TabIndex = 6;

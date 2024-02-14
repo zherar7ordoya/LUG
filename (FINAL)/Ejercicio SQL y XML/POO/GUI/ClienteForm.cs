@@ -2,24 +2,21 @@
 
 using System;
 using System.Collections.Generic;
-using System.Security.AccessControl;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class ClienteForm : BaseForm
     {
-        private ModoFormulario modo;
-
         public ClienteForm()
         {
             InitializeComponent();
-            modo = ModoFormulario.Alta;
-            InicializarEventHandlers();
         }
+
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
+            InicializarEventHandlers();
             Consultar();
         }
 
@@ -40,6 +37,38 @@ namespace GUI
             EmailControl.Leave += ValidarCampos;
         }
 
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+        #region MÉTODOS INTERNOS
+        private void LimpiarControlesPersonalizados()
+        {
+            NombreControl.Nombre = "";
+            ApellidoControl.Apellido = "";
+            DniControl.Dni = "";
+            EmailControl.Email = "";
+        }
+
+
+        private Cliente ArmarCliente()
+        {
+            Cliente cliente = new Cliente();
+
+            if (string.IsNullOrEmpty(CodigoTextbox.Text)) cliente.Codigo = 0;
+            else cliente.Codigo = int.Parse(CodigoTextbox.Text);
+
+            cliente.Nombre = NombreControl.Nombre;
+            cliente.Apellido = ApellidoControl.Apellido;
+            cliente.DNI = int.Parse(DniControl.Dni);
+            cliente.FechaNacimiento = DateTime.Parse(FechaNacimientoDTP.Text);
+            cliente.Email = EmailControl.Email;
+
+            return cliente;
+        }
+
+        #endregion
+
+
+        #region MODOS DE FORMULARIO 
         private void CambiarAlModoAlta(object sender, EventArgs e)
         {
             AltaButton.Visible = false;
@@ -51,11 +80,14 @@ namespace GUI
             Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
         }
 
+
         private void CambiarAlModoNormal(object sender, EventArgs e)
         {
             DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
             if (resultado == DialogResult.Yes) CambiarAlModoNormal();
         }
+
+
         private void CambiarAlModoNormal()
         {
             AltaButton.Visible = true;
@@ -64,17 +96,18 @@ namespace GUI
             GuardarButton.Visible = false;
             Consultar();
         }
+        #endregion
 
 
+        #region SINCRONIZACIÓN ENTRE CONTROLES
         private void ActualizarInformacion(object sender, DataGridViewCellEventArgs e)
         {
-            SincronizarControles(sender, e);
+            MostrarDetalles(sender, e);
             MostrarVehiculos(sender, e);
-            ValidarCampos(sender, EventArgs.Empty);
         }
 
 
-        private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
+        private void MostrarDetalles(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -102,6 +135,7 @@ namespace GUI
                 VehiculosDGV.DataSource = cliente.VehiculosRentados;
             }
         }
+        #endregion
 
 
         #region VALIDACIONES MORFOLÓGICAS
@@ -110,7 +144,14 @@ namespace GUI
         {
             bool validado = ValidarCampos();
             bool cancelado = CancelarButton.Visible;
+
+            // Si cancelado está oculto, entonces no es una alta, por lo tanto,
+            // el botón de guardar no debe participar de esta validación.
             GuardarButton.Visible = validado && cancelado;
+
+            // Sigue la misma lógica que el botón de guardar, pero a la inversa
+            AltaButton.Visible = validado && !cancelado;
+            ModificacionButton.Visible = validado && !cancelado;
         }
 
 
@@ -126,17 +167,7 @@ namespace GUI
             return validado;
         }
 
-
         #endregion
-
-
-        private void LimpiarControlesPersonalizados()
-        {
-            NombreControl.Nombre = "";
-            ApellidoControl.Apellido = "";
-            DniControl.Dni = "";
-            EmailControl.Email = "";
-        }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
