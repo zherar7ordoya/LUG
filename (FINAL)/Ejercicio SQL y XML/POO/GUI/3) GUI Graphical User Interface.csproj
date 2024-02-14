@@ -86,7 +86,6 @@
     <Compile Include="MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModoFormulario.cs" />
     <Compile Include="Cliente\NombreControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

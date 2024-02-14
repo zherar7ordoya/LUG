@@ -8,6 +8,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
+    public enum ModoFormulario { Alta, Guardado }
+
+
+
     /// <summary>
     /// Básicamente, esta clase es la controladora de la vista ClienteForm,
     /// excepto que por ser una clase parcial, no necesito instanciarla.
@@ -15,47 +19,33 @@ namespace GUI
     /// </summary>
     public partial class ClienteForm
     {
+
         private void Agregar(object sender, EventArgs e)
         {
             try
             {
-                if (modo == ModoFormulario.Alta)
+                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el cliente?");
+                if (resultado == DialogResult.Yes)
                 {
-                    Tool.LimpiarControlesEstandar(Controls);
-                    LimpiarControlesPersonalizados();
-                    ListadoDGV.Columns.Remove("Baja");
-
-                    AltaButton.Text = "Guardar";
-                    ModificacionButton.Visible = false;
-                    Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
-
-                    modo = ModoFormulario.Guardado;
-                }
-                else if (modo == ModoFormulario.Guardado)
-                {
-                    DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el cliente?");
-                    if (resultado == DialogResult.Yes)
+                    Cliente cliente = new Cliente
                     {
-                        Cliente cliente = new Cliente
-                        {
-                            Codigo = 0,
-                            Nombre = NombreControl.Nombre,
-                            Apellido = ApellidoControl.Apellido,
-                            DNI = int.Parse(DniControl.Dni),
-                            FechaNacimiento = DateTime.Parse(FechaNacimientoDTP.Text),
-                            Email = EmailControl.Email
-                        };
-                        new ClienteBLL().Agregar(cliente);
-                    }
-                    else { Tool.MostrarInformacion("Guardado cancelado por el usuario"); }
+                        Codigo = 0,
+                        Nombre = NombreControl.Nombre,
+                        Apellido = ApellidoControl.Apellido,
+                        DNI = int.Parse(DniControl.Dni),
+                        FechaNacimiento = DateTime.Parse(FechaNacimientoDTP.Text),
+                        Email = EmailControl.Email
+                    };
 
-                    AltaButton.Text = "Alta";
-                    ModificacionButton.Visible = true;
-                    Consultar();
-                    modo = ModoFormulario.Alta;
+                    bool agregado = new ClienteBLL().Agregar(cliente);
+
+                    if (agregado) Tool.MostrarInformacion("Cliente guardado");
+                    else Tool.MostrarError("No se pudo guardar el cliente");
                 }
+                else Tool.MostrarInformacion("Guardado cancelado por el usuario");
             }
             catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            finally { CambiarAlModoNormal(); }
         }
 
 
@@ -114,6 +104,7 @@ namespace GUI
                 else { Tool.MostrarInformacion("Modificación cancelada por el usuario"); }
             }
             catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            finally { CambiarAlModoNormal(); }
         }
 
 

@@ -18,39 +18,24 @@ namespace GUI
         {
             InitializeComponent();
             tip.SetToolTip(ApellidoTextbox, "Formato esperado: Primera letra mayúscula, siguientes letras minúsculas.");
-            ApellidoTextbox.Validating += ValidarApellido;
-        }
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||| EVENTOS PARA EL FORM
-
-        // Evento para notificar al formulario principal el estado de la validación
-        public event EventHandler<bool> ValidacionCompleta;
-
-
-        // Método para notificar al formulario principal el estado de la validación
-        private void OnValidacionCompleta(bool esValido)
-        {
-            ValidacionCompleta?.Invoke(this, esValido);
+            ApellidoTextbox.Validating += Validar;
         }
 
         //|||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS PARA EL CONTROL
 
-        private void ValidarApellido(object sender, EventArgs e)
+        private void Validar(object sender, EventArgs e)
         {
-            bool esValido = ValidarApellido();
-
-            // Notificar al formulario principal sobre el estado de la validación
-            OnValidacionCompleta(esValido);
+            Validar();
         }
 
 
-        public bool ValidarApellido()
+        public bool Validar()
         {
             string regex = @"^[A-Z][a-z]+$";
 
-            bool esValido = Regex.IsMatch(ApellidoTextbox.Text, regex);
+            bool valido = Regex.IsMatch(ApellidoTextbox.Text, regex);
 
-            if (esValido)
+            if (valido)
             {
                 ApellidoError.SetError(ApellidoTextbox, null);
             }
@@ -59,7 +44,7 @@ namespace GUI
                 ApellidoError.SetError(ApellidoTextbox, "El apellido no es válido");
             }
 
-            return esValido;
+            return valido;
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

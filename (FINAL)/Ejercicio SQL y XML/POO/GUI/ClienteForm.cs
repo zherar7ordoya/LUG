@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Security.AccessControl;
 using System.Windows.Forms;
 
 namespace GUI
@@ -19,23 +20,49 @@ namespace GUI
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
-            Consultar(); // En Load para asegurarse de que se llame después de la inicialización
+            Consultar();
         }
 
 
         private void InicializarEventHandlers()
         {
-            AltaButton.Click += Agregar;
+            AltaButton.Click += CambiarAlModoAlta;
             ModificacionButton.Click += Modificar;
+            GuardarButton.Click += Agregar;
+            CancelarButton.Click += CambiarAlModoNormal;
+
             ListadoDGV.RowEnter += ActualizarInformacion;
             ListadoDGV.CellClick += Borrar;
 
-            // Suscripción de los manejadores de eventos a los eventos
-            // validadores de los controles de usuario
-            NombreControl.ValidacionCompleta += ValidarNombre;
-            ApellidoControl.ValidacionCompleta += ValidarApellido;
-            DniControl.ValidacionCompleta += ValidarDni;
-            EmailControl.ValidacionCompleta += ValidarEmail;
+            NombreControl.Leave += ValidarCampos;
+            ApellidoControl.Leave += ValidarCampos;
+            DniControl.Leave += ValidarCampos;
+            EmailControl.Leave += ValidarCampos;
+        }
+
+        private void CambiarAlModoAlta(object sender, EventArgs e)
+        {
+            AltaButton.Visible = false;
+            ModificacionButton.Visible = false;
+            CancelarButton.Visible = true;
+            GuardarButton.Visible = false;
+            LimpiarControlesPersonalizados();
+            Tool.LimpiarControlesEstandar(Controls);
+            Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
+        }
+
+        private void CambiarAlModoNormal(object sender, EventArgs e)
+        {
+            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
+            if (resultado == DialogResult.Yes) CambiarAlModoNormal();
+        }
+        private void CambiarAlModoNormal()
+        {
+            AltaButton.Visible = true;
+            ModificacionButton.Visible = true;
+            CancelarButton.Visible = false;
+            GuardarButton.Visible = false;
+            Consultar();
         }
 
 
@@ -43,6 +70,7 @@ namespace GUI
         {
             SincronizarControles(sender, e);
             MostrarVehiculos(sender, e);
+            ValidarCampos(sender, EventArgs.Empty);
         }
 
 
@@ -58,15 +86,6 @@ namespace GUI
                 FechaNacimientoDTP.Text = cliente.FechaNacimiento.ToString();
                 EmailControl.Email = cliente.Email;
             }
-        }
-
-
-        private void LimpiarControlesPersonalizados()
-        {
-            NombreControl.Nombre = "";
-            ApellidoControl.Apellido = "";
-            DniControl.Dni = "";
-            EmailControl.Email = "";
         }
 
 
@@ -87,40 +106,37 @@ namespace GUI
 
         #region VALIDACIONES MORFOLÓGICAS
 
-        private void ValidarNombre(object sender, bool esValido)
-        {
-            ValidarCampos(sender, EventArgs.Empty);
-        }
-
-        private void ValidarApellido(object sender, bool esValido)
-        {
-            ValidarCampos(sender, EventArgs.Empty);
-        }
-
-        private void ValidarDni(object sender, bool esValido)
-        {
-            ValidarCampos(sender, EventArgs.Empty);
-        }
-
-        private void ValidarEmail(object sender, bool esValido)
-        {
-            ValidarCampos(sender, EventArgs.Empty);
-        }
-
         private void ValidarCampos(object sender, EventArgs e)
         {
-            bool nombre = NombreControl.ValidarNombre();
-            bool apellido = ApellidoControl.ValidarApellido();
-            bool dni = DniControl.ValidarDni();
-            bool email = EmailControl.ValidarEmail();
+            bool validado = ValidarCampos();
+            bool cancelado = CancelarButton.Visible;
+            GuardarButton.Visible = validado && cancelado;
+        }
+
+
+        private bool ValidarCampos()
+        {
+            bool nombre = NombreControl.Validar();
+            bool apellido = ApellidoControl.Validar();
+            bool dni = DniControl.Validar();
+            bool email = EmailControl.Validar();
 
             bool validado = nombre && apellido && dni && email;
 
-            AltaButton.Enabled = validado;
-            ModificacionButton.Enabled = validado;
+            return validado;
         }
 
+
         #endregion
+
+
+        private void LimpiarControlesPersonalizados()
+        {
+            NombreControl.Nombre = "";
+            ApellidoControl.Apellido = "";
+            DniControl.Dni = "";
+            EmailControl.Email = "";
+        }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
