@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BEL
+﻿namespace BEL
 {
     public class Renta : Entidad
     {
@@ -23,30 +21,11 @@ namespace BEL
         // Método para calcular el importe de la renta
         private void CalcularImporte()
         {
-            // Lógica para calcular el importe basado en la cantidad de días, tipo de vehículo, etc.
-            // Puedes ajustar esta lógica según tus requerimientos específicos.
-            // Aquí se asume que existe un método en la clase Vehiculo para obtener el costo diario.
-            Importe = 
-                DiasRentados * 
-                TarifarTipo(Vehiculo.Tipo) * 
-                TarifarModelo(Vehiculo.Modelo);
         }
 
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HERRAMIENTAS
 
 
-        private decimal TarifarTipo(string tipo)
-        {
-            return Math.Abs(tipo.GetHashCode()) % 10000;
-        }
-
-        private decimal TarifarModelo(string modelo)
-        {
-            return Math.Abs(modelo.GetHashCode()) % 10000;
-        }
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+        // 
         public override string ToString()
         {
             return $"Cliente: {Cliente} - Vehículo: {Vehiculo} - Días rentados: {DiasRentados} - Importe: {Importe}";

@@ -3,7 +3,7 @@
     public enum VehiculoTipo
     {
         Automovil,
-        SUV,
+        Suv,
         Camioneta,
         Camion
     }

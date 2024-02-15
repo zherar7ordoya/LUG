@@ -43,10 +43,14 @@
   <ItemGroup>
     <!-- ******** FORMA DE MOSTRAR UNA CLASE PARCIAL COMO JERARQUÍA ******** -->
     <Compile Include="ABMC\ClienteBLL.ABMC.cs" />
+    <Compile Include="Vehiculo\AutomovilBLL.cs" />
+    <Compile Include="Vehiculo\CamionBLL.cs" />
+    <Compile Include="Vehiculo\CamionetaBLL.cs" />
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="ABMC\RentaBLL.ABMC.cs" />
     <Compile Include="RentaBLL.cs" />
     <Compile Include="ABMC\VehiculoBLL.ABMC.cs" />
+    <Compile Include="Vehiculo\SuvBLL.cs" />
     <Compile Include="VehiculoBLL.cs" />
     <!-- ******************************************************************* -->
     <Compile Include="Properties\AssemblyInfo.cs" />

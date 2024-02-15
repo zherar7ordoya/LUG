@@ -2,9 +2,9 @@
 
 namespace BLL
 {
-    public abstract partial class VehiculoBLL
+    public class AutomovilBLL : VehiculoBLL
     {
-        public virtual decimal CalcularRenta(Vehiculo vehiculo, int cantidadDias)
+        public override decimal CalcularRenta(Vehiculo vehiculo, int cantidadDias)
         {
             decimal costoPorTipo = 100;  // Costo base
             decimal costoPorModelo = 0;
