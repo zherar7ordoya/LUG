@@ -54,3 +54,6 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.DniControl.resources
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.EmailControl.resources
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.NombreControl.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.MarcaControl.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.ModeloControl.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.PatenteControl.resources

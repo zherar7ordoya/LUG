@@ -80,6 +80,12 @@
     <Compile Include="Cliente\EmailControl.Designer.cs">
       <DependentUpon>EmailControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarcaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarcaControl.Designer.cs">
+      <DependentUpon>MarcaControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,18 @@
     </Compile>
     <Compile Include="Cliente\NombreControl.Designer.cs">
       <DependentUpon>NombreControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModeloControl.Designer.cs">
+      <DependentUpon>ModeloControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatenteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatenteControl.Designer.cs">
+      <DependentUpon>PatenteControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,11 +128,20 @@
     <EmbeddedResource Include="Cliente\EmailControl.resx">
       <DependentUpon>EmailControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarcaControl.resx">
+      <DependentUpon>MarcaControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\NombreControl.resx">
       <DependentUpon>NombreControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModeloControl.resx">
+      <DependentUpon>ModeloControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatenteControl.resx">
+      <DependentUpon>PatenteControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -6,8 +6,6 @@ namespace GUI
 {
     public partial class ApellidoControl : UserControl
     {
-        private readonly ToolTip tip = new ToolTip();
-
         public string Apellido
         {
             get { return ApellidoTextbox.Text; }

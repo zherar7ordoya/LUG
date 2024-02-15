@@ -43,11 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vehiculo\Automovil.cs" />
+    <Compile Include="Vehiculo\Camion.cs" />
+    <Compile Include="Vehiculo\Camioneta.cs" />
     <Compile Include="Entidad.cs" />
     <Compile Include="Renta.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VehiculoTipo.cs" />
+    <Compile Include="Vehiculo\Suv.cs" />
+    <Compile Include="Vehiculo\VehiculoTipo.cs" />
     <Compile Include="Vehiculo.cs" />
   </ItemGroup>
   <ItemGroup>
