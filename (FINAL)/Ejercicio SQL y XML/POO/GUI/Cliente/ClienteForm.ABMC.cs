@@ -57,7 +57,7 @@ namespace GUI
 
             if (borrado)
             {
-                Tool.MostrarError("Cliente borrado");
+                Tool.MostrarInformacion("Cliente borrado");
                 CambiarAlModoNormal();
             }
         }

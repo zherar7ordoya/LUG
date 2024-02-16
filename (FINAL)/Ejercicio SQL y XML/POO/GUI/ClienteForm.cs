@@ -28,7 +28,7 @@ namespace GUI
             GuardarButton.Click += Agregar;
             CancelarButton.Click += CambiarAlModoNormal;
 
-            ListadoDGV.RowEnter += ActualizarInformacion;
+            ListadoDGV.RowEnter += SincronizarControles;
             ListadoDGV.CellClick += Borrar;
 
             NombreControl.Leave += ValidarCampos;
@@ -71,10 +71,13 @@ namespace GUI
         #region MODOS DE FORMULARIO 
         private void CambiarAlModoAlta(object sender, EventArgs e)
         {
+            ListadoDGV.Columns.Remove("Baja");
+
             AltaButton.Visible = false;
             ModificacionButton.Visible = false;
             CancelarButton.Visible = true;
             GuardarButton.Visible = false;
+
             LimpiarControlesPersonalizados();
             Tool.LimpiarControlesEstandar(Controls);
             Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
@@ -100,7 +103,7 @@ namespace GUI
 
 
         #region SINCRONIZACIÓN ENTRE CONTROLES
-        private void ActualizarInformacion(object sender, DataGridViewCellEventArgs e)
+        private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
         {
             MostrarDetalles(sender, e);
             MostrarVehiculos(sender, e);

@@ -17,7 +17,11 @@ namespace BLL
 
         public bool Borrar(Vehiculo objeto)
         {
-            return new VehiculoASL().Borrar(objeto);
+            if (new VehiculoASL().SinAsignar(objeto))
+            {
+                return new VehiculoASL().Borrar(objeto);
+            }
+            return false;
         }
 
         public bool Modificar(Vehiculo objeto)

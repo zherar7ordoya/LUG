@@ -70,7 +70,7 @@
             this.DetallePanel.Controls.Add(this.ApellidoControl, 1, 2);
             this.DetallePanel.Controls.Add(this.DniControl, 1, 3);
             this.DetallePanel.Controls.Add(this.EmailControl, 1, 5);
-            this.DetallePanel.Location = new System.Drawing.Point(619, 13);
+            this.DetallePanel.Location = new System.Drawing.Point(732, 13);
             this.DetallePanel.Margin = new System.Windows.Forms.Padding(4);
             this.DetallePanel.Name = "DetallePanel";
             this.DetallePanel.RowCount = 6;
@@ -80,7 +80,7 @@
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.DetallePanel.Size = new System.Drawing.Size(415, 220);
+            this.DetallePanel.Size = new System.Drawing.Size(415, 208);
             this.DetallePanel.TabIndex = 0;
             // 
             // label1
@@ -199,7 +199,7 @@
             // 
             // AltaButton
             // 
-            this.AltaButton.Location = new System.Drawing.Point(648, 240);
+            this.AltaButton.Location = new System.Drawing.Point(761, 228);
             this.AltaButton.Name = "AltaButton";
             this.AltaButton.Size = new System.Drawing.Size(111, 29);
             this.AltaButton.TabIndex = 7;
@@ -218,12 +218,12 @@
             this.ListadoDGV.ReadOnly = true;
             this.ListadoDGV.RowHeadersWidth = 51;
             this.ListadoDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListadoDGV.Size = new System.Drawing.Size(600, 221);
+            this.ListadoDGV.Size = new System.Drawing.Size(713, 209);
             this.ListadoDGV.TabIndex = 9;
             // 
             // ModificacionButton
             // 
-            this.ModificacionButton.Location = new System.Drawing.Point(767, 240);
+            this.ModificacionButton.Location = new System.Drawing.Point(880, 228);
             this.ModificacionButton.Name = "ModificacionButton";
             this.ModificacionButton.Size = new System.Drawing.Size(111, 29);
             this.ModificacionButton.TabIndex = 8;
@@ -237,17 +237,17 @@
             this.VehiculosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.VehiculosDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.VehiculosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VehiculosDGV.Location = new System.Drawing.Point(12, 240);
+            this.VehiculosDGV.Location = new System.Drawing.Point(12, 228);
             this.VehiculosDGV.Name = "VehiculosDGV";
             this.VehiculosDGV.ReadOnly = true;
             this.VehiculosDGV.RowHeadersWidth = 51;
             this.VehiculosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.VehiculosDGV.Size = new System.Drawing.Size(600, 221);
+            this.VehiculosDGV.Size = new System.Drawing.Size(713, 209);
             this.VehiculosDGV.TabIndex = 10;
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(767, 275);
+            this.GuardarButton.Location = new System.Drawing.Point(880, 263);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(111, 29);
             this.GuardarButton.TabIndex = 11;
@@ -257,7 +257,7 @@
             // 
             // CancelarButton
             // 
-            this.CancelarButton.Location = new System.Drawing.Point(648, 275);
+            this.CancelarButton.Location = new System.Drawing.Point(763, 263);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(111, 29);
             this.CancelarButton.TabIndex = 12;
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 474);
+            this.ClientSize = new System.Drawing.Size(1160, 449);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.VehiculosDGV);

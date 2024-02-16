@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GUI
@@ -17,7 +18,7 @@ namespace GUI
             PatenteTextbox.Validating += Validar;
         }
 
-        private void Validar(object sender, CancelEventArgs e)
+        private void Validar(object sender, EventArgs e)
         {
             Validar();
         }
@@ -25,7 +26,7 @@ namespace GUI
         public bool Validar()
         {
             string regex = @"^[A-Z]{3}\d{3}$";
-            bool valido = System.Text.RegularExpressions.Regex.IsMatch(PatenteTextbox.Text, regex);
+            bool valido = Regex.IsMatch(PatenteTextbox.Text, regex);
 
             if (valido) PatenteError.SetError(PatenteTextbox, null);
             else PatenteError.SetError(PatenteTextbox, "Formato esperado: Tres letras mayúsculas y tres dígitos");
