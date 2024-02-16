@@ -14,23 +14,74 @@ namespace MPP
 {
     public class VehiculoMPP : IMapeadoXml<Vehiculo>
     {
+        //public List<Vehiculo> MapearDesdeXml(string archivo)
+        //{
+        //    try
+        //    {
+        //        List<Vehiculo> vehiculosLista = new List<Vehiculo>();
+        //        XElement vehiculosXelement = new ConexionXml().Leer(archivo);
+        //        foreach (XElement vehiculoXElement in vehiculosXelement.Elements("Vehiculo"))
+        //        {
+        //            Vehiculo vehiculo = new Vehiculo
+        //            {
+        //                Codigo = int.Parse(vehiculoXElement.Attribute("Codigo").Value),
+        //                //Tipo = vehiculoXElement.Attribute("Tipo").Value,
+        //                Tipo = (VehiculoTipo)Enum.Parse(typeof(VehiculoTipo), vehiculoXElement.Attribute("Tipo").Value),
+        //                Marca = vehiculoXElement.Element("Marca").Value,
+        //                Modelo = vehiculoXElement.Element("Modelo").Value,
+        //                Patente = vehiculoXElement.Element("Patente").Value
+        //            };
+        //            vehiculosLista.Add(vehiculo);
+        //        }
+        //        return vehiculosLista;
+        //    }
+        //    catch (XmlException ex) { throw new Exception(ex.Message); }
+        //    catch (Exception ex) { throw new Exception(ex.Message); }
+        //}
+
+
         public List<Vehiculo> MapearDesdeXml(string archivo)
         {
             try
             {
                 List<Vehiculo> vehiculosLista = new List<Vehiculo>();
                 XElement vehiculosXelement = new ConexionXml().Leer(archivo);
+
                 foreach (XElement vehiculoXElement in vehiculosXelement.Elements("Vehiculo"))
                 {
-                    Vehiculo vehiculo = new Vehiculo
+                    Vehiculo vehiculo;
+                    string stringTipo = vehiculoXElement.Attribute("Tipo").Value;
+
+                    if (Enum.TryParse<VehiculoTipo>(stringTipo, out VehiculoTipo tipo))
                     {
-                        Codigo = int.Parse(vehiculoXElement.Attribute("Codigo").Value),
-                        Tipo = vehiculoXElement.Attribute("Tipo").Value,
-                        Marca = vehiculoXElement.Element("Marca").Value,
-                        Modelo = vehiculoXElement.Element("Modelo").Value,
-                        Patente = vehiculoXElement.Element("Patente").Value
-                    };
-                    vehiculosLista.Add(vehiculo);
+                        switch (tipo)
+                        {
+                            // Si es necesario, añade más casos para otros tipos
+                            case VehiculoTipo.Automovil:
+                                vehiculo = new Automovil();
+                                break;
+                            case VehiculoTipo.Camion:
+                                vehiculo = new Camion();
+                                break;
+                            case VehiculoTipo.Camioneta:
+                                vehiculo = new Camioneta();
+                                break;
+                            case VehiculoTipo.Suv:
+                                vehiculo = new Suv();
+                                break;
+                            default:
+                                throw new InvalidOperationException($"Tipo de vehículo desconocido: {tipo}");
+                        }
+
+                        vehiculo.Codigo = int.Parse(vehiculoXElement.Attribute("Codigo").Value);
+                        vehiculo.Tipo = tipo;
+                        vehiculo.Marca = vehiculoXElement.Element("Marca").Value;
+                        vehiculo.Modelo = vehiculoXElement.Element("Modelo").Value;
+                        vehiculo.Patente = vehiculoXElement.Element("Patente").Value;
+
+                        vehiculosLista.Add(vehiculo);
+                    }
+                    else throw new InvalidOperationException($"Valor no válido para el atributo 'Tipo': {stringTipo}");
                 }
                 return vehiculosLista;
             }

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace BLL
 {
-    public abstract partial class VehiculoBLL : IABMC<Vehiculo>
+    public partial class VehiculoBLL : IABMC<Vehiculo>
     {
         public bool Agregar(Vehiculo objeto)
         {
@@ -29,7 +29,5 @@ namespace BLL
         {
             return new VehiculoASL().Consultar();
         }
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }

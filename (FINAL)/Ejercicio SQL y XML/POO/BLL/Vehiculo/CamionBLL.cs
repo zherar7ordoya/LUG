@@ -2,14 +2,14 @@
 
 namespace BLL
 {
-    public class CamionBLL : VehiculoBLL
+    public class CamionBLL : VehiculoBLL<Camion>
     {
-        public override decimal CalcularRenta(Vehiculo vehiculo, int cantidadDias)
+        public override decimal CalcularRenta(Camion camion, int cantidadDias)
         {
             decimal costoPorTipo = 400;  // Costo base
             decimal costoPorModelo = 0;
 
-            switch (vehiculo.Modelo)
+            switch (camion.Modelo)
             {
                 case "VNL":
                     costoPorModelo = 200;
@@ -18,6 +18,7 @@ namespace BLL
                     costoPorModelo = 100;
                     break;
             }
+
             return (costoPorTipo + costoPorModelo) * cantidadDias;
         }
     }

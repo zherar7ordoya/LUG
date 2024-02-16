@@ -23,7 +23,7 @@ namespace BLL
             return new RentaASL().ObtenerVehiculosMenosRentados();
         }
 
-        public Dictionary<string, decimal> ObtenerTotalRecaudadoPorTipoDeVehiculo()
+        public Dictionary<VehiculoTipo, decimal> ObtenerTotalRecaudadoPorTipoDeVehiculo()
         {
            return new RentaASL().ObtenerTotalRecaudadoPorTipoDeVehiculo();
         }

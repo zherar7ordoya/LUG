@@ -38,7 +38,7 @@ namespace ASL
                 .ToList();
         }
 
-        public Dictionary<string, decimal> ObtenerTotalRecaudadoPorTipoDeVehiculo()
+        public Dictionary<VehiculoTipo, decimal> ObtenerTotalRecaudadoPorTipoDeVehiculo()
         {
             List<Renta> rentados = Consultar();
 
