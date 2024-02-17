@@ -34,7 +34,7 @@ namespace GUI
             if (agregado)
             {
                 Tool.MostrarInformacion("Cliente guardado");
-                CambiarAlModoNormal();
+                ModoNormal();
             }
         }
 
@@ -58,7 +58,7 @@ namespace GUI
             if (borrado)
             {
                 Tool.MostrarInformacion("Cliente borrado");
-                CambiarAlModoNormal();
+                ModoNormal();
             }
         }
 
@@ -79,7 +79,7 @@ namespace GUI
             if (modificado)
             {
                 Tool.MostrarInformacion("Cliente modificado");
-                CambiarAlModoNormal();
+                ModoNormal();
             }
         }
 

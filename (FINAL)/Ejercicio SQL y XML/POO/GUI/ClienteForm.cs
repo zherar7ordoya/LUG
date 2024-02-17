@@ -2,12 +2,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Security;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class ClienteForm : BaseForm
     {
+        private bool alta = false;
         public ClienteForm()
         {
             InitializeComponent();
@@ -23,18 +25,18 @@ namespace GUI
 
         private void InicializarEventHandlers()
         {
-            AltaButton.Click += CambiarAlModoAlta;
+            AltaButton.Click += ModoAlta;
             ModificacionButton.Click += Modificar;
             GuardarButton.Click += Agregar;
-            CancelarButton.Click += CambiarAlModoNormal;
+            CancelarButton.Click += ModoNormal;
 
             ListadoDGV.RowEnter += SincronizarControles;
             ListadoDGV.CellClick += Borrar;
 
-            NombreControl.Leave += ValidarCampos;
-            ApellidoControl.Leave += ValidarCampos;
-            DniControl.Leave += ValidarCampos;
-            EmailControl.Leave += ValidarCampos;
+            NombreControl.TextChanged += ValidarCampos;
+            ApellidoControl.TextChanged += ValidarCampos;
+            DniControl.TextChanged += ValidarCampos;
+            EmailControl.TextChanged += ValidarCampos;
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -47,7 +49,6 @@ namespace GUI
             DniControl.Dni = "";
             EmailControl.Email = "";
         }
-
 
         private Cliente ArmarCliente()
         {
@@ -67,9 +68,26 @@ namespace GUI
 
         #endregion
 
-
         #region MODOS DE FORMULARIO 
-        private void CambiarAlModoAlta(object sender, EventArgs e)
+
+        private void ModoNormal(object sender, EventArgs e)
+        {
+            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
+            if (resultado == DialogResult.Yes) ModoNormal();
+        }
+        
+        private void ModoNormal()
+        {
+            AltaButton.Visible = true;
+            ModificacionButton.Visible = false;
+            CancelarButton.Visible = false;
+            GuardarButton.Visible = false;
+            Consultar();
+
+            alta = false;
+        }
+
+        private void ModoAlta(object sender, EventArgs e)
         {
             ListadoDGV.Columns.Remove("Baja");
 
@@ -81,34 +99,19 @@ namespace GUI
             LimpiarControlesPersonalizados();
             Tool.LimpiarControlesEstandar(Controls);
             Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
+
+            alta = true;
         }
 
-
-        private void CambiarAlModoNormal(object sender, EventArgs e)
-        {
-            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
-            if (resultado == DialogResult.Yes) CambiarAlModoNormal();
-        }
-
-
-        private void CambiarAlModoNormal()
-        {
-            AltaButton.Visible = true;
-            ModificacionButton.Visible = true;
-            CancelarButton.Visible = false;
-            GuardarButton.Visible = false;
-            Consultar();
-        }
         #endregion
 
-
         #region SINCRONIZACIÓN ENTRE CONTROLES
+
         private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
         {
             MostrarDetalles(sender, e);
             MostrarVehiculos(sender, e);
         }
-
 
         private void MostrarDetalles(object sender, DataGridViewCellEventArgs e)
         {
@@ -124,7 +127,6 @@ namespace GUI
             }
         }
 
-
         private void MostrarVehiculos(object sender, DataGridViewCellEventArgs e)
         {
             VehiculosDGV.DataSource = null;
@@ -138,27 +140,17 @@ namespace GUI
                 VehiculosDGV.DataSource = cliente.VehiculosRentados;
             }
         }
-        #endregion
 
+        #endregion
 
         #region VALIDACIONES MORFOLÓGICAS
 
         private void ValidarCampos(object sender, EventArgs e)
         {
-            bool validado = ValidarCampos();
-            bool cancelado = CancelarButton.Visible;
-
-            // Si cancelado está oculto, entonces no es una alta, por lo tanto,
-            // el botón de guardar no debe participar de esta validación.
-            GuardarButton.Visible = validado && cancelado;
-
-            // Sigue la misma lógica que el botón de guardar, pero a la inversa
-            AltaButton.Visible = validado && !cancelado;
-            ModificacionButton.Visible = validado && !cancelado;
+            ValidarCampos();
         }
 
-
-        private bool ValidarCampos()
+        private void ValidarCampos()
         {
             bool nombre = NombreControl.Validar();
             bool apellido = ApellidoControl.Validar();
@@ -167,7 +159,33 @@ namespace GUI
 
             bool validado = nombre && apellido && dni && email;
 
-            return validado;
+            if (validado)
+            {
+                if (alta)
+                {
+                    GuardarButton.Visible = true;
+                    ModificacionButton.Visible = false;
+                }
+                else
+                {
+                    AltaButton.Visible = false;
+                    ModificacionButton.Visible = true;
+                    GuardarButton.Visible = false;
+                }
+            }
+            else
+            {
+                if (alta)
+                {
+                    GuardarButton.Visible = false;
+                    ModificacionButton.Visible = false;
+                }
+                else
+                {
+                    ModificacionButton.Visible = false;
+                    GuardarButton.Visible = false;
+                }
+            }
         }
 
         #endregion

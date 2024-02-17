@@ -229,6 +229,7 @@
             this.ModificacionButton.TabIndex = 8;
             this.ModificacionButton.Text = "Modificación";
             this.ModificacionButton.UseVisualStyleBackColor = true;
+            this.ModificacionButton.Visible = false;
             // 
             // VehiculosDGV
             // 

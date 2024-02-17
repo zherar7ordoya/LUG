@@ -64,3 +64,5 @@ U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.DashboardForm.resources
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.VehiculoForm.resources
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.DashboardForm.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\bin\Debug\GUI.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.pdb
