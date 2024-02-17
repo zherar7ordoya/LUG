@@ -61,3 +61,5 @@ D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.ModeloControl.resources
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.PatenteControl.resources
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.VehiculoForm.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.DashboardForm.resources
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.VehiculoForm.resources

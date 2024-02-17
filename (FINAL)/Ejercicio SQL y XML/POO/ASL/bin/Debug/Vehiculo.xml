@@ -16,15 +16,15 @@
         <Patente>XYZ456</Patente>
     </Vehiculo>
 
-    <!-- Vehículo 3: SUV -->
-    <Vehiculo Codigo="3" Tipo="SUV">
+    <!-- Vehículo 3: Suv -->
+    <Vehiculo Codigo="3" Tipo="Suv">
         <Marca>Toyota</Marca>
         <Modelo>Rav4</Modelo>
         <Patente>LMN789</Patente>
     </Vehiculo>
 
-    <!-- Vehículo 4: SUV -->
-    <Vehiculo Codigo="4" Tipo="SUV">
+    <!-- Vehículo 4: Suv -->
+    <Vehiculo Codigo="4" Tipo="Suv">
         <Marca>Honda</Marca>
         <Modelo>CR-V</Modelo>
         <Patente>PQR987</Patente>
