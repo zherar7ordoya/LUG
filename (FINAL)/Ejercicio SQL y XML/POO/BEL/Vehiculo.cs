@@ -9,7 +9,7 @@
 
         public override string ToString()
         {
-            return string.Format($"Tipo: {Tipo} - Marca: {Marca} - Modelo: {Modelo} - Patente: {Patente}");
+            return $"{Tipo}\n{Marca} {Modelo}\n{Patente}";
         }
     }
 }

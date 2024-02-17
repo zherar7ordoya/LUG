@@ -47,6 +47,7 @@ namespace GUI
             VehiculosMasRentadosPorImporteChart.Series[0].YValueMembers = "Value";
 
             VehiculosMasRentadosPorImporteChart.DataBind();
+            VehiculosMasRentadosPorImporteChart.Series[0].ChartType = SeriesChartType.Pie;
             VehiculosMasRentadosPorImporteChart.Series[0].IsVisibleInLegend = false;
             VehiculosMasRentadosPorImporteChart.Titles.Add("Vehículos más rentados (por importe)");
         }
@@ -69,6 +70,7 @@ namespace GUI
             VehiculosMenosRentadosPorImporteChart.Series[0].YValueMembers = "Value";
 
             VehiculosMenosRentadosPorImporteChart.DataBind();
+            VehiculosMenosRentadosPorImporteChart.Series[0].ChartType = SeriesChartType.Pie;
             VehiculosMenosRentadosPorImporteChart.Series[0].IsVisibleInLegend = false;
             VehiculosMenosRentadosPorImporteChart.Titles.Add("Vehículos menos rentados (por importe)");
         }

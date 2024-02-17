@@ -30,10 +30,9 @@ namespace BLL
             List<Renta> rentados = Consultar();
 
             return rentados
-                .GroupBy(x => x.Vehiculo.Tipo.ToString())
-                .OrderByDescending(grupo => grupo.Sum(x => x.Importe))
-                .Take(2)
-                .ToDictionary(grupo => grupo.Key, grupo => grupo.Sum(x => x.Importe));
+                .OrderByDescending(renta => renta.Importe)
+                .Take(3)
+                .ToDictionary(renta => renta.Vehiculo.ToString(), renta => renta.Importe);
         }
 
 
@@ -54,10 +53,9 @@ namespace BLL
             List<Renta> rentados = Consultar();
 
             return rentados
-                .GroupBy(x => x.Vehiculo.Tipo.ToString())
-                .OrderBy(grupo => grupo.Sum(x => x.Importe))
-                .Take(2)
-                .ToDictionary(grupo => grupo.Key, grupo => grupo.Sum(x => x.Importe));
+                .OrderBy(renta => renta.Importe)
+                .Take(3)
+                .ToDictionary(renta => renta.Vehiculo.ToString(), renta => renta.Importe);
         }
 
 
