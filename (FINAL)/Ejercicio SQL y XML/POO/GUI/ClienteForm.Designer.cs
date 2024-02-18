@@ -42,14 +42,13 @@
             this.DniControl = new GUI.DniControl();
             this.EmailControl = new GUI.EmailControl();
             this.AltaButton = new System.Windows.Forms.Button();
-            this.ListadoDGV = new System.Windows.Forms.DataGridView();
+            this.ListadoDgv = new System.Windows.Forms.DataGridView();
             this.ModificacionButton = new System.Windows.Forms.Button();
-            this.VehiculosDGV = new System.Windows.Forms.DataGridView();
-            this.GuardarButton = new System.Windows.Forms.Button();
+            this.VehiculosDgv = new System.Windows.Forms.DataGridView();
             this.CancelarButton = new System.Windows.Forms.Button();
             this.DetallePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListadoDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehiculosDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiculosDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // DetallePanel
@@ -70,8 +69,8 @@
             this.DetallePanel.Controls.Add(this.ApellidoControl, 1, 2);
             this.DetallePanel.Controls.Add(this.DniControl, 1, 3);
             this.DetallePanel.Controls.Add(this.EmailControl, 1, 5);
-            this.DetallePanel.Location = new System.Drawing.Point(732, 13);
-            this.DetallePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.DetallePanel.Location = new System.Drawing.Point(824, 16);
+            this.DetallePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DetallePanel.Name = "DetallePanel";
             this.DetallePanel.RowCount = 6;
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -80,7 +79,7 @@
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.DetallePanel.Size = new System.Drawing.Size(415, 208);
+            this.DetallePanel.Size = new System.Drawing.Size(467, 254);
             this.DetallePanel.TabIndex = 0;
             // 
             // label1
@@ -89,143 +88,146 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.Size = new System.Drawing.Size(63, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 33);
+            this.label2.Location = new System.Drawing.Point(4, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 18);
+            this.label2.Size = new System.Drawing.Size(73, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 68);
+            this.label3.Location = new System.Drawing.Point(4, 82);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 18);
+            this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellido";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 105);
+            this.label4.Location = new System.Drawing.Point(4, 126);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 18);
+            this.label4.Size = new System.Drawing.Size(40, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "DNI";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 139);
+            this.label5.Location = new System.Drawing.Point(4, 167);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 18);
+            this.label5.Size = new System.Drawing.Size(167, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Fecha de nacimiento";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 172);
+            this.label6.Location = new System.Drawing.Point(4, 207);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 18);
+            this.label6.Size = new System.Drawing.Size(57, 23);
             this.label6.TabIndex = 5;
             this.label6.Text = "E-mail";
             // 
             // CodigoTextbox
             // 
             this.CodigoTextbox.Enabled = false;
-            this.CodigoTextbox.Location = new System.Drawing.Point(148, 4);
-            this.CodigoTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.CodigoTextbox.Location = new System.Drawing.Point(179, 5);
+            this.CodigoTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CodigoTextbox.Name = "CodigoTextbox";
-            this.CodigoTextbox.Size = new System.Drawing.Size(54, 25);
+            this.CodigoTextbox.Size = new System.Drawing.Size(60, 30);
             this.CodigoTextbox.TabIndex = 1;
             // 
             // FechaNacimientoDTP
             // 
             this.FechaNacimientoDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaNacimientoDTP.Location = new System.Drawing.Point(148, 143);
-            this.FechaNacimientoDTP.Margin = new System.Windows.Forms.Padding(4);
+            this.FechaNacimientoDTP.Location = new System.Drawing.Point(179, 172);
+            this.FechaNacimientoDTP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FechaNacimientoDTP.Name = "FechaNacimientoDTP";
-            this.FechaNacimientoDTP.Size = new System.Drawing.Size(107, 25);
+            this.FechaNacimientoDTP.Size = new System.Drawing.Size(120, 30);
             this.FechaNacimientoDTP.TabIndex = 5;
             // 
             // NombreControl
             // 
-            this.NombreControl.Location = new System.Drawing.Point(146, 35);
+            this.NombreControl.Location = new System.Drawing.Point(177, 42);
             this.NombreControl.Margin = new System.Windows.Forms.Padding(2);
             this.NombreControl.Name = "NombreControl";
             this.NombreControl.Nombre = "";
-            this.NombreControl.Size = new System.Drawing.Size(245, 31);
+            this.NombreControl.Size = new System.Drawing.Size(276, 38);
             this.NombreControl.TabIndex = 2;
             // 
             // ApellidoControl
             // 
             this.ApellidoControl.Apellido = "";
-            this.ApellidoControl.Location = new System.Drawing.Point(146, 70);
+            this.ApellidoControl.Location = new System.Drawing.Point(177, 84);
             this.ApellidoControl.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoControl.Name = "ApellidoControl";
-            this.ApellidoControl.Size = new System.Drawing.Size(245, 33);
+            this.ApellidoControl.Size = new System.Drawing.Size(276, 40);
             this.ApellidoControl.TabIndex = 3;
             // 
             // DniControl
             // 
             this.DniControl.Dni = "";
-            this.DniControl.Location = new System.Drawing.Point(146, 107);
+            this.DniControl.Location = new System.Drawing.Point(177, 128);
             this.DniControl.Margin = new System.Windows.Forms.Padding(2);
             this.DniControl.Name = "DniControl";
-            this.DniControl.Size = new System.Drawing.Size(139, 30);
+            this.DniControl.Size = new System.Drawing.Size(156, 37);
             this.DniControl.TabIndex = 4;
             // 
             // EmailControl
             // 
             this.EmailControl.Email = "";
-            this.EmailControl.Location = new System.Drawing.Point(146, 174);
+            this.EmailControl.Location = new System.Drawing.Point(177, 209);
             this.EmailControl.Margin = new System.Windows.Forms.Padding(2);
             this.EmailControl.Name = "EmailControl";
-            this.EmailControl.Size = new System.Drawing.Size(245, 30);
+            this.EmailControl.Size = new System.Drawing.Size(276, 37);
             this.EmailControl.TabIndex = 6;
             // 
             // AltaButton
             // 
-            this.AltaButton.Location = new System.Drawing.Point(761, 228);
+            this.AltaButton.Location = new System.Drawing.Point(1035, 279);
+            this.AltaButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AltaButton.Name = "AltaButton";
-            this.AltaButton.Size = new System.Drawing.Size(111, 29);
+            this.AltaButton.Size = new System.Drawing.Size(125, 35);
             this.AltaButton.TabIndex = 7;
             this.AltaButton.Text = "Alta";
             this.AltaButton.UseVisualStyleBackColor = true;
             // 
             // ListadoDGV
             // 
-            this.ListadoDGV.AllowUserToAddRows = false;
-            this.ListadoDGV.AllowUserToDeleteRows = false;
-            this.ListadoDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.ListadoDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.ListadoDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListadoDGV.Location = new System.Drawing.Point(12, 12);
-            this.ListadoDGV.Name = "ListadoDGV";
-            this.ListadoDGV.ReadOnly = true;
-            this.ListadoDGV.RowHeadersWidth = 51;
-            this.ListadoDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListadoDGV.Size = new System.Drawing.Size(713, 209);
-            this.ListadoDGV.TabIndex = 9;
+            this.ListadoDgv.AllowUserToAddRows = false;
+            this.ListadoDgv.AllowUserToDeleteRows = false;
+            this.ListadoDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.ListadoDgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.ListadoDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListadoDgv.Location = new System.Drawing.Point(14, 15);
+            this.ListadoDgv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ListadoDgv.Name = "ListadoDGV";
+            this.ListadoDgv.ReadOnly = true;
+            this.ListadoDgv.RowHeadersWidth = 51;
+            this.ListadoDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListadoDgv.Size = new System.Drawing.Size(802, 255);
+            this.ListadoDgv.TabIndex = 9;
             // 
             // ModificacionButton
             // 
-            this.ModificacionButton.Location = new System.Drawing.Point(880, 228);
+            this.ModificacionButton.Location = new System.Drawing.Point(1166, 279);
+            this.ModificacionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ModificacionButton.Name = "ModificacionButton";
-            this.ModificacionButton.Size = new System.Drawing.Size(111, 29);
+            this.ModificacionButton.Size = new System.Drawing.Size(125, 35);
             this.ModificacionButton.TabIndex = 8;
             this.ModificacionButton.Text = "Modificación";
             this.ModificacionButton.UseVisualStyleBackColor = true;
@@ -233,34 +235,26 @@
             // 
             // VehiculosDGV
             // 
-            this.VehiculosDGV.AllowUserToAddRows = false;
-            this.VehiculosDGV.AllowUserToDeleteRows = false;
-            this.VehiculosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.VehiculosDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.VehiculosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VehiculosDGV.Location = new System.Drawing.Point(12, 228);
-            this.VehiculosDGV.Name = "VehiculosDGV";
-            this.VehiculosDGV.ReadOnly = true;
-            this.VehiculosDGV.RowHeadersWidth = 51;
-            this.VehiculosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.VehiculosDGV.Size = new System.Drawing.Size(713, 209);
-            this.VehiculosDGV.TabIndex = 10;
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Location = new System.Drawing.Point(880, 263);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(111, 29);
-            this.GuardarButton.TabIndex = 11;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Visible = false;
+            this.VehiculosDgv.AllowUserToAddRows = false;
+            this.VehiculosDgv.AllowUserToDeleteRows = false;
+            this.VehiculosDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.VehiculosDgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.VehiculosDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VehiculosDgv.Location = new System.Drawing.Point(14, 279);
+            this.VehiculosDgv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.VehiculosDgv.Name = "VehiculosDGV";
+            this.VehiculosDgv.ReadOnly = true;
+            this.VehiculosDgv.RowHeadersWidth = 51;
+            this.VehiculosDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.VehiculosDgv.Size = new System.Drawing.Size(802, 255);
+            this.VehiculosDgv.TabIndex = 10;
             // 
             // CancelarButton
             // 
-            this.CancelarButton.Location = new System.Drawing.Point(763, 263);
+            this.CancelarButton.Location = new System.Drawing.Point(904, 279);
+            this.CancelarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelarButton.Name = "CancelarButton";
-            this.CancelarButton.Size = new System.Drawing.Size(111, 29);
+            this.CancelarButton.Size = new System.Drawing.Size(125, 35);
             this.CancelarButton.TabIndex = 12;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = true;
@@ -268,24 +262,23 @@
             // 
             // ClienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 449);
+            this.ClientSize = new System.Drawing.Size(1305, 549);
             this.Controls.Add(this.CancelarButton);
-            this.Controls.Add(this.GuardarButton);
-            this.Controls.Add(this.VehiculosDGV);
+            this.Controls.Add(this.VehiculosDgv);
             this.Controls.Add(this.ModificacionButton);
-            this.Controls.Add(this.ListadoDGV);
+            this.Controls.Add(this.ListadoDgv);
             this.Controls.Add(this.AltaButton);
             this.Controls.Add(this.DetallePanel);
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "ClienteForm";
             this.Text = "ClienteForm";
             this.Load += new System.EventHandler(this.ClienteForm_Load);
             this.DetallePanel.ResumeLayout(false);
             this.DetallePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListadoDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehiculosDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiculosDgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,14 +295,13 @@
         private System.Windows.Forms.TextBox CodigoTextbox;
         private System.Windows.Forms.DateTimePicker FechaNacimientoDTP;
         private System.Windows.Forms.Button AltaButton;
-        private System.Windows.Forms.DataGridView ListadoDGV;
+        private System.Windows.Forms.DataGridView ListadoDgv;
         private System.Windows.Forms.Button ModificacionButton;
-        private System.Windows.Forms.DataGridView VehiculosDGV;
+        private System.Windows.Forms.DataGridView VehiculosDgv;
         private NombreControl NombreControl;
         private ApellidoControl ApellidoControl;
         private DniControl DniControl;
         private EmailControl EmailControl;
-        private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button CancelarButton;
     }
 }

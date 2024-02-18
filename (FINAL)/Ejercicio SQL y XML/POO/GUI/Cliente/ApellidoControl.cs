@@ -16,6 +16,7 @@ namespace GUI
         {
             InitializeComponent();
             ApellidoTextbox.Validating += Validar;
+            ApellidoTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 
         //|||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS PARA EL CONTROL

@@ -45,9 +45,9 @@ namespace GUI
 
             try
             {
-                if (e.ColumnIndex == ListadoDGV.Columns["Baja"].Index && e.RowIndex >= 0)
+                if (e.ColumnIndex == ListadoDgv.Columns["Baja"].Index && e.RowIndex >= 0)
                 {
-                    Cliente cliente = (Cliente)ListadoDGV.Rows[e.RowIndex].DataBoundItem;
+                    Cliente cliente = (Cliente)ListadoDgv.Rows[e.RowIndex].DataBoundItem;
                     DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea borrar este cliente?");
                     if (resultado == DialogResult.Yes) borrado = new ClienteBLL().Borrar(cliente);
                     else Tool.MostrarInformacion("Borrado cancelado por el usuario");
@@ -88,10 +88,10 @@ namespace GUI
         {
             try
             {
-                ListadoDGV.DataSource = null;
+                ListadoDgv.DataSource = null;
 
                 // Crear (si no existe) una nueva columna para el botón de baja
-                if (!ListadoDGV.Columns.Contains("Baja"))
+                if (!ListadoDgv.Columns.Contains("Baja"))
                 {
                     DataGridViewButtonColumn BajaColumn = new DataGridViewButtonColumn
                     {
@@ -99,12 +99,12 @@ namespace GUI
                         Text = "X",
                         UseColumnTextForButtonValue = true
                     };
-                    ListadoDGV.Columns.Add(BajaColumn);
+                    ListadoDgv.Columns.Add(BajaColumn);
                 }
 
                 List<Cliente> clientes = new ClienteBLL().Consultar();
-                ListadoDGV.DataSource = clientes;
-                ListadoDGV.Columns["Codigo"].DisplayIndex = 1; // Mover al segundo lugar
+                ListadoDgv.DataSource = clientes;
+                ListadoDgv.Columns["Codigo"].DisplayIndex = 1; // Mover al segundo lugar
             }
             catch (Exception ex) { Tool.MostrarError(ex.Message); }
         }

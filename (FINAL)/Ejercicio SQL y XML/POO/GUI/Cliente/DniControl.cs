@@ -16,6 +16,7 @@ namespace GUI
         {
             InitializeComponent();
             DniTextbox.Validating += Validar;
+            DniTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 
         //|||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS PARA EL CONTROL

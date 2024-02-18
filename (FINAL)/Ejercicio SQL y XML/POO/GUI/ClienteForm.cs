@@ -9,7 +9,7 @@ namespace GUI
 {
     public partial class ClienteForm : BaseForm
     {
-        private bool alta = false;
+        private bool normal = true, modificado = false, validado = false;
         public ClienteForm()
         {
             InitializeComponent();
@@ -27,16 +27,15 @@ namespace GUI
         {
             AltaButton.Click += ModoAlta;
             ModificacionButton.Click += Modificar;
-            GuardarButton.Click += Agregar;
-            CancelarButton.Click += ModoNormal;
+            CancelarButton.Click += Cancelar;
 
-            ListadoDGV.RowEnter += SincronizarControles;
-            ListadoDGV.CellClick += Borrar;
+            ListadoDgv.RowEnter += SincronizarControles;
+            ListadoDgv.CellClick += Borrar;
 
-            NombreControl.TextChanged += ValidarCampos;
-            ApellidoControl.TextChanged += ValidarCampos;
-            DniControl.TextChanged += ValidarCampos;
-            EmailControl.TextChanged += ValidarCampos;
+            NombreControl.TextChanged += ValidaModificacion;
+            ApellidoControl.TextChanged += ValidaModificacion;
+            DniControl.TextChanged += ValidaModificacion;
+            EmailControl.TextChanged += ValidaModificacion;
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -70,7 +69,7 @@ namespace GUI
 
         #region MODOS DE FORMULARIO 
 
-        private void ModoNormal(object sender, EventArgs e)
+        private void Cancelar(object sender, EventArgs e)
         {
             DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
             if (resultado == DialogResult.Yes) ModoNormal();
@@ -78,29 +77,38 @@ namespace GUI
         
         private void ModoNormal()
         {
+            normal = true;
+
             AltaButton.Visible = true;
             ModificacionButton.Visible = false;
             CancelarButton.Visible = false;
-            GuardarButton.Visible = false;
+            
             Consultar();
-
-            alta = false;
         }
 
         private void ModoAlta(object sender, EventArgs e)
         {
-            ListadoDGV.Columns.Remove("Baja");
+            if (normal)
+            {
+                normal = false;
+                AltaButton.Text = "Guardar";
 
-            AltaButton.Visible = false;
-            ModificacionButton.Visible = false;
-            CancelarButton.Visible = true;
-            GuardarButton.Visible = false;
+                ListadoDgv.Columns.Remove("Baja");
 
-            LimpiarControlesPersonalizados();
-            Tool.LimpiarControlesEstandar(Controls);
-            Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
+                AltaButton.Visible = false;
+                ModificacionButton.Visible = false;
+                CancelarButton.Visible = true;
 
-            alta = true;
+                LimpiarControlesPersonalizados();
+                Tool.LimpiarControlesEstandar(Controls);
+                Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
+            }
+            else
+            {
+                normal = true;
+                AltaButton.Text = "Alta";
+                Agregar(this, e);
+            }
         }
 
         #endregion
@@ -117,7 +125,7 @@ namespace GUI
         {
             if (e.RowIndex >= 0)
             {
-                Cliente cliente = (Cliente)ListadoDGV.Rows[e.RowIndex].DataBoundItem;
+                Cliente cliente = (Cliente)ListadoDgv.Rows[e.RowIndex].DataBoundItem;
                 CodigoTextbox.Text = cliente.Codigo.ToString();
                 NombreControl.Nombre = cliente.Nombre;
                 ApellidoControl.Apellido = cliente.Apellido;
@@ -129,15 +137,15 @@ namespace GUI
 
         private void MostrarVehiculos(object sender, DataGridViewCellEventArgs e)
         {
-            VehiculosDGV.DataSource = null;
+            VehiculosDgv.DataSource = null;
 
-            if (ListadoDGV.CurrentRow != null)
+            if (ListadoDgv.CurrentRow != null)
             {
                 // La siguiente línea nunca falla: sin "delay" alguno
-                Cliente cliente = (Cliente)ListadoDGV.Rows[e.RowIndex].DataBoundItem;
+                Cliente cliente = (Cliente)ListadoDgv.Rows[e.RowIndex].DataBoundItem;
                 List<Vehiculo> vehiculos = cliente.VehiculosRentados;
                 if (vehiculos == null) { return; }
-                VehiculosDGV.DataSource = cliente.VehiculosRentados;
+                VehiculosDgv.DataSource = cliente.VehiculosRentados;
             }
         }
 
@@ -145,8 +153,14 @@ namespace GUI
 
         #region VALIDACIONES MORFOLÓGICAS
 
-        private void ValidarCampos(object sender, EventArgs e)
+        private void ValidaModificacion(object sender, EventArgs e)
         {
+            if (ListadoDgv.CurrentRow == null) return;
+            Cliente cliente = (Cliente)ListadoDgv.CurrentRow.DataBoundItem;
+            if (NombreControl.Nombre != cliente.Nombre) modificado = true;
+            if (ApellidoControl.Apellido != cliente.Apellido) modificado = true;
+            if (DniControl.Dni != cliente.DNI.ToString()) modificado = true;
+            if (EmailControl.Email != cliente.Email) modificado = true;
             ValidarCampos();
         }
 
@@ -159,32 +173,39 @@ namespace GUI
 
             bool validado = nombre && apellido && dni && email;
 
-            if (validado)
+            if (normal && !modificado && !validado)
             {
-                if (alta)
-                {
-                    GuardarButton.Visible = true;
-                    ModificacionButton.Visible = false;
-                }
-                else
-                {
-                    AltaButton.Visible = false;
-                    ModificacionButton.Visible = true;
-                    GuardarButton.Visible = false;
-                }
+                CancelarButton.Visible = false;
+                AltaButton.Visible = true;
+                ModificacionButton.Visible = false;
             }
-            else
+
+            if (!normal && !modificado && !validado)
             {
-                if (alta)
-                {
-                    GuardarButton.Visible = false;
-                    ModificacionButton.Visible = false;
-                }
-                else
-                {
-                    ModificacionButton.Visible = false;
-                    GuardarButton.Visible = false;
-                }
+                CancelarButton.Visible = true;
+                AltaButton.Visible = false;
+                ModificacionButton.Visible = false;
+            }
+
+            if (!normal && !modificado && validado)
+            {
+                CancelarButton.Visible = true;
+                AltaButton.Visible = true;
+                ModificacionButton.Visible = false;
+            }
+
+            if (normal && modificado && !validado)
+            {
+                CancelarButton.Visible = true;
+                AltaButton.Visible = false;
+                ModificacionButton.Visible = false;
+            }
+
+            if (normal && modificado && validado)
+            {
+                CancelarButton.Visible = true;
+                AltaButton.Visible = false;
+                ModificacionButton.Visible = true;
             }
         }
 

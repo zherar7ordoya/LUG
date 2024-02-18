@@ -16,6 +16,7 @@ namespace GUI
         {
             InitializeComponent();
             EmailTextbox.Validating += Validar;
+            EmailTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 
         //|||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS PARA EL CONTROL
