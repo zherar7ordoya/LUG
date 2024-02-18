@@ -90,6 +90,7 @@
     <Compile Include="DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstadoFormulario.cs" />
     <Compile Include="Vehiculo\MarcaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

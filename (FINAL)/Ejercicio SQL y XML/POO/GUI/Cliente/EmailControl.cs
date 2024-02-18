@@ -16,6 +16,8 @@ namespace GUI
         {
             InitializeComponent();
             EmailTextbox.Validating += Validar;
+
+            // Evento para que el control notifique al formulario que el texto ha cambiado
             EmailTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 

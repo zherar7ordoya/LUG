@@ -9,29 +9,32 @@ namespace GUI
     public static class Tool
     {
         #region Limpieza de controles
-        public static void LimpiarControlesEstandar(this Control.ControlCollection controls)
+        public static void LimpiarFormularioCliente(this Control.ControlCollection controls)
         {
             foreach (Control control in controls)
             {
-                if (control is TableLayoutPanel panel)
+                if (control is DataGridView dgv)
                 {
-                    LimpiarControlesEstandarTableLayoutPanel(panel);
+                    dgv.DataSource = null;
+                    if (dgv.Columns.Contains("Baja")) dgv.Columns.Remove("Baja");
                 }
 
-                if (control is DataGridView) (control as DataGridView).DataSource = null;
-                if (control is TextBox) control.Text = "";
-                if (control is DateTimePicker) control.Text = DateTime.Now.ToString();
+                if (control is TableLayoutPanel panel)
+                {
+                    foreach (Control ctrl in panel.Controls)
+                    {
+                        if (ctrl is NombreControl) ((NombreControl)ctrl).Nombre = "";
+                        if (ctrl is ApellidoControl) ((ApellidoControl)ctrl).Apellido = "";
+                        if (ctrl is DniControl) ((DniControl)ctrl).Dni = "";
+                        if (ctrl is DateTimePicker) ctrl.Text = DateTime.Now.ToString();
+                        if (ctrl is EmailControl) ((EmailControl)ctrl).Email = "";
+                    }
+                }
             }
         }
 
-        private static void LimpiarControlesEstandarTableLayoutPanel(TableLayoutPanel tableLayoutPanel)
-        {
-            foreach (Control control in tableLayoutPanel.Controls)
-            {
-                if (control is TextBox) control.Text = "";
-                if (control is DateTimePicker) control.Text = DateTime.Now.ToString();
-            }
-        }
+
+        
         #endregion
 
         #region Mensajes (MessageBox)

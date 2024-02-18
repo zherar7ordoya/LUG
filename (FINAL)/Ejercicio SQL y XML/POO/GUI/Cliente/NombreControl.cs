@@ -16,6 +16,8 @@ namespace GUI
         {
             InitializeComponent();
             NombreTextbox.Validating += Validar;
+
+            // Evento para que el control notifique al formulario que el texto ha cambiado
             NombreTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 

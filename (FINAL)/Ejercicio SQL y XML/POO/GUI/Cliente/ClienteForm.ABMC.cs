@@ -34,7 +34,9 @@ namespace GUI
             if (agregado)
             {
                 Tool.MostrarInformacion("Cliente guardado");
-                ModoNormal();
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
             }
         }
 
@@ -58,7 +60,9 @@ namespace GUI
             if (borrado)
             {
                 Tool.MostrarInformacion("Cliente borrado");
-                ModoNormal();
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
             }
         }
 
@@ -79,7 +83,9 @@ namespace GUI
             if (modificado)
             {
                 Tool.MostrarInformacion("Cliente modificado");
-                ModoNormal();
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
             }
         }
 

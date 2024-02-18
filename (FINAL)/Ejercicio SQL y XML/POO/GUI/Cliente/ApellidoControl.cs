@@ -16,6 +16,8 @@ namespace GUI
         {
             InitializeComponent();
             ApellidoTextbox.Validating += Validar;
+
+            // Evento para que el control notifique al formulario que el texto ha cambiado
             ApellidoTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 

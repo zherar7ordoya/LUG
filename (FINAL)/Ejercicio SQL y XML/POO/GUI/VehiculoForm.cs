@@ -106,7 +106,7 @@ namespace GUI
             CancelarButton.Visible = true;
             GuardarButton.Visible = false;
             LimpiarControlesPersonalizados();
-            Tool.LimpiarControlesEstandar(Controls);
+            Tool.LimpiarFormularioCliente(Controls);
             Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
         }
         #endregion

@@ -16,6 +16,8 @@ namespace GUI
         {
             InitializeComponent();
             DniTextbox.Validating += Validar;
+
+            // Evento para que el control notifique al formulario que el texto ha cambiado
             DniTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 
