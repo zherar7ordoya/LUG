@@ -1,117 +1,60 @@
 ﻿using BEL;
 
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class VehiculoForm : BaseForm
     {
-        public VehiculoForm()
-        {
-            InitializeComponent();
-        }
+        private EstadoFormulario estado = EstadoFormulario.Normal;
+        public VehiculoForm() => InitializeComponent();
+
+
         private void VehiculoForm_Load(object sender, EventArgs e)
         {
-            // Obtén los valores del enumerador VehiculoTipo y asignarlos al ComboBox
+            // Obtener los valores del enumerador VehiculoTipo y asignarlos al ComboBox
             VehiculoTipo[] tipos = (VehiculoTipo[])Enum.GetValues(typeof(VehiculoTipo));
             TipoCombobox.DataSource = tipos;
 
             InicializarEventHandlers();
             Consultar();
+            //ConfigurarFormulario();
         }
+
 
         private void InicializarEventHandlers()
         {
             // Botones
-            AltaButton.Click += CambiarAlModoAlta;
-            ModificacionButton.Click += Modificar;
-            GuardarButton.Click += Agregar;
-            CancelarButton.Click += CambiarAlModoNormal;
+            GuardarButton.Click += BotonGuardar;
+            CancelarButton.Click += BotonCancelar;
 
             // DataGridViews
             ListadoDgv.RowEnter += SincronizarControles;
             ListadoDgv.CellClick += Borrar;
 
             // Controles de usuario
-            MarcaControl.Leave += ValidarCampos;
-            ModeloControl.Leave += ValidarCampos;
-            PatenteControl.Leave += ValidarCampos;
+            MarcaControl.TextChanged += ValidarDatos;
+            ModeloControl.TextChanged += ValidarDatos;
+            PatenteControl.TextChanged += ValidarDatos;
         }
 
-        #region MÉTODOS INTERNOS
-        private Vehiculo ArmarVehiculo()
+
+        private void ConfigurarFormulario()
         {
-            Vehiculo vehiculo;
-            string tipo = TipoCombobox.SelectedValue.ToString();
+            bool marca = MarcaControl.Validar();
+            bool modelo = ModeloControl.Validar();
+            bool patente = PatenteControl.Validar();
 
-            switch (tipo)
-            {
-                case "Automovil":
-                    vehiculo = new Automovil();
-                    break;
-                case "Camion":
-                    vehiculo = new Camion();
-                    break;
-                case "Camioneta":
-                    vehiculo = new Camioneta();
-                    break;
-                case "Suv":
-                    vehiculo = new Suv();
-                    break;
-                default:
-                    throw new InvalidOperationException($"Tipo de vehículo desconocido: {tipo}");
-            }
-
-            if (string.IsNullOrEmpty(CodigoTextbox.Text)) vehiculo.Codigo = 0;
-            else vehiculo.Codigo = int.Parse(CodigoTextbox.Text);
-            vehiculo.Tipo = (VehiculoTipo)TipoCombobox.SelectedValue;
-            vehiculo.Marca = MarcaControl.Marca;
-            vehiculo.Modelo = ModeloControl.Modelo;
-            vehiculo.Patente = PatenteControl.Patente;
-
-            return vehiculo;
+            bool validado = marca && modelo && patente;
+            Tool.ConfigurarBotones(this, estado, validado);
         }
 
+        #region ||*----------------------------------------------------> EVENTOS
 
-        private void LimpiarControlesPersonalizados()
-        {
-            MarcaControl.Marca = "";
-            ModeloControl.Modelo = "";
-            PatenteControl.Patente = "";
-        }
-        #endregion
+        //|||||||||||||||||||||||||||||||||||||||||||||| EVENTOS DE DATAGRIDVIEW
 
-        #region MODOS DE FORMULARIO
-        private void CambiarAlModoNormal(object sender, EventArgs e)
-        {
-            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
-            if (resultado == DialogResult.Yes) CambiarAlModoNormal();
-        }
-        private void CambiarAlModoNormal()
-        {
-            AltaButton.Visible = true;
-            ModificacionButton.Visible = true;
-            CancelarButton.Visible = false;
-            GuardarButton.Visible = false;
-            Consultar();
-        }
-
-
-        private void CambiarAlModoAlta(object sender, EventArgs e)
-        {
-            ListadoDgv.Columns.Remove("Baja");
-            AltaButton.Visible = false;
-            ModificacionButton.Visible = false;
-            CancelarButton.Visible = true;
-            GuardarButton.Visible = false;
-            LimpiarControlesPersonalizados();
-            Tool.LimpiarFormularioCliente(Controls);
-            Tool.MostrarInformacion("Complete los campos y luego pulse Aceptar");
-        }
-        #endregion
-
-        #region MUESTRA DE DATOS
         private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -125,31 +68,55 @@ namespace GUI
                 PatenteControl.Patente = vehiculo.Patente;
             }
         }
-        #endregion
 
-        #region VALIDACIONES MORFOLÓGICAS
-        private void ValidarCampos(object sender, EventArgs e)
+        //|||||||||||||||||||||||||||||||||||||| EVENTOS DE CONTROLES DE USUARIO
+
+        private void ValidarDatos(object sender, EventArgs e)
         {
-            bool validado = ValidarCampos();
-            bool cancelado = CancelarButton.Visible;
+            if (ListadoDgv.CurrentRow != null) // Dato: es null durante el alta
+            {
+                Vehiculo vehiculo = (Vehiculo)ListadoDgv.SelectedRows[0].DataBoundItem;
 
-            // Cancelado oculto: modo alta alta (guardar no debe participar de esta validación)
-            GuardarButton.Visible = validado && cancelado;
-            AltaButton.Visible = validado && !cancelado;
-            ModificacionButton.Visible = validado && !cancelado;
+                bool modificado = (MarcaControl.Marca != vehiculo.Marca) ||
+                                  (TipoCombobox.Text != vehiculo.Tipo.ToString()) ||
+                                  (ModeloControl.Modelo != vehiculo.Modelo) ||
+                                  (PatenteControl.Patente != vehiculo.Patente);
+                if (modificado) estado = EstadoFormulario.Modificacion;
+                else estado = EstadoFormulario.Normal;
+            }
+            ConfigurarFormulario(); // Actualiza el estado de los botones
+        }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||| EVENTOS DE BOTONES
+
+        private void BotonGuardar(object sender, EventArgs e)
+        {
+            if (estado == EstadoFormulario.Normal)
+            {
+                Tool.LimpiarFormularioVehiculo(Controls);
+                estado = EstadoFormulario.Alta;
+                ConfigurarFormulario();
+                Tool.MostrarInformacion("Complete los campos y luego pulse Guardar");
+            }
+            else
+            {
+                if (estado == EstadoFormulario.Alta) Agregar(this, e);
+                else if (estado == EstadoFormulario.Modificacion) Modificar(this, e);
+            }
         }
 
 
-        private bool ValidarCampos()
+        private void BotonCancelar(object sender, EventArgs e)
         {
-            bool marca = MarcaControl.Validar();
-            bool modelo = ModeloControl.Validar();
-            bool patente = PatenteControl.Validar();
-
-            bool validado = marca && modelo && patente;
-
-            return validado;
+            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
+            if (resultado == DialogResult.Yes)
+            {
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
+            }
         }
+
         #endregion
     }
 }

@@ -38,7 +38,7 @@
             // 
             this.PatenteTextbox.Location = new System.Drawing.Point(3, 3);
             this.PatenteTextbox.Name = "PatenteTextbox";
-            this.PatenteTextbox.Size = new System.Drawing.Size(100, 20);
+            this.PatenteTextbox.Size = new System.Drawing.Size(120, 20);
             this.PatenteTextbox.TabIndex = 0;
             // 
             // PatenteError

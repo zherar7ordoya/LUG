@@ -42,7 +42,7 @@
             // 
             this.ModeloTextbox.Location = new System.Drawing.Point(3, 3);
             this.ModeloTextbox.Name = "ModeloTextbox";
-            this.ModeloTextbox.Size = new System.Drawing.Size(100, 20);
+            this.ModeloTextbox.Size = new System.Drawing.Size(120, 20);
             this.ModeloTextbox.TabIndex = 0;
             // 
             // ModeloControl

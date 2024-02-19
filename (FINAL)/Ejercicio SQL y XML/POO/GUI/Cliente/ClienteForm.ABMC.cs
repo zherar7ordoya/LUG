@@ -24,7 +24,7 @@ namespace GUI
 
             try
             {
-                Cliente cliente = ArmarCliente();
+                Cliente cliente = Tool.ArmarObjetoCliente(this);
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el cliente?");
                 if (resultado == DialogResult.Yes) agregado = new ClienteBLL().Agregar(cliente);
                 else Tool.MostrarInformacion("Guardado cancelado por el usuario");
@@ -73,7 +73,7 @@ namespace GUI
 
             try
             {
-                Cliente cliente = ArmarCliente();
+                Cliente cliente = Tool.ArmarObjetoCliente(this);
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar este cliente?");
                 if (resultado == DialogResult.Yes) modificado = new ClienteBLL().Modificar(cliente);
                 else Tool.MostrarInformacion("Modificación cancelada por el usuario");
@@ -89,7 +89,12 @@ namespace GUI
             }
         }
 
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
 
+        /// <summary>
+        /// Mi pobre método principal es el único que no obedece a un evento. Nadie
+        /// lo llama, él solo está ahí, siempre presente, siendo la base para todo.
+        /// </summary>
         private void Consultar()
         {
             try

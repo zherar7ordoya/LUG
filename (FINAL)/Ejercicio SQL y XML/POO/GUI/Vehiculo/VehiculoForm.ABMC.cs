@@ -20,7 +20,7 @@ namespace GUI
 
             try
             {
-                Vehiculo vehiculo = ArmarVehiculo();
+                Vehiculo vehiculo = Tool.ArmarObjetoVehiculo(this);
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el vehículo?");
                 if (resultado == DialogResult.Yes) agregado = new VehiculoBLL().Agregar(vehiculo);
                 else Tool.MostrarInformacion("Guardado cancelado por el usuario");
@@ -30,7 +30,9 @@ namespace GUI
             if (agregado)
             {
                 Tool.MostrarInformacion("Vehículo guardado");
-                CambiarAlModoNormal();
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
             }
         }
 
@@ -54,7 +56,9 @@ namespace GUI
             if (borrado)
             {
                 Tool.MostrarInformacion("Vehiculo borrado");
-                CambiarAlModoNormal();
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
             }
         }
 
@@ -65,7 +69,7 @@ namespace GUI
 
             try
             {
-                Vehiculo vehiculo = ArmarVehiculo();
+                Vehiculo vehiculo = Tool.ArmarObjetoVehiculo(this);
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar este vehículo?");
                 if (resultado == DialogResult.Yes) modificado = new VehiculoBLL().Modificar(vehiculo);
                 else Tool.MostrarInformacion("Modificación cancelada por el usuario");
@@ -75,12 +79,18 @@ namespace GUI
             if (modificado)
             {
                 Tool.MostrarInformacion("Vehículo modificado");
-                CambiarAlModoNormal();
+                estado = EstadoFormulario.Normal;
+                Consultar();
+                ConfigurarFormulario();
             }
         }
 
-        //---------------------------------------------------------------------*
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
 
+        /// <summary>
+        /// Mi pobre método principal es el único que no obedece a un evento. Nadie
+        /// lo llama, él solo está ahí, siempre presente, siendo la base para todo.
+        /// </summary>
         private void Consultar()
         {
             try

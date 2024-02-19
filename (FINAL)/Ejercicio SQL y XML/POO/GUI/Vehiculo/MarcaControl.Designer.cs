@@ -42,7 +42,7 @@
             // 
             this.MarcaTextbox.Location = new System.Drawing.Point(3, 3);
             this.MarcaTextbox.Name = "MarcaTextbox";
-            this.MarcaTextbox.Size = new System.Drawing.Size(100, 20);
+            this.MarcaTextbox.Size = new System.Drawing.Size(120, 20);
             this.MarcaTextbox.TabIndex = 0;
             // 
             // MarcaControl

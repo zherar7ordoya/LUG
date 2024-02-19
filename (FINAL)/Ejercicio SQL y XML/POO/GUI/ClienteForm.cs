@@ -8,46 +8,60 @@ namespace GUI
 {
     public partial class ClienteForm : BaseForm
     {
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||| INICIALIZACIÓN
-
         private EstadoFormulario estado = EstadoFormulario.Normal;
+        public ClienteForm() => InitializeComponent();
 
-        public ClienteForm()
-        {
-            InitializeComponent();
-        }
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
+            // Estos métodos aquí (Load) para asegurarse que los controles estén inicializados
             InicializarEventHandlers();
-            Consultar();
+            Consultar(); // Llena el DataGridView principal, pero se llama CONSULTAR por el ABMC
             ConfigurarFormulario();
         }
 
+
         private void InicializarEventHandlers()
         {
-            GuardarButton.Click += ConfigurarGuardar;
-            CancelarButton.Click += Cancelar;
+            // Botones
+            GuardarButton.Click += BotonGuardar;
+            CancelarButton.Click += BotonCancelar;
 
+            // DataGridViews
             ListadoDgv.RowEnter += SincronizarControles;
             ListadoDgv.CellClick += Borrar;
 
-            NombreControl.TextChanged += ValidaModificacion;
-            ApellidoControl.TextChanged += ValidaModificacion;
-            DniControl.TextChanged += ValidaModificacion;
-            FechaNacimientoDtp.ValueChanged += ValidaModificacion;
-            EmailControl.TextChanged += ValidaModificacion;
+            // Controles de usuario
+            NombreControl.TextChanged += ValidarDatos;
+            ApellidoControl.TextChanged += ValidarDatos;
+            DniControl.TextChanged += ValidarDatos;
+            FechaNacimientoDtp.ValueChanged += ValidarDatos; // Este fue un agregado (no es UserControl)
+            EmailControl.TextChanged += ValidarDatos;
         }
 
-        //|||||||||||||||||||||||||||||||||||||||||||||||| EVENTOS DE FORMULARIO
 
-        #region SINCRONIZACIÓN ENTRE CONTROLES
+        private void ConfigurarFormulario()
+        {
+            bool nombre = NombreControl.Validar();
+            bool apellido = ApellidoControl.Validar();
+            bool dni = DniControl.Validar();
+            bool email = EmailControl.Validar();
+
+            bool validado = nombre && apellido && dni && email;
+            Tool.ConfigurarBotones(this, estado, validado);
+        }
+
+
+        #region ||*----------------------------------------------------> EVENTOS
+
+        //|||||||||||||||||||||||||||||||||||||||||||||| EVENTOS DE DATAGRIDVIEW
 
         private void SincronizarControles(object sender, DataGridViewCellEventArgs e)
         {
             MostrarDetalles(sender, e);
             MostrarVehiculos(sender, e);
         }
+
 
         private void MostrarDetalles(object sender, DataGridViewCellEventArgs e)
         {
@@ -61,6 +75,7 @@ namespace GUI
             FechaNacimientoDtp.Text = cliente.FechaNacimiento.ToString();
             EmailControl.Email = cliente.Email;
         }
+
 
         private void MostrarVehiculos(object sender, DataGridViewCellEventArgs e)
         {
@@ -77,11 +92,28 @@ namespace GUI
             }
         }
 
-        #endregion
+        //|||||||||||||||||||||||||||||||||||||| EVENTOS DE CONTROLES DE USUARIO
 
-        #region MODOS DE FORMULARIO 
+        private void ValidarDatos(object sender, EventArgs e)
+        {
+            if (ListadoDgv.CurrentRow != null) // Dato: es null durante el alta
+            {
+                Cliente cliente = (Cliente)ListadoDgv.SelectedRows[0].DataBoundItem;
 
-        private void ConfigurarGuardar(object sender, EventArgs e)
+                bool modificado = (NombreControl.Nombre != cliente.Nombre) ||
+                                  (ApellidoControl.Apellido != cliente.Apellido) ||
+                                  (DniControl.Dni != cliente.DNI.ToString()) ||
+                                  (FechaNacimientoDtp.Text != cliente.FechaNacimiento.ToShortDateString()) ||
+                                  (EmailControl.Email != cliente.Email);
+                if (modificado) estado = EstadoFormulario.Modificacion;
+                else estado = EstadoFormulario.Normal;
+            }
+            ConfigurarFormulario(); // Actualiza el estado de los botones
+        }
+
+        //||||||||||||||||||||||||||||||||||||||||||||||||||| EVENTOS DE BOTONES
+
+        private void BotonGuardar(object sender, EventArgs e)
         {
             if (estado == EstadoFormulario.Normal)
             {
@@ -98,7 +130,7 @@ namespace GUI
         }
 
 
-        private void Cancelar(object sender, EventArgs e)
+        private void BotonCancelar(object sender, EventArgs e)
         {
             DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
             if (resultado == DialogResult.Yes)
@@ -109,73 +141,6 @@ namespace GUI
             }
         }
 
-
-        private void ValidaModificacion(object sender, EventArgs e)
-        {
-            if (ListadoDgv.CurrentRow != null)
-            {
-                Cliente cliente = (Cliente)ListadoDgv.SelectedRows[0].DataBoundItem;
-
-                bool modificado = (NombreControl.Nombre != cliente.Nombre) ||
-                             (ApellidoControl.Apellido != cliente.Apellido) ||
-                             (DniControl.Dni != cliente.DNI.ToString()) ||
-                             (FechaNacimientoDtp.Text != cliente.FechaNacimiento.ToShortDateString()) ||
-                             (EmailControl.Email != cliente.Email);
-                if (modificado) estado = EstadoFormulario.Modificacion;
-                else estado = EstadoFormulario.Normal;
-            }
-            ConfigurarFormulario();
-        }
-
         #endregion
-
-        //|||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS DE FORMULARIO
-
-        private void ConfigurarFormulario()
-        {
-            bool nombre = NombreControl.Validar();
-            bool apellido = ApellidoControl.Validar();
-            bool dni = DniControl.Validar();
-            bool email = EmailControl.Validar();
-
-            bool validado = nombre && apellido && dni && email;
-
-            switch (estado)
-            {
-                case EstadoFormulario.Normal:
-                    GuardarButton.Text = "Alta";
-                    CancelarButton.Visible = false;
-                    break;
-                case EstadoFormulario.Alta:
-                    GuardarButton.Text = "Guardar";
-                    CancelarButton.Visible = true;
-                    break;
-                case EstadoFormulario.Modificacion:
-                    GuardarButton.Text = "Guardar";
-                    CancelarButton.Visible = true;
-                    break;
-            }
-
-            GuardarButton.Visible = validado;
-        }
-
-
-        private Cliente ArmarCliente()
-        {
-            Cliente cliente = new Cliente();
-
-            if (string.IsNullOrEmpty(CodigoTextbox.Text)) cliente.Codigo = 0; // Es un alta
-            else cliente.Codigo = int.Parse(CodigoTextbox.Text);
-
-            cliente.Nombre = NombreControl.Nombre;
-            cliente.Apellido = ApellidoControl.Apellido;
-            cliente.DNI = int.Parse(DniControl.Dni);
-            cliente.FechaNacimiento = DateTime.Parse(FechaNacimientoDtp.Text);
-            cliente.Email = EmailControl.Email;
-
-            return cliente;
-        }
-
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     }
 }
