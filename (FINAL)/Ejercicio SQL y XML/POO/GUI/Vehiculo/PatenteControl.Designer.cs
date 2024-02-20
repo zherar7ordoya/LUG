@@ -36,9 +36,10 @@
             // 
             // PatenteTextbox
             // 
-            this.PatenteTextbox.Location = new System.Drawing.Point(3, 3);
+            this.PatenteTextbox.Location = new System.Drawing.Point(0, 0);
+            this.PatenteTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.PatenteTextbox.Name = "PatenteTextbox";
-            this.PatenteTextbox.Size = new System.Drawing.Size(120, 20);
+            this.PatenteTextbox.Size = new System.Drawing.Size(105, 22);
             this.PatenteTextbox.TabIndex = 0;
             // 
             // PatenteError
@@ -47,11 +48,12 @@
             // 
             // PatenteControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PatenteTextbox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PatenteControl";
-            this.Size = new System.Drawing.Size(150, 26);
+            this.Size = new System.Drawing.Size(130, 32);
             ((System.ComponentModel.ISupportInitialize)(this.PatenteError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

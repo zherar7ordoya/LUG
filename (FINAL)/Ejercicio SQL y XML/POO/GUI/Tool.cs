@@ -118,6 +118,58 @@ namespace GUI
 
         #region HERRAMIENTAS ESPECÍFICAS DE RENTA
 
+        public static void LimpiarFormularioRenta(this Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                if (control is DataGridView dgv)
+                {
+                    // Solo al DatarGridView principal (ListadoDgv: Rentas) 
+                    if (dgv.Columns.Contains("Baja"))
+                    {
+                        dgv.DataSource = null;
+                        dgv.Columns.Remove("Baja"); 
+                    }
+                }
+
+                if (control is TableLayoutPanel panel)
+                {
+                    foreach (Control ctrl in panel.Controls)
+                    {
+                        // Panel de Cliente
+                        if (ctrl is TextBox) ctrl.Text = "";
+                        if (ctrl is NombreControl) ((NombreControl)ctrl).Nombre = "";
+                        if (ctrl is ApellidoControl) ((ApellidoControl)ctrl).Apellido = "";
+                        if (ctrl is DniControl) ((DniControl)ctrl).Dni = "";
+                        if (ctrl is DateTimePicker) ctrl.Text = DateTime.Now.ToString();
+                        if (ctrl is EmailControl) ((EmailControl)ctrl).Email = "";
+
+                        // Panel de Vehículo
+                        if (ctrl is TextBox) ctrl.Text = "";
+                        if (ctrl is ComboBox) ctrl.Text = "Automovil";
+                        if (ctrl is MarcaControl) ((MarcaControl)ctrl).Marca = "";
+                        if (ctrl is ModeloControl) ((ModeloControl)ctrl).Modelo = "";
+                        if (ctrl is PatenteControl) ((PatenteControl)ctrl).Patente = "";
+                    }
+                }
+            }
+        }
+
+
+        public static Renta ArmarObjetoRenta(RentaForm formulario)
+        {
+            Renta renta = new Renta();
+
+            //if (string.IsNullOrEmpty(formulario.CodigoTextbox.Text)) renta.Codigo = 0;
+            //else renta.Codigo = int.Parse(formulario.CodigoTextbox.Text);
+            //renta.Tipo = (VehiculoTipo)formulario.TipoCombobox.SelectedValue;
+            //renta.Marca = formulario.MarcaControl.Marca;
+            //renta.Modelo = formulario.ModeloControl.Modelo;
+            //renta.Patente = formulario.PatenteControl.Patente;
+
+            return renta;
+        }
+
         #endregion
 
         #region HERRAMIENTAS ESPECÍFICAS DE VEHÍCULO

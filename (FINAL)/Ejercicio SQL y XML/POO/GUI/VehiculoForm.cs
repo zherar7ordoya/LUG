@@ -20,7 +20,6 @@ namespace GUI
 
             InicializarEventHandlers();
             Consultar();
-            //ConfigurarFormulario();
         }
 
 

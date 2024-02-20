@@ -40,18 +40,20 @@
             // 
             // MarcaTextbox
             // 
-            this.MarcaTextbox.Location = new System.Drawing.Point(3, 3);
+            this.MarcaTextbox.Location = new System.Drawing.Point(0, 0);
+            this.MarcaTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MarcaTextbox.Name = "MarcaTextbox";
-            this.MarcaTextbox.Size = new System.Drawing.Size(120, 20);
+            this.MarcaTextbox.Size = new System.Drawing.Size(159, 22);
             this.MarcaTextbox.TabIndex = 0;
             // 
             // MarcaControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MarcaTextbox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MarcaControl";
-            this.Size = new System.Drawing.Size(150, 26);
+            this.Size = new System.Drawing.Size(200, 32);
             ((System.ComponentModel.ISupportInitialize)(this.MarcaError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,8 +16,9 @@ namespace GUI
         {
             // Estos métodos aquí (Load) para asegurarse que los controles estén inicializados
             InicializarEventHandlers();
-            Consultar(); // Llena el DataGridView principal, pero se llama CONSULTAR por el ABMC
-            ConfigurarFormulario();
+
+            // Llena el DataGridView principal apelando al CONSULTAR del ABMC
+            Consultar(); 
         }
 
 

@@ -40,18 +40,20 @@
             // 
             // ModeloTextbox
             // 
-            this.ModeloTextbox.Location = new System.Drawing.Point(3, 3);
+            this.ModeloTextbox.Location = new System.Drawing.Point(0, 0);
+            this.ModeloTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModeloTextbox.Name = "ModeloTextbox";
-            this.ModeloTextbox.Size = new System.Drawing.Size(120, 20);
+            this.ModeloTextbox.Size = new System.Drawing.Size(159, 22);
             this.ModeloTextbox.TabIndex = 0;
             // 
             // ModeloControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ModeloTextbox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModeloControl";
-            this.Size = new System.Drawing.Size(150, 26);
+            this.Size = new System.Drawing.Size(200, 32);
             ((System.ComponentModel.ISupportInitialize)(this.ModeloError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

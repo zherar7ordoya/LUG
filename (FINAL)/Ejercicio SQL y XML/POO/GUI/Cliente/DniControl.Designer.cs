@@ -40,20 +40,20 @@
             // 
             // DniTextbox
             // 
-            this.DniTextbox.Location = new System.Drawing.Point(2, 2);
-            this.DniTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DniTextbox.Location = new System.Drawing.Point(3, 2);
+            this.DniTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DniTextbox.Name = "DniTextbox";
-            this.DniTextbox.Size = new System.Drawing.Size(80, 20);
+            this.DniTextbox.Size = new System.Drawing.Size(105, 22);
             this.DniTextbox.TabIndex = 0;
             // 
             // DniControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DniTextbox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DniControl";
-            this.Size = new System.Drawing.Size(98, 24);
+            this.Size = new System.Drawing.Size(130, 30);
             ((System.ComponentModel.ISupportInitialize)(this.DniError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
