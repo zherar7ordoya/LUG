@@ -171,37 +171,37 @@ namespace GUI
 
         private void BotonCalcular(object sender, EventArgs e)
         {
-            List<Vehiculo> vehiculos = new VehiculoBLL().Consultar();
+            // Obtengo el objeto renta
             Renta renta = (Renta)ListadoDgv.SelectedRows[0].DataBoundItem;
 
-            VehiculoTipo tipo = renta.Vehiculo.Tipo;
-
-            Vehiculo vehiculo = vehiculos.Find(v => v.Codigo == renta.Vehiculo.Codigo);
-
+            // Obtengo el objeto vehiculo de esa renta
+            Vehiculo vehiculo = renta.Vehiculo;
+            
+            // Calculo el importe de la renta según el tipo de vehículo
             switch (vehiculo.Tipo)
             {
                 case VehiculoTipo.Automovil:
                     AutomovilBLL automovilBLL = new AutomovilBLL();
-                    renta.Importe = automovilBLL.CalcularRenta((Automovil)renta.Vehiculo, renta.DiasRentados);
+                    ImporteControl.Importe = automovilBLL.CalcularRenta((Automovil)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
                     break;
                 case VehiculoTipo.Camion:
                     CamionBLL camionBLL = new CamionBLL();
-                    renta.Importe = camionBLL.CalcularRenta((Camion)renta.Vehiculo, renta.DiasRentados);
+                    ImporteControl.Importe = camionBLL.CalcularRenta((Camion)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
                     break;
                 case VehiculoTipo.Camioneta:
                     CamionetaBLL camionetaBLL = new CamionetaBLL();
-                    renta.Importe = camionetaBLL.CalcularRenta((Camioneta)renta.Vehiculo, renta.DiasRentados);
+                    ImporteControl.Importe = camionetaBLL.CalcularRenta((Camioneta)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
                     break;
                 case VehiculoTipo.Suv:
                     SuvBLL suvBLL = new SuvBLL();
-                    renta.Importe = suvBLL.CalcularRenta((Suv)renta.Vehiculo, renta.DiasRentados);
+                    ImporteControl.Importe = suvBLL.CalcularRenta((Suv)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
                     break;
                 default:
                     break;
             }
-            ImporteControl.Importe = renta.Importe.ToString();
-            estado = EstadoFormulario.Modificacion;
-            ConfigurarFormulario();
+
+            ImporteControl.Update();  // Forzar la actualización inmediata del control
+            CompararDatos(this, e);
         }
 
         #endregion
