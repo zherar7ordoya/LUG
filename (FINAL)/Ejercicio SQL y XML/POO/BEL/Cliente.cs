@@ -14,7 +14,7 @@ namespace BEL
 
         public override string ToString()
         {
-            return $"Código: {Codigo} - Cliente: {Nombre} {Apellido}";
+            return $"{Nombre} {Apellido}";
         }
     }
 }

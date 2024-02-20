@@ -36,10 +36,9 @@
             // 
             // ApellidoTextbox
             // 
-            this.ApellidoTextbox.Location = new System.Drawing.Point(2, 2);
-            this.ApellidoTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoTextbox.Location = new System.Drawing.Point(0, 0);
             this.ApellidoTextbox.Name = "ApellidoTextbox";
-            this.ApellidoTextbox.Size = new System.Drawing.Size(158, 20);
+            this.ApellidoTextbox.Size = new System.Drawing.Size(100, 25);
             this.ApellidoTextbox.TabIndex = 0;
             // 
             // ApellidoError
@@ -48,12 +47,12 @@
             // 
             // ApellidoControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ApellidoTextbox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ApellidoControl";
-            this.Size = new System.Drawing.Size(180, 24);
+            this.Size = new System.Drawing.Size(125, 25);
             ((System.ComponentModel.ISupportInitialize)(this.ApellidoError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

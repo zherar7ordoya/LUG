@@ -34,9 +34,9 @@ namespace GUI
             ListadoDgv.CellClick += Borrar;
 
             // Controles de usuario
-            MarcaControl.TextChanged += ValidarDatos;
-            ModeloControl.TextChanged += ValidarDatos;
-            PatenteControl.TextChanged += ValidarDatos;
+            MarcaControl.TextChanged += CompararDatos;
+            ModeloControl.TextChanged += CompararDatos;
+            PatenteControl.TextChanged += CompararDatos;
         }
 
 
@@ -70,7 +70,7 @@ namespace GUI
 
         //|||||||||||||||||||||||||||||||||||||| EVENTOS DE CONTROLES DE USUARIO
 
-        private void ValidarDatos(object sender, EventArgs e)
+        private void CompararDatos(object sender, EventArgs e)
         {
             if (ListadoDgv.CurrentRow != null) // Dato: es null durante el alta
             {

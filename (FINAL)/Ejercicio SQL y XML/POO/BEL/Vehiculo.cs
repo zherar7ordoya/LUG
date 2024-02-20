@@ -9,7 +9,7 @@
 
         public override string ToString()
         {
-            return $"{Tipo}\n{Marca} {Modelo}\n{Patente}";
+            return $"{Marca} {Modelo}";
         }
     }
 }

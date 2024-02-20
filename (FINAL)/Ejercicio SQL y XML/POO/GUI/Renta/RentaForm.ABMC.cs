@@ -19,7 +19,7 @@ namespace GUI
             try
             {
                 Renta renta = Tool.ArmarObjetoRenta(this);
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar la renta?");
+                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar esta renta?");
                 if (resultado == DialogResult.Yes) agregado = new RentaBLL().Agregar(renta);
                 else Tool.MostrarInformacion("Guardado cancelado por el usuario");
             }

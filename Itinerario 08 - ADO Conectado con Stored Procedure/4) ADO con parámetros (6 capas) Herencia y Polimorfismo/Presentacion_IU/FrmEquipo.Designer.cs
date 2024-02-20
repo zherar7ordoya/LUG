@@ -29,8 +29,8 @@ namespace Presentacion_IU
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.InfoLabel = new System.Windows.Forms.Label();
             this.BuscarPuntajeButton = new System.Windows.Forms.Button();
             this.JugadoresDGV = new System.Windows.Forms.DataGridView();
@@ -89,8 +89,8 @@ namespace Presentacion_IU
             // 
             this.JugadoresDGV.AllowUserToAddRows = false;
             this.JugadoresDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.JugadoresDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.JugadoresDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.JugadoresDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.JugadoresDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.JugadoresDGV.Location = new System.Drawing.Point(480, 191);
@@ -123,8 +123,8 @@ namespace Presentacion_IU
             // 
             this.EquiposDGV.AllowUserToAddRows = false;
             this.EquiposDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.EquiposDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EquiposDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.EquiposDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.EquiposDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EquiposDGV.Location = new System.Drawing.Point(477, 20);

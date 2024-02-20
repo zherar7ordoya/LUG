@@ -36,10 +36,9 @@
             // 
             // EmailTextbox
             // 
-            this.EmailTextbox.Location = new System.Drawing.Point(2, 2);
-            this.EmailTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailTextbox.Location = new System.Drawing.Point(0, 0);
             this.EmailTextbox.Name = "EmailTextbox";
-            this.EmailTextbox.Size = new System.Drawing.Size(158, 20);
+            this.EmailTextbox.Size = new System.Drawing.Size(100, 25);
             this.EmailTextbox.TabIndex = 0;
             // 
             // EmailError
@@ -48,12 +47,12 @@
             // 
             // EmailControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.EmailTextbox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "EmailControl";
-            this.Size = new System.Drawing.Size(180, 24);
+            this.Size = new System.Drawing.Size(125, 25);
             ((System.ComponentModel.ISupportInitialize)(this.EmailError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

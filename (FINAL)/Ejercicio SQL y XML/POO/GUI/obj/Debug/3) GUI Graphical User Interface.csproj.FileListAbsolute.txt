@@ -71,3 +71,4 @@ D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.ImporteControl.resources
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.ImporteControl.resources
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.RentaForm.resources
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\GUI\obj\Debug\GUI.RentaForm.resources

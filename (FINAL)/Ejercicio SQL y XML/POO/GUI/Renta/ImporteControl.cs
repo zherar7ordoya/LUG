@@ -35,9 +35,7 @@ namespace GUI
 
         public bool Validar()
         {
-            // ^\d+: Comienza con uno o más dígitos.
-            // (\.\d{ 1,2})?: Opcionalmente, puede haber un punto seguido por uno o dos dígitos.
-            string regex = @"^\d+(\.\d{1,2})?$";
+            string regex = @"^\d+([\.,]\d{1,2})?$";
             bool valido = Regex.IsMatch(ImporteTextbox.Text, regex);
 
             if (valido) ImporteError.SetError(ImporteTextbox, null);

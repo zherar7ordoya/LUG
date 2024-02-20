@@ -39,7 +39,7 @@
             this.ImporteTextbox.Location = new System.Drawing.Point(0, 0);
             this.ImporteTextbox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ImporteTextbox.Name = "ImporteTextbox";
-            this.ImporteTextbox.Size = new System.Drawing.Size(120, 30);
+            this.ImporteTextbox.Size = new System.Drawing.Size(100, 25);
             this.ImporteTextbox.TabIndex = 0;
             // 
             // ImporteError
@@ -48,13 +48,13 @@
             // 
             // ImporteControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ImporteTextbox);
             this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "ImporteControl";
-            this.Size = new System.Drawing.Size(150, 32);
+            this.Size = new System.Drawing.Size(125, 25);
             ((System.ComponentModel.ISupportInitialize)(this.ImporteError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
