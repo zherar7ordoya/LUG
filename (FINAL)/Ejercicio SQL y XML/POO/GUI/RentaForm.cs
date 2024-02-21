@@ -4,13 +4,6 @@ using BLL;
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -48,6 +41,9 @@ namespace GUI
             CodigoVehiculoTextbox.TextChanged += CompararDatos;
             DiasRentadosNumeric.ValueChanged += CompararDatos;
             ImporteControl.TextChanged += CompararDatos;
+
+            // Un "twich"...
+            ManualCheckbox.CheckedChanged += (s, e) => ImporteControl.Enabled = ManualCheckbox.Checked;
         }
 
         private void ConfigurarFormulario()
@@ -146,7 +142,7 @@ namespace GUI
         {
             if (estado == EstadoFormulario.Normal)
             {
-                Tool.LimpiarFormularioVehiculo(Controls);
+                Tool.LimpiarFormularioRenta(Controls);
                 estado = EstadoFormulario.Alta;
                 ConfigurarFormulario();
                 Tool.MostrarInformacion("Complete los campos y luego pulse Guardar");
@@ -157,6 +153,7 @@ namespace GUI
                 else if (estado == EstadoFormulario.Modificacion) Modificar(this, e);
             }
         }
+
 
         private void BotonCancelar(object sender, EventArgs e)
         {
@@ -169,43 +166,60 @@ namespace GUI
             }
         }
 
+
         private void BotonCalcular(object sender, EventArgs e)
         {
-            // Obtengo el objeto renta
-            Renta renta = (Renta)ListadoDgv.SelectedRows[0].DataBoundItem;
+            Vehiculo vehiculo;
 
-            // Obtengo el objeto vehiculo de esa renta
-            Vehiculo vehiculo = renta.Vehiculo;
-            
-            // Calculo el importe de la renta según el tipo de vehículo
-            switch (vehiculo.Tipo)
+            /*** Si es un alta, va a estar vacío... ***/
+            if (ListadoDgv.Rows.Count != 0) 
             {
-                case VehiculoTipo.Automovil:
-                    AutomovilBLL automovilBLL = new AutomovilBLL();
-                    ImporteControl.Importe = automovilBLL.CalcularRenta((Automovil)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
-                    break;
-                case VehiculoTipo.Camion:
-                    CamionBLL camionBLL = new CamionBLL();
-                    ImporteControl.Importe = camionBLL.CalcularRenta((Camion)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
-                    break;
-                case VehiculoTipo.Camioneta:
-                    CamionetaBLL camionetaBLL = new CamionetaBLL();
-                    ImporteControl.Importe = camionetaBLL.CalcularRenta((Camioneta)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
-                    break;
-                case VehiculoTipo.Suv:
-                    SuvBLL suvBLL = new SuvBLL();
-                    ImporteControl.Importe = suvBLL.CalcularRenta((Suv)renta.Vehiculo, renta.DiasRentados).ToString("0.00");
-                    break;
-                default:
-                    break;
+                // Obtengo el objeto renta
+                Renta renta = (Renta)ListadoDgv.SelectedRows[0].DataBoundItem;
+
+                // Obtengo el objeto vehiculo de esa renta
+                vehiculo = renta.Vehiculo;
+            }
+            /*** ...así que lo obtengo de vehículos ***/
+            else vehiculo = (Vehiculo)VehiculosDgv.SelectedRows[0].DataBoundItem;
+
+            // Calculo el importe de la renta según el tipo de vehículo
+            if (vehiculo is Automovil automovil)
+            {
+                ImporteControl.Importe = 
+                    new AutomovilBLL()
+                    .CalcularRenta(automovil, (int)DiasRentadosNumeric.Value)
+                    .ToString("0.00");
+            }
+            else if (vehiculo is Camion camion)
+            {
+                ImporteControl.Importe =
+                    new CamionBLL()
+                    .CalcularRenta(camion, (int)DiasRentadosNumeric.Value)
+                    .ToString("0.00");
+            }
+            else if (vehiculo is Camioneta camioneta)
+            {
+                ImporteControl.Importe = 
+                    new CamionetaBLL()
+                    .CalcularRenta(camioneta, (int)DiasRentadosNumeric.Value)
+                    .ToString("0.00");
+            }
+            else if (vehiculo is Suv suv)
+            {
+                ImporteControl.Importe = 
+                    new SuvBLL()
+                    .CalcularRenta(suv, (int)DiasRentadosNumeric.Value)
+                    .ToString("0.00");
             }
 
-            ImporteControl.Update();  // Forzar la actualización inmediata del control
+            // Forzar la actualización inmediata del control
+            ImporteControl.Update();
+
+            // Comprobar si el formulario necesita cambiar de estado (modificación)
             CompararDatos(this, e);
         }
 
         #endregion
-
-
     }
 }
