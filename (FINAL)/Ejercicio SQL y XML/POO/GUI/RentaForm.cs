@@ -15,6 +15,7 @@ namespace GUI
         private EstadoFormulario estado = EstadoFormulario.Normal;
         public RentaForm() => InitializeComponent();
 
+
         private void RentaForm_Load(object sender, EventArgs e)
         {
             InicializarEventHandlers();
@@ -22,6 +23,7 @@ namespace GUI
             VehiculosDgv.DataSource = new VehiculoBLL().Consultar();
             Consultar();
         }
+
 
         private void InicializarEventHandlers()
         {
@@ -36,7 +38,7 @@ namespace GUI
             ClientesDgv.RowEnter += MostarCliente;
             VehiculosDgv.RowEnter += MostarVehiculo;
 
-            // Controles
+            // Controles fundamentales (en los que se basa el estado del formulario)
             CodigoClienteTextbox.TextChanged += CompararDatos;
             CodigoVehiculoTextbox.TextChanged += CompararDatos;
             DiasRentadosNumeric.ValueChanged += CompararDatos;
@@ -46,12 +48,16 @@ namespace GUI
             ManualCheckbox.CheckedChanged += (s, e) => ImporteControl.Enabled = ManualCheckbox.Checked;
         }
 
+
         private void ConfigurarFormulario()
         {
-            bool validado = ImporteControl.Validar();
+            bool cliente = CodigoClienteTextbox.Text != string.Empty;
+            bool vehiculo = CodigoVehiculoTextbox.Text != string.Empty;
+            bool importe = ImporteControl.Validar();
+
+            bool validado = cliente && vehiculo && importe;
             Tool.ConfigurarBotones(this, estado, validado);
         }
-
 
         #region ||*----------------------------------------------------> EVENTOS
 
@@ -69,6 +75,7 @@ namespace GUI
                 MostarVehiculo(sender, e);
             }
         }
+
 
         private void MostarCliente(object sender, DataGridViewCellEventArgs e)
         {
@@ -93,6 +100,7 @@ namespace GUI
             FechaNacimientoDtp.Value = cliente.FechaNacimiento;
             EmailControl.Email = cliente.Email;
         }
+
 
         private void MostarVehiculo(object sender, DataGridViewCellEventArgs e)
         {
@@ -169,24 +177,15 @@ namespace GUI
 
         private void BotonCalcular(object sender, EventArgs e)
         {
-            Vehiculo vehiculo;
+            List<Vehiculo> vehiculos = new VehiculoBLL().Consultar();
 
-            /*** Si es un alta, va a estar vacío... ***/
-            if (ListadoDgv.Rows.Count != 0) 
-            {
-                // Obtengo el objeto renta
-                Renta renta = (Renta)ListadoDgv.SelectedRows[0].DataBoundItem;
-
-                // Obtengo el objeto vehiculo de esa renta
-                vehiculo = renta.Vehiculo;
-            }
-            /*** ...así que lo obtengo de vehículos ***/
-            else vehiculo = (Vehiculo)VehiculosDgv.SelectedRows[0].DataBoundItem;
+            // Solo puedo confiar en el vehículo del TextBox (en ninguno de los DataGridView)
+            Vehiculo vehiculo = vehiculos.Find(x => x.Codigo == int.Parse(CodigoVehiculoTextbox.Text));
 
             // Calculo el importe de la renta según el tipo de vehículo
             if (vehiculo is Automovil automovil)
             {
-                ImporteControl.Importe = 
+                ImporteControl.Importe =
                     new AutomovilBLL()
                     .CalcularRenta(automovil, (int)DiasRentadosNumeric.Value)
                     .ToString("0.00");
@@ -200,20 +199,20 @@ namespace GUI
             }
             else if (vehiculo is Camioneta camioneta)
             {
-                ImporteControl.Importe = 
+                ImporteControl.Importe =
                     new CamionetaBLL()
                     .CalcularRenta(camioneta, (int)DiasRentadosNumeric.Value)
                     .ToString("0.00");
             }
             else if (vehiculo is Suv suv)
             {
-                ImporteControl.Importe = 
+                ImporteControl.Importe =
                     new SuvBLL()
                     .CalcularRenta(suv, (int)DiasRentadosNumeric.Value)
                     .ToString("0.00");
             }
 
-            // Forzar la actualización inmediata del control
+            // Forzar la actualización del control (o CompararDatos fallará)
             ImporteControl.Update();
 
             // Comprobar si el formulario necesita cambiar de estado (modificación)

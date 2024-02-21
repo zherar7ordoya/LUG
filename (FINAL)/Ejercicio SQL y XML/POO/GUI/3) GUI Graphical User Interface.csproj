@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Base\Icons8-Ios7-Transport-Driver.ico</ApplicationIcon>
+    <ApplicationIcon>Base\Transport Driver %28Icons8%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\AcercaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\AcercaForm.Designer.cs">
+      <DependentUpon>AcercaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\ApellidoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="VehiculoForm.Designer.cs">
       <DependentUpon>VehiculoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Base\AcercaForm.resx">
+      <DependentUpon>AcercaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cliente\ApellidoControl.resx">
       <DependentUpon>ApellidoControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,7 +232,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Base\Icons8-Ios7-Transport-Driver.ico" />
+    <Content Include="Base\Transport Driver %28Icons8%29.ico" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

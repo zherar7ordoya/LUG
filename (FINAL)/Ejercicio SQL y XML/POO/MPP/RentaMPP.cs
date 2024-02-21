@@ -49,15 +49,20 @@ namespace MPP
 
                 if (objeto.Cliente != null)
                 {
-                    parametros.Add("@Cliente", objeto.Cliente.Codigo);
+                    parametros.Add("@Codigo_Cliente", objeto.Cliente.Codigo);
                 }
 
                 if (objeto.Vehiculo != null)
                 {
-                    parametros.Add("@Vehiculo", objeto.Vehiculo.Codigo);
+                    parametros.Add("@Codigo_Vehiculo", objeto.Vehiculo.Codigo);
                 }
 
-                if (objeto.Importe > 0)
+                if (objeto.DiasRentados > 0) // Dias rentados no puede ser negativo ni cero
+                {
+                    parametros.Add("@DiasRentados", objeto.DiasRentados);
+                }
+
+                if (objeto.Importe > 0) // Importe no puede ser negativo, puede ser cero
                 {
                     parametros.Add("@Importe", objeto.Importe);
                 }

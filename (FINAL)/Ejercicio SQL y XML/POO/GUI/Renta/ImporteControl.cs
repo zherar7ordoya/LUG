@@ -12,7 +12,6 @@ namespace GUI
             set { ImporteTextbox.Text = value; }
         }
 
-
         public ImporteControl()
         {
             InitializeComponent();
@@ -30,14 +29,36 @@ namespace GUI
             string regex = @"^\d+([\.,]\d{1,2})?$";
             bool valido = Regex.IsMatch(ImporteTextbox.Text, regex);
 
-            if (valido) ImporteError.SetError(ImporteTextbox, null);
+            if (valido)
+            {
+                decimal valor;
+
+                if (decimal.TryParse(ImporteTextbox.Text, out valor))
+                {
+                    if (valor > 0)
+                    {
+                        ImporteError.SetError(ImporteTextbox, null);
+                        return true;
+                    }
+                    else
+                    {
+                        ImporteError.SetError(ImporteTextbox, "El valor debe ser mayor a cero.");
+                        return false;
+                    }
+                }
+                else
+                {
+                    ImporteError.SetError(ImporteTextbox, "Formato numérico no válido.");
+                    return false;
+                }
+            }
             else
             {
                 ImporteError.SetError(
                     ImporteTextbox,
                     "Formato esperado: Número entero o decimal con dos decimales");
+                return false;
             }
-            return valido;
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using BEL;
 
+using BLL;
+
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GUI
@@ -128,7 +131,7 @@ namespace GUI
                     if (dgv.Columns.Contains("Baja"))
                     {
                         dgv.DataSource = null;
-                        dgv.Columns.Remove("Baja"); 
+                        dgv.Columns.Remove("Baja");
                     }
                 }
 
@@ -136,17 +139,22 @@ namespace GUI
                 {
                     foreach (Control ctrl in panel.Controls)
                     {
-                        // Panel de Cliente
+                        // Comunes a todos los paneles
                         if (ctrl is TextBox) ctrl.Text = "";
+                        if (ctrl is DateTimePicker) ctrl.Text = DateTime.Now.ToString();
+                        if (ctrl is NumericUpDown) ((NumericUpDown)ctrl).Value = 1;
+                        if (ctrl is ComboBox) ctrl.Text = "";
+
+                        // Panel de Renta
+                        if (ctrl is ImporteControl) ((ImporteControl)ctrl).Importe = "0";
+
+                        // Panel de Cliente
                         if (ctrl is NombreControl) ((NombreControl)ctrl).Nombre = "";
                         if (ctrl is ApellidoControl) ((ApellidoControl)ctrl).Apellido = "";
                         if (ctrl is DniControl) ((DniControl)ctrl).Dni = "";
-                        if (ctrl is DateTimePicker) ctrl.Text = DateTime.Now.ToString();
                         if (ctrl is EmailControl) ((EmailControl)ctrl).Email = "";
 
                         // Panel de Vehículo
-                        if (ctrl is TextBox) ctrl.Text = "";
-                        if (ctrl is ComboBox) ctrl.Text = "Automovil";
                         if (ctrl is MarcaControl) ((MarcaControl)ctrl).Marca = "";
                         if (ctrl is ModeloControl) ((ModeloControl)ctrl).Modelo = "";
                         if (ctrl is PatenteControl) ((PatenteControl)ctrl).Patente = "";
@@ -160,13 +168,29 @@ namespace GUI
         {
             Renta renta = new Renta();
 
-            //if (string.IsNullOrEmpty(formulario.CodigoTextbox.Text)) renta.Codigo = 0;
-            //else renta.Codigo = int.Parse(formulario.CodigoTextbox.Text);
-            //renta.Tipo = (VehiculoTipo)formulario.TipoCombobox.SelectedValue;
-            //renta.Marca = formulario.MarcaControl.Marca;
-            //renta.Modelo = formulario.ModeloControl.Modelo;
-            //renta.Patente = formulario.PatenteControl.Patente;
+            // Código: si es un alta, el código es 0
+            if (string.IsNullOrEmpty(formulario.CodigoRentaTextbox.Text)) renta.Codigo = 0;
+            else renta.Codigo = int.Parse(formulario.CodigoRentaTextbox.Text);
 
+            // Ahora, la propiedad Cliente
+            List<Cliente> clientes = new ClienteBLL().Consultar();
+            renta.Cliente =
+                clientes
+                .Find(x => formulario.CodigoClienteTextbox.Text == x.Codigo.ToString());
+
+            // Ahora, la propiedad Vehículo
+            List<Vehiculo> vehiculos = new VehiculoBLL().Consultar();
+            renta.Vehiculo =
+                vehiculos
+                .Find(x => formulario.CodigoVehiculoTextbox.Text == x.Codigo.ToString());
+
+            // Los días rentados (que no puede ser 0:solucionado con el control Numeric)
+            renta.DiasRentados = (int)formulario.DiasRentadosNumeric.Value;
+
+            // El importe (que no puede ser 0: solucionado con la validación)
+            renta.Importe = decimal.Parse(formulario.ImporteControl.Importe);
+
+            // Listo
             return renta;
         }
 
