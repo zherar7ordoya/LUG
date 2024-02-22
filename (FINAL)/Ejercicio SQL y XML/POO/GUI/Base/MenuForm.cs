@@ -27,7 +27,7 @@ namespace GUI
         private void MenuCliente(object sender, EventArgs e)
         {
             ClienteForm formulario = new ClienteForm();
-            formulario.ShowDialog();
+            formulario.ShowDialog(); // Singleton, ¡chupáte esta mandarina!
         }
         private void MenuRenta(object sender, EventArgs e)
         {

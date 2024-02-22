@@ -107,39 +107,39 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.Size = new System.Drawing.Size(57, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 18);
+            this.label3.Size = new System.Drawing.Size(57, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Marca";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 18);
+            this.label4.Size = new System.Drawing.Size(57, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Modelo";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 18);
+            this.label5.Size = new System.Drawing.Size(57, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Patente";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // CodigoTextbox
             // 
@@ -154,7 +154,7 @@
             this.MarcaControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarcaControl.Location = new System.Drawing.Point(67, 80);
             this.MarcaControl.Marca = "";
-            this.MarcaControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MarcaControl.Margin = new System.Windows.Forms.Padding(4);
             this.MarcaControl.Name = "MarcaControl";
             this.MarcaControl.Size = new System.Drawing.Size(120, 29);
             this.MarcaControl.TabIndex = 7;
@@ -163,7 +163,7 @@
             // 
             this.ModeloControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModeloControl.Location = new System.Drawing.Point(67, 118);
-            this.ModeloControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModeloControl.Margin = new System.Windows.Forms.Padding(4);
             this.ModeloControl.Modelo = "";
             this.ModeloControl.Name = "ModeloControl";
             this.ModeloControl.Size = new System.Drawing.Size(120, 29);
@@ -171,18 +171,18 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 18);
+            this.label2.Size = new System.Drawing.Size(57, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tipo";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // PatenteControl
             // 
             this.PatenteControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatenteControl.Location = new System.Drawing.Point(67, 156);
-            this.PatenteControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PatenteControl.Margin = new System.Windows.Forms.Padding(4);
             this.PatenteControl.Name = "PatenteControl";
             this.PatenteControl.Patente = "";
             this.PatenteControl.Size = new System.Drawing.Size(120, 31);

@@ -135,6 +135,8 @@ namespace GUI
             this.Controls.Add(this.MenuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStrip;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
             this.Name = "MenuForm";
             this.Text = "Agencia de Transporte";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

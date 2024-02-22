@@ -82,13 +82,13 @@ namespace MPP
         {
             try
             {
-                // A "Código" siempre lo voy a necesitar
+                // A "Código" siempre lo voy a necesitar...
                 Dictionary<string, object> parametros = new Dictionary<string, object>
                 {
                     { "@Codigo", objeto.Codigo }
                 };
 
-                // Pero el resto de los campos son opcionales (caso "Borrar")
+                // ...pero el resto de los campos son opcionales (caso "Borrar")
                 if (!string.IsNullOrEmpty(objeto.Nombre))
                 {
                     parametros.Add("@Nombre", objeto.Nombre);

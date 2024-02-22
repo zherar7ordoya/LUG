@@ -1,0 +1,12 @@
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\Entidades\bin\Debug\Entidades.dll
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\Entidades\bin\Debug\Entidades.pdb
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\Entidades\obj\Debug\Entidades.dll
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\Entidades\bin\Debug\Entidades.dll
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\Entidades\obj\Debug\Entidades.dll
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\Entidades\obj\Debug\Entidades.pdb

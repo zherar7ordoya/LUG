@@ -19,10 +19,7 @@ namespace BLL
 
         public bool Borrar(Vehiculo objeto)
         {
-            if (Tool.SinAsignar(objeto))
-            {
-                return new VehiculoPML().Borrar(objeto);
-            }
+            if (Tool.VehiculoSinAsignar(objeto)) return new VehiculoPML().Borrar(objeto);
             return false;
         }
 

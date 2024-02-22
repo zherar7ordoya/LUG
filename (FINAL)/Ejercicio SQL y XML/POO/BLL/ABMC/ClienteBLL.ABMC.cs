@@ -23,7 +23,8 @@ namespace BLL
 
         public bool Borrar(Cliente objeto)
         {
-            return new ClientePML().Borrar(objeto);
+            if (Tool.ClienteSinAsignar(objeto)) return new ClientePML().Borrar(objeto);
+            return false;
         }
 
         public bool Modificar(Cliente objeto)

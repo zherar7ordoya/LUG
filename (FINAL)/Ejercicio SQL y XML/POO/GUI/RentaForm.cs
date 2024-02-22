@@ -47,7 +47,7 @@ namespace GUI
             // Controles fundamentales (en los que se basa el estado del formulario)
             CodigoClienteTextbox.TextChanged += CompararDatos;
             CodigoVehiculoTextbox.TextChanged += CompararDatos;
-            DiasRentadosNumeric.ValueChanged += CompararDatos;
+            DiasRentadosNumeric.ValueChanged += BotonCalcular; // El recálculo llamará a CompararDatos
             ImporteControl.TextChanged += CompararDatos;
 
             // Un "twich"...

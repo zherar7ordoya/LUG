@@ -101,7 +101,7 @@ namespace MPP
                     parametros.Add("@DiasRentados", objeto.DiasRentados);
                 }
 
-                if (objeto.Importe > 0) // Importe no puede ser negativo, puede ser cero
+                if (objeto.Importe > 0) // Importe no puede ser negativo ni cero
                 {
                     parametros.Add("@Importe", objeto.Importe);
                 }

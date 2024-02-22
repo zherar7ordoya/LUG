@@ -54,8 +54,8 @@
             // 
             this.DetallePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DetallePanel.ColumnCount = 2;
-            this.DetallePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.DetallePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.DetallePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.DetallePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.DetallePanel.Controls.Add(this.label1, 0, 0);
             this.DetallePanel.Controls.Add(this.label2, 0, 1);
             this.DetallePanel.Controls.Add(this.label3, 0, 2);
@@ -69,7 +69,7 @@
             this.DetallePanel.Controls.Add(this.DniControl, 1, 3);
             this.DetallePanel.Controls.Add(this.EmailControl, 1, 5);
             this.DetallePanel.Location = new System.Drawing.Point(713, 12);
-            this.DetallePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DetallePanel.Margin = new System.Windows.Forms.Padding(4);
             this.DetallePanel.Name = "DetallePanel";
             this.DetallePanel.RowCount = 6;
             this.DetallePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -83,69 +83,69 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(4, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 18);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 68);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 18);
+            this.label3.Size = new System.Drawing.Size(75, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellido";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(4, 102);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 18);
+            this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "DNI";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(4, 136);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.Size = new System.Drawing.Size(75, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "F. Nac.";
+            this.label5.Text = "Fec. Nac.";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(4, 170);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 18);
+            this.label6.Size = new System.Drawing.Size(75, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "E-mail";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // CodigoTextbox
             // 
             this.CodigoTextbox.Enabled = false;
-            this.CodigoTextbox.Location = new System.Drawing.Point(76, 4);
-            this.CodigoTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CodigoTextbox.Location = new System.Drawing.Point(90, 4);
+            this.CodigoTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.CodigoTextbox.Name = "CodigoTextbox";
             this.CodigoTextbox.Size = new System.Drawing.Size(54, 25);
             this.CodigoTextbox.TabIndex = 1;
@@ -153,8 +153,8 @@
             // FechaNacimientoDtp
             // 
             this.FechaNacimientoDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaNacimientoDtp.Location = new System.Drawing.Point(76, 140);
-            this.FechaNacimientoDtp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FechaNacimientoDtp.Location = new System.Drawing.Point(90, 140);
+            this.FechaNacimientoDtp.Margin = new System.Windows.Forms.Padding(4);
             this.FechaNacimientoDtp.Name = "FechaNacimientoDtp";
             this.FechaNacimientoDtp.Size = new System.Drawing.Size(100, 25);
             this.FechaNacimientoDtp.TabIndex = 5;
@@ -162,41 +162,41 @@
             // NombreControl
             // 
             this.NombreControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreControl.Location = new System.Drawing.Point(74, 36);
+            this.NombreControl.Location = new System.Drawing.Point(88, 36);
             this.NombreControl.Margin = new System.Windows.Forms.Padding(2);
             this.NombreControl.Name = "NombreControl";
             this.NombreControl.Nombre = "";
-            this.NombreControl.Size = new System.Drawing.Size(141, 30);
+            this.NombreControl.Size = new System.Drawing.Size(127, 30);
             this.NombreControl.TabIndex = 2;
             // 
             // ApellidoControl
             // 
             this.ApellidoControl.Apellido = "";
             this.ApellidoControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApellidoControl.Location = new System.Drawing.Point(74, 70);
+            this.ApellidoControl.Location = new System.Drawing.Point(88, 70);
             this.ApellidoControl.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoControl.Name = "ApellidoControl";
-            this.ApellidoControl.Size = new System.Drawing.Size(141, 30);
+            this.ApellidoControl.Size = new System.Drawing.Size(127, 30);
             this.ApellidoControl.TabIndex = 3;
             // 
             // DniControl
             // 
             this.DniControl.Dni = "";
             this.DniControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DniControl.Location = new System.Drawing.Point(74, 104);
+            this.DniControl.Location = new System.Drawing.Point(88, 104);
             this.DniControl.Margin = new System.Windows.Forms.Padding(2);
             this.DniControl.Name = "DniControl";
-            this.DniControl.Size = new System.Drawing.Size(139, 30);
+            this.DniControl.Size = new System.Drawing.Size(127, 30);
             this.DniControl.TabIndex = 4;
             // 
             // EmailControl
             // 
             this.EmailControl.Email = "";
             this.EmailControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailControl.Location = new System.Drawing.Point(74, 172);
+            this.EmailControl.Location = new System.Drawing.Point(88, 172);
             this.EmailControl.Margin = new System.Windows.Forms.Padding(2);
             this.EmailControl.Name = "EmailControl";
-            this.EmailControl.Size = new System.Drawing.Size(141, 30);
+            this.EmailControl.Size = new System.Drawing.Size(127, 30);
             this.EmailControl.TabIndex = 6;
             // 
             // GuardarButton

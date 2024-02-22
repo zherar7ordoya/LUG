@@ -27,6 +27,8 @@ namespace BLL
             }
             return true;
         }
+
+
         private int CalcularEdad(DateTime fechaNacimiento)
         {
             int edad = DateTime.Now.Year - fechaNacimiento.Year;

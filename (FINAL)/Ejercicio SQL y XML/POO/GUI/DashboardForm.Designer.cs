@@ -61,13 +61,14 @@
             this.VehiculosMasRentadosPorTipoChart.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             this.VehiculosMasRentadosPorTipoChart.Legends.Add(legend6);
-            this.VehiculosMasRentadosPorTipoChart.Location = new System.Drawing.Point(12, 12);
+            this.VehiculosMasRentadosPorTipoChart.Location = new System.Drawing.Point(12, 11);
+            this.VehiculosMasRentadosPorTipoChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMasRentadosPorTipoChart.Name = "VehiculosMasRentadosPorTipoChart";
             series6.ChartArea = "ChartArea1";
             series6.Legend = "Legend1";
             series6.Name = "Series1";
             this.VehiculosMasRentadosPorTipoChart.Series.Add(series6);
-            this.VehiculosMasRentadosPorTipoChart.Size = new System.Drawing.Size(300, 300);
+            this.VehiculosMasRentadosPorTipoChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMasRentadosPorTipoChart.TabIndex = 0;
             this.VehiculosMasRentadosPorTipoChart.Text = "chart1";
             // 
@@ -77,13 +78,14 @@
             this.VehiculosMasRentadosPorImporteChart.ChartAreas.Add(chartArea7);
             legend7.Name = "Legend1";
             this.VehiculosMasRentadosPorImporteChart.Legends.Add(legend7);
-            this.VehiculosMasRentadosPorImporteChart.Location = new System.Drawing.Point(318, 12);
+            this.VehiculosMasRentadosPorImporteChart.Location = new System.Drawing.Point(268, 11);
+            this.VehiculosMasRentadosPorImporteChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMasRentadosPorImporteChart.Name = "VehiculosMasRentadosPorImporteChart";
             series7.ChartArea = "ChartArea1";
             series7.Legend = "Legend1";
             series7.Name = "Series1";
             this.VehiculosMasRentadosPorImporteChart.Series.Add(series7);
-            this.VehiculosMasRentadosPorImporteChart.Size = new System.Drawing.Size(300, 300);
+            this.VehiculosMasRentadosPorImporteChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMasRentadosPorImporteChart.TabIndex = 1;
             this.VehiculosMasRentadosPorImporteChart.Text = "chart2";
             // 
@@ -93,13 +95,14 @@
             this.VehiculosMenosRentadosPorTipoChart.ChartAreas.Add(chartArea8);
             legend8.Name = "Legend1";
             this.VehiculosMenosRentadosPorTipoChart.Legends.Add(legend8);
-            this.VehiculosMenosRentadosPorTipoChart.Location = new System.Drawing.Point(12, 318);
+            this.VehiculosMenosRentadosPorTipoChart.Location = new System.Drawing.Point(12, 265);
+            this.VehiculosMenosRentadosPorTipoChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMenosRentadosPorTipoChart.Name = "VehiculosMenosRentadosPorTipoChart";
             series8.ChartArea = "ChartArea1";
             series8.Legend = "Legend1";
             series8.Name = "Series1";
             this.VehiculosMenosRentadosPorTipoChart.Series.Add(series8);
-            this.VehiculosMenosRentadosPorTipoChart.Size = new System.Drawing.Size(300, 300);
+            this.VehiculosMenosRentadosPorTipoChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMenosRentadosPorTipoChart.TabIndex = 2;
             this.VehiculosMenosRentadosPorTipoChart.Text = "chart3";
             // 
@@ -109,13 +112,14 @@
             this.VehiculosMenosRentadosPorImporteChart.ChartAreas.Add(chartArea9);
             legend9.Name = "Legend1";
             this.VehiculosMenosRentadosPorImporteChart.Legends.Add(legend9);
-            this.VehiculosMenosRentadosPorImporteChart.Location = new System.Drawing.Point(318, 318);
+            this.VehiculosMenosRentadosPorImporteChart.Location = new System.Drawing.Point(268, 265);
+            this.VehiculosMenosRentadosPorImporteChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMenosRentadosPorImporteChart.Name = "VehiculosMenosRentadosPorImporteChart";
             series9.ChartArea = "ChartArea1";
             series9.Legend = "Legend1";
             series9.Name = "Series1";
             this.VehiculosMenosRentadosPorImporteChart.Series.Add(series9);
-            this.VehiculosMenosRentadosPorImporteChart.Size = new System.Drawing.Size(300, 300);
+            this.VehiculosMenosRentadosPorImporteChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMenosRentadosPorImporteChart.TabIndex = 3;
             this.VehiculosMenosRentadosPorImporteChart.Text = "chart4";
             // 
@@ -125,26 +129,28 @@
             this.TotalRecaudadoPorTipoChart.ChartAreas.Add(chartArea10);
             legend10.Name = "Legend1";
             this.TotalRecaudadoPorTipoChart.Legends.Add(legend10);
-            this.TotalRecaudadoPorTipoChart.Location = new System.Drawing.Point(624, 12);
+            this.TotalRecaudadoPorTipoChart.Location = new System.Drawing.Point(524, 11);
+            this.TotalRecaudadoPorTipoChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalRecaudadoPorTipoChart.Name = "TotalRecaudadoPorTipoChart";
             series10.ChartArea = "ChartArea1";
             series10.Legend = "Legend1";
             series10.Name = "Series1";
             this.TotalRecaudadoPorTipoChart.Series.Add(series10);
-            this.TotalRecaudadoPorTipoChart.Size = new System.Drawing.Size(450, 606);
+            this.TotalRecaudadoPorTipoChart.Size = new System.Drawing.Size(506, 504);
             this.TotalRecaudadoPorTipoChart.TabIndex = 4;
             this.TotalRecaudadoPorTipoChart.Text = "chart5";
             // 
             // DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 645);
+            this.ClientSize = new System.Drawing.Size(1034, 536);
             this.Controls.Add(this.TotalRecaudadoPorTipoChart);
             this.Controls.Add(this.VehiculosMenosRentadosPorImporteChart);
             this.Controls.Add(this.VehiculosMenosRentadosPorTipoChart);
             this.Controls.Add(this.VehiculosMasRentadosPorImporteChart);
             this.Controls.Add(this.VehiculosMasRentadosPorTipoChart);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
             this.Load += new System.EventHandler(this.DashboardForm_Load);
