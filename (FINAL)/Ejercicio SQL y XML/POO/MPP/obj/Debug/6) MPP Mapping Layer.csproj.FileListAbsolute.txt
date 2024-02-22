@@ -22,7 +22,7 @@ D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\bin\Debug\DAL.pdb
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\6) MPP Mapping Layer.csproj.AssemblyReference.cache
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\6) MPP Mapping Layer.csproj.CoreCompileInputs.cache
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\6) MPP Mapping Layer.csproj.CopyComplete
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\MPP.dll
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\MPP.pdb
 U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\6) MPP M.DDDBBAC8.Up2Date
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\MPP\obj\Debug\6) MPP M.DDDBBAC8.Up2Date

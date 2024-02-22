@@ -32,7 +32,9 @@ namespace GUI
             ListadoDgv.RowEnter += SincronizarControles;
             ListadoDgv.CellClick += Borrar;
 
-            // Controles de usuario
+            // Estos eventos son críticos para el funcionamiento del formulario,
+            // y se resumen en: todo aquello que el usuario pueda ingresar o modificar
+            TipoCombobox.TextChanged += CompararDatos;
             MarcaControl.TextChanged += CompararDatos;
             ModeloControl.TextChanged += CompararDatos;
             PatenteControl.TextChanged += CompararDatos;

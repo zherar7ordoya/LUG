@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\vehiculoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|solutionrelative:gui\\vehiculoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\vehiculoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|solutionrelative:gui\\vehiculoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\rentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|solutionrelative:gui\\rentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\rentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|solutionrelative:gui\\rentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|solutionrelative:gui\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\3) GUI Graphical User Interface.csproj|solutionrelative:gui\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 166,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RentaForm.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\RentaForm.cs",
+              "RelativeDocumentMoniker": "GUI\\RentaForm.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\RentaForm.cs",
+              "RelativeToolTip": "GUI\\RentaForm.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:35:25.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RentaForm.cs [Design]",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\RentaForm.cs",
+              "RelativeDocumentMoniker": "GUI\\RentaForm.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\RentaForm.cs [Design]",
+              "RelativeToolTip": "GUI\\RentaForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:35:17.74Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClienteForm.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\ClienteForm.cs",
+              "RelativeDocumentMoniker": "GUI\\ClienteForm.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\ClienteForm.cs",
+              "RelativeToolTip": "GUI\\ClienteForm.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAywAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:33:33.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehiculoForm.cs [Design]",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\VehiculoForm.cs",
+              "RelativeDocumentMoniker": "GUI\\VehiculoForm.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\VehiculoForm.cs [Design]",
+              "RelativeToolTip": "GUI\\VehiculoForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:31:45.979Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VehiculoForm.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\VehiculoForm.cs",
+              "RelativeDocumentMoniker": "GUI\\VehiculoForm.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\VehiculoForm.cs",
+              "RelativeToolTip": "GUI\\VehiculoForm.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:31:16.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteForm.cs [Design]",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\ClienteForm.cs",
+              "RelativeDocumentMoniker": "GUI\\ClienteForm.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\ClienteForm.cs [Design]",
+              "RelativeToolTip": "GUI\\ClienteForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:33:24.046Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
