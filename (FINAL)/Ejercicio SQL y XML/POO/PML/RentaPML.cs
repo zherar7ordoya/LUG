@@ -1,4 +1,5 @@
 ﻿using ABS;
+
 using BEL;
 
 using MPP;
@@ -6,8 +7,6 @@ using MPP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /* ************************************************************************** *\
 La "Persistence Management Layer" (Capa de Gestión de Persistencia) cumple una
@@ -27,10 +26,10 @@ namespace PML
             try
             {
                 string consulta = "RentaAgregar";
-                List<Renta> rentas = new RentaMPP().MapearDesdeSql("RentasConsultar");
+                List<Renta> rentas = new RentaMPP().MapearDesdeSql(true, "RentasConsultar");
                 int codigo = rentas.Max(c => c.Codigo) + 1;
                 objeto.Codigo = codigo;
-                return new RentaMPP().MapearHaciaSql(consulta, objeto);
+                return new RentaMPP().MapearHaciaSql(true, consulta, objeto);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -46,7 +45,7 @@ namespace PML
                     Codigo = objeto.Codigo
                 };
                 string consulta = "RentaBorrar";
-                return new RentaMPP().MapearHaciaSql(consulta, renta);
+                return new RentaMPP().MapearHaciaSql(true, consulta, renta);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -57,7 +56,7 @@ namespace PML
             try
             {
                 string consulta = "RentaModificar";
-                return new RentaMPP().MapearHaciaSql(consulta, objeto);
+                return new RentaMPP().MapearHaciaSql(true, consulta, objeto);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -68,7 +67,7 @@ namespace PML
             try
             {
                 string consulta = "RentasConsultar";
-                return new RentaMPP().MapearDesdeSql(consulta);
+                return new RentaMPP().MapearDesdeSql(true, consulta);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }

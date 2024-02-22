@@ -27,12 +27,22 @@ namespace MPP
 {
     public class ClienteMPP : IMapeadoSql<Cliente>
     {
-        public List<Cliente> MapearDesdeSql(string consulta)
+        /// <summary>
+        /// Convierte un DataTable en una lista de objetos Cliente.
+        /// </summary>
+        /// <param name="stored">
+        /// TRUE si la consulta es un procedimiento almacenado.
+        /// FALSE si la consulta es un comando de texto.
+        /// </param>
+        /// <param name="consulta">
+        /// Nombre del procedimiento almacenado o comando de texto.
+        /// </param>
+        public List<Cliente> MapearDesdeSql(bool stored, string consulta)
         {
             try
             {
                 List<Cliente> listaClientes = new List<Cliente>();
-                DataTable tablaClientes = new ConexionSql().Leer(consulta, null);
+                DataTable tablaClientes = new ConexionSql().Leer(stored, consulta, null);
 
                 foreach (DataRow registro in tablaClientes.Rows)
                 {
@@ -55,7 +65,20 @@ namespace MPP
         }
 
 
-        public bool MapearHaciaSql(string consulta, Cliente objeto)
+        /// <summary>
+        /// Convierte un objeto Cliente en un comando SQL.
+        /// </summary>
+        /// <param name="stored">
+        /// TRUE si la consulta es un procedimiento almacenado.
+        /// FALSE si la consulta es un comando de texto.
+        /// </param>
+        /// <param name="consulta">
+        /// Nombre del procedimiento almacenado o comando de texto.
+        /// </param>
+        /// <param name="objeto">
+        /// El objeto Cliente a mapear.
+        /// </param>
+        public bool MapearHaciaSql(bool stored, string consulta, Cliente objeto)
         {
             try
             {
@@ -91,7 +114,7 @@ namespace MPP
                     parametros.Add("@Email", objeto.Email);
                 }
 
-                return new ConexionSql().Escribir(consulta, parametros);
+                return new ConexionSql().Escribir(stored, consulta, parametros);
             }
             catch (SqlException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }

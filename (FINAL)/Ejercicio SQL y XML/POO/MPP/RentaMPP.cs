@@ -27,12 +27,22 @@ namespace MPP
 {
     public class RentaMPP : IMapeadoSql<Renta>
     {
-        public List<Renta> MapearDesdeSql(string consulta)
+        /// <summary>
+        /// Convierte un DataTable en una lista de objetos Renta.
+        /// </summary>
+        /// <param name="stored">
+        /// TRUE si la consulta es un procedimiento almacenado.
+        /// FALSE si la consulta es un comando de texto.
+        /// </param>
+        /// <param name="consulta">
+        /// Nombre del procedimiento almacenado o comando de texto.
+        /// </param>
+        public List<Renta> MapearDesdeSql(bool stored, string consulta)
         {
             try
             {
                 List<Renta> listaRentas = new List<Renta>();
-                DataTable tablaRentas = new ConexionSql().Leer(consulta, null);
+                DataTable tablaRentas = new ConexionSql().Leer(stored, consulta, null);
 
                 foreach (DataRow registro in tablaRentas.Rows)
                 {
@@ -52,7 +62,22 @@ namespace MPP
             catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
-        public bool MapearHaciaSql(string consulta, Renta objeto)
+
+        /// <summary>
+        /// Convierte un objeto Renta en un diccionario de parámetros para un
+        /// procedimiento almacenado o comando de texto.
+        /// </summary>
+        /// <param name="stored">
+        /// TRUE si la consulta es un procedimiento almacenado.
+        /// FALSE si la consulta es un comando de texto.
+        /// </param>
+        /// <param name="consulta">
+        /// Nombre del procedimiento almacenado o comando de texto.
+        /// </param>
+        /// <param name="objeto">
+        /// El objeto Renta a mapear.
+        /// </param>
+        public bool MapearHaciaSql(bool stored, string consulta, Renta objeto)
         {
             try
             {
@@ -81,7 +106,7 @@ namespace MPP
                     parametros.Add("@Importe", objeto.Importe);
                 }
 
-                return new ConexionSql().Escribir(consulta, parametros);
+                return new ConexionSql().Escribir(stored, consulta, parametros);
             }
             catch (SqlException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }

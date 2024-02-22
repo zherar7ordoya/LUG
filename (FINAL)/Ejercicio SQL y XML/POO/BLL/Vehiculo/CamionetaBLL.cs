@@ -7,7 +7,7 @@ namespace BLL
         public override decimal CalcularRenta(Camioneta camioneta, int cantidadDias)
         {
             decimal costoPorTipo = 300;  // Costo base
-            decimal costoPorModelo = 0;
+            decimal costoPorModelo;
 
             switch (camioneta.Modelo)
             {
@@ -16,6 +16,9 @@ namespace BLL
                     break;
                 case "F-150":
                     costoPorModelo = 75;
+                    break;
+                default:
+                    costoPorModelo = 37.5m; // Notación literal de decimal
                     break;
             }
 

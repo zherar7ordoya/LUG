@@ -16,26 +16,26 @@ using System.Runtime.InteropServices;
 
 //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-[assembly: AssemblyTitle("La Transportadora Inc.")]
+[assembly: AssemblyTitle("La Transportadora")]
 
-[assembly: AssemblyProduct("Sistema para una agencia de transporte.")]
+[assembly: AssemblyProduct("Sistema para una agencia de transporte")]
 
 [assembly: AssemblyVersion("0.9.0.0")]
 
-[assembly: AssemblyCopyright("© 2024 Todos los derechos reservados.")]
+[assembly: AssemblyCopyright("© 2024 Todos los derechos reservados")]
 
-[assembly: AssemblyCompany("Ejercicio Integrador para LUG.")]
+[assembly: AssemblyCompany("Ejercicio Integrador para LUG")]
 
 [assembly: AssemblyDescription
 (
-"Universidad Abierta Interamericana.\r\n" +
-"Facultad de Tecnología Informática.\r\n" +
-"Carrera Analista Programador.\r\n" +
+"Universidad Abierta Interamericana\r\n" +
+"Facultad de Tecnología Informática\r\n" +
+"Carrera Analista Programador\r\n" +
 "\r\n" +
-"Cátedra:\tLenguajes de Última Generación.\r\n" +
-"Docente:\tMauricio Humberto Prinzo.\r\n" +
+"Cátedra:\tLenguajes de Última Generación\r\n" +
+"Docente:\tMauricio Humberto Prinzo\r\n" +
 "\r\n" +
-"Alumno:\tGerardo Tordoya.\r\n" +
-"Legajo:\tB00048241-T4."
+"Alumno:\tGerardo Tordoya\r\n" +
+"Legajo:\tB00048241-T4"
 )
 ]

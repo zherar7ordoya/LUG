@@ -31,15 +31,15 @@ namespace GUI
         {
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SalirMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DashboardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AcercaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RentaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.VehiculoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DashboardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SalirMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AcercaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,12 @@ namespace GUI
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // SalirMenuItem
+            // 
+            this.SalirMenuItem.Name = "SalirMenuItem";
+            this.SalirMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.SalirMenuItem.Text = "Salir";
+            // 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -72,6 +78,12 @@ namespace GUI
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
             this.verToolStripMenuItem.Size = new System.Drawing.Size(42, 24);
             this.verToolStripMenuItem.Text = "Ver";
+            // 
+            // DashboardMenuItem
+            // 
+            this.DashboardMenuItem.Name = "DashboardMenuItem";
+            this.DashboardMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.DashboardMenuItem.Text = "Dashboard";
             // 
             // entidadesToolStripMenuItem
             // 
@@ -82,20 +94,6 @@ namespace GUI
             this.entidadesToolStripMenuItem.Name = "entidadesToolStripMenuItem";
             this.entidadesToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.entidadesToolStripMenuItem.Text = "Entidades";
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AcercaMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // AcercaMenuItem
-            // 
-            this.AcercaMenuItem.Name = "AcercaMenuItem";
-            this.AcercaMenuItem.Size = new System.Drawing.Size(297, 24);
-            this.AcercaMenuItem.Text = "Acerca de Agencia de Transporte";
             // 
             // ClienteMenuItem
             // 
@@ -115,17 +113,19 @@ namespace GUI
             this.VehiculoMenuItem.Size = new System.Drawing.Size(208, 24);
             this.VehiculoMenuItem.Text = "Gestor de Vehículos";
             // 
-            // DashboardMenuItem
+            // ayudaToolStripMenuItem
             // 
-            this.DashboardMenuItem.Name = "DashboardMenuItem";
-            this.DashboardMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.DashboardMenuItem.Text = "Dashboard";
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AcercaMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
-            // SalirMenuItem
+            // AcercaMenuItem
             // 
-            this.SalirMenuItem.Name = "SalirMenuItem";
-            this.SalirMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.SalirMenuItem.Text = "Salir";
+            this.AcercaMenuItem.Name = "AcercaMenuItem";
+            this.AcercaMenuItem.Size = new System.Drawing.Size(268, 24);
+            this.AcercaMenuItem.Text = "Acerca de La Transportadora";
             // 
             // MenuForm
             // 

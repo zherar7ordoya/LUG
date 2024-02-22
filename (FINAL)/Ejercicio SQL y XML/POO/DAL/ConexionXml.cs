@@ -22,7 +22,7 @@ namespace DAL
         {
             try
             {
-                return XElement.Load(archivo);
+                return XElement.Load($"Data/{archivo}"); // Yo sé dónde está el archivo.
             }
             catch (FileNotFoundException ex) { throw new Exception(ex.Message); }
             catch (XmlException ex) { throw new Exception(ex.Message); }
@@ -33,7 +33,7 @@ namespace DAL
         {
             try
             {
-                datos.Save(archivo);
+                datos.Save($"Data/{archivo}"); // Yo sé dónde está el archivo.
                 return true;
             }
             catch (FileNotFoundException ex) { throw new Exception(ex.Message); }

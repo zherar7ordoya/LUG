@@ -9,7 +9,7 @@ namespace MPP
     {
         public static Cliente ObtenerClientePorCodigo(int codigo)
         {
-            List<Cliente> clientes = new ClienteMPP().MapearDesdeSql("ClientesConsultar");
+            List<Cliente> clientes = new ClienteMPP().MapearDesdeSql(true, "ClientesConsultar");
             return clientes.Find(cliente => cliente.Codigo == codigo);
         }
 
@@ -23,7 +23,7 @@ namespace MPP
         {
             List<Vehiculo> vehiculos = new List<Vehiculo>();
 
-            List<Renta> todos = new RentaMPP().MapearDesdeSql("RentasConsultar");
+            List<Renta> todos = new RentaMPP().MapearDesdeSql(true, "RentasConsultar");
             List<Renta> rentas = todos.FindAll(renta => renta.Cliente.Codigo == codigo);
 
             foreach (Renta renta in rentas)

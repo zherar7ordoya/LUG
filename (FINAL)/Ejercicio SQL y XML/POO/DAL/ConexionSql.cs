@@ -42,13 +42,16 @@ namespace DAL
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||| HERRAMIENTAS
 
         // Los defaults son para procedimientos almacenados y sin parámetros.
-        private void ConfigurarComando(string consulta, Dictionary<string, object> parametros = null, bool esProcedimientoAlmacenado = true)
+        private void ConfigurarComando(
+            bool stored,
+            string consulta,
+            Dictionary<string, object> parametros = null)
         {
             comando = new SqlCommand
             {
                 CommandText = consulta,
                 Connection = conexion,
-                CommandType = esProcedimientoAlmacenado ? CommandType.StoredProcedure : CommandType.Text
+                CommandType = stored ? CommandType.StoredProcedure : CommandType.Text
             };
 
             if (parametros != null)
@@ -62,14 +65,32 @@ namespace DAL
 
         // |||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS DE CLASE
 
-        public DataTable Leer(string consulta, Dictionary<string, object> parametros)
+        /// <summary>
+        /// Lectura de datos desde la base de datos.
+        /// </summary>
+        /// <param name="stored">
+        /// TRUE para procedimiento almacenado,
+        /// FALSE para consulta de texto plana
+        /// </param>
+        /// <param name="consulta">
+        /// Procedimiento almacenado: nombre del stored procedure.
+        /// Consulta de texto: literal de la consulta.
+        /// </param>
+        /// <param name="parametros">
+        /// Diccionario de parámetros para la consulta.
+        /// NULL si no hay parámetros.
+        /// </param>
+        public DataTable Leer(
+            bool stored,
+            string consulta,
+            Dictionary<string, object> parametros)
         {
             DataTable tabla = new DataTable();
             SqlDataAdapter adaptador = null;
 
             try
             {
-                ConfigurarComando(consulta, parametros);
+                ConfigurarComando(stored, consulta, parametros);
                 adaptador = new SqlDataAdapter(comando);
                 adaptador.Fill(tabla);
             }
@@ -80,13 +101,30 @@ namespace DAL
             return tabla;
         }
 
-
-        public bool Escribir(string consulta, Dictionary<string, object> parametros)
+        /// <summary>
+        /// Escritura de datos en la base de datos.
+        /// </summary>
+        /// <param name="stored">
+        /// TRUE para procedimiento almacenado,
+        /// FALSE para consulta de texto plana
+        /// </param>
+        /// <param name="consulta">
+        /// Procedimiento almacenado: nombre del stored procedure.
+        /// Consulta de texto: literal de la consulta.
+        /// </param>
+        /// <param name="parametros">
+        /// Diccionario de parámetros para la consulta.
+        /// NULL si no hay parámetros.
+        /// </param>
+        public bool Escribir(
+            bool stored,
+            string consulta,
+            Dictionary<string, object> parametros)
         {
             try
             {
                 transaccion = conexion.BeginTransaction();
-                ConfigurarComando(consulta, parametros);
+                ConfigurarComando(stored, consulta, parametros);
                 comando.Transaction = transaccion;
                 comando.ExecuteNonQuery();
                 transaccion.Commit();

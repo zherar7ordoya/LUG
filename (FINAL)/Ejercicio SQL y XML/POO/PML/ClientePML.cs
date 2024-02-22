@@ -7,8 +7,6 @@ using MPP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /* ************************************************************************** *\
 La "Persistence Management Layer" (Capa de Gestión de Persistencia) cumple una
@@ -28,10 +26,10 @@ namespace PML
             try
             {
                 string consulta = "ClienteAgregar";
-                List<Cliente> clientes = new ClienteMPP().MapearDesdeSql("ClientesConsultar");
+                List<Cliente> clientes = new ClienteMPP().MapearDesdeSql(true, "ClientesConsultar");
                 int codigo = clientes.Max(c => c.Codigo) + 1;
                 objeto.Codigo = codigo;
-                return new ClienteMPP().MapearHaciaSql(consulta, objeto);
+                return new ClienteMPP().MapearHaciaSql(true, consulta, objeto);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -47,7 +45,7 @@ namespace PML
                     Codigo = objeto.Codigo
                 };
                 string consulta = "ClienteBorrar";
-                return new ClienteMPP().MapearHaciaSql(consulta, cliente);
+                return new ClienteMPP().MapearHaciaSql(true, consulta, cliente);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -58,7 +56,7 @@ namespace PML
             try
             {
                 string consulta = "ClienteModificar";
-                return new ClienteMPP().MapearHaciaSql(consulta, objeto);
+                return new ClienteMPP().MapearHaciaSql(true, consulta, objeto);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -68,8 +66,8 @@ namespace PML
         {
             try
             {
-                List<Cliente> clientes = new ClienteMPP().MapearDesdeSql("ClientesConsultar");
-                List<Renta> rentas = new RentaMPP().MapearDesdeSql("RentasConsultar");
+                List<Cliente> clientes = new ClienteMPP().MapearDesdeSql(true, "ClientesConsultar");
+                List<Renta> rentas = new RentaMPP().MapearDesdeSql(true, "RentasConsultar");
 
                 foreach (Renta renta in rentas)
                 {
