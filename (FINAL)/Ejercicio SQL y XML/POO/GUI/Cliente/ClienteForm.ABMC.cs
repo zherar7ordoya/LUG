@@ -6,6 +6,16 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+/* ************************************************************************** *\
+
+SI HUBIERA LLEVADO ESTA CLASE A UNA CAPA CONTROLADORA, ÉSTA SERÍA SU DEFINICIÓN:
+
+La capa controladora de la vista actúa como el componente principal para
+gestionar las interacciones del usuario con la aplicación. Su función principal
+es interpretar las acciones del usuario, coordinarse con la BLL para realizar
+operaciones de manipulación de datos, y presentar resultados al usuario.
+\* ************************************************************************** */
+
 namespace GUI
 {
     /// <summary>

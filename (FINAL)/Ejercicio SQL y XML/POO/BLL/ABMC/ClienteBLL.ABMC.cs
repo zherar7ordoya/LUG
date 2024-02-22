@@ -1,8 +1,10 @@
 ﻿using ABS;
 
-using ASL;
+
 
 using BEL;
+
+using PML;
 
 using System.Collections.Generic;
 
@@ -14,28 +16,28 @@ namespace BLL
         {
             if (ValidarEdad(objeto.FechaNacimiento))
             {
-                return new ClienteASL().Agregar(objeto);
+                return new ClientePML().Agregar(objeto);
             }
             return false;
         }
 
         public bool Borrar(Cliente objeto)
         {
-            return new ClienteASL().Borrar(objeto);
+            return new ClientePML().Borrar(objeto);
         }
 
         public bool Modificar(Cliente objeto)
         {
             if (ValidarEdad(objeto.FechaNacimiento))
             {
-                return new ClienteASL().Modificar(objeto);
+                return new ClientePML().Modificar(objeto);
             }
             return false;
         }
 
         public List<Cliente> Consultar()
         {
-            return new ClienteASL().Consultar();
+            return new ClientePML().Consultar();
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

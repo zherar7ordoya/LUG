@@ -1,4 +1,4 @@
-﻿using ASL;
+﻿using PML;
 
 using BEL;
 
@@ -11,7 +11,7 @@ namespace BLL
     {
         public static bool SinAsignar(Vehiculo objeto)
         {
-            List<Renta> rentas = new RentaASL().Consultar();
+            List<Renta> rentas = new RentaPML().Consultar();
             foreach (Renta renta in rentas)
             {
                 if (renta.Vehiculo.Codigo == objeto.Codigo)

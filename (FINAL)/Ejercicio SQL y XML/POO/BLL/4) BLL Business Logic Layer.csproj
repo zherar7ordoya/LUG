@@ -61,13 +61,13 @@
       <Project>{027728cf-dcac-4026-afc4-dd9b88305f7e}</Project>
       <Name>1%29 ABS Abstraction Layer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ASL\5%29 ASL Application Services Layer.csproj">
-      <Project>{9909d29a-0efe-4620-ab73-7ca66f5d9896}</Project>
-      <Name>5%29 ASL Application Services Layer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BEL\2%29 BEL Business Entities Layer.csproj">
       <Project>{6be322e7-469a-4b4c-8cd4-d2cf04c026a5}</Project>
       <Name>2%29 BEL Business Entities Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PML\5%29 PML Persistence Management Layer.csproj">
+      <Project>{A5A5E3FC-B0E5-4D7B-8316-8BB3EC3AEC2A}</Project>
+      <Name>5%29 PML Persistence Management Layer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

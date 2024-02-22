@@ -1,8 +1,10 @@
 ﻿using ABS;
 
-using ASL;
+
 
 using BEL;
+
+using PML;
 
 using System.Collections.Generic;
 
@@ -12,22 +14,22 @@ namespace BLL
     {
         public bool Agregar(Renta objeto)
         {
-            return new RentaASL().Agregar(objeto);
+            return new RentaPML().Agregar(objeto);
         }
 
         public bool Borrar(Renta objeto)
         {
-            return new RentaASL().Borrar(objeto);
+            return new RentaPML().Borrar(objeto);
         }
 
         public bool Modificar(Renta objeto)
         {
-            return new RentaASL().Modificar(objeto);
+            return new RentaPML().Modificar(objeto);
         }
 
         public List<Renta> Consultar()
         {
-            return new RentaASL().Consultar();
+            return new RentaPML().Consultar();
         }
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

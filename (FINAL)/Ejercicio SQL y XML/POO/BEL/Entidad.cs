@@ -1,5 +1,6 @@
 ﻿using ABS;
 
+
 namespace BEL
 {
     public abstract class Entidad : IEntidad
