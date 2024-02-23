@@ -16,7 +16,8 @@ namespace GUI
             InitializeComponent();
             MarcaTextbox.Validating += Validar;
 
-            // Evento para que el control notifique al formulario que el texto ha cambiado
+            // Evento para que el control de usuario notifique al formulario que
+            // el texto ha cambiado.
             MarcaTextbox.TextChanged += (s, e) => OnTextChanged(EventArgs.Empty);
         }
 

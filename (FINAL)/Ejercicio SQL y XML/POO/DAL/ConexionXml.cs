@@ -3,19 +3,18 @@ using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 
-/* ************************************************************************** *\
-La capa de acceso a datos (DAL) tiene como responsabilidad principal gestionar
-la ubicación y persistencia de los datos, determinando "dónde" se almacenan los
-datos del sistema. Esto implica proporcionar mecanismos para interactuar con el
-repositorio de datos correspondiente, ya sea un servidor SQL o archivos XML. La
-DAL recibe la información estructurada desde la capa mapeadora y utiliza esta
-información para realizar las operaciones de almacenamiento y recuperación en el
-repositorio de datos específico, manteniendo así la separación de preocupaciones
-en cuanto a la persistencia.
-\* ************************************************************************** */
 
 namespace DAL
 {
+    /**
+     * ¿Por qué XElement y no XmlDocument?
+     * Es una situación similar a la elección entre DataTable y DataSet.
+     * XElement representa un elemento XML individual. Es adecuado cuando estás
+     * trabajando principalmente con un solo elemento dentro del documento XML.
+     * XDocument representa un documento XML completo. Útil cuando se necesita
+     * manipular la estructura completa del documento, incluyendo la declaración
+     * XML, los elementos raíz y posiblemente varios niveles de anidamiento.
+     */
     public class ConexionXml
     {
         private readonly string ruta;
@@ -30,7 +29,7 @@ namespace DAL
         {
             try
             {
-                return XElement.Load(ruta); // Yo sé dónde está el archivo.
+                return XElement.Load(ruta); //*--=> Yo sé dónde está el archivo.
             }
             catch (FileNotFoundException ex) { throw new Exception(ex.Message); }
             catch (XmlException ex) { throw new Exception(ex.Message); }
@@ -41,7 +40,7 @@ namespace DAL
         {
             try
             {
-                datos.Save(ruta); // Yo sé dónde está el archivo.
+                datos.Save(ruta);           //*--=> Yo sé dónde está el archivo.
                 return true;
             }
             catch (FileNotFoundException ex) { throw new Exception(ex.Message); }

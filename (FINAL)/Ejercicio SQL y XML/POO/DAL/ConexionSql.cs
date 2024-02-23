@@ -4,16 +4,6 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 
-/* ************************************************************************** *\
-La capa de acceso a datos (DAL) tiene como única responsabilidad la de gestionar
-la ubicación y persistencia de los datos, determinando "dónde" se almacenan los
-datos del sistema. Esto implica proporcionar mecanismos para interactuar con el
-repositorio de datos correspondiente, ya sea un servidor SQL o archivos XML. La
-DAL recibe la información estructurada desde la capa mapeadora y utiliza esta
-información para realizar las operaciones de almacenamiento y recuperación en el
-repositorio de datos específico, manteniendo así la separación de preocupaciones
-en cuanto a la persistencia.
-\* ************************************************************************** */
 
 namespace DAL
 {
@@ -21,13 +11,19 @@ namespace DAL
     //              no se me permite usar "using" (el bloque using asegura que
     //              el método Dispose se llame automáticamente cuando el bloque
     //              se completa, liberando así los recursos no administrados.
-    
-    /// <summary>
-    /// ¿Por qué DataTable y no DataSet? ...
-    /// </summary>
+
+    /**
+     * ¿Por qué DataTable y no DataSet?
+     * DataTable representa una sola tabla de datos. Es más liviano y eficiente
+     * cuando solo se necesita trabajar con una única tabla de resultados.
+     * DataSet representa un conjunto de datos que puede contener múltiples
+     * tablas, relaciones y restricciones. Es más adecuado cuando se necesita
+     * trabajar con múltiples tablas o se necesita mantener la estructura
+     * relacional entre las tablas.
+     */
     public class ConexionSql : IDisposable
     {
-        private readonly string cadena = 
+        private readonly string cadena =
             ConfigurationManager
             .ConnectionStrings["Final"]
             .ToString();

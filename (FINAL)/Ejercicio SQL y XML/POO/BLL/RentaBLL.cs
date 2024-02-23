@@ -1,17 +1,8 @@
 ﻿using BEL;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-/* ************************************************************************** *\
-La "Business Logic Layer" (BLL) es una capa fundamental en la arquitectura de
-software que se encarga de gestionar la lógica de negocio de una aplicación. Su
-función principal es coordinar y ejecutar las operaciones que van más allá de la
-manipulación básica de datos, asegurando que estas operaciones cumplan con las
-reglas y requisitos específicos del dominio de la aplicación en un sistema mixto
-de datos distribuidos.
-\* ************************************************************************** */
 
 namespace BLL
 {
@@ -23,6 +14,17 @@ namespace BLL
     /// </summary>
     public partial class RentaBLL
     {
+        // NOTA: Es inneceario validar la cantidad de días rentados pues ya está
+        //       validado por el control numérico en la interfaz de usuario.
+
+        private bool ValidarImporte(decimal importe)
+        {
+            if (importe <= 0) throw new Exception("El importe debe ser mayor a cero");
+            return true;
+        }
+
+        //*------------------------------------------------------------------*\\
+
         public Dictionary<string, int> VehiculosMasRentadosPorTipo()
         {
             List<Renta> rentados = Consultar();

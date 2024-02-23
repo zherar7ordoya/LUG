@@ -1,16 +1,13 @@
 ﻿using BLL;
-
 using System;
 using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace GUI
 {
     public partial class DashboardForm : BaseForm
     {
-        public DashboardForm()
-        {
-            InitializeComponent();
-        }
+        public DashboardForm() => InitializeComponent();
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
@@ -26,8 +23,6 @@ namespace GUI
             VehiculosMasRentadosPorTipoChart.DataSource = new RentaBLL().VehiculosMasRentadosPorTipo();
             VehiculosMasRentadosPorTipoChart.Series[0].XValueMember = "Key";
             VehiculosMasRentadosPorTipoChart.Series[0].YValueMembers = "Value";
-
-            VehiculosMasRentadosPorTipoChart.DataBind();
             VehiculosMasRentadosPorTipoChart.Series[0].IsVisibleInLegend = false;
             VehiculosMasRentadosPorTipoChart.Titles.Add("Vehículos más rentados (por tipo)");
         }
@@ -37,8 +32,6 @@ namespace GUI
             VehiculosMasRentadosPorImporteChart.DataSource = new RentaBLL().VehiculosMasRentadosPorImporte();
             VehiculosMasRentadosPorImporteChart.Series[0].XValueMember = "Key";
             VehiculosMasRentadosPorImporteChart.Series[0].YValueMembers = "Value";
-
-            VehiculosMasRentadosPorImporteChart.DataBind();
             VehiculosMasRentadosPorImporteChart.Series[0].ChartType = SeriesChartType.Pie;
             VehiculosMasRentadosPorImporteChart.Series[0].IsVisibleInLegend = false;
             VehiculosMasRentadosPorImporteChart.Titles.Add("Vehículos más rentados (por importe)");
@@ -49,8 +42,6 @@ namespace GUI
             VehiculosMenosRentadosPorTipoChart.DataSource = new RentaBLL().VehiculosMenosRentadosPorTipo();
             VehiculosMenosRentadosPorTipoChart.Series[0].XValueMember = "Key";
             VehiculosMenosRentadosPorTipoChart.Series[0].YValueMembers = "Value";
-
-            VehiculosMenosRentadosPorTipoChart.DataBind();
             VehiculosMenosRentadosPorTipoChart.Series[0].IsVisibleInLegend = false;
             VehiculosMenosRentadosPorTipoChart.Titles.Add("Vehículos menos rentados (por tipo)");
         }
@@ -60,8 +51,6 @@ namespace GUI
             VehiculosMenosRentadosPorImporteChart.DataSource = new RentaBLL().VehiculosMenosRentadosPorImporte();
             VehiculosMenosRentadosPorImporteChart.Series[0].XValueMember = "Key";
             VehiculosMenosRentadosPorImporteChart.Series[0].YValueMembers = "Value";
-
-            VehiculosMenosRentadosPorImporteChart.DataBind();
             VehiculosMenosRentadosPorImporteChart.Series[0].ChartType = SeriesChartType.Pie;
             VehiculosMenosRentadosPorImporteChart.Series[0].IsVisibleInLegend = false;
             VehiculosMenosRentadosPorImporteChart.Titles.Add("Vehículos menos rentados (por importe)");
@@ -72,8 +61,6 @@ namespace GUI
             TotalRecaudadoPorTipoChart.DataSource = new RentaBLL().TotalRecaudadoPorTipo();
             TotalRecaudadoPorTipoChart.Series[0].XValueMember = "Key";
             TotalRecaudadoPorTipoChart.Series[0].YValueMembers = "Value";
-
-            TotalRecaudadoPorTipoChart.DataBind();
             TotalRecaudadoPorTipoChart.Series[0].IsVisibleInLegend = false;
             TotalRecaudadoPorTipoChart.Titles.Add("Total Recaudado por Tipo de Vehículo");
         }
