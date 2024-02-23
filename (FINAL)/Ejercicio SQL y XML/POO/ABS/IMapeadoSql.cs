@@ -23,6 +23,7 @@ namespace ABS
         /// <returns></returns>
         List<T> MapearDesdeSql(bool stored, string consulta);
 
+
         /// <summary>
         /// Convierte un objeto T en un comando SQL.
         /// </summary>
