@@ -40,9 +40,4 @@
     <Modelo>T680</Modelo>
     <Patente>MNO345</Patente>
   </Vehiculo>
-  <Vehiculo Codigo="9" Tipo="Camion">
-    <Marca>Terminator</Marca>
-    <Modelo>T-800</Modelo>
-    <Patente>XYZ666</Patente>
-  </Vehiculo>
 </Vehiculos>
