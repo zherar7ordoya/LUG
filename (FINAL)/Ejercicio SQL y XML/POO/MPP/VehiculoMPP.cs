@@ -28,12 +28,17 @@ namespace MPP
 {
     public class VehiculoMPP : IMapeadoXml<Vehiculo>
     {
-        public List<Vehiculo> MapearDesdeXml(string archivo)
+        private readonly ConexionXml conexion;
+        public VehiculoMPP(string archivo) => conexion = new ConexionXml(archivo);
+
+        //*--------------------------------------------------------------------*
+
+        public List<Vehiculo> MapearDesdeXml()
         {
             try
             {
                 List<Vehiculo> vehiculosLista = new List<Vehiculo>();
-                XElement vehiculosXelement = new ConexionXml().Leer(archivo);
+                XElement vehiculosXelement = conexion.Leer();
 
                 foreach (XElement vehiculoXElement in vehiculosXelement.Elements("Vehiculo"))
                 {
@@ -78,7 +83,7 @@ namespace MPP
         }
 
 
-        public bool MapearHaciaXml(string archivo, List<Vehiculo> objetos)
+        public bool MapearHaciaXml(List<Vehiculo> objetos)
         {
             try
             {
@@ -92,7 +97,7 @@ namespace MPP
                         new XElement("Patente", vehiculo.Patente)
                     )
                 );
-                return new ConexionXml().Escribir(archivo, datos);
+                return conexion.Escribir(datos);
             }
             catch (XmlException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }

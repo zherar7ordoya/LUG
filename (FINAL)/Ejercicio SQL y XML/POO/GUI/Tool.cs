@@ -127,7 +127,7 @@ namespace GUI
             {
                 if (control is DataGridView dgv)
                 {
-                    // Solo al DatarGridView principal (ListadoDgv: Rentas) 
+                    // Solo al DatarGridView principal (ListadoDgv para rentas)
                     if (dgv.Columns.Contains("Baja"))
                     {
                         dgv.DataSource = null;

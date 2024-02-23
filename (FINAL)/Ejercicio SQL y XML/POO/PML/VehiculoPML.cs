@@ -21,7 +21,16 @@ namespace PML
 {
     public class VehiculoPML : IABMC<Vehiculo>
     {
-        private readonly string archivo = "Vehiculo.xml";
+        private readonly string archivo;
+        private readonly VehiculoMPP mapeador;
+
+        public VehiculoPML()
+        {
+            archivo = "Vehiculo.xml";
+            mapeador = new VehiculoMPP(archivo);
+        }
+
+        //*--------------------------------------------------------------------*
 
         public bool Agregar(Vehiculo objeto)
         {
@@ -31,7 +40,7 @@ namespace PML
                 int codigo = vehiculos.Max(c => c.Codigo) + 1;
                 objeto.Codigo = codigo;
                 vehiculos.Add(objeto);
-                return new VehiculoMPP().MapearHaciaXml(archivo, vehiculos);
+                return mapeador.MapearHaciaXml(vehiculos);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -43,7 +52,7 @@ namespace PML
             {
                 List<Vehiculo> vehiculos = Consultar();
                 vehiculos.RemoveAll(x => x.Codigo == objeto.Codigo);
-                return new VehiculoMPP().MapearHaciaXml(archivo, vehiculos);
+                return mapeador.MapearHaciaXml(vehiculos);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -63,7 +72,7 @@ namespace PML
                     vehiculo.Modelo = objeto.Modelo;
                     vehiculo.Patente = objeto.Patente;
                 }
-                return new VehiculoMPP().MapearHaciaXml(archivo, vehiculos);
+                return mapeador.MapearHaciaXml(vehiculos);
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
@@ -73,7 +82,7 @@ namespace PML
         {
             try
             {
-                return new VehiculoMPP().MapearDesdeXml(archivo);
+                return mapeador.MapearDesdeXml();
             }
             catch (InvalidOperationException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }

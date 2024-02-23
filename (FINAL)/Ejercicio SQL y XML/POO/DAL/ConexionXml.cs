@@ -18,22 +18,30 @@ namespace DAL
 {
     public class ConexionXml
     {
-        public XElement Leer(string archivo)
+        private readonly string ruta;
+        public ConexionXml(string archivo)
+        {
+            ruta = $"Data/{archivo}";
+        }
+
+        //*--------------------------------------------------------------------*
+
+        public XElement Leer()
         {
             try
             {
-                return XElement.Load($"Data/{archivo}"); // Yo sé dónde está el archivo.
+                return XElement.Load(ruta); // Yo sé dónde está el archivo.
             }
             catch (FileNotFoundException ex) { throw new Exception(ex.Message); }
             catch (XmlException ex) { throw new Exception(ex.Message); }
             catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
-        public bool Escribir(string archivo, XElement datos)
+        public bool Escribir(XElement datos)
         {
             try
             {
-                datos.Save($"Data/{archivo}"); // Yo sé dónde está el archivo.
+                datos.Save(ruta); // Yo sé dónde está el archivo.
                 return true;
             }
             catch (FileNotFoundException ex) { throw new Exception(ex.Message); }

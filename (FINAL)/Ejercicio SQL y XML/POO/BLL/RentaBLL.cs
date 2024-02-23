@@ -36,7 +36,7 @@ namespace BLL
 
 
         /**
-         * Este fue mañoso... Al ir ingresando datos se da la situación de que 
+         * Este fue mañoso... Al ir ingresando datos se vio la situación de que 
          * el diccionario no soporta valores duplicados. Pero es que un vehículo
          * puede ser rentado más de una vez...
          * Este código utiliza un bucle para recorrer las rentas y construir el
@@ -57,14 +57,11 @@ namespace BLL
                 {
                     string vehiculoKey = renta.Vehiculo.ToString();
 
-                    if (ingresos.ContainsKey(vehiculoKey))
-                    {
-                        ingresos[vehiculoKey] += renta.Importe;
-                    }
-                    else
-                    {
-                        ingresos.Add(vehiculoKey, renta.Importe);
-                    }
+                    // Vehículo existe
+                    if (ingresos.ContainsKey(vehiculoKey)) ingresos[vehiculoKey] += renta.Importe;
+
+                    // Vehículo no existe
+                    else ingresos.Add(vehiculoKey, renta.Importe);
                 }
 
                 var resultado = ingresos
@@ -94,7 +91,7 @@ namespace BLL
 
 
         /**
-         * Este fue mañoso... Al ir ingresando datos se da la situación de que 
+         * Este fue mañoso... Al ir ingresando datos se vio la situación de que 
          * el diccionario no soporta valores duplicados. Pero es que un vehículo
          * puede ser rentado más de una vez...
          * Este código utiliza un bucle para recorrer las rentas y construir el
@@ -115,14 +112,11 @@ namespace BLL
                 {
                     string vehiculoKey = renta.Vehiculo.ToString();
 
-                    if (ingresos.ContainsKey(vehiculoKey))  // Vehículo existe
-                    {
-                        ingresos[vehiculoKey] += renta.Importe;
-                    }
-                    else                                    // Vehículo no existe
-                    {
-                        ingresos.Add(vehiculoKey, renta.Importe);
-                    }
+                    // Vehículo existe
+                    if (ingresos.ContainsKey(vehiculoKey)) ingresos[vehiculoKey] += renta.Importe;
+
+                    // Vehículo no existe
+                    else ingresos.Add(vehiculoKey, renta.Importe);
                 }
 
                 var resultado = ingresos
@@ -139,9 +133,6 @@ namespace BLL
         }
 
 
-
-
-
         public Dictionary<string, decimal> TotalRecaudadoPorTipo()
         {
             List<Renta> rentados = Consultar();
@@ -151,6 +142,6 @@ namespace BLL
                 .ToDictionary(grupo => grupo.Key, grupo => grupo.Sum(x => x.Importe));
         }
 
-        // ...
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
     }
 }
