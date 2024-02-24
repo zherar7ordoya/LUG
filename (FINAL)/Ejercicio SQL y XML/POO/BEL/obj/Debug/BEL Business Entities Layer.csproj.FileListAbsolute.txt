@@ -1,9 +1,0 @@
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\BEL.dll
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\BEL.pdb
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\ABS.dll
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\bin\Debug\ABS.pdb
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL Business Entities Layer.csproj.AssemblyReference.cache
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL Business Entities Layer.csproj.CoreCompileInputs.cache
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL Busi.F60D06B9.Up2Date
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.dll
-D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\BEL\obj\Debug\BEL.pdb
