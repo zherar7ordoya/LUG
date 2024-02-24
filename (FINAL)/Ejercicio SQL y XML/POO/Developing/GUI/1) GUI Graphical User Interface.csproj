@@ -227,17 +227,17 @@
       <Project>{027728CF-DCAC-4026-AFC4-DD9B88305F7E}</Project>
       <Name>0%29 ABS Abstraction Layer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BEL\0%29 BEL Business Entities Layer.csproj">
+    <ProjectReference Include="..\BEL\0%29 BEL Business Entity Layer.csproj">
       <Project>{6be322e7-469a-4b4c-8cd4-d2cf04c026a5}</Project>
-      <Name>0%29 BEL Business Entities Layer</Name>
+      <Name>0%29 BEL Business Entity Layer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BLL\2%29 BLL Business Logic Layer.csproj">
+    <ProjectReference Include="..\BLL\3%29 BLL Business Logic Layer.csproj">
       <Project>{3fae395d-122a-4ccc-9a8a-7d66a1bd6d31}</Project>
-      <Name>2%29 BLL Business Logic Layer</Name>
+      <Name>3%29 BLL Business Logic Layer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VCL\VCL View Control Layer.csproj">
+    <ProjectReference Include="..\VCL\2%29 VCL View Control Layer.csproj">
       <Project>{68259EA6-E9C9-4758-A5E2-05C892DF2747}</Project>
-      <Name>VCL View Control Layer</Name>
+      <Name>2%29 VCL View Control Layer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

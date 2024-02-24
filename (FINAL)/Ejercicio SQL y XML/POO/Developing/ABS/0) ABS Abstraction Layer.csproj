@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IABMC.cs" />
-    <Compile Include="IDashboard.cs" />
     <Compile Include="IEntidad.cs" />
     <Compile Include="IMapeadoSql.cs" />
     <Compile Include="IMapeadoXml.cs" />

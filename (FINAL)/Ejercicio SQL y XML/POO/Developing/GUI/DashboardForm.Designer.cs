@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.VehiculosMasRentadosPorTipoChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.VehiculosMasRentadosPorImporteChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.VehiculosMenosRentadosPorTipoChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -57,85 +57,85 @@
             // 
             // VehiculosMasRentadosPorTipoChart
             // 
-            chartArea6.Name = "ChartArea1";
-            this.VehiculosMasRentadosPorTipoChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.VehiculosMasRentadosPorTipoChart.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.VehiculosMasRentadosPorTipoChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.VehiculosMasRentadosPorTipoChart.Legends.Add(legend1);
             this.VehiculosMasRentadosPorTipoChart.Location = new System.Drawing.Point(12, 11);
             this.VehiculosMasRentadosPorTipoChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMasRentadosPorTipoChart.Name = "VehiculosMasRentadosPorTipoChart";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.VehiculosMasRentadosPorTipoChart.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.VehiculosMasRentadosPorTipoChart.Series.Add(series1);
             this.VehiculosMasRentadosPorTipoChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMasRentadosPorTipoChart.TabIndex = 0;
             this.VehiculosMasRentadosPorTipoChart.Text = "chart1";
             // 
             // VehiculosMasRentadosPorImporteChart
             // 
-            chartArea7.Name = "ChartArea1";
-            this.VehiculosMasRentadosPorImporteChart.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.VehiculosMasRentadosPorImporteChart.Legends.Add(legend7);
+            chartArea2.Name = "ChartArea1";
+            this.VehiculosMasRentadosPorImporteChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.VehiculosMasRentadosPorImporteChart.Legends.Add(legend2);
             this.VehiculosMasRentadosPorImporteChart.Location = new System.Drawing.Point(268, 11);
             this.VehiculosMasRentadosPorImporteChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMasRentadosPorImporteChart.Name = "VehiculosMasRentadosPorImporteChart";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.VehiculosMasRentadosPorImporteChart.Series.Add(series7);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.VehiculosMasRentadosPorImporteChart.Series.Add(series2);
             this.VehiculosMasRentadosPorImporteChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMasRentadosPorImporteChart.TabIndex = 1;
             this.VehiculosMasRentadosPorImporteChart.Text = "chart2";
             // 
             // VehiculosMenosRentadosPorTipoChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.VehiculosMenosRentadosPorTipoChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.VehiculosMenosRentadosPorTipoChart.Legends.Add(legend8);
+            chartArea3.Name = "ChartArea1";
+            this.VehiculosMenosRentadosPorTipoChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.VehiculosMenosRentadosPorTipoChart.Legends.Add(legend3);
             this.VehiculosMenosRentadosPorTipoChart.Location = new System.Drawing.Point(12, 265);
             this.VehiculosMenosRentadosPorTipoChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMenosRentadosPorTipoChart.Name = "VehiculosMenosRentadosPorTipoChart";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.VehiculosMenosRentadosPorTipoChart.Series.Add(series8);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.VehiculosMenosRentadosPorTipoChart.Series.Add(series3);
             this.VehiculosMenosRentadosPorTipoChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMenosRentadosPorTipoChart.TabIndex = 2;
             this.VehiculosMenosRentadosPorTipoChart.Text = "chart3";
             // 
             // VehiculosMenosRentadosPorImporteChart
             // 
-            chartArea9.Name = "ChartArea1";
-            this.VehiculosMenosRentadosPorImporteChart.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.VehiculosMenosRentadosPorImporteChart.Legends.Add(legend9);
+            chartArea4.Name = "ChartArea1";
+            this.VehiculosMenosRentadosPorImporteChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.VehiculosMenosRentadosPorImporteChart.Legends.Add(legend4);
             this.VehiculosMenosRentadosPorImporteChart.Location = new System.Drawing.Point(268, 265);
             this.VehiculosMenosRentadosPorImporteChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VehiculosMenosRentadosPorImporteChart.Name = "VehiculosMenosRentadosPorImporteChart";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.VehiculosMenosRentadosPorImporteChart.Series.Add(series9);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.VehiculosMenosRentadosPorImporteChart.Series.Add(series4);
             this.VehiculosMenosRentadosPorImporteChart.Size = new System.Drawing.Size(250, 250);
             this.VehiculosMenosRentadosPorImporteChart.TabIndex = 3;
             this.VehiculosMenosRentadosPorImporteChart.Text = "chart4";
             // 
             // TotalRecaudadoPorTipoChart
             // 
-            chartArea10.Name = "ChartArea1";
-            this.TotalRecaudadoPorTipoChart.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.TotalRecaudadoPorTipoChart.Legends.Add(legend10);
+            chartArea5.Name = "ChartArea1";
+            this.TotalRecaudadoPorTipoChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.TotalRecaudadoPorTipoChart.Legends.Add(legend5);
             this.TotalRecaudadoPorTipoChart.Location = new System.Drawing.Point(524, 11);
             this.TotalRecaudadoPorTipoChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalRecaudadoPorTipoChart.Name = "TotalRecaudadoPorTipoChart";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.TotalRecaudadoPorTipoChart.Series.Add(series10);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.TotalRecaudadoPorTipoChart.Series.Add(series5);
             this.TotalRecaudadoPorTipoChart.Size = new System.Drawing.Size(506, 504);
             this.TotalRecaudadoPorTipoChart.TabIndex = 4;
             this.TotalRecaudadoPorTipoChart.Text = "chart5";
@@ -153,7 +153,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
-            this.Load += new System.EventHandler(this.DashboardForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VehiculosMasRentadosPorTipoChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehiculosMasRentadosPorImporteChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehiculosMenosRentadosPorTipoChart)).EndInit();

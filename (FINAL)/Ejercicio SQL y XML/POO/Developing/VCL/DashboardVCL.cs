@@ -6,68 +6,109 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace VCL
 {
     public class DashboardVCL
     {
-        public void CargarDashboard(IDashboard formulario)
+        readonly Form formulario;
+        readonly List<Controlador> controladores = new List<Controlador>();   
+
+        Chart VehiculosMasRentadosPorTipoChart;
+        Chart VehiculosMasRentadosPorImporteChart;
+        Chart VehiculosMenosRentadosPorTipoChart;
+        Chart VehiculosMenosRentadosPorImporteChart;
+        Chart TotalRecaudadoPorTipoChart;
+
+        public DashboardVCL(Form formulario)
         {
-            formulario.CargarChartVehiculosMasRentadosPorTipo();
-            formulario.CargarChartVehiculosMasRentadosPorImporte();
-            formulario.CargarChartVehiculosMenosRentadosPorTipo();
-            formulario.CargarChartVehiculosMenosRentadosPorImporte();
-            formulario.CargarChartTotalRecaudadoPorTipo();
+            this.formulario = formulario;
+
+            foreach (Control control in formulario.Controls)
+            {
+                controladores.Add(new Controlador(control.Name, control));
+            }
+
+            IncializarControles();
+
+            formulario.Load += new EventHandler(Load);
         }
 
-        public void CargarChartVehiculosMasRentadosPorTipo(Chart chart)
+        
+        private void IncializarControles()
         {
-            chart.DataSource = new RentaBLL().VehiculosMasRentadosPorTipo();
-            chart.Series[0].XValueMember = "Key";
-            chart.Series[0].YValueMembers = "Value";
-            chart.Series[0].IsVisibleInLegend = false;
-            chart.Titles.Add("Vehículos más rentados (por tipo)");
+            VehiculosMasRentadosPorTipoChart = (Chart)formulario.Controls["VehiculosMasRentadosPorTipoChart"];
+            VehiculosMasRentadosPorImporteChart = (Chart)formulario.Controls["VehiculosMasRentadosPorImporteChart"];
+            VehiculosMenosRentadosPorTipoChart = (Chart)formulario.Controls["VehiculosMenosRentadosPorTipoChart"];
+            VehiculosMenosRentadosPorImporteChart = (Chart)formulario.Controls["VehiculosMenosRentadosPorImporteChart"];
+            TotalRecaudadoPorTipoChart = (Chart)formulario.Controls["TotalRecaudadoPorTipoChart"];
         }
 
-        // Repite este patrón para las demás funciones de carga de gráficos.
 
-        public void CargarChartVehiculosMasRentadosPorImporte(Chart chart)
+        private void Load(object sender, EventArgs e)
         {
-            chart.DataSource = new RentaBLL().VehiculosMasRentadosPorImporte();
-            chart.Series[0].XValueMember = "Key";
-            chart.Series[0].YValueMembers = "Value";
-            chart.Series[0].ChartType = SeriesChartType.Pie;
-            chart.Series[0].IsVisibleInLegend = false;
-            chart.Titles.Add("Vehículos más rentados (por importe)");
+            CargarChartVehiculosMasRentadosPorTipo();
+            CargarChartVehiculosMasRentadosPorImporte();
+            CargarChartVehiculosMenosRentadosPorTipo();
+            CargarChartVehiculosMenosRentadosPorImporte();
+            CargarChartTotalRecaudadoPorTipo();
         }
 
-        public void CargarChartVehiculosMenosRentadosPorTipo(Chart chart)
+        //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||| MÉTODOS |||
+
+        private void CargarChartVehiculosMasRentadosPorTipo()
         {
-            chart.DataSource = new RentaBLL().VehiculosMenosRentadosPorTipo();
-            chart.Series[0].XValueMember = "Key";
-            chart.Series[0].YValueMembers = "Value";
-            chart.Series[0].IsVisibleInLegend = false;
-            chart.Titles.Add("Vehículos menos rentados (por tipo)");
+            VehiculosMasRentadosPorTipoChart.DataSource = new RentaBLL().VehiculosMasRentadosPorTipo();
+            VehiculosMasRentadosPorTipoChart.Series[0].XValueMember = "Key";
+            VehiculosMasRentadosPorTipoChart.Series[0].YValueMembers = "Value";
+            VehiculosMasRentadosPorTipoChart.Series[0].IsVisibleInLegend = false;
+            VehiculosMasRentadosPorTipoChart.Titles.Add("Vehículos más rentados (por tipo)");
         }
 
-        public void CargarChartVehiculosMenosRentadosPorImporte(Chart chart)
+
+        private void CargarChartVehiculosMasRentadosPorImporte()
         {
-            chart.DataSource = new RentaBLL().VehiculosMenosRentadosPorImporte();
-            chart.Series[0].XValueMember = "Key";
-            chart.Series[0].YValueMembers = "Value";
-            chart.Series[0].ChartType = SeriesChartType.Pie;
-            chart.Series[0].IsVisibleInLegend = false;
-            chart.Titles.Add("Vehículos menos rentados (por importe)");
+            VehiculosMasRentadosPorImporteChart.DataSource = new RentaBLL().VehiculosMasRentadosPorImporte();
+            VehiculosMasRentadosPorImporteChart.Series[0].XValueMember = "Key";
+            VehiculosMasRentadosPorImporteChart.Series[0].YValueMembers = "Value";
+            VehiculosMasRentadosPorImporteChart.Series[0].ChartType = SeriesChartType.Pie;
+            VehiculosMasRentadosPorImporteChart.Series[0].IsVisibleInLegend = false;
+            VehiculosMasRentadosPorImporteChart.Titles.Add("Vehículos más rentados (por importe)");
         }
 
-        public void CargarChartTotalRecaudadoPorTipo(Chart chart)
+
+        private void CargarChartVehiculosMenosRentadosPorTipo()
         {
-            chart.DataSource = new RentaBLL().TotalRecaudadoPorTipo();
-            chart.Series[0].XValueMember = "Key";
-            chart.Series[0].YValueMembers = "Value";
-            chart.Series[0].IsVisibleInLegend = false;
-            chart.Titles.Add("Total Recaudado por Tipo de Vehículo");
+            VehiculosMenosRentadosPorTipoChart.DataSource = new RentaBLL().VehiculosMenosRentadosPorTipo();
+            VehiculosMenosRentadosPorTipoChart.Series[0].XValueMember = "Key";
+            VehiculosMenosRentadosPorTipoChart.Series[0].YValueMembers = "Value";
+            VehiculosMenosRentadosPorTipoChart.Series[0].IsVisibleInLegend = false;
+            VehiculosMenosRentadosPorTipoChart.Titles.Add("Vehículos menos rentados (por tipo)");
         }
+
+
+        private void CargarChartVehiculosMenosRentadosPorImporte()
+        {
+            VehiculosMenosRentadosPorImporteChart.DataSource = new RentaBLL().VehiculosMenosRentadosPorImporte();
+            VehiculosMenosRentadosPorImporteChart.Series[0].XValueMember = "Key";
+            VehiculosMenosRentadosPorImporteChart.Series[0].YValueMembers = "Value";
+            VehiculosMenosRentadosPorImporteChart.Series[0].ChartType = SeriesChartType.Pie;
+            VehiculosMenosRentadosPorImporteChart.Series[0].IsVisibleInLegend = false;
+            VehiculosMenosRentadosPorImporteChart.Titles.Add("Vehículos menos rentados (por importe)");
+        }
+
+
+        private void CargarChartTotalRecaudadoPorTipo()
+        {
+            TotalRecaudadoPorTipoChart.DataSource = new RentaBLL().TotalRecaudadoPorTipo();
+            TotalRecaudadoPorTipoChart.Series[0].XValueMember = "Key";
+            TotalRecaudadoPorTipoChart.Series[0].YValueMembers = "Value";
+            TotalRecaudadoPorTipoChart.Series[0].IsVisibleInLegend = false;
+            TotalRecaudadoPorTipoChart.Titles.Add("Total Recaudado por Tipo de Vehículo");
+        }
+
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
     }
 }
