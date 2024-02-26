@@ -6,7 +6,16 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
-
+/// <summary>
+/// ¿Por qué la capa de mapeo de datos (MPP) está tan cerca de la DAL? Después de
+/// todo, la capa de gestión de persistencia (PML), encima de la MPP, aún maneja
+/// operaciones de lectura y escritura. ¿No hubiera sido mejor que la MPP estuviera
+/// arriba de la PML, y que la PML estuviera arriba de la DAL?
+/// Se hizo así para deshacerse lo antes posible de las estructuras de datos que
+/// maneja la DAL (DataTables y XElements) y convertirlas en objetos de negocio
+/// lo antes posible. La PML, así, puede realizar sus operaciones con objetos de
+/// negocio en lugar de estructuras de datos no nativas de C#.
+/// </summary>
 namespace MPP
 {
     public class ClienteMPP : IMapeadoSql<Cliente>
