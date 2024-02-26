@@ -48,12 +48,9 @@
     <Compile Include="Cliente\IApellidoControl.cs" />
     <Compile Include="Cliente\IDniControl.cs" />
     <Compile Include="Cliente\IEmailControl.cs" />
-    <Compile Include="Cliente\IClienteForm.cs" />
     <Compile Include="IEntidad.cs" />
     <Compile Include="Cliente\INombreControl.cs" />
-    <Compile Include="Renta\IRentaForm.cs" />
     <Compile Include="VehiculoTipo.cs" />
-    <Compile Include="Vehiculo\IVehiculoForm.cs" />
     <Compile Include="Renta\IImporteControl.cs" />
     <Compile Include="IMapeadoSql.cs" />
     <Compile Include="IMapeadoXml.cs" />

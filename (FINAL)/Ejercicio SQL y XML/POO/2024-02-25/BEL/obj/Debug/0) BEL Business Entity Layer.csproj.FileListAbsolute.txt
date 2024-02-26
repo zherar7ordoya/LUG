@@ -25,3 +25,12 @@ C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024
 C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL B.713E9B54.Up2Date
 C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\BEL.dll
 C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\BEL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\BEL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\BEL.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\ABS.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\ABS.pdb
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL Business Entity Layer.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL Business Entity Layer.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL B.713E9B54.Up2Date
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\BEL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\BEL.pdb

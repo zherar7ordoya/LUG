@@ -38,7 +38,7 @@
             // 
             this.EmailTextbox.Location = new System.Drawing.Point(0, 0);
             this.EmailTextbox.Name = "EmailTextbox";
-            this.EmailTextbox.Size = new System.Drawing.Size(100, 25);
+            this.EmailTextbox.Size = new System.Drawing.Size(208, 25);
             this.EmailTextbox.TabIndex = 0;
             // 
             // EmailError
@@ -52,7 +52,7 @@
             this.Controls.Add(this.EmailTextbox);
             this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "EmailControl";
-            this.Size = new System.Drawing.Size(125, 25);
+            this.Size = new System.Drawing.Size(233, 25);
             ((System.ComponentModel.ISupportInitialize)(this.EmailError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

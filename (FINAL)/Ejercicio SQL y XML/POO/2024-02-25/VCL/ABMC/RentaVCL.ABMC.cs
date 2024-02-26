@@ -12,13 +12,46 @@ namespace VCL
 {
     public partial class RentaVCL
     {
+        // MÉTODO COMÚN
+        private Renta ArmarObjetoRenta()
+        {
+            Renta renta = new Renta();
+
+            // Código: si es un alta, el código es 0
+            if (string.IsNullOrEmpty(CodigoRentaTextbox.Text)) renta.Codigo = 0;
+            else renta.Codigo = int.Parse(CodigoRentaTextbox.Text);
+
+            // Ahora, la propiedad Cliente
+            List<Cliente> clientes = new ClienteBLL().Consultar();
+            renta.Cliente =
+                clientes
+                .Find(x => CodigoClienteTextbox.Text == x.Codigo.ToString());
+
+            // Ahora, la propiedad Vehículo
+            List<Vehiculo> vehiculos = new VehiculoBLL().Consultar();
+            renta.Vehiculo =
+                vehiculos
+                .Find(x => CodigoVehiculoTextbox.Text == x.Codigo.ToString());
+
+            // Los días rentados (que no puede ser 0:solucionado con el control Numeric)
+            renta.DiasRentados = (int)DiasRentadosNumeric.Value;
+
+            // El importe (que no puede ser 0: solucionado con la validación)
+            renta.Importe = decimal.Parse(ImporteControl.Importe);
+
+            // Listo
+            return renta;
+        }
+
+
+        // MÉTODOS DEL ABMC
         private void Agregar(object sender, EventArgs e)
         {
             bool agregado = false;
 
             try
             {
-                Renta renta = Tool.ArmarObjetoRenta((IRentaForm)formulario);
+                Renta renta = ArmarObjetoRenta();
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar esta renta?");
                 if (resultado == DialogResult.Yes) agregado = new RentaBLL().Agregar(renta);
                 else Tool.MostrarInformacion("Guardado cancelado por el usuario");
@@ -67,7 +100,7 @@ namespace VCL
 
             try
             {
-                Renta renta = Tool.ArmarObjetoRenta((IRentaForm)formulario);
+                Renta renta = ArmarObjetoRenta();
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar esta renta?");
                 if (resultado == DialogResult.Yes) modificado = new RentaBLL().Modificar(renta);
                 else Tool.MostrarInformacion("Modificación cancelada por el usuario");

@@ -12,13 +12,48 @@ namespace VCL
 {
     public partial class VehiculoVCL
     {
+        // MÉTODO COMÚN
+        private Vehiculo ArmarObjetoVehiculo()
+        {
+            Vehiculo vehiculo;
+            string tipo = TipoCombobox.SelectedValue.ToString();
+
+            switch (tipo)
+            {
+                case "Automovil":
+                    vehiculo = new Automovil();
+                    break;
+                case "Camion":
+                    vehiculo = new Camion();
+                    break;
+                case "Camioneta":
+                    vehiculo = new Camioneta();
+                    break;
+                case "Suv":
+                    vehiculo = new Suv();
+                    break;
+                default:
+                    throw new InvalidOperationException($"Tipo de vehículo desconocido: {tipo}");
+            }
+
+            if (string.IsNullOrEmpty(CodigoTextbox.Text)) vehiculo.Codigo = 0;
+            else vehiculo.Codigo = int.Parse(CodigoTextbox.Text);
+            vehiculo.Tipo = (VehiculoTipo)TipoCombobox.SelectedValue;
+            vehiculo.Marca = MarcaControl.Marca;
+            vehiculo.Modelo = ModeloControl.Modelo;
+            vehiculo.Patente = PatenteControl.Patente;
+
+            return vehiculo;
+        }
+
+        // MÉTODOS DEL ABMC
         private void Agregar(object sender, EventArgs e)
         {
             bool agregado = false;
 
             try
             {
-                Vehiculo vehiculo = Tool.ArmarObjetoVehiculo((IVehiculoForm)this);
+                Vehiculo vehiculo = ArmarObjetoVehiculo();
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el vehículo?");
                 if (resultado == DialogResult.Yes) agregado = new VehiculoBLL().Agregar(vehiculo);
                 else Tool.MostrarInformacion("Guardado cancelado por el usuario");
@@ -67,7 +102,7 @@ namespace VCL
 
             try
             {
-                Vehiculo vehiculo = Tool.ArmarObjetoVehiculo((IVehiculoForm)this);
+                Vehiculo vehiculo = ArmarObjetoVehiculo();
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar este vehículo?");
                 if (resultado == DialogResult.Yes) modificado = new VehiculoBLL().Modificar(vehiculo);
                 else Tool.MostrarInformacion("Modificación cancelada por el usuario");

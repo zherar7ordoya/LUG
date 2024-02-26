@@ -12,13 +12,31 @@ namespace VCL
 {
     public partial class ClienteVCL
     {
+        // MÉTODO COMÚN
+        private Cliente ArmarObjetoCliente()
+        {
+            Cliente cliente = new Cliente();
+
+            if (string.IsNullOrEmpty(CodigoTextbox.Text)) cliente.Codigo = 0; // Es un alta
+            else cliente.Codigo = int.Parse(CodigoTextbox.Text);
+
+            cliente.Nombre = NombreControl.Nombre;
+            cliente.Apellido = ApellidoControl.Apellido;
+            cliente.DNI = int.Parse(DniControl.Dni);
+            cliente.FechaNacimiento = DateTime.Parse(FechaNacimientoDtp.Text);
+            cliente.Email = EmailControl.Email;
+
+            return cliente;
+        }
+
+        // MÉTODOS DEL ABMC
         private void Agregar(object sender, EventArgs e)
         {
             bool agregado = false;
 
             try
             {
-                Cliente cliente = Tool.ArmarObjetoCliente((IClienteForm)formulario);
+                Cliente cliente = ArmarObjetoCliente();
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el cliente?");
                 if (resultado == DialogResult.Yes) agregado = new ClienteBLL().Agregar(cliente);
                 else Tool.MostrarInformacion("Guardado cancelado por el usuario");
@@ -67,7 +85,7 @@ namespace VCL
 
             try
             {
-                Cliente cliente = Tool.ArmarObjetoCliente((IClienteForm)formulario);
+                Cliente cliente = ArmarObjetoCliente();
                 DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar este cliente?");
                 if (resultado == DialogResult.Yes) modificado = new ClienteBLL().Modificar(cliente);
                 else Tool.MostrarInformacion("Modificación cancelada por el usuario");
