@@ -1,0 +1,18 @@
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\bin\Debug\BEL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\bin\Debug\BEL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\bin\Debug\ABS.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\bin\Debug\ABS.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\obj\Debug\0) BEL Business Entity Layer.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\obj\Debug\0) BEL Business Entity Layer.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\obj\Debug\0) BEL B.713E9B54.Up2Date
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\obj\Debug\BEL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Developing\BEL\obj\Debug\BEL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\BEL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\BEL.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\ABS.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\bin\Debug\ABS.pdb
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL Business Entity Layer.csproj.AssemblyReference.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL Business Entity Layer.csproj.CoreCompileInputs.cache
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\0) BEL B.713E9B54.Up2Date
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\BEL.dll
+D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\BEL\obj\Debug\BEL.pdb
