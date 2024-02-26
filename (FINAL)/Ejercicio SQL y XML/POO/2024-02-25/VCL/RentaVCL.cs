@@ -14,11 +14,10 @@ namespace VCL
     {
         #region INICIALIZACIÓN
 
-        // Formulario y estado
         readonly Form formulario;
         private EstadoFormulario estado = EstadoFormulario.Normal;
 
-        //|||||||||||||||||||||||||||||||| LISTA DE CONTROLES DEL FORMULARIO |||
+        //|||||||||||||||||||||||||||||||||||| LISTA DE CONTROLES DEL FORMULARIO
 
         // Cliente
         TextBox CodigoClienteTextbox;
