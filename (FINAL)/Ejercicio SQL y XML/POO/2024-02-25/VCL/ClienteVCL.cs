@@ -36,7 +36,7 @@ namespace VCL
             formulario.Load += Load;
         }
 
-        // Inicialización controles
+
         private void IncializarControles()
         {
             ListadoDgv = (DataGridView)formulario.Controls["ListadoDgv"];
