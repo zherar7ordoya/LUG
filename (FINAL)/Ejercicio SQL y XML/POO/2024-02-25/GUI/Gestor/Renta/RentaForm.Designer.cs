@@ -179,22 +179,24 @@
             // 
             this.CodigoClienteTextbox.Enabled = false;
             this.CodigoClienteTextbox.Location = new System.Drawing.Point(104, 11);
-            this.CodigoClienteTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CodigoClienteTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.CodigoClienteTextbox.Name = "CodigoClienteTextbox";
             this.CodigoClienteTextbox.Size = new System.Drawing.Size(50, 25);
             this.CodigoClienteTextbox.TabIndex = 1;
             // 
             // FechaNacimientoDtp
             // 
+            this.FechaNacimientoDtp.Enabled = false;
             this.FechaNacimientoDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaNacimientoDtp.Location = new System.Drawing.Point(104, 131);
-            this.FechaNacimientoDtp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FechaNacimientoDtp.Margin = new System.Windows.Forms.Padding(4);
             this.FechaNacimientoDtp.Name = "FechaNacimientoDtp";
             this.FechaNacimientoDtp.Size = new System.Drawing.Size(100, 25);
             this.FechaNacimientoDtp.TabIndex = 5;
             // 
             // NombreControl
             // 
+            this.NombreControl.Enabled = false;
             this.NombreControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreControl.Location = new System.Drawing.Point(104, 42);
             this.NombreControl.Margin = new System.Windows.Forms.Padding(2);
@@ -206,6 +208,7 @@
             // ApellidoControl
             // 
             this.ApellidoControl.Apellido = "";
+            this.ApellidoControl.Enabled = false;
             this.ApellidoControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApellidoControl.Location = new System.Drawing.Point(104, 70);
             this.ApellidoControl.Margin = new System.Windows.Forms.Padding(2);
@@ -216,6 +219,7 @@
             // DniControl
             // 
             this.DniControl.Dni = "";
+            this.DniControl.Enabled = false;
             this.DniControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DniControl.Location = new System.Drawing.Point(104, 99);
             this.DniControl.Margin = new System.Windows.Forms.Padding(2);
@@ -226,6 +230,7 @@
             // EmailControl
             // 
             this.EmailControl.Email = "";
+            this.EmailControl.Enabled = false;
             this.EmailControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailControl.Location = new System.Drawing.Point(104, 160);
             this.EmailControl.Margin = new System.Windows.Forms.Padding(2);
@@ -279,19 +284,21 @@
             // 
             // MarcaControl
             // 
+            this.MarcaControl.Enabled = false;
             this.MarcaControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarcaControl.Location = new System.Drawing.Point(982, 80);
             this.MarcaControl.Marca = "";
-            this.MarcaControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MarcaControl.Margin = new System.Windows.Forms.Padding(4);
             this.MarcaControl.Name = "MarcaControl";
             this.MarcaControl.Size = new System.Drawing.Size(125, 25);
             this.MarcaControl.TabIndex = 7;
             // 
             // ModeloControl
             // 
+            this.ModeloControl.Enabled = false;
             this.ModeloControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModeloControl.Location = new System.Drawing.Point(982, 114);
-            this.ModeloControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModeloControl.Margin = new System.Windows.Forms.Padding(4);
             this.ModeloControl.Modelo = "";
             this.ModeloControl.Name = "ModeloControl";
             this.ModeloControl.Size = new System.Drawing.Size(125, 25);
@@ -308,9 +315,10 @@
             // 
             // PatenteControl
             // 
+            this.PatenteControl.Enabled = false;
             this.PatenteControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatenteControl.Location = new System.Drawing.Point(982, 147);
-            this.PatenteControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PatenteControl.Margin = new System.Windows.Forms.Padding(4);
             this.PatenteControl.Name = "PatenteControl";
             this.PatenteControl.Patente = "";
             this.PatenteControl.Size = new System.Drawing.Size(125, 25);
@@ -318,6 +326,7 @@
             // 
             // TipoCombobox
             // 
+            this.TipoCombobox.Enabled = false;
             this.TipoCombobox.FormattingEnabled = true;
             this.TipoCombobox.Location = new System.Drawing.Point(982, 48);
             this.TipoCombobox.Name = "TipoCombobox";

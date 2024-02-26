@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EstadoFormulario.cs" />
+    <Compile Include="Enumerador\EstadoFormulario.cs" />
     <Compile Include="IABMC.cs" />
     <Compile Include="Cliente\IApellidoControl.cs" />
     <Compile Include="Cliente\IDniControl.cs" />
     <Compile Include="Cliente\IEmailControl.cs" />
     <Compile Include="IEntidad.cs" />
     <Compile Include="Cliente\INombreControl.cs" />
-    <Compile Include="VehiculoTipo.cs" />
+    <Compile Include="Enumerador\VehiculoTipo.cs" />
     <Compile Include="Renta\IImporteControl.cs" />
     <Compile Include="IMapeadoSql.cs" />
     <Compile Include="IMapeadoXml.cs" />
