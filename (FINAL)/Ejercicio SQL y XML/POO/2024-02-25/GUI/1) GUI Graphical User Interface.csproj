@@ -213,12 +213,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ABS\0%29 ABS Abstraction Layer.csproj">
-      <Project>{027728CF-DCAC-4026-AFC4-DD9B88305F7E}</Project>
+      <Project>{027728cf-dcac-4026-afc4-dd9b88305f7e}</Project>
       <Name>0%29 ABS Abstraction Layer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BEL\0%29 BEL Business Entity Layer.csproj">
-      <Project>{6be322e7-469a-4b4c-8cd4-d2cf04c026a5}</Project>
-      <Name>0%29 BEL Business Entity Layer</Name>
     </ProjectReference>
     <ProjectReference Include="..\VCL\2%29 VCL View Control Layer.csproj">
       <Project>{68259EA6-E9C9-4758-A5E2-05C892DF2747}</Project>
