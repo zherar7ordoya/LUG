@@ -33,7 +33,7 @@ namespace VCL
         {
             this.formulario = formulario;
             IncializarControles();
-            formulario.Load += Load;
+            formulario.Load += FormularioLoad;
         }
 
 
@@ -52,7 +52,7 @@ namespace VCL
         }
 
         // Carga del formulario
-        private void Load(object sender, EventArgs e)
+        private void FormularioLoad(object sender, EventArgs e)
         {
             // Estos métodos aquí (Load) para asegurarse que los controles estén inicializados
             InicializarEventHandlers();

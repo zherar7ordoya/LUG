@@ -21,7 +21,7 @@ namespace VCL
         {
             this.formulario = formulario;
             IncializarControles();
-            formulario.Load += Load;
+            formulario.Load += FormularioLoad;
         }
 
         private void IncializarControles()
@@ -33,7 +33,7 @@ namespace VCL
             TotalRecaudadoPorTipoChart = (Chart)formulario.Controls["TotalRecaudadoPorTipoChart"];
         }
 
-        private void Load(object sender, EventArgs e)
+        private void FormularioLoad(object sender, EventArgs e)
         {
             CargarChartVehiculosMasRentadosPorTipo();
             CargarChartVehiculosMasRentadosPorImporte();

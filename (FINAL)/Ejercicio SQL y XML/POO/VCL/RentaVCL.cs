@@ -51,7 +51,7 @@ namespace VCL
         {
             this.formulario = formulario;
             IncializarControles();
-            formulario.Load += Load;
+            formulario.Load += FormularioLoad;
         }
 
         // Inicialización controles
@@ -86,7 +86,7 @@ namespace VCL
         }
 
         // Carga del formulario
-        private void Load(object sender, EventArgs e)
+        private void FormularioLoad(object sender, EventArgs e)
         {
             InicializarEventHandlers();
             ClientesDgv.DataSource = new ClienteBLL().Consultar();

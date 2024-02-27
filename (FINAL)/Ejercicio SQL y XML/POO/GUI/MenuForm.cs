@@ -8,11 +8,11 @@ namespace GUI
         public MenuForm()
         {
             InitializeComponent();
-            this.Load += FormularioLoad;
-            this.FormClosing += FormularioClosing;
+            this.Load += MenuLoad;
+            this.FormClosing += MenuClosing;
         }
 
-        private void FormularioLoad(object sender, EventArgs e)
+        private void MenuLoad(object sender, EventArgs e)
         {
             SalirMenuItem.Click += MenuSalir;
             ClienteMenuItem.Click += MenuCliente;
@@ -22,7 +22,7 @@ namespace GUI
             AcercaMenuItem.Click += MenuAcerca;
         }
 
-        private void FormularioClosing(object sender, FormClosingEventArgs e)
+        private void MenuClosing(object sender, FormClosingEventArgs e)
         {
             // Se puede verificar la propiedad CloseReason para determinar
             // cómo se está cerrando el formulario

@@ -24,7 +24,7 @@ namespace VCL
         {
             this.formulario = formulario;
             IncializarControles();
-            formulario.Load += Load;
+            formulario.Load += FormularioLoad;
         }
 
         private void IncializarControles()
@@ -40,7 +40,7 @@ namespace VCL
         }
 
 
-        private void Load(object sender, EventArgs e)
+        private void FormularioLoad(object sender, EventArgs e)
         {
             // Obtener los valores del enumerador VehiculoTipo y asignarlos al ComboBox
             VehiculoTipo[] tipos = (VehiculoTipo[])Enum.GetValues(typeof(VehiculoTipo));

@@ -64,6 +64,11 @@ namespace DAL
          */
 
         //*--------------------------------------------------------------------*
+        
+        // TODO: El tema con este método es que tuve que traer cada uno de los 
+        //       parámetros del método desde la PML (pasaron por MPP sin hacer
+        //       nada) para llegar aquí. No me parece que sea la mejor forma de
+        //       hacerlo. Tal vez debería usar el constructor...
         private void ConfigurarComando(
             bool stored,
             string consulta,
