@@ -1,6 +1,0 @@
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Production\ABS\bin\Debug\ABS.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Production\ABS\bin\Debug\ABS.pdb
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Production\ABS\obj\Debug\0) ABS Abstraction Layer.csproj.AssemblyReference.cache
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Production\ABS\obj\Debug\0) ABS Abstraction Layer.csproj.CoreCompileInputs.cache
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Production\ABS\obj\Debug\ABS.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\Production\ABS\obj\Debug\ABS.pdb

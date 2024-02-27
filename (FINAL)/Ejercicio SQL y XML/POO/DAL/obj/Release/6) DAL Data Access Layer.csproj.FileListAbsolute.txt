@@ -1,0 +1,5 @@
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\DAL\bin\Release\Data\Vehiculo.xml
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\DAL\bin\Release\DAL.dll
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\DAL\obj\Release\6) DAL Data Access Layer.csproj.AssemblyReference.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\DAL\obj\Release\6) DAL Data Access Layer.csproj.CoreCompileInputs.cache
+U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\DAL\obj\Release\DAL.dll
