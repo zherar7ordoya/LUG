@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace VCL
 {
+    // La GUI, y luego, esta capa controladora, interactúan el ABMC.
+    // Entonces, ¿por qué no implementar la interfaz IABMC en la GUI o acá?
     public partial class ClienteVCL
     {
         // MÉTODO COMÚN
@@ -52,6 +54,7 @@ namespace VCL
             }
         }
 
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
 
         private void Borrar(object sender, DataGridViewCellEventArgs e)
         {
@@ -78,6 +81,7 @@ namespace VCL
             }
         }
 
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
 
         private void Modificar(object sender, EventArgs e)
         {
@@ -103,10 +107,6 @@ namespace VCL
 
         //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
 
-        /// <summary>
-        /// Mi pobre método principal es el único que no obedece a un evento. Nadie
-        /// lo llama, él solo está ahí, siempre presente, siendo la base para todo.
-        /// </summary>
         private void Consultar()
         {
             try
