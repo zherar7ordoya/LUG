@@ -1,0 +1,12 @@
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\DAO\bin\Debug\DAO.dll
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\DAO\bin\Debug\DAO.pdb
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\DAO\obj\Debug\DAO.dll
+Z:\Documentos\Información\Trabajo\UAI\Docencia\Cátedras\LUG\02 Código\2020_05_01_Capas\DAO\obj\Debug\DAO.pdb
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\DAO\bin\Debug\DAO.dll
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\DAO\bin\Debug\DAO.pdb
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\DAO\obj\Debug\DAO.dll
+C:\Users\Dario Cardacci\source\repos\OnLine_TF\2020_05_01_Capas\DAO\obj\Debug\DAO.pdb

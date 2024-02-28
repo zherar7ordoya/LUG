@@ -1,10 +1,9 @@
 ﻿using ABS;
-
 using BEL;
-
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+
 
 namespace VCL
 {
@@ -182,9 +181,5 @@ namespace VCL
         }
 
         #endregion
-
-
-
-        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
     }
 }
