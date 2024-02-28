@@ -7,8 +7,8 @@ using System.Data;
 using System.Data.SqlClient;
 
 /// <summary>
-/// ¿Por qué la capa de mapeo de datos (MPP) está tan cerca de la DAL? Porque,
-/// al final, la capa de gestión de persistencia (PML), encima de la MPP, aún
+/// ¿Por qué la capa de mapeo de datos (MPP) está tan cerca de la DAL? Porque no
+/// olvidemos que PML (la capa gestora de persistencia, encima de la MPP), aún
 /// maneja operaciones de lectura y escritura. ¿No hubiera sido mejor que la MPP
 /// estuviera arriba de la PML, y que la PML estuviera arriba de la DAL?
 /// Se hizo así para deshacerse lo antes posible de las estructuras de datos que
@@ -17,6 +17,7 @@ using System.Data.SqlClient;
 /// negocio en lugar de estructuras de datos que solo tienen sentido en la DAL 
 /// ya que las estructuras de datos devueltas por los repositorios de datos no
 /// coinciden directamente con las estructuras de los objetos de negocio.
+/// Por esa razón es necesaria, lo antes posible, la conversión de estructuras.
 /// </summary>
 namespace MPP
 {
@@ -41,7 +42,7 @@ namespace MPP
 
                 foreach (DataRow registro in tablaClientes.Rows)
                 {
-                    // Si esto no es mapeo, entonces nada lo es...
+                    // Si esto no es mapeo...
                     Cliente cliente = new Cliente
                     {
                         Codigo = int.Parse(registro["Codigo"].ToString()),
@@ -76,6 +77,8 @@ namespace MPP
         /// </param>
         public bool MapearHaciaSql(bool stored, string consulta, Cliente objeto)
         {
+            // Interesante: en esta instancia, el mapeo es hacia los parámetros
+            //              de la consulta.
             try
             {
                 // A "Código" siempre lo voy a necesitar...
@@ -97,6 +100,6 @@ namespace MPP
             catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
     }
 }
