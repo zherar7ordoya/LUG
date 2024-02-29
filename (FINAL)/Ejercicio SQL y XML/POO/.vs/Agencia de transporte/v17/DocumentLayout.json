@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|u:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\vcl\\clientevcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|solutionrelative:vcl\\clientevcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClienteVCL.cs",
+              "DocumentMoniker": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\VCL\\ClienteVCL.cs",
+              "RelativeDocumentMoniker": "VCL\\ClienteVCL.cs",
+              "ToolTip": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\VCL\\ClienteVCL.cs",
+              "RelativeToolTip": "VCL\\ClienteVCL.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T15:07:41.531Z",
+              "EditorCaption": ""
             }
           ]
         }
