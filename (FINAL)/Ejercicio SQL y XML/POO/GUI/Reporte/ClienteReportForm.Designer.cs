@@ -32,7 +32,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet = new GUI.FinalDataSet();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ClienteReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.clienteTableAdapter = new GUI.FinalDataSetTableAdapters.ClienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet)).BeginInit();
@@ -48,17 +48,17 @@
             this.finalDataSet.DataSetName = "FinalDataSet";
             this.finalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // ClienteReportViewer
             // 
             reportDataSource1.Name = "ClienteDataTable";
             reportDataSource1.Value = this.clienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUI.Reporte.ClienteReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(654, 445);
-            this.reportViewer1.TabIndex = 0;
+            this.ClienteReportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.ClienteReportViewer.LocalReport.ReportEmbeddedResource = "GUI.Reporte.ClienteReport.rdlc";
+            this.ClienteReportViewer.Location = new System.Drawing.Point(12, 12);
+            this.ClienteReportViewer.Name = "ClienteReportViewer";
+            this.ClienteReportViewer.ServerReport.BearerToken = null;
+            this.ClienteReportViewer.Size = new System.Drawing.Size(654, 445);
+            this.ClienteReportViewer.TabIndex = 0;
             // 
             // clienteTableAdapter
             // 
@@ -69,7 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 470);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.ClienteReportViewer);
             this.Name = "ClienteReportForm";
             this.Text = "ClienteReportForm";
             this.Load += new System.EventHandler(this.ClienteReportForm_Load);
@@ -81,7 +81,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer ClienteReportViewer;
         private FinalDataSet finalDataSet;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private FinalDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;

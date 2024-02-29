@@ -79,6 +79,9 @@
     <Compile Include="Acerca\AcercaForm.Designer.cs">
       <DependentUpon>AcercaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinalDataSet.cs">
+      <DependentUpon>FinalDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reporte\ClienteReportForm.cs">
       <SubType>Form</SubType>
     </Compile>

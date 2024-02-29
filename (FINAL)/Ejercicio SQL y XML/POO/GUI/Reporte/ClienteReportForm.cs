@@ -14,7 +14,7 @@ namespace GUI
             // TODO: esta línea de código carga datos en la tabla 'finalDataSet.Cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.finalDataSet.Cliente);
 
-            this.reportViewer1.RefreshReport();
+            this.ClienteReportViewer.RefreshReport();
         }
     }
 }
