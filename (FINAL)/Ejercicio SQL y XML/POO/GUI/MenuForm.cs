@@ -20,6 +20,7 @@ namespace GUI
             VehiculoMenuItem.Click += MenuVehiculo;
             DashboardMenuItem.Click += MenuDashboard;
             AcercaMenuItem.Click += MenuAcerca;
+            ClienteReportMenu.Click += MenuReporte;
         }
 
         private void MenuClosing(object sender, FormClosingEventArgs e)
@@ -66,5 +67,11 @@ namespace GUI
         }
 
         //*<==------------------------------------------------------------==>*\\
+
+        private void MenuReporte(object sender, EventArgs e)
+        {
+            ClienteReportForm formulario = new ClienteReportForm();
+            formulario.ShowDialog();
+        }
     }
 }
