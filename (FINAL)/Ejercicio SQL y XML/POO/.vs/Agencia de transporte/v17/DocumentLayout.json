@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
+  "WorkspaceRootPath": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\vcl\\dashboardvcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|u:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\vcl\\dashboardvcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|solutionrelative:vcl\\dashboardvcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DashboardVCL.cs",
-              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\VCL\\DashboardVCL.cs",
+              "DocumentMoniker": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\VCL\\DashboardVCL.cs",
               "RelativeDocumentMoniker": "VCL\\DashboardVCL.cs",
-              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\VCL\\DashboardVCL.cs",
+              "ToolTip": "U:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\VCL\\DashboardVCL.cs",
               "RelativeToolTip": "VCL\\DashboardVCL.cs",
               "ViewState": "AQIAABQAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
