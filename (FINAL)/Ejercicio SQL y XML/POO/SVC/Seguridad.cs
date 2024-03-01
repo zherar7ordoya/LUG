@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SVC
 {
@@ -12,18 +9,18 @@ namespace SVC
     /// </summary>
     public static class Seguridad
     {
-        public static string Encriptar(string pCadena)
+        public static string Encriptar(string texto)
         {
-            byte[] encriptado = Encoding.Unicode.GetBytes(pCadena);
-            string resultado = Convert.ToBase64String(encriptado);
-            return resultado;
+            byte[] array = Encoding.Unicode.GetBytes(texto);
+            string encriptado = Convert.ToBase64String(array);
+            return encriptado;
         }
 
-        public static string Desencriptar(this string pCadena)
+        public static string Desencriptar(this string texto)
         {
-            byte[] desencriptado = Convert.FromBase64String(pCadena);
-            string resultado = Encoding.Unicode.GetString(desencriptado);
-            return resultado;
+            byte[] array = Convert.FromBase64String(texto);
+            string desencriptado = Encoding.Unicode.GetString(array);
+            return desencriptado;
         }
     }
 }

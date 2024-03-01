@@ -76,7 +76,7 @@
             // ValidarButton
             // 
             this.ValidarButton.Enabled = false;
-            this.ValidarButton.Location = new System.Drawing.Point(95, 141);
+            this.ValidarButton.Location = new System.Drawing.Point(156, 145);
             this.ValidarButton.Name = "ValidarButton";
             this.ValidarButton.Size = new System.Drawing.Size(60, 30);
             this.ValidarButton.TabIndex = 4;

@@ -12,7 +12,16 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
+
+            // Ingreso al sistema
+            LoginForm login = new LoginForm();
+
+            // Muestra el login y verifica el resultado
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                // Si el resultado es OK, muestra el formulario del menú
+                Application.Run(new MenuForm());
+            }
         }
     }
 }

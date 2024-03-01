@@ -46,6 +46,7 @@
     <Compile Include="ABMC\ClienteVCL.ABMC.cs" />
     <Compile Include="ClienteVCL.cs" />
     <Compile Include="DashboardVCL.cs" />
+    <Compile Include="Login\LoginVCL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABMC\RentaVCL.ABMC.cs" />
     <Compile Include="RentaVCL.cs" />
