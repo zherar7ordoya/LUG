@@ -82,6 +82,12 @@
     <Compile Include="FinalDataSet.cs">
       <DependentUpon>FinalDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporte\ClienteReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </Compile>
     <EmbeddedResource Include="Acerca\AcercaForm.resx">
       <DependentUpon>AcercaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte\ClienteReportForm.resx">
       <DependentUpon>ClienteReportForm.cs</DependentUpon>
