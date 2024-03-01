@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4) PML Persistence Manageme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2) VCL View Control Layer", "VCL\2) VCL View Control Layer.csproj", "{68259EA6-E9C9-4758-A5E2-05C892DF2747}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0) SVC Service Layer", "SVC\0) SVC Service Layer.csproj", "{CE5B0699-7AE0-43FB-B9A8-BA89D15507A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{68259EA6-E9C9-4758-A5E2-05C892DF2747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68259EA6-E9C9-4758-A5E2-05C892DF2747}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68259EA6-E9C9-4758-A5E2-05C892DF2747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5B0699-7AE0-43FB-B9A8-BA89D15507A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5B0699-7AE0-43FB-B9A8-BA89D15507A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5B0699-7AE0-43FB-B9A8-BA89D15507A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5B0699-7AE0-43FB-B9A8-BA89D15507A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

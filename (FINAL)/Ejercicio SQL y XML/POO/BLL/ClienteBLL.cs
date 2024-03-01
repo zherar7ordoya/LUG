@@ -2,6 +2,8 @@
 
 using PML;
 
+using SVC;
+
 using System;
 using System.Collections.Generic;
 
@@ -40,26 +42,35 @@ namespace BLL
 
         #endregion
 
-        // TODO => Se hace este método para hacer un login. No es parte del ABMC.
-        //         Debería estar en la capa servicio.
-        //         Pero, por ahora, lo dejo acá...
-        //         Pero este método me parece que debería estar en la BLL ya que
-        //         el login está intrínsecamente relacionado con la lógica del
-        //         negocio y las reglas de acceso.
-        public bool ConsultarCliente(string email, string clave)
+        /// <summary>
+        /// Simulador de login.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="clave"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public bool ValidarLogin(string email, string clave)
         {
             try
             {
+                // Aquí, la manera de recuperar la información que podría usarse
+                // para el login.
                 List<Cliente> clientes = new ClientePML().Consultar();
                 Cliente cliente = clientes.Find(c => c.Email == email);
-                if (cliente == null)
+
+                // ...pero se hará un "mock" de la consulta a la base de datos.
+
+                // Simulo que recuperé la clave encriptada de la base de datos.
+                string emailEncriptado = Seguridad.Encriptar(email);
+                
+                // Encripto la clave ingresada.
+                string claveEncriptada = Seguridad.Encriptar(clave);
+
+                // Sin desencriptar nada, comparo los valores encriptados.
+                if (emailEncriptado != claveEncriptada)
                 {
-                    throw new Exception("El email ingresado no existe");
+                    throw new Exception("La clave ingresada es incorrecta");
                 }
-                //if (cliente.Clave != clave)
-                //{
-                //    throw new Exception("La clave ingresada es incorrecta");
-                //}
                 return true;
             }
             catch (Exception ex) { throw new Exception(ex.Message); }

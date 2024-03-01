@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.EmailControl = new GUI.EmailControl();
             this.ClaveTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ValidarButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // EmailControl
             // 
             this.EmailControl.Email = "";
             this.EmailControl.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailControl.Location = new System.Drawing.Point(13, 38);
+            this.EmailControl.Location = new System.Drawing.Point(39, 38);
             this.EmailControl.Margin = new System.Windows.Forms.Padding(4);
             this.EmailControl.Name = "EmailControl";
             this.EmailControl.Size = new System.Drawing.Size(206, 26);
@@ -47,7 +49,7 @@
             // 
             // ClaveTextbox
             // 
-            this.ClaveTextbox.Location = new System.Drawing.Point(12, 120);
+            this.ClaveTextbox.Location = new System.Drawing.Point(39, 96);
             this.ClaveTextbox.Name = "ClaveTextbox";
             this.ClaveTextbox.PasswordChar = '*';
             this.ClaveTextbox.Size = new System.Drawing.Size(180, 25);
@@ -55,7 +57,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(36, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 25);
             this.label1.TabIndex = 2;
@@ -64,7 +66,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(10, 92);
+            this.label2.Location = new System.Drawing.Point(36, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 25);
             this.label2.TabIndex = 3;
@@ -74,18 +76,27 @@
             // ValidarButton
             // 
             this.ValidarButton.Enabled = false;
-            this.ValidarButton.Location = new System.Drawing.Point(69, 205);
+            this.ValidarButton.Location = new System.Drawing.Point(95, 141);
             this.ValidarButton.Name = "ValidarButton";
             this.ValidarButton.Size = new System.Drawing.Size(60, 30);
             this.ValidarButton.TabIndex = 4;
             this.ValidarButton.Text = "Validar";
             this.ValidarButton.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(12, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 171);
+            this.label3.TabIndex = 5;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 291);
+            this.ClientSize = new System.Drawing.Size(267, 362);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.ValidarButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -106,5 +117,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ValidarButton;
+        private System.Windows.Forms.Label label3;
     }
 }
