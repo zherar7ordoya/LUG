@@ -27,7 +27,7 @@ namespace BLL
                 List<Cliente> clientes = new ClientePML().Consultar();
                 Cliente cliente = clientes.Find(c => c.Email == email);
 
-                // ...pero se hará un "mock" de la consulta a la base de datos.
+                /*** ...pero se hará un "mock" de la consulta a la base de datos. ***/
 
                 // Simulo que recuperé la clave encriptada de la base de datos.
                 string emailEncriptado = Seguridad.Encriptar(email);
@@ -36,10 +36,7 @@ namespace BLL
                 string claveEncriptada = Seguridad.Encriptar(clave);
 
                 // Sin desencriptar nada: comparo los valores encriptados.
-                if (emailEncriptado != claveEncriptada)
-                {
-                    throw new Exception("La clave ingresada es incorrecta");
-                }
+                if (emailEncriptado != claveEncriptada) return false;
                 return true;
             }
             catch (Exception ex) { throw new Exception(ex.Message); }

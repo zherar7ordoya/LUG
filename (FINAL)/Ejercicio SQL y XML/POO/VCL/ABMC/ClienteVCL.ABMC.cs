@@ -4,6 +4,8 @@ using BEL;
 
 using BLL;
 
+using SVC;
+
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -39,15 +41,15 @@ namespace VCL
             try
             {
                 Cliente cliente = ArmarObjetoCliente();
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el cliente?");
+                DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea guardar el cliente?");
                 if (resultado == DialogResult.Yes) agregado = new ClienteBLL().Agregar(cliente);
-                else Tool.MostrarInformacion("Guardado cancelado por el usuario");
+                else Mensajeria.MostrarInformacion("Guardado cancelado por el usuario");
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (agregado)
             {
-                Tool.MostrarInformacion("Cliente guardado");
+                Mensajeria.MostrarInformacion("Cliente guardado");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -65,16 +67,16 @@ namespace VCL
                 if (e.ColumnIndex == ListadoDgv.Columns["Baja"].Index && e.RowIndex >= 0)
                 {
                     Cliente cliente = (Cliente)ListadoDgv.Rows[e.RowIndex].DataBoundItem;
-                    DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea borrar este cliente?");
+                    DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea borrar este cliente?");
                     if (resultado == DialogResult.Yes) borrado = new ClienteBLL().Borrar(cliente);
-                    else Tool.MostrarInformacion("Borrado cancelado por el usuario");
+                    else Mensajeria.MostrarInformacion("Borrado cancelado por el usuario");
                 }
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (borrado)
             {
-                Tool.MostrarInformacion("Cliente borrado");
+                Mensajeria.MostrarInformacion("Cliente borrado");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -90,15 +92,15 @@ namespace VCL
             try
             {
                 Cliente cliente = ArmarObjetoCliente();
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar este cliente?");
+                DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea modificar este cliente?");
                 if (resultado == DialogResult.Yes) modificado = new ClienteBLL().Modificar(cliente);
-                else Tool.MostrarInformacion("Modificación cancelada por el usuario");
+                else Mensajeria.MostrarInformacion("Modificación cancelada por el usuario");
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (modificado)
             {
-                Tool.MostrarInformacion("Cliente modificado");
+                Mensajeria.MostrarInformacion("Cliente modificado");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -129,7 +131,7 @@ namespace VCL
                 ListadoDgv.DataSource = clientes;
                 ListadoDgv.Columns["Codigo"].DisplayIndex = 1; // Mover al segundo lugar
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
         }
 
         //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\

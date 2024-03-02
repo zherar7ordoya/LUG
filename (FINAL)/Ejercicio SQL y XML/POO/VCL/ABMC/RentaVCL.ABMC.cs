@@ -4,6 +4,8 @@ using BEL;
 
 using BLL;
 
+using SVC;
+
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -52,15 +54,15 @@ namespace VCL
             try
             {
                 Renta renta = ArmarObjetoRenta();
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar esta renta?");
+                DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea guardar esta renta?");
                 if (resultado == DialogResult.Yes) agregado = new RentaBLL().Agregar(renta);
-                else Tool.MostrarInformacion("Guardado cancelado por el usuario");
+                else Mensajeria.MostrarInformacion("Guardado cancelado por el usuario");
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (agregado)
             {
-                Tool.MostrarInformacion("Renta guardada");
+                Mensajeria.MostrarInformacion("Renta guardada");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -77,16 +79,16 @@ namespace VCL
                 if (e.ColumnIndex == ListadoDgv.Columns["Baja"].Index && e.RowIndex >= 0)
                 {
                     Renta renta = (Renta)ListadoDgv.Rows[e.RowIndex].DataBoundItem;
-                    DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea borrar esta renta?");
+                    DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea borrar esta renta?");
                     if (resultado == DialogResult.Yes) borrado = new RentaBLL().Borrar(renta);
-                    else Tool.MostrarInformacion("Borrado cancelado por el usuario");
+                    else Mensajeria.MostrarInformacion("Borrado cancelado por el usuario");
                 }
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (borrado)
             {
-                Tool.MostrarInformacion("Renta borrada");
+                Mensajeria.MostrarInformacion("Renta borrada");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -101,15 +103,15 @@ namespace VCL
             try
             {
                 Renta renta = ArmarObjetoRenta();
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar esta renta?");
+                DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea modificar esta renta?");
                 if (resultado == DialogResult.Yes) modificado = new RentaBLL().Modificar(renta);
-                else Tool.MostrarInformacion("Modificación cancelada por el usuario");
+                else Mensajeria.MostrarInformacion("Modificación cancelada por el usuario");
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (modificado)
             {
-                Tool.MostrarInformacion("Renta modificada");
+                Mensajeria.MostrarInformacion("Renta modificada");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -144,7 +146,7 @@ namespace VCL
                 ListadoDgv.DataSource = rentas;
                 ListadoDgv.Columns["Codigo"].DisplayIndex = 1; // Mover al segundo lugar
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
         }
 
         //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\

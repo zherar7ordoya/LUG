@@ -79,9 +79,6 @@
     <Compile Include="Acerca\AcercaForm.Designer.cs">
       <DependentUpon>AcercaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FinalDataSet.cs">
-      <DependentUpon>FinalDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +90,6 @@
     </Compile>
     <Compile Include="Reporte\ClienteReportForm.Designer.cs">
       <DependentUpon>ClienteReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FinalDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FinalDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Gestor\Cliente\ApellidoControl.cs">
       <SubType>UserControl</SubType>
@@ -246,17 +238,6 @@
       <DependentUpon>VehiculoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte\ClienteReport.rdlc" />
-    <None Include="FinalDataSet.xsc">
-      <DependentUpon>FinalDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FinalDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinalDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FinalDataSet.xss">
-      <DependentUpon>FinalDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -276,6 +257,10 @@
       <Project>{027728cf-dcac-4026-afc4-dd9b88305f7e}</Project>
       <Name>0%29 ABS Abstraction Layer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SVC\0%29 SVC Service Layer.csproj">
+      <Project>{CE5B0699-7AE0-43FB-B9A8-BA89D15507A9}</Project>
+      <Name>0%29 SVC Service Layer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VCL\2%29 VCL View Control Layer.csproj">
       <Project>{68259EA6-E9C9-4758-A5E2-05C892DF2747}</Project>
       <Name>2%29 VCL View Control Layer</Name>
@@ -283,9 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base\TransportDriver.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

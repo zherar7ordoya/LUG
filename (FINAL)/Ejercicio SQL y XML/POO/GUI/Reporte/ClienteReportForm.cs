@@ -1,5 +1,7 @@
 ﻿using System;
 
+using VCL;
+
 namespace GUI
 {
     public partial class ClienteReportForm : BaseForm
@@ -7,12 +9,7 @@ namespace GUI
         public ClienteReportForm()
         {
             InitializeComponent();
-        }
-
-        private void ClienteReportForm_Load(object sender, EventArgs e)
-        {
-            this.clienteTableAdapter.Fill(this.finalDataSet.Cliente);
-            this.ClienteReportViewer.RefreshReport();
+            _ = new ClienteReportVCL(this);
         }
     }
 }

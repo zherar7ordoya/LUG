@@ -1,5 +1,8 @@
 ﻿using ABS;
 using BEL;
+
+using SVC;
+
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -159,7 +162,7 @@ namespace VCL
                 Tool.LimpiarFormularioCliente(formulario.Controls);
                 estado = EstadoFormulario.Alta;
                 ConfigurarFormulario();
-                Tool.MostrarInformacion("Complete los campos y luego pulse Guardar");
+                Mensajeria.MostrarInformacion("Complete los campos y luego pulse Guardar");
             }
             else
             {
@@ -171,7 +174,7 @@ namespace VCL
 
         private void BotonCancelar(object sender, EventArgs e)
         {
-            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
+            DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea cancelar?");
             if (resultado == DialogResult.Yes)
             {
                 estado = EstadoFormulario.Normal;

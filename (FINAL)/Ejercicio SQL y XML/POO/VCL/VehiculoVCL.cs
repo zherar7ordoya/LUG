@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BEL;
 using ABS;
+using SVC;
 
 namespace VCL
 {
@@ -124,7 +125,7 @@ namespace VCL
                 Tool.LimpiarFormularioVehiculo(formulario.Controls);
                 estado = EstadoFormulario.Alta;
                 ConfigurarFormulario();
-                Tool.MostrarInformacion("Complete los campos y luego pulse Guardar");
+                Mensajeria.MostrarInformacion("Complete los campos y luego pulse Guardar");
             }
             else
             {
@@ -136,7 +137,7 @@ namespace VCL
 
         private void BotonCancelar(object sender, EventArgs e)
         {
-            DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea cancelar?");
+            DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea cancelar?");
             if (resultado == DialogResult.Yes)
             {
                 estado = EstadoFormulario.Normal;

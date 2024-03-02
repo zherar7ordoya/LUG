@@ -1,19 +1,28 @@
-﻿using System;
+﻿using SVC;
+
+using System;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class MenuForm : BaseForm
     {
-        public MenuForm()
+        public MenuForm(bool validado)
         {
             InitializeComponent();
-            this.Load += MenuLoad;
-            this.FormClosing += MenuClosing;
+            if (!validado)
+            {
+                Mensajeria.MostrarError("La clave ingresada es incorrecta");
+            }
+            this.GestorMenu.Enabled = validado;
+            this.VerMenu.Enabled = validado;
+            this.Load += FormularioLoad;
+            this.FormClosing += FormularioClosing;
         }
 
-        private void MenuLoad(object sender, EventArgs e)
+        private void FormularioLoad(object sender, EventArgs e)
         {
+            CerrarSesionMenu.Click += CerrarSesion;
             SalirMenuItem.Click += MenuSalir;
             ClienteMenuItem.Click += MenuCliente;
             RentaMenuItem.Click += MenuRenta;
@@ -23,7 +32,13 @@ namespace GUI
             ClienteReportMenu.Click += MenuReporte;
         }
 
-        private void MenuClosing(object sender, FormClosingEventArgs e)
+        private void CerrarSesion(object sender, EventArgs e)
+        {
+            Application.Restart();
+            //Close();
+        }
+
+        private void FormularioClosing(object sender, FormClosingEventArgs e)
         {
             // Se puede verificar la propiedad CloseReason para determinar
             // cómo se está cerrando el formulario

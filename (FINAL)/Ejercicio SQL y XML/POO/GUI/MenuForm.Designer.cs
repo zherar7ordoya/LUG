@@ -29,38 +29,40 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.MenuStrip = new System.Windows.Forms.MenuStrip();
+            this.MenuBase = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GestorMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RentaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.VehiculoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.VerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DashboardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClienteReportMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClienteReportMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuStrip.SuspendLayout();
+            this.CerrarSesionMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuBase.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MenuStrip
+            // MenuBase
             // 
-            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuBase.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.entidadesToolStripMenuItem,
-            this.verToolStripMenuItem,
+            this.GestorMenu,
+            this.VerMenu,
             this.ayudaToolStripMenuItem});
-            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.MenuStrip.Size = new System.Drawing.Size(299, 30);
-            this.MenuStrip.TabIndex = 1;
-            this.MenuStrip.Text = "menuStrip1";
+            this.MenuBase.Location = new System.Drawing.Point(0, 0);
+            this.MenuBase.Name = "MenuBase";
+            this.MenuBase.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.MenuBase.Size = new System.Drawing.Size(509, 30);
+            this.MenuBase.TabIndex = 1;
+            this.MenuBase.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CerrarSesionMenu,
             this.SalirMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
@@ -69,18 +71,18 @@ namespace GUI
             // SalirMenuItem
             // 
             this.SalirMenuItem.Name = "SalirMenuItem";
-            this.SalirMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.SalirMenuItem.Size = new System.Drawing.Size(180, 24);
             this.SalirMenuItem.Text = "Salir";
             // 
-            // entidadesToolStripMenuItem
+            // GestorMenu
             // 
-            this.entidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GestorMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ClienteMenuItem,
             this.RentaMenuItem,
             this.VehiculoMenuItem});
-            this.entidadesToolStripMenuItem.Name = "entidadesToolStripMenuItem";
-            this.entidadesToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.entidadesToolStripMenuItem.Text = "Gestor";
+            this.GestorMenu.Name = "GestorMenu";
+            this.GestorMenu.Size = new System.Drawing.Size(64, 24);
+            this.GestorMenu.Text = "Gestor";
             // 
             // ClienteMenuItem
             // 
@@ -100,20 +102,26 @@ namespace GUI
             this.VehiculoMenuItem.Size = new System.Drawing.Size(208, 24);
             this.VehiculoMenuItem.Text = "Gestor de Vehículos";
             // 
-            // verToolStripMenuItem
+            // VerMenu
             // 
-            this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.VerMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DashboardMenuItem,
             this.ClienteReportMenu});
-            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(42, 24);
-            this.verToolStripMenuItem.Text = "Ver";
+            this.VerMenu.Name = "VerMenu";
+            this.VerMenu.Size = new System.Drawing.Size(42, 24);
+            this.VerMenu.Text = "Ver";
             // 
             // DashboardMenuItem
             // 
             this.DashboardMenuItem.Name = "DashboardMenuItem";
             this.DashboardMenuItem.Size = new System.Drawing.Size(205, 24);
             this.DashboardMenuItem.Text = "Dashboard";
+            // 
+            // ClienteReportMenu
+            // 
+            this.ClienteReportMenu.Name = "ClienteReportMenu";
+            this.ClienteReportMenu.Size = new System.Drawing.Size(205, 24);
+            this.ClienteReportMenu.Text = "Informe de clientes";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -129,27 +137,27 @@ namespace GUI
             this.AcercaMenuItem.Size = new System.Drawing.Size(268, 24);
             this.AcercaMenuItem.Text = "Acerca de La Transportadora";
             // 
-            // ClienteReporteMenu
+            // CerrarSesionMenu
             // 
-            this.ClienteReportMenu.Name = "ClienteReporteMenu";
-            this.ClienteReportMenu.Size = new System.Drawing.Size(205, 24);
-            this.ClienteReportMenu.Text = "Informe de clientes";
+            this.CerrarSesionMenu.Name = "CerrarSesionMenu";
+            this.CerrarSesionMenu.Size = new System.Drawing.Size(180, 24);
+            this.CerrarSesionMenu.Text = "Cerrar sesión";
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 156);
-            this.Controls.Add(this.MenuStrip);
+            this.ClientSize = new System.Drawing.Size(509, 310);
+            this.Controls.Add(this.MenuBase);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.MenuStrip;
+            this.MainMenuStrip = this.MenuBase;
             this.MaximizeBox = true;
             this.MinimizeBox = true;
             this.Name = "MenuForm";
             this.Text = "Agencia de Transporte";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.MenuStrip.ResumeLayout(false);
-            this.MenuStrip.PerformLayout();
+            this.MenuBase.ResumeLayout(false);
+            this.MenuBase.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,10 +165,10 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip MenuStrip;
+        private System.Windows.Forms.MenuStrip MenuBase;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem entidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem VerMenu;
+        private System.Windows.Forms.ToolStripMenuItem GestorMenu;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AcercaMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClienteMenuItem;
@@ -169,5 +177,6 @@ namespace GUI
         private System.Windows.Forms.ToolStripMenuItem DashboardMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SalirMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClienteReportMenu;
+        private System.Windows.Forms.ToolStripMenuItem CerrarSesionMenu;
     }
 }

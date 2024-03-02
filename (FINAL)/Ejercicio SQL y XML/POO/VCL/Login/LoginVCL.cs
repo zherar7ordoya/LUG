@@ -1,7 +1,6 @@
 ﻿using ABS;
-
 using BLL;
-
+using SVC;
 using System;
 using System.Windows.Forms;
 
@@ -35,6 +34,7 @@ namespace VCL
             EmailControl.TextChanged += ValidarInput;
             ClaveTextbox.TextChanged += ValidarInput;
             ValidarButton.Click += ValidarEmail;
+            //formulario.FormClosing += FormularioClosing;
         }
 
         private void ValidarInput(object sender, EventArgs e)
@@ -51,12 +51,27 @@ namespace VCL
                 string email = EmailControl.Email;
                 string clave = ClaveTextbox.Text;
                 bool validado = new LoginBLL().ValidarLogin(email, clave);
-                formulario.DialogResult = DialogResult.OK;
+                if (validado)
+                {
+                    formulario.DialogResult = DialogResult.Yes;
+                }
+                else
+                {
+                    formulario.DialogResult = DialogResult.No;
+                }
                 formulario.Close();
             }
             catch (Exception ex)
             {
-                Tool.MostrarError(ex.Message);
+                Mensajeria.MostrarError(ex.Message);
+            }
+        }
+
+        private void FormularioClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
             }
         }
     }

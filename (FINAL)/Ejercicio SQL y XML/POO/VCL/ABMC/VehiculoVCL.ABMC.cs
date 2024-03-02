@@ -4,6 +4,8 @@ using BEL;
 
 using BLL;
 
+using SVC;
+
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -54,15 +56,15 @@ namespace VCL
             try
             {
                 Vehiculo vehiculo = ArmarObjetoVehiculo();
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea guardar el vehículo?");
+                DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea guardar el vehículo?");
                 if (resultado == DialogResult.Yes) agregado = new VehiculoBLL().Agregar(vehiculo);
-                else Tool.MostrarInformacion("Guardado cancelado por el usuario");
+                else Mensajeria.MostrarInformacion("Guardado cancelado por el usuario");
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (agregado)
             {
-                Tool.MostrarInformacion("Vehículo guardado");
+                Mensajeria.MostrarInformacion("Vehículo guardado");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -79,16 +81,16 @@ namespace VCL
                 if (e.ColumnIndex == ListadoDgv.Columns["Baja"].Index && e.RowIndex >= 0)
                 {
                     Vehiculo vehiculo = (Vehiculo)ListadoDgv.Rows[e.RowIndex].DataBoundItem;
-                    DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea borrar este vehículo?");
+                    DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea borrar este vehículo?");
                     if (resultado == DialogResult.Yes) borrado = new VehiculoBLL().Borrar(vehiculo);
-                    else Tool.MostrarInformacion("Borrado cancelado por el usuario");
+                    else Mensajeria.MostrarInformacion("Borrado cancelado por el usuario");
                 }
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (borrado)
             {
-                Tool.MostrarInformacion("Vehiculo borrado");
+                Mensajeria.MostrarInformacion("Vehiculo borrado");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -103,15 +105,15 @@ namespace VCL
             try
             {
                 Vehiculo vehiculo = ArmarObjetoVehiculo();
-                DialogResult resultado = Tool.MostrarPregunta("¿Seguro que desea modificar este vehículo?");
+                DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea modificar este vehículo?");
                 if (resultado == DialogResult.Yes) modificado = new VehiculoBLL().Modificar(vehiculo);
-                else Tool.MostrarInformacion("Modificación cancelada por el usuario");
+                else Mensajeria.MostrarInformacion("Modificación cancelada por el usuario");
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
 
             if (modificado)
             {
-                Tool.MostrarInformacion("Vehículo modificado");
+                Mensajeria.MostrarInformacion("Vehículo modificado");
                 estado = EstadoFormulario.Normal;
                 Consultar();
                 ConfigurarFormulario();
@@ -146,7 +148,7 @@ namespace VCL
                 ListadoDgv.DataSource = vehiculos;
                 ListadoDgv.Columns["Codigo"].DisplayIndex = 1; // Mover al segundo lugar
             }
-            catch (Exception ex) { Tool.MostrarError(ex.Message); }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
         }
 
     }
