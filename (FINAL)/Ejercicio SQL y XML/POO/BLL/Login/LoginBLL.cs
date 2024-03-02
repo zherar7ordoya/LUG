@@ -35,7 +35,7 @@ namespace BLL
                 // Encripto la clave ingresada.
                 string claveEncriptada = Seguridad.Encriptar(clave);
 
-                // Sin desencriptar nada, comparo los valores encriptados.
+                // Sin desencriptar nada: comparo los valores encriptados.
                 if (emailEncriptado != claveEncriptada)
                 {
                     throw new Exception("La clave ingresada es incorrecta");

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.EmailControl = new GUI.EmailControl();
             this.ClaveTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -89,7 +88,9 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(233, 171);
             this.label3.TabIndex = 5;
-            this.label3.Text = resources.GetString("label3.Text");
+            this.label3.Text = "Escriba el mismo e-mail en ambos campos.\r\n\r\nEsto es un \"mock\" (simulador).\r\n\r\nEn " +
+    "los métodos pertinentes de la BLL se puede examinar la encriptación, recupero (d" +
+    "esde la base de datos) y validación.";
             // 
             // LoginForm
             // 
