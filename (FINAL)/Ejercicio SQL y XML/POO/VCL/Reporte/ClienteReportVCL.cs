@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace VCL
 {
+    // Ver nota en App.config
     public class ClienteReportVCL
     {
         // Formulario y controles

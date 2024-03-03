@@ -2,6 +2,7 @@
 
 namespace GUI
 {
+    // Ver nota en App.config
     public partial class ClienteReportForm : BaseForm
     {
         public ClienteReportForm()

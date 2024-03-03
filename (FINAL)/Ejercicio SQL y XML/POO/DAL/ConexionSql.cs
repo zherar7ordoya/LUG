@@ -23,6 +23,9 @@ namespace DAL
      */
     public class ConexionSql : IDisposable
     {
+        // Ver comentario en App.config en la GUI.
+        // A pesar de ello, se usa ConfigurationManager para obtener la cadena
+        // de conexión por ser un ítem en la evaluación de la materia.
         private readonly string cadena =
             ConfigurationManager
             .ConnectionStrings["Final"]
@@ -89,8 +92,8 @@ namespace DAL
         {
             comando = new SqlCommand
             {
-                CommandText = consulta,
                 Connection = conexion,
+                CommandText = consulta,
                 // Esto debería evitarse: un stored procedure se lleva parte de
                 // la lógica de la aplicación a la base de datos.
                 CommandType = stored ? CommandType.StoredProcedure : CommandType.Text
@@ -185,7 +188,7 @@ namespace DAL
                 transaccion = conexion.BeginTransaction();
                 ConfigurarComando(stored, consulta, parametros);
                 comando.Transaction = transaccion;
-                comando.ExecuteNonQuery();
+                comando.ExecuteNonQuery(); // Ejecutar el comando y no devolver nada
                 transaccion.Commit();
                 return true;
             }
