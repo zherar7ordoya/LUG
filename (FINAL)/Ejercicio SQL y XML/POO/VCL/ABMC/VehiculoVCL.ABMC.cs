@@ -14,6 +14,7 @@ namespace VCL
 {
     public partial class VehiculoVCL
     {
+        // TODO => Llevar los métodos comunes a una clase estática.
         // MÉTODO COMÚN
         private Vehiculo ArmarObjetoVehiculo()
         {

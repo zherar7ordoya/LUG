@@ -40,6 +40,7 @@ namespace PML
 
         public bool Borrar(Vehiculo objeto)
         {
+            // Si el vehículo no está asignado a una renta, se puede borrar
             if (Tool.VehiculoSinAsignar(objeto))
             {
                 try

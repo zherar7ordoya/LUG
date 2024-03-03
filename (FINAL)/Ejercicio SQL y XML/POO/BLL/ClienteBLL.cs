@@ -6,7 +6,6 @@ namespace BLL
     public partial class ClienteBLL
     {
         #region VALIDACIONES SEMÁNTICAS
-        
         private bool ValidarEdad(DateTime fechaNacimiento)
         {
             if (CalcularEdad(fechaNacimiento) < 18)
@@ -20,7 +19,6 @@ namespace BLL
             return true;
         }
 
-
         private int CalcularEdad(DateTime fechaNacimiento)
         {
             int edad = DateTime.Now.Year - fechaNacimiento.Year;
@@ -32,7 +30,6 @@ namespace BLL
             }
             return edad;
         }
-
         #endregion
     }
 }

@@ -26,6 +26,7 @@ namespace PML
 
         public bool Borrar(Cliente objeto)
         {
+            // Si el cliente no está asignado a una renta, se puede borrar
             if (Tool.ClienteSinAsignar(objeto))
             {
                 try

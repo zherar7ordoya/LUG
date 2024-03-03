@@ -10,6 +10,7 @@ using System.Xml.Linq;
 
 namespace MPP
 {
+    // Ver nota en archivo XML.
     public class VehiculoMPP : IMapeadoXml<Vehiculo>
     {
         private readonly ConexionXml conexion;

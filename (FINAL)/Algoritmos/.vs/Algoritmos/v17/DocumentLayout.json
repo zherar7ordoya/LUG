@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EABCEF8-4748-4E99-BF47-1639533B7D32}|Programaci\u00F3n Din\u00E1mica\\Programaci\u00F3n Din\u00E1mica.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\algoritmos\\programaci\u00F3n din\u00E1mica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EABCEF8-4748-4E99-BF47-1639533B7D32}|Programaci\u00F3n Din\u00E1mica\\Programaci\u00F3n Din\u00E1mica.csproj|solutionrelative:programaci\u00F3n din\u00E1mica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F119B-58F5-4A55-9FE4-41F4466DF87B}|Divide y Conquista\\Divide y Conquista.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\algoritmos\\divide y conquista\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F119B-58F5-4A55-9FE4-41F4466DF87B}|Divide y Conquista\\Divide y Conquista.csproj|solutionrelative:divide y conquista\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF0D111-C8E4-4125-958D-96F03D5C5857}|Algoritmo \u00C1vido\\Algoritmo \u00C1vido.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\algoritmos\\algoritmo \u00E1vido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF0D111-C8E4-4125-958D-96F03D5C5857}|Algoritmo \u00C1vido\\Algoritmo \u00C1vido.csproj|solutionrelative:algoritmo \u00E1vido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\Programaci\u00F3n Din\u00E1mica\\Program.cs",
+              "RelativeDocumentMoniker": "Programaci\u00F3n Din\u00E1mica\\Program.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\Programaci\u00F3n Din\u00E1mica\\Program.cs",
+              "RelativeToolTip": "Programaci\u00F3n Din\u00E1mica\\Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T18:23:41.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\Divide y Conquista\\Program.cs",
+              "RelativeDocumentMoniker": "Divide y Conquista\\Program.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\Divide y Conquista\\Program.cs",
+              "RelativeToolTip": "Divide y Conquista\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T18:20:06.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\Algoritmo \u00C1vido\\Program.cs",
+              "RelativeDocumentMoniker": "Algoritmo \u00C1vido\\Program.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Algoritmos\\Algoritmo \u00C1vido\\Program.cs",
+              "RelativeToolTip": "Algoritmo \u00C1vido\\Program.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T18:18:44.01Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

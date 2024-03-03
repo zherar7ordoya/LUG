@@ -51,6 +51,10 @@ namespace MPP
                         DNI = int.Parse(registro["DNI"].ToString()),
                         FechaNacimiento = DateTime.Parse(registro["FechaNacimiento"].ToString()),
                         Email = registro["Email"].ToString(),
+                        // Esto es conceptual: el objeto Cliente tiene una lista
+                        // de Vehiculos, pero la tabla de la base de datos no
+                        // tiene una lista sino una relación con Vehículo a
+                        // través de la tabla Rentas.
                         VehiculosRentados = new List<Vehiculo>()
                     };
                     listaClientes.Add(cliente);
@@ -77,8 +81,8 @@ namespace MPP
         /// </param>
         public bool MapearHaciaSql(bool stored, string consulta, Cliente objeto)
         {
-            // Interesante: en esta instancia, el mapeo es hacia los parámetros
-            //              de la consulta.
+            // Interesante: en esta instancia, el mapeo es de los parámetros de
+            //              la consulta.
             try
             {
                 // A "Código" siempre lo voy a necesitar...
@@ -93,6 +97,10 @@ namespace MPP
                 if (objeto.DNI > 0) parametros.Add("@DNI", objeto.DNI);
                 if (objeto.FechaNacimiento != DateTime.MinValue) parametros.Add("@FechaNacimiento", objeto.FechaNacimiento);
                 if (!string.IsNullOrEmpty(objeto.Email)) parametros.Add("@Email", objeto.Email);
+
+                // ¿Y Vehículos Rentados? La tabla de la base de datos no tiene
+                // una lista sino una relación con Vehículo a través de la tabla
+                // Rentas. No se puede mapear directamente.
 
                 return new ConexionSql().Escribir(stored, consulta, parametros);
             }

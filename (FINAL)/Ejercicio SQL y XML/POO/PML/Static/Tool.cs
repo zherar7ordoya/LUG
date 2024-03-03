@@ -7,6 +7,8 @@ namespace PML
 {
     public static class Tool
     {
+        //||||||||||||||||||||||||||||||||||||||||||||||||| VALIDACIONES LÓGICAS
+
         public static bool ClienteSinAsignar(Cliente objeto)
         {
             List<Renta> rentas = new RentaPML().Consultar();

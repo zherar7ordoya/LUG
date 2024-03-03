@@ -2,6 +2,7 @@
 
 namespace ABS
 {
+    // Ver notas en IApellidoControl
     public interface INombreControl
     {
         string Nombre { get; set; }

@@ -16,6 +16,7 @@ namespace VCL
     // Entonces, ¿por qué no implementar la interfaz IABMC en la GUI o acá?
     public partial class ClienteVCL
     {
+        // TODO => Llevar los métodos comunes a una clase estática.
         // MÉTODO COMÚN
         private Cliente ArmarObjetoCliente()
         {

@@ -7,10 +7,17 @@ using System.Linq;
 namespace BLL
 {
     /// <summary>
+    /// Nota 1:
     /// Estas consultas son parte de la lógica de negocio de la aplicación.
     /// Los métodos devuelven diccionarios pues es la estructura de datos que 
     /// mejor resume la información que se quiere mostrar en el dashboard (que
     /// resume la misma información de manera visual a través de los charts).
+    /// 
+    /// Nota 2:
+    /// Obviamente, no es posible hacer esta consulta mediante procedimientos
+    /// almacenados pues el repositorio de datos es mixto (XML y SQL Server):
+    /// parte de la información se encuentra en un archivo XML y otra parte en
+    /// SQL Server.
     /// </summary>
     public partial class RentaBLL
     {
@@ -34,12 +41,12 @@ namespace BLL
         /**
          * Este fue mañoso... Al ir ingresando datos se vio la situación de que 
          * el diccionario no soporta valores duplicados. Pero es que un vehículo
-         * puede ser rentado más de una vez...
+         * puede ser rentado más de una vez... (véase nota en la BEL al respecto).
          * Este código utiliza un bucle para recorrer las rentas y construir el
          * diccionario sumando los importes para los vehículos que ya están en
          * el diccionario y agregando nuevos vehículos con sus importes si aún
-         * no están presentes. Luego, ordena y toma los tres primeros vehículos
-         * con mayores ingresos.
+         * no están presentes. Luego, ordena por importe y toma los tres primeros
+         * vehículos con mayores ingresos.
          */
         public Dictionary<string, decimal> VehiculosMasRentadosPorImporte()
         {
@@ -51,6 +58,7 @@ namespace BLL
 
                 foreach (var renta in rentados)
                 {
+                    // Ver el método ToString() en la clase Vehiculo
                     string vehiculoKey = renta.Vehiculo.ToString();
 
                     // Vehículo existe
@@ -86,16 +94,7 @@ namespace BLL
         }
 
 
-        /**
-         * Este fue mañoso... Al ir ingresando datos se vio la situación de que 
-         * el diccionario no soporta valores duplicados. Pero es que un vehículo
-         * puede ser rentado más de una vez...
-         * Este código utiliza un bucle para recorrer las rentas y construir el
-         * diccionario sumando los importes para los vehículos que ya están en
-         * el diccionario y agregando nuevos vehículos con sus importes si aún
-         * no están presentes. Luego, ordena y toma los tres primeros vehículos
-         * con menores ingresos.
-         */
+         // Ver nota para el método VehiculosMasRentadosPorImporte().
         public Dictionary<string, decimal> VehiculosMenosRentadosPorImporte()
         {
             try
@@ -107,11 +106,7 @@ namespace BLL
                 foreach (var renta in rentados)
                 {
                     string vehiculoKey = renta.Vehiculo.ToString();
-
-                    // Vehículo existe
                     if (ingresos.ContainsKey(vehiculoKey)) ingresos[vehiculoKey] += renta.Importe;
-
-                    // Vehículo no existe
                     else ingresos.Add(vehiculoKey, renta.Importe);
                 }
 

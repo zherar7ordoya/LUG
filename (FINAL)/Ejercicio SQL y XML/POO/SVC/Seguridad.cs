@@ -16,6 +16,7 @@ namespace SVC
             return encriptado;
         }
 
+        // Nótese que el método no es referenciado en el código.
         public static string Desencriptar(this string texto)
         {
             byte[] array = Convert.FromBase64String(texto);

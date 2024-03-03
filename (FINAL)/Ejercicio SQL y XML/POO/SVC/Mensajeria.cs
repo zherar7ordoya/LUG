@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace SVC
 {
     public static class Mensajeria
     {
-        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| MENSAJERÍA
-
         public static void MostrarInformacion(string mensaje)
         {
             MessageBox.Show(
@@ -46,6 +39,5 @@ namespace SVC
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
         }
-
     }
 }

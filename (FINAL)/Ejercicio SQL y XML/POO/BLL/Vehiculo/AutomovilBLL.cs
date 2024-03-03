@@ -2,6 +2,7 @@
 
 namespace BLL
 {
+    // Ver nota en la clase VehiculoBLL.cs
     public class AutomovilBLL : VehiculoBLL<Automovil>
     {
         public override decimal CalcularRenta(Automovil automovil, int cantidadDias)

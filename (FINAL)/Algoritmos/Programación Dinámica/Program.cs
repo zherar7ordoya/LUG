@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Problema: Calcular el n-ésimo número de la secuencia de Fibonacci.
 // Solución: Utilizar la programación dinámica para almacenar los valores

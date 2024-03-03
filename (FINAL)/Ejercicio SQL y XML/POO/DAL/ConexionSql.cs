@@ -61,10 +61,23 @@ namespace DAL
          * limitaciones y se considera obsoleto en favor de Dictionary. Una de
          * las limitaciones de HashTable es que no es fuertemente tipada, lo que
          * significa que puede contener elementos de cualquier tipo de datos.
+         * La falta de seguridad de tipo de HashTable significa que no hace 
+         * verificaciones de tipo en tiempo de compilación y, por lo tanto, se
+         * pueden introducir errores difíciles de detectar hasta tiempo de
+         * ejecución.
+         * De manera similar a HashTable, ArrayList es otra estructura de datos
+         * que ha quedado desaconsejada en favor de las implementaciones más
+         * modernas y tipo seguro de List<T>.
+         * Finalmente, ¿por qué Dictionary y no List? Porque List trabaja con un
+         * tipo de dato. En cambio, Dictionary trabaja con pares clave-valor, lo
+         * que es más adecuado para el manejo de parámetros de consulta (donde
+         * las claves son strings y los valores pueden ser de cualquier tipo,
+         * lo que es adecuado para representar una colección heterogénea de
+         * parámetros).
          */
 
         //*--------------------------------------------------------------------*
-        
+
         // TODO => El tema con este método es que tuve que traer cada uno de los 
         //         parámetros del método desde la PML (pasaron por MPP sin hacer
         //         nada) para llegar aquí. No me parece que sea la mejor forma
@@ -78,6 +91,8 @@ namespace DAL
             {
                 CommandText = consulta,
                 Connection = conexion,
+                // Esto debería evitarse: un stored procedure se lleva parte de
+                // la lógica de la aplicación a la base de datos.
                 CommandType = stored ? CommandType.StoredProcedure : CommandType.Text
             };
 
@@ -162,7 +177,7 @@ namespace DAL
             /* Escritura (Insert, Update, Delete): En operaciones de escritura,
              * como INSERT, UPDATE, DELETE, se utiliza directamente SqlCommand.
              * En este caso, no se necesita un DataAdapter porque no se está
-             * recuperando un conjunto de datos, sino ejecutando una acción
+             * recuperando un conjunto de datos sino ejecutando una acción
              * directa en la base de datos. */
 
             try

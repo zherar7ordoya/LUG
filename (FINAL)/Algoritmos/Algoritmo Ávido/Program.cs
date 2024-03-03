@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Problema: Encontrar la combinación de monedas que devuelve el cambio con la
 //           menor cantidad de monedas posible.

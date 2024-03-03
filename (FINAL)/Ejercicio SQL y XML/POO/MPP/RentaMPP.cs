@@ -73,8 +73,8 @@ namespace MPP
                     { "@Codigo", objeto.Codigo }
                 };
 
-                // Caso borrar:
-                // Apelo a los valores "default" cuando no han sido inicializados
+                // Cuando no es un borrado, apelo a los valores "default" para
+                // diferenciar borrado de no-borrado.
                 if (objeto.Cliente != null) parametros.Add("@Codigo_Cliente", objeto.Cliente.Codigo);
                 if (objeto.Vehiculo != null) parametros.Add("@Codigo_Vehiculo", objeto.Vehiculo.Codigo);
                 if (objeto.DiasRentados > 0) parametros.Add("@DiasRentados", objeto.DiasRentados);

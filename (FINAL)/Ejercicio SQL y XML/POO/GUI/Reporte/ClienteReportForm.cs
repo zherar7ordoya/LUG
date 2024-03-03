@@ -1,6 +1,4 @@
-﻿using System;
-
-using VCL;
+﻿using VCL;
 
 namespace GUI
 {

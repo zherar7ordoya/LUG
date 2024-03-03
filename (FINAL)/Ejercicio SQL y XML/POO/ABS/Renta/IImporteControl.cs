@@ -2,6 +2,7 @@
 
 namespace ABS
 {
+    // Ver notas en IApellidoControl (el traslado aplica a Enabled y Update)
     public interface IImporteControl
     {
         string Importe { get; set; }

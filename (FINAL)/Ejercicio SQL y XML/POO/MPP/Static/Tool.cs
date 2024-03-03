@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 namespace MPP
 {
-
+    // Estos métodos son unos de los pocos lugares donde hubiera sido más
+    // eficiente tener consultas de un solo objeto en lugar de listas.
     static public class Tool
     {
         public static Cliente ObtenerClientePorCodigo(int codigo)

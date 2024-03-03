@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Problema: Encontrar el máximo elemento en una matriz.
 // Solución: Utilizar el enfoque de divide y conquista para dividir la matriz en

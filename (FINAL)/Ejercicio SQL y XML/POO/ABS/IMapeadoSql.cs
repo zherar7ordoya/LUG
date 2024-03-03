@@ -3,6 +3,8 @@
 
 namespace ABS
 {
+    // ¿Era necesaria esta interfaz? Yo creo que sí ya que la implementa cada
+    // mapeador de cada entidad.
     public interface IMapeadoSql<T> where T : IEntidad
     {
         /// <summary>

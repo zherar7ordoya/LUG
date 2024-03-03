@@ -93,7 +93,6 @@ namespace VCL
             Tool.ConfigurarBotones(formulario, estado, validado);
         }
 
-
         #region ||*----------------------------------------------------> EVENTOS
 
         //|||||||||||||||||||||||||||||||||||||||||||||| EVENTOS DE DATAGRIDVIEW

@@ -2,6 +2,7 @@
 
 namespace ABS
 {
+    // Ver notas en IApellidoControl
     public interface IDniControl
     {
         string Dni { get; set; }

@@ -35,6 +35,11 @@ namespace BEL
         public int DNI { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Email { get; set; }
+        // Si bien el enunciado pide "el vehículo rentado", se optó por una
+        // lista para trabajar con una estructura a manera de historial dado que
+        // un cliente puede rentar más de un vehículo a lo largo del tiempo (y
+        // porque no se pidió fecha de renta, que en un caso u otro, hubiera
+        // sido necesaria).
         public List<Vehiculo> VehiculosRentados { get; set; }
 
         public override string ToString()

@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
+<!-- Se agregó "Codigo" a atributos, era lo más aconsejable (estándar) -->
+
 <Vehiculos>
 
     <!-- Vehículo 1: Automovil -->

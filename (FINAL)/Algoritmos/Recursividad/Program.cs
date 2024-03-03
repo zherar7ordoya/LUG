@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Problema: Calcular el factorial de un número entero no negativo.
 // Solución: Utilizar una función recursiva que calcule el factorial del número.
