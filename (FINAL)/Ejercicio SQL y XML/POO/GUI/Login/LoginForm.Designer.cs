@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ValidarButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.SalirButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EmailControl
@@ -92,11 +93,22 @@
     "los métodos pertinentes de la BLL se puede examinar la encriptación, recupero (d" +
     "esde la base de datos) y validación.";
             // 
+            // SalirButton
+            // 
+            this.SalirButton.Location = new System.Drawing.Point(39, 145);
+            this.SalirButton.Name = "SalirButton";
+            this.SalirButton.Size = new System.Drawing.Size(60, 30);
+            this.SalirButton.TabIndex = 6;
+            this.SalirButton.Text = "Salir";
+            this.SalirButton.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 362);
+            this.ControlBox = false;
+            this.Controls.Add(this.SalirButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ValidarButton);
             this.Controls.Add(this.label2);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ValidarButton;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button SalirButton;
     }
 }

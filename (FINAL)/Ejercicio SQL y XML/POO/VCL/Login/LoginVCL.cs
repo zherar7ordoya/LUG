@@ -13,6 +13,7 @@ namespace VCL
         IEmailControl EmailControl;
         TextBox ClaveTextbox;
         Button ValidarButton;
+        Button SalirButton;
 
         // Constructor
         public LoginVCL(Form formulario)
@@ -27,6 +28,7 @@ namespace VCL
             EmailControl = (IEmailControl)formulario.Controls["EmailControl"];
             ClaveTextbox = (TextBox)formulario.Controls["ClaveTextbox"];
             ValidarButton = (Button)formulario.Controls["ValidarButton"];
+            SalirButton = (Button)formulario.Controls["SalirButton"];
         }
 
         private void InicializarEventHandlers()
@@ -34,7 +36,7 @@ namespace VCL
             EmailControl.TextChanged += ValidarInput;
             ClaveTextbox.TextChanged += ValidarInput;
             ValidarButton.Click += ValidarEmail;
-            //formulario.FormClosing += FormularioClosing;
+            SalirButton.Click += Salir;
         }
 
         private void ValidarInput(object sender, EventArgs e)
@@ -67,12 +69,10 @@ namespace VCL
             }
         }
 
-        private void FormularioClosing(object sender, FormClosingEventArgs e)
+        private void Salir(object sender, EventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                Application.Exit();
-            }
+            formulario.DialogResult = DialogResult.Cancel;
+            Application.Exit();
         }
     }
 }
