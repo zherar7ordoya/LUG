@@ -1,11 +1,7 @@
 ﻿using ABS;
-
 using BEL;
-
 using BLL;
-
 using SVC;
-
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -95,6 +91,7 @@ namespace VCL
             VehiculosDgv.DataSource = new VehiculoBLL().Consultar();
             Consultar();
         }
+
         private void InicializarEventHandlers()
         {
             // Botones
@@ -118,7 +115,6 @@ namespace VCL
             // Un "twich"...
             ManualCheckbox.CheckedChanged += (s, e) => ImporteControl.Enabled = ManualCheckbox.Checked;
         }
-
         #endregion
 
         private void ConfigurarFormulario()
@@ -148,7 +144,6 @@ namespace VCL
             }
         }
 
-
         private void MostarCliente(object sender, DataGridViewCellEventArgs e)
         {
             Cliente cliente = null;
@@ -172,7 +167,6 @@ namespace VCL
             FechaNacimientoDtp.Value = cliente.FechaNacimiento;
             EmailControl.Email = cliente.Email;
         }
-
 
         private void MostarVehiculo(object sender, DataGridViewCellEventArgs e)
         {
@@ -234,7 +228,6 @@ namespace VCL
             }
         }
 
-
         private void BotonCancelar(object sender, EventArgs e)
         {
             DialogResult resultado = Mensajeria.MostrarPregunta("¿Seguro que desea cancelar?");
@@ -246,54 +239,57 @@ namespace VCL
             }
         }
 
-
         private void BotonCalcular(object sender, EventArgs e)
         {
-            if (CodigoVehiculoTextbox.Text != string.Empty)
+            // Tuve que agregar esta condición para controlar que no se dispare
+            // el cálculo cuando el formulario está en estado Normal
+            if (estado != EstadoFormulario.Normal)
             {
-                List<Vehiculo> vehiculos = new VehiculoBLL().Consultar();
-
-                // Solo puedo confiar en el vehículo del TextBox (en ninguno de los DataGridView)
-                Vehiculo vehiculo = vehiculos.Find(x => x.Codigo == int.Parse(CodigoVehiculoTextbox.Text));
-
-                // Calculo el importe de la renta según el tipo de vehículo
-                if (vehiculo is Automovil automovil)
+                if (CodigoVehiculoTextbox.Text != string.Empty)
                 {
-                    ImporteControl.Importe =
-                        new AutomovilBLL()
-                        .CalcularRenta(automovil, (int)DiasRentadosNumeric.Value)
-                        .ToString("0.00");
-                }
-                else if (vehiculo is Camion camion)
-                {
-                    ImporteControl.Importe =
-                        new CamionBLL()
-                        .CalcularRenta(camion, (int)DiasRentadosNumeric.Value)
-                        .ToString("0.00");
-                }
-                else if (vehiculo is Camioneta camioneta)
-                {
-                    ImporteControl.Importe =
-                        new CamionetaBLL()
-                        .CalcularRenta(camioneta, (int)DiasRentadosNumeric.Value)
-                        .ToString("0.00");
-                }
-                else if (vehiculo is Suv suv)
-                {
-                    ImporteControl.Importe =
-                        new SuvBLL()
-                        .CalcularRenta(suv, (int)DiasRentadosNumeric.Value)
-                        .ToString("0.00");
-                }
+                    List<Vehiculo> vehiculos = new VehiculoBLL().Consultar();
 
-                // Forzar la actualización del control (o CompararDatos fallará)
-                ImporteControl.Update();
+                    // Solo puedo confiar en el vehículo del TextBox (en ninguno de los DataGridView)
+                    Vehiculo vehiculo = vehiculos.Find(x => x.Codigo == int.Parse(CodigoVehiculoTextbox.Text));
 
-                // Comprobar si el formulario necesita cambiar de estado (modificación)
-                CompararDatos(this, e);
+                    // Calculo el importe de la renta según el tipo de vehículo
+                    if (vehiculo is Automovil automovil)
+                    {
+                        ImporteControl.Importe =
+                            new AutomovilBLL()
+                            .CalcularRenta(automovil, (int)DiasRentadosNumeric.Value)
+                            .ToString("0.00");
+                    }
+                    else if (vehiculo is Camion camion)
+                    {
+                        ImporteControl.Importe =
+                            new CamionBLL()
+                            .CalcularRenta(camion, (int)DiasRentadosNumeric.Value)
+                            .ToString("0.00");
+                    }
+                    else if (vehiculo is Camioneta camioneta)
+                    {
+                        ImporteControl.Importe =
+                            new CamionetaBLL()
+                            .CalcularRenta(camioneta, (int)DiasRentadosNumeric.Value)
+                            .ToString("0.00");
+                    }
+                    else if (vehiculo is Suv suv)
+                    {
+                        ImporteControl.Importe =
+                            new SuvBLL()
+                            .CalcularRenta(suv, (int)DiasRentadosNumeric.Value)
+                            .ToString("0.00");
+                    }
+
+                    // Forzar la actualización del control (o CompararDatos fallará)
+                    ImporteControl.Update();
+
+                    // Comprobar si el formulario necesita cambiar de estado (modificación)
+                    CompararDatos(this, e);
+                }
             }
         }
-
         #endregion
     }
 }

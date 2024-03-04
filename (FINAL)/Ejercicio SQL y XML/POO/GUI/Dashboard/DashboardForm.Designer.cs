@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 655);
+            this.ClientSize = new System.Drawing.Size(1172, 655);
             this.Controls.Add(this.TotalRecaudadoPorTipoChart);
             this.Controls.Add(this.VehiculosMenosRentadosPorImporteChart);
             this.Controls.Add(this.VehiculosMenosRentadosPorTipoChart);
