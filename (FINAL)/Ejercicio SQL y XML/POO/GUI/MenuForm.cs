@@ -1,5 +1,4 @@
 ﻿using SVC;
-
 using System;
 using System.Windows.Forms;
 
@@ -18,7 +17,7 @@ namespace GUI
             this.VerMenu.Enabled = validado;
             this.Load += FormularioLoad;
             this.FormClosing += FormularioClosing;
-            this.KeyDown += FormularioKeyDown;
+            // TODO => Implementar la salida mediante la tecla ESC
         }
 
         private void FormularioLoad(object sender, EventArgs e)
@@ -63,15 +62,6 @@ namespace GUI
                 DialogResult result = Mensajeria.MostrarPregunta("¿Está seguro de que quiere salir?");
                 if (result == DialogResult.Yes) Application.Exit();
                 else e.Cancel = true;
-            }
-        }
-
-        private void FormularioKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                DialogResult result = Mensajeria.MostrarPregunta("¿Está seguro de que quiere salir?");
-                if (result == DialogResult.Yes) Application.Exit();
             }
         }
         #endregion

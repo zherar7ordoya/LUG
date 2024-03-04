@@ -22,12 +22,11 @@ namespace BLL
         {
             try
             {
-                // Aquí, la manera de recuperar la información que podría usarse
-                // para el login.
+                // Aquí, la manera de recuperar la información para el login.
                 List<Cliente> clientes = new ClientePML().Consultar();
                 Cliente cliente = clientes.Find(c => c.Email == email);
 
-                /*** ...pero se hará un "mock" de la consulta a la base de datos. ***/
+                /*** ...pero se trabajará con un "mock"  ***/
 
                 // Simulo que recuperé la clave encriptada de la base de datos.
                 string emailEncriptado = Seguridad.Encriptar(email);
@@ -37,6 +36,7 @@ namespace BLL
 
                 // Sin desencriptar nada: comparo los valores encriptados.
                 if (emailEncriptado != claveEncriptada) return false;
+
                 return true;
             }
             catch (Exception ex) { throw new Exception(ex.Message); }

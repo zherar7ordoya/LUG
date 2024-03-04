@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
+  "WorkspaceRootPath": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|c:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|solutionrelative:gui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|d:\\documents\\lenguajes-de-ultima-generacion\\(final)\\ejercicio sql y xml\\poo\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\App.config",
+              "RelativeDocumentMoniker": "GUI\\App.config",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\App.config",
+              "RelativeToolTip": "GUI\\App.config",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAkwA8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-04T15:18:38.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\Program.cs",
+              "DocumentMoniker": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "C:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\Program.cs",
+              "ToolTip": "D:\\Documents\\Lenguajes-de-Ultima-Generacion\\(FINAL)\\Ejercicio SQL y XML\\POO\\GUI\\Program.cs",
               "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAB7AAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T23:42:01.692Z",
+              "WhenOpened": "2024-03-04T15:06:57.923Z",
               "EditorCaption": ""
             }
           ]

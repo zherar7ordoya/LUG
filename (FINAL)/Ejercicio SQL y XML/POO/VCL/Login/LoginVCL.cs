@@ -1,6 +1,9 @@
 ﻿using ABS;
+
 using BLL;
+
 using SVC;
+
 using System;
 using System.Windows.Forms;
 
@@ -53,26 +56,20 @@ namespace VCL
                 string email = EmailControl.Email;
                 string clave = ClaveTextbox.Text;
                 bool validado = new LoginBLL().ValidarLogin(email, clave);
-                if (validado)
-                {
-                    formulario.DialogResult = DialogResult.Yes;
-                }
-                else
-                {
-                    formulario.DialogResult = DialogResult.No;
-                }
+                if (validado) formulario.DialogResult = DialogResult.Yes;
+                else formulario.DialogResult = DialogResult.No;
                 formulario.Close();
             }
-            catch (Exception ex)
-            {
-                Mensajeria.MostrarError(ex.Message);
-            }
+            catch (Exception ex) { Mensajeria.MostrarError(ex.Message); }
         }
 
         private void Salir(object sender, EventArgs e)
         {
-            formulario.DialogResult = DialogResult.Cancel;
-            Application.Exit();
+            // TODO => Bug: al salir, se escucha el sonido de error.
+            if (Mensajeria.MostrarPregunta("¿Desea salir del sistema?") == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
