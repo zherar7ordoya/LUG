@@ -1,15 +1,3 @@
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\bin\Debug\SVC.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\bin\Debug\SVC.pdb
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\0) SVC Service Layer.csproj.AssemblyReference.cache
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\0) SVC Service Layer.csproj.CoreCompileInputs.cache
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\SVC.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\SVC.pdb
-C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\bin\Debug\SVC.dll
-C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\bin\Debug\SVC.pdb
-C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\0) SVC Service Layer.csproj.AssemblyReference.cache
-C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\0) SVC Service Layer.csproj.CoreCompileInputs.cache
-C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\SVC.dll
-C:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\SVC.pdb
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\bin\Debug\SVC.dll
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\bin\Debug\SVC.pdb
 D:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\SVC\obj\Debug\0) SVC Service Layer.csproj.AssemblyReference.cache

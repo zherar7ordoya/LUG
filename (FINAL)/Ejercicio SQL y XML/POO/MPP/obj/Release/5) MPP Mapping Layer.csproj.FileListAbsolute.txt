@@ -1,9 +1,0 @@
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\bin\Release\Data\Vehiculo.xml
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\bin\Release\MPP.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\bin\Release\ABS.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\bin\Release\BEL.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\bin\Release\DAL.dll
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\obj\Release\5) MPP Mapping Layer.csproj.AssemblyReference.cache
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\obj\Release\5) MPP Mapping Layer.csproj.CoreCompileInputs.cache
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\obj\Release\5) MPP M.771781B0.Up2Date
-U:\Documents\Lenguajes-de-Ultima-Generacion\(FINAL)\Ejercicio SQL y XML\POO\2024-02-25\MPP\obj\Release\MPP.dll
