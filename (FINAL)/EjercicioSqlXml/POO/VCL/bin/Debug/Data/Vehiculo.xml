@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- Se agregó "Codigo" a atributos, era lo más aconsejable (estándar) -->
+
+<Vehiculos>
+
+    <!-- Vehículo 1: Automovil -->
+    <Vehiculo Codigo="1" Tipo="Automovil">
+        <Marca>Ford</Marca>
+        <Modelo>Fiesta</Modelo>
+        <Patente>ABC123</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 2: Automovil -->
+    <Vehiculo Codigo="2" Tipo="Automovil">
+        <Marca>Chevrolet</Marca>
+        <Modelo>Cruze</Modelo>
+        <Patente>XYZ456</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 3: Suv -->
+    <Vehiculo Codigo="3" Tipo="Suv">
+        <Marca>Toyota</Marca>
+        <Modelo>Rav4</Modelo>
+        <Patente>LMN789</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 4: Suv -->
+    <Vehiculo Codigo="4" Tipo="Suv">
+        <Marca>Honda</Marca>
+        <Modelo>CR-V</Modelo>
+        <Patente>PQR987</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 5: Camioneta -->
+    <Vehiculo Codigo="5" Tipo="Camioneta">
+        <Marca>Chevrolet</Marca>
+        <Modelo>Silverado</Modelo>
+        <Patente>JKL456</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 6: Camioneta -->
+    <Vehiculo Codigo="6" Tipo="Camioneta">
+        <Marca>Ford</Marca>
+        <Modelo>F-150</Modelo>
+        <Patente>DEF789</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 7: Camion -->
+    <Vehiculo Codigo="7" Tipo="Camion">
+        <Marca>Volvo</Marca>
+        <Modelo>VNL</Modelo>
+        <Patente>GHI012</Patente>
+    </Vehiculo>
+
+    <!-- Vehículo 8: Camion -->
+    <Vehiculo Codigo="8" Tipo="Camion">
+        <Marca>Kenworth</Marca>
+        <Modelo>T680</Modelo>
+        <Patente>MNO345</Patente>
+    </Vehiculo>
+
+</Vehiculos>
