@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\Documents\\EjercicioSqlXml\\POO\\",
+  "WorkspaceRootPath": "D:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C19FCB19-BD0C-4B8A-8C37-1F71CC3973EB}|MPP\\5) MPP Mapping Layer.csproj|u:\\documents\\ejerciciosqlxml\\poo\\mpp\\clientempp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C19FCB19-BD0C-4B8A-8C37-1F71CC3973EB}|MPP\\5) MPP Mapping Layer.csproj|solutionrelative:mpp\\clientempp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|D:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\vcl\\clientevcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|solutionrelative:vcl\\clientevcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClienteMPP.cs",
-              "DocumentMoniker": "U:\\Documents\\EjercicioSqlXml\\POO\\MPP\\ClienteMPP.cs",
-              "RelativeDocumentMoniker": "MPP\\ClienteMPP.cs",
-              "ToolTip": "U:\\Documents\\EjercicioSqlXml\\POO\\MPP\\ClienteMPP.cs",
-              "RelativeToolTip": "MPP\\ClienteMPP.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAACcAAAAdAAAA",
+              "Title": "ClienteVCL.cs",
+              "DocumentMoniker": "D:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\VCL\\ClienteVCL.cs",
+              "RelativeDocumentMoniker": "VCL\\ClienteVCL.cs",
+              "ToolTip": "D:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\VCL\\ClienteVCL.cs",
+              "RelativeToolTip": "VCL\\ClienteVCL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:46:25.509Z",
+              "WhenOpened": "2024-04-27T01:13:38.196Z",
               "EditorCaption": ""
             }
           ]
