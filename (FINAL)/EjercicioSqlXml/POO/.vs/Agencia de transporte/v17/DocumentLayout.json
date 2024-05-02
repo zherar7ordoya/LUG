@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\Documents\\EjercicioSqlXml\\POO\\",
+  "WorkspaceRootPath": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C19FCB19-BD0C-4B8A-8C37-1F71CC3973EB}|MPP\\5) MPP Mapping Layer.csproj|u:\\documents\\ejerciciosqlxml\\poo\\mpp\\clientempp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C19FCB19-BD0C-4B8A-8C37-1F71CC3973EB}|MPP\\5) MPP Mapping Layer.csproj|solutionrelative:mpp\\clientempp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|u:\\documents\\lug\\(final)\\ejerciciosqlxml\\poo\\vcl\\vehiculovcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|solutionrelative:vcl\\vehiculovcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|u:\\documents\\lug\\(final)\\ejerciciosqlxml\\poo\\gui\\gestor\\vehiculo\\vehiculoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|solutionrelative:gui\\gestor\\vehiculo\\vehiculoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|u:\\documents\\lug\\(final)\\ejerciciosqlxml\\poo\\vcl\\clientevcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68259EA6-E9C9-4758-A5E2-05C892DF2747}|VCL\\2) VCL View Control Layer.csproj|solutionrelative:vcl\\clientevcl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\gui\\gestor\\cliente\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86AE1516-3C7F-411C-8AB3-D79D56410A7D}|GUI\\1) GUI Graphical User Interface.csproj|solutionrelative:gui\\gestor\\cliente\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClienteMPP.cs",
-              "DocumentMoniker": "U:\\Documents\\EjercicioSqlXml\\POO\\MPP\\ClienteMPP.cs",
-              "RelativeDocumentMoniker": "MPP\\ClienteMPP.cs",
-              "ToolTip": "U:\\Documents\\EjercicioSqlXml\\POO\\MPP\\ClienteMPP.cs",
-              "RelativeToolTip": "MPP\\ClienteMPP.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAACcAAAAdAAAA",
+              "Title": "VehiculoVCL.cs",
+              "DocumentMoniker": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\VCL\\VehiculoVCL.cs",
+              "RelativeDocumentMoniker": "VCL\\VehiculoVCL.cs",
+              "ToolTip": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\VCL\\VehiculoVCL.cs",
+              "RelativeToolTip": "VCL\\VehiculoVCL.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAAC0AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:46:25.509Z",
+              "WhenOpened": "2024-04-27T14:10:45.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehiculoForm.cs [Design]",
+              "DocumentMoniker": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\GUI\\Gestor\\Vehiculo\\VehiculoForm.cs",
+              "RelativeDocumentMoniker": "GUI\\Gestor\\Vehiculo\\VehiculoForm.cs",
+              "ToolTip": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\GUI\\Gestor\\Vehiculo\\VehiculoForm.cs [Design]",
+              "RelativeToolTip": "GUI\\Gestor\\Vehiculo\\VehiculoForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T14:10:31.341Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteVCL.cs",
+              "DocumentMoniker": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\VCL\\ClienteVCL.cs",
+              "RelativeDocumentMoniker": "VCL\\ClienteVCL.cs",
+              "ToolTip": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\VCL\\ClienteVCL.cs",
+              "RelativeToolTip": "VCL\\ClienteVCL.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAcwEkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T21:48:51.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteForm.cs",
+              "DocumentMoniker": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\GUI\\Gestor\\Cliente\\ClienteForm.cs",
+              "RelativeDocumentMoniker": "GUI\\Gestor\\Cliente\\ClienteForm.cs",
+              "ToolTip": "U:\\Documents\\LUG\\(FINAL)\\EjercicioSqlXml\\POO\\GUI\\Gestor\\Cliente\\ClienteForm.cs",
+              "RelativeToolTip": "GUI\\Gestor\\Cliente\\ClienteForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T21:48:31.941Z",
               "EditorCaption": ""
             }
           ]
