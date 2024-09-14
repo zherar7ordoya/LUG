@@ -15,16 +15,16 @@ namespace GUI
 
             // Ingreso al sistema.---------------------------------------------*
 
-            LoginForm login = new LoginForm();
+            //LoginForm login = new LoginForm();
 
-            if (login.ShowDialog() == DialogResult.Yes)
-            {
-                Application.Run(new MenuForm(true));
-            }
-            else
-            {
-                Application.Run(new MenuForm(false));
-            }
+            //if (login.ShowDialog() == DialogResult.Yes)
+            //{
+            //    Application.Run(new MenuForm(true));
+            //}
+            //else
+            //{
+                Application.Run(new AcercaForm());
+            //}
 
             //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
         }
